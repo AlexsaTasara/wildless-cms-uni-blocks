@@ -4,6 +4,8 @@ import { Icon } from '../../ui-kit/Icon/Icon';
 import { Title } from '../../ui-kit/Title/Title';
 import { AlignType } from '../BaseTile/BaseTileProps';
 import type { LinkColumnsMode, LinkDocsContent } from './LinkDocsContent';
+import { formatSuffix } from './formatSuffix';
+import { getExtFromHref } from './getExtFromHref';
 
 const titleAlignStyleMap: Record<AlignType, string> = {
   left: 'text-left',
@@ -64,19 +66,3 @@ export const LinkDocs = JSX<LinkDocsProps>(
     );
   },
 );
-
-const getExtFromHref = (href: string) => {
-  if (!href) return '';
-
-  const lastChunk = href.split('.').pop();
-  if (!lastChunk || lastChunk.includes('/')) return '';
-
-  return lastChunk;
-};
-
-const formatSuffix = (ext?: string, fileSize?: string) => {
-  const prefix = ext || fileSize ? ',' : '';
-  const extension = ext ? ` ${ext}` : '';
-  const size = fileSize ? ` (${fileSize})` : '';
-  return prefix + extension + size;
-};

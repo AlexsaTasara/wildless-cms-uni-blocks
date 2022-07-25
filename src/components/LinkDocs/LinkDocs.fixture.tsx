@@ -1,7 +1,7 @@
 import { context } from '../../setup-fixture';
 import { LinkDocs } from './LinkDocs';
+import { LinkDocs as MobileLinkDocs } from './LinkDocs.mobile';
 import type { LinkDocsContent } from './LinkDocsContent';
-import { Accordion } from '../Accordion/Accordion';
 
 export const LINK_DOCS: LinkDocsContent = {
   title: 'Дополнительные документы',
@@ -63,6 +63,21 @@ export default {
   'no icon and title': (
     <div className="container grid grid-cols-12">
       <LinkDocs className="col-span-12" context={context} {...LINK_DOCS_NO_ICON} />
+    </div>
+  ),
+  'mobile vertical': (
+    <div className="container grid grid-cols-12">
+      <MobileLinkDocs className="col-span-12" context={context} {...LINK_DOCS_NO_ICON} />
+    </div>
+  ),
+  'mobile horizontal': (
+    <div className="container grid grid-cols-12">
+      <MobileLinkDocs
+        className="col-span-12"
+        context={context}
+        {...LINK_DOCS_NO_ICON}
+        listMode={'horizontal'}
+      />
     </div>
   ),
 };

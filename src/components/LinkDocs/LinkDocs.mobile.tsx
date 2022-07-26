@@ -2,7 +2,7 @@ import { JSX } from '@redneckz/uni-jsx';
 import type { UniBlockProps } from '../../types';
 import type { MobileLinkDocsContent } from './LinkDocsContent';
 import { Title } from '../../ui-kit/Title/Title';
-import { SwipeListControl } from '../SwipeListControl/SwipeListControl';
+import { SwipeListControl } from '../../ui-kit/SwipeListControl/SwipeListControl';
 import { LinkDocsListItem } from './LinkDocsListItem.mobile';
 
 export interface LinkDocsProps extends MobileLinkDocsContent, UniBlockProps {}

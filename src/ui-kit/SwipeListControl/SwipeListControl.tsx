@@ -1,15 +1,12 @@
 import { JSX } from '@redneckz/uni-jsx';
-import type { UniBlockProps } from '../../types';
 import type { CSSProperties } from 'react';
-import type { SwipeListControlContent } from './SwipeListControlContent';
+import type { SwipeListControlProps } from './SwipeListControlContent';
 
 const DOT_STYLES = 'bg-primary-main opacity-30 w-1.5 h-1.5 min-w-1.5 min-h-1.5 rounded-full';
 const DOT_WIDTH = 6;
 const ACTIVE_DOT_WIDTH = 22;
 const DOT_OPACITY = 0.3;
 const ACTIVE_DOT_OPACITY = 1;
-
-export interface SwipeListControlProps extends SwipeListControlContent, UniBlockProps {}
 
 export const SwipeListControl = JSX<SwipeListControlProps>(
   ({

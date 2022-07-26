@@ -31466,7 +31466,9 @@ const DOT_WIDTH = 6;
 const ACTIVE_DOT_WIDTH = 22;
 const DOT_OPACITY = 0.3;
 const ACTIVE_DOT_OPACITY = 1;
-const SwipeListControl = JSX(({ className = '', context, children, gap = 14, margin = -16, padding = 16, showDots = true, }) => {
+const SwipeListControl = JSX(({ className = '', context, children, gap = 14, margin, padding, showDots = true }) => {
+    const marginResult = margin ?? -16;
+    const paddingResult = padding ?? 16;
     const [randomHash] = context.useState(`slider-control-${String(Math.floor(Math.random() * 1e9))}`);
     const [isFirstRun, setIsFirstRun] = context.useState(true);
     if (isFirstRun) {
@@ -31477,7 +31479,7 @@ const SwipeListControl = JSX(({ className = '', context, children, gap = 14, mar
             const itemWidth = container.children[0].offsetWidth;
             const scrollItemWidth = itemWidth + gap;
             const scrollableDistance = container.scrollWidth - clientWidth;
-            const edgeScrollDistance = (3 * itemWidth - clientWidth) / 2 + gap + padding;
+            const edgeScrollDistance = (3 * itemWidth - clientWidth) / 2 + gap + paddingResult;
             const scrollableItemsCount = childElementCount - 1;
             const scrollPoints = new Array(scrollableItemsCount)
                 .fill(0)
@@ -31507,7 +31509,12 @@ const SwipeListControl = JSX(({ className = '', context, children, gap = 14, mar
         const fraction = (scrollLeft - start) / (end - start);
         setIndexFraction(fraction);
     };
-    return (jsxs("div", { children: [jsx("div", { className: `mx-[${margin}px] px-[${padding}px] overflow-auto flex gap-3.5 horizontal-list no-scrollbar ${className}`, role: "list", onScroll: handleToggle, "data-hash": randomHash, children: children }), showDots && (jsx("div", { className: "flex gap-2 mx-auto mt-[22px] w-fit", children: childrenCount
+    return (jsxs("div", { children: [jsx("div", { className: `overflow-auto flex gap-3.5 horizontal-list no-scrollbar ${className}`, role: "list", onScroll: handleToggle, "data-hash": randomHash, style: {
+                    marginLeft: `${marginResult}px`,
+                    marginRight: `${marginResult}px`,
+                    paddingLeft: `${paddingResult}px`,
+                    paddingRight: `${paddingResult}px`,
+                }, children: children }), showDots && (jsx("div", { className: "flex gap-2 mx-auto mt-[22px] w-fit", children: childrenCount
                     ? new Array(childrenCount)
                         .fill(0)
                         .map((_, idx) => (jsx("div", { className: `${DOT_STYLES}`, style: getDotStyles(idx, activeIndex, indexFraction) }, String(idx))))
@@ -31552,7 +31559,7 @@ const LinkDocsListItem = JSX(({ hasBorder, doc, icon }) => {
 
 
 const LinkDocs_mobile_LinkDocs = JSX(({ className = '', context, title, subtitle, icon = 'DocIcon', documents, listMode = 'vertical', hasBorder = true, }) => {
-    return (jsxs("section", { className: `py-6 px-4 bg-white ${className}`, children: [title && (jsx(Title, { className: `text-center ${subtitle ? 'mb-2' : 'mb-5'}`, size: "3XS", children: title })), subtitle && jsx("h3", { className: "mb-5 text-center text-md", children: subtitle }), listMode === 'vertical' ? (jsx("div", { className: `text-sm text-primary-main flex flex-col ${hasBorder ? 'gap-3.5' : 'gap-2'}`, children: documents?.length
+    return (jsxs("section", { className: `py-6 px-4 bg-white ${className}`, children: [title && (jsx(Title, { className: `text-center ${subtitle ? 'mb-2' : 'mb-5'}`, size: "3XS", children: title })), subtitle && jsx("h3", { className: "mb-5 text-center text-md", children: subtitle }), listMode === 'vertical' ? (jsx("div", { className: `text-sm text-primary-main flex flex-col ${hasBorder ? 'gap-3.5' : 'gap-2'}`, role: "list", children: documents?.length
                     ? documents.map((doc, i) => (jsx(LinkDocsListItem, { hasBorder: hasBorder, doc: doc, icon: icon }, String(i))))
                     : null })) : (jsx(SwipeListControl, { context: context, className: "text-sm text-primary-main", children: documents?.length
                     ? documents.map((doc, i) => (jsx(LinkDocsListItem, { hasBorder: hasBorder, doc: doc, icon: icon }, String(i))))

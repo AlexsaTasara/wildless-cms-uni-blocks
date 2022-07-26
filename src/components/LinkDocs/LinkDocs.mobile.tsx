@@ -29,6 +29,7 @@ export const LinkDocs = JSX<LinkDocsProps>(
         {listMode === 'vertical' ? (
           <div
             className={`text-sm text-primary-main flex flex-col ${hasBorder ? 'gap-3.5' : 'gap-2'}`}
+            role="list"
           >
             {documents?.length
               ? documents.map((doc, i) => (

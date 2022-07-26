@@ -77,7 +77,12 @@
     "cosmos": "cosmos",
     "precosmos:export": "npm run build:icons",
     "cosmos:export": "cosmos-export",
-    "prepare": "husky install && npm run --prefix ./eslint-rules build || exit 0"
+    "prepare": "husky install && npm run --prefix ./eslint-rules build || exit 0",
+    "e2e": "cypress open",
+    "e2e:run": "cypress run",
+    "e2e:test": "npm run e2e:pretest && npm run e2e:run",
+    "e2e:pretest": "rm -r cypress/snapshots/blocksVisualRegressionDesktop.cy.ts/__diff_output__ || true",
+    "e2e:update": "npm run e2e:pretest && npm run e2e:run -env updateSnapshots=true"
   },
   "peerDependencies": {
     "react": ">=16.8.0",
@@ -103,6 +108,8 @@
     "copyfiles": "^2.4.1",
     "css-loader": "^6.7.1",
     "cssnano": "^5.1.11",
+    "cypress": "^10.3.1",
+    "cypress-image-snapshot": "^4.0.1",
     "eslint": "^8.19.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-local-eslint-rules": "./eslint-rules",

@@ -1,7 +1,6 @@
 import type { LinkProps } from '../../model/LinkProps';
 import type { IconName } from '../../ui-kit/Icon/IconProps';
 import type { BaseTileCommonProps } from '../BaseTile/BaseTileProps';
-import type { ListControlMode } from '../ListControl/ListControlContent';
 
 /**
  * @title Отображение списка
@@ -11,6 +10,15 @@ import type { ListControlMode } from '../ListControl/ListControlContent';
  *    ]
  */
 export type LinkColumnsMode = 'single' | 'double';
+
+/**
+ * @title Отображение списка
+ * @enumNames [
+ *    "Вертикально",
+ *    "Горизонтально",
+ *    ]
+ */
+export type LinkListMode = 'vertical' | 'horizontal';
 
 /**
  * @title Элемент списка
@@ -43,7 +51,7 @@ export interface LinkDocsContent extends LinkDocsBaseContent {
  * @title Список документов
  */
 export interface MobileLinkDocsContent extends LinkDocsBaseContent {
-  listMode?: ListControlMode;
+  listMode?: LinkListMode;
   /** @title Рамка элементов */
   hasBorder?: boolean;
 }

@@ -1,12 +1,7 @@
 import { JSX } from '@redneckz/uni-jsx';
 import type { UniBlockProps } from '../../types';
 import type { CSSProperties } from 'react';
-import type { ListControlContent, ListControlMode } from './ListControlContent';
-
-const listModeStylesMap: Record<ListControlMode, string> = {
-  vertical: 'flex-col',
-  horizontal: 'overflow-auto',
-};
+import type { SwipeListControlContent } from './SwipeListControlContent';
 
 const DOT_STYLES = 'bg-primary-main opacity-30 w-1.5 h-1.5 min-w-1.5 min-h-1.5 mt-2.5 rounded-full';
 const DOT_WIDTH = 6;
@@ -14,10 +9,10 @@ const ACTIVE_DOT_WIDTH = 22;
 const DOT_OPACITY = 0.3;
 const ACTIVE_DOT_OPACITY = 1;
 
-export interface ListControlProps extends ListControlContent, UniBlockProps {}
+export interface SwipeListControlProps extends SwipeListControlContent, UniBlockProps {}
 
-export const ListControl = JSX<ListControlProps>(
-  ({ className = '', context, children, listMode = 'vertical', gap = 14, paddingX = 16 }) => {
+export const SwipeListControl = JSX<SwipeListControlProps>(
+  ({ className = '', context, children, gap = 14, paddingX = 16 }) => {
     // TODO: temporary workaround for selecting control container
     const [randomHash] = context.useState<string>(
       `slider-control-${String(Math.floor(Math.random() * 1e9))}`,
@@ -62,7 +57,6 @@ export const ListControl = JSX<ListControlProps>(
 
     const handleToggle = (e: any) => {
       const container = e.currentTarget;
-
       const { scrollLeft } = container;
 
       const idx = scrollPoints.findIndex(
@@ -78,30 +72,27 @@ export const ListControl = JSX<ListControlProps>(
     return (
       <div>
         <div
-          className={`mx-[-${paddingX}px] px-[${paddingX}px] text-sm text-primary-main flex gap-3.5 ${
-            listModeStylesMap[listMode]
-          } ${listMode === 'horizontal' ? 'horizontal-list no-scrollbar' : ''} ${className}`}
+          className={`text-sm text-primary-main flex gap-3.5 overflow-auto
+            horizontal-list no-scrollbar mx-[-${paddingX}px] px-[${paddingX}px] ${className}`}
           role="list"
           onScroll={handleToggle}
           data-hash={randomHash}
         >
           {children}
         </div>
-        {listMode === 'horizontal' ? (
-          <div className="flex gap-2 mx-auto w-fit">
-            {childrenCount
-              ? new Array(childrenCount)
-                  .fill(0)
-                  .map((_, idx) => (
-                    <div
-                      key={String(idx)}
-                      className={`${DOT_STYLES}`}
-                      style={getDotStyles(idx, activeIndex, indexFraction)}
-                    />
-                  ))
-              : null}
-          </div>
-        ) : null}
+        <div className="flex gap-2 mx-auto w-fit">
+          {childrenCount
+            ? new Array(childrenCount)
+                .fill(0)
+                .map((_, idx) => (
+                  <div
+                    key={String(idx)}
+                    className={`${DOT_STYLES}`}
+                    style={getDotStyles(idx, activeIndex, indexFraction)}
+                  />
+                ))
+            : null}
+        </div>
       </div>
     );
   },

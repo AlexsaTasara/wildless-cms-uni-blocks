@@ -1,9 +1,9 @@
 import { context } from '../../setup-fixture';
 import { LinkDocs } from './LinkDocs';
-import { LinkDocs as MobileLinkDocs } from './LinkDocs.mobile';
+import { LinkDocs as LinkDocsMobile } from './LinkDocs.mobile';
 import type { LinkDocsContent } from './LinkDocsContent';
 
-export const LINK_DOCS: LinkDocsContent = {
+export const LINK_DOCS_BASE: LinkDocsContent = {
   title: 'Дополнительные документы',
   icon: 'DocIcon',
   documents: [
@@ -29,25 +29,25 @@ export const LINK_DOCS: LinkDocsContent = {
 };
 
 export const LINK_DOCS_ONE_COLUMN: LinkDocsContent = {
-  ...LINK_DOCS,
+  ...LINK_DOCS_BASE,
   columnsMode: 'single',
 };
 
 export const LINK_DOCS_ANOTHER_ICON: LinkDocsContent = {
-  ...LINK_DOCS,
+  ...LINK_DOCS_BASE,
   icon: 'GlassIcon',
   title: '',
 };
 
 export const LINK_DOCS_NO_ICON: LinkDocsContent = {
-  ...LINK_DOCS,
+  ...LINK_DOCS_BASE,
   icon: undefined,
 };
 
 export default {
   'two columns (default)': (
     <div className="container grid grid-cols-12">
-      <LinkDocs className="col-span-12" context={context} {...LINK_DOCS} />
+      <LinkDocs className="col-span-12" context={context} {...LINK_DOCS_BASE} />
     </div>
   ),
   'one column': (
@@ -67,12 +67,12 @@ export default {
   ),
   'mobile vertical': (
     <div className="container grid grid-cols-12">
-      <MobileLinkDocs className="col-span-12" context={context} {...LINK_DOCS_NO_ICON} />
+      <LinkDocsMobile className="col-span-12" context={context} {...LINK_DOCS_NO_ICON} />
     </div>
   ),
   'mobile horizontal': (
     <div className="container grid grid-cols-12">
-      <MobileLinkDocs
+      <LinkDocsMobile
         className="col-span-12"
         context={context}
         {...LINK_DOCS_NO_ICON}

@@ -34,7 +34,9 @@ export const LinkDocs = JSX<LinkDocsProps>(
           >
             {documents?.length
               ? documents.map((doc, i) => (
-                  <LinkDocsListItem key={String(i)} hasBorder={hasBorder} doc={doc} icon={icon} />
+                  <div key={String(i)} role="listitem">
+                    <LinkDocsListItem hasBorder={hasBorder} doc={doc} icon={icon} />
+                  </div>
                 ))
               : null}
           </div>

@@ -31323,7 +31323,6 @@ var SizeTableClass;
     SizeTableClass["L"] = "text-title";
     SizeTableClass["M"] = "text-title-sm";
     SizeTableClass["S"] = "text-title-xs";
-    SizeTableClass["XS"] = "text-title-xs";
     SizeTableClass["2XS"] = "text-title-2xs";
     SizeTableClass["3XS"] = "text-title-3xs";
 })(SizeTableClass || (SizeTableClass = {}));

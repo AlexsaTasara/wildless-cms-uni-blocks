@@ -41,7 +41,7 @@ export const LINK_DOCS_ANOTHER_ICON: LinkDocsContent = {
 
 export const LINK_DOCS_NO_ICON: LinkDocsContent = {
   ...LINK_DOCS_BASE,
-  icon: undefined,
+  icon: '',
 };
 
 export default {
@@ -67,7 +67,22 @@ export default {
   ),
   'mobile vertical': (
     <div className="container grid grid-cols-12">
-      <LinkDocsMobile className="col-span-12" context={context} {...LINK_DOCS_NO_ICON} />
+      <LinkDocsMobile
+        className="col-span-12"
+        context={context}
+        subtitle="Откройте мультивалютный вклад, чтобы распределить свои вложения"
+        {...LINK_DOCS_BASE}
+      />
+    </div>
+  ),
+  'mobile vertical no border': (
+    <div className="container grid grid-cols-12">
+      <LinkDocsMobile
+        className="col-span-12"
+        context={context}
+        hasBorder={false}
+        {...LINK_DOCS_BASE}
+      />
     </div>
   ),
   'mobile horizontal': (
@@ -75,7 +90,17 @@ export default {
       <LinkDocsMobile
         className="col-span-12"
         context={context}
-        {...LINK_DOCS_NO_ICON}
+        {...LINK_DOCS_BASE}
+        listMode={'horizontal'}
+      />
+    </div>
+  ),
+  'mobile horizontal no dots': (
+    <div className="container grid grid-cols-12">
+      <LinkDocsMobile
+        className="col-span-12"
+        context={context}
+        {...LINK_DOCS_BASE}
         listMode={'horizontal'}
       />
     </div>

@@ -2,6 +2,7 @@
  * Icons sorted by name
  */
 export enum IconMap {
+  '',
   'ActualBalanceIcon',
   'AppleIcon',
   'Calendar2Icon',
@@ -70,6 +71,7 @@ export enum IconMap {
 /**
  * @title Иконка
  * @enumNames [
+ *    "",
  *    "Деньги",
  *    "Лого «Apple»",
  *    "Календарь 2",

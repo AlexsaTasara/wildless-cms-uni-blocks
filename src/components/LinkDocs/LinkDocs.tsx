@@ -2,7 +2,7 @@ import { JSX } from '@redneckz/uni-jsx';
 import type { UniBlockProps } from '../../types';
 import { Icon } from '../../ui-kit/Icon/Icon';
 import { Title } from '../../ui-kit/Title/Title';
-import { AlignType } from '../BaseTile/BaseTileProps';
+import type { AlignType } from '../BaseTile/BaseTileProps';
 import type { LinkColumnsMode, LinkDocsContent } from './LinkDocsContent';
 import { formatSuffix } from './formatSuffix';
 import { getExtFromHref } from './getExtFromHref';

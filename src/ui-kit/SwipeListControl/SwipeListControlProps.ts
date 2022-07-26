@@ -6,3 +6,7 @@ export interface SwipeListControlProps extends UniBlockProps {
   padding?: number;
   showDots?: boolean;
 }
+
+export interface SwipeListControlItemProps {
+  className?: string;
+}

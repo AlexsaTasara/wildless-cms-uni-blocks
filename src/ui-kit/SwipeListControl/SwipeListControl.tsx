@@ -9,10 +9,15 @@ const DOT_OPACITY = 0.3;
 const ACTIVE_DOT_OPACITY = 1;
 
 export const SwipeListControl = JSX<SwipeListControlProps>(
-  ({ className = '', context, children, gap = 14, margin, padding, showDots = true }) => {
-    const marginResult = margin ?? -16;
-    const paddingResult = padding ?? 16;
-
+  ({
+    className = '',
+    context,
+    children,
+    gap = 14,
+    margin = -16,
+    padding = 16,
+    showDots = true,
+  }) => {
     const [randomHash] = context.useState<string>(
       `slider-control-${String(Math.floor(Math.random() * 1e9))}`,
     );
@@ -28,7 +33,7 @@ export const SwipeListControl = JSX<SwipeListControlProps>(
         const itemWidth = (container.children[0] as HTMLElement).offsetWidth;
         const scrollItemWidth = itemWidth + gap;
         const scrollableDistance = container.scrollWidth - clientWidth;
-        const edgeScrollDistance = (3 * itemWidth - clientWidth) / 2 + gap + paddingResult;
+        const edgeScrollDistance = (3 * itemWidth - clientWidth) / 2 + gap + padding;
 
         const scrollableItemsCount = childElementCount - 1;
         const scrollPoints: [number, number][] = new Array(scrollableItemsCount)
@@ -71,15 +76,16 @@ export const SwipeListControl = JSX<SwipeListControlProps>(
     return (
       <div>
         <div
-          className={`overflow-auto flex gap-3.5 horizontal-list no-scrollbar ${className}`}
+          className={`overflow-auto flex horizontal-list no-scrollbar ${className}`}
           role="list"
           onScroll={handleToggle}
           data-hash={randomHash}
           style={{
-            marginLeft: `${marginResult}px`,
-            marginRight: `${marginResult}px`,
-            paddingLeft: `${paddingResult}px`,
-            paddingRight: `${paddingResult}px`,
+            marginLeft: `${margin}px`,
+            marginRight: `${margin}px`,
+            paddingLeft: `${padding}px`,
+            paddingRight: `${padding}px`,
+            columnGap: `${gap}px`,
           }}
         >
           {children}

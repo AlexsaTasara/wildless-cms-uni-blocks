@@ -15,10 +15,8 @@ export const LinkDocsListItem = JSX<LinkDocsListItemProps>(({ hasBorder, doc, ic
   const { text, fileSize, ...linkProps } = doc;
   return (
     <a
-      className={`snap-center snap-always min-w-[calc(100%-8px)] flex ${
-        hasBorder ? 'rounded-md border-main-stroke border p-4' : ''
-      }`}
-      role="listitem"
+      className={`flex h-full ${hasBorder ? 'rounded-md border-main-stroke border p-4' : ''}`}
+      role="link"
       {...linkProps}
     >
       {icon && (

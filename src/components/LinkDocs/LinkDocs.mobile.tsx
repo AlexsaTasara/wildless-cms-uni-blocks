@@ -4,6 +4,7 @@ import type { MobileLinkDocsContent } from './LinkDocsContent';
 import { Title } from '../../ui-kit/Title/Title';
 import { SwipeListControl } from '../../ui-kit/SwipeListControl/SwipeListControl';
 import { LinkDocsListItem } from './LinkDocsListItem.mobile';
+import { SwipeListControlItem } from '../../ui-kit/SwipeListControl/SwipeListControlItem';
 
 export interface LinkDocsProps extends MobileLinkDocsContent, UniBlockProps {}
 
@@ -41,7 +42,9 @@ export const LinkDocs = JSX<LinkDocsProps>(
           <SwipeListControl context={context} className="text-sm text-primary-main">
             {documents?.length
               ? documents.map((doc, i) => (
-                  <LinkDocsListItem key={String(i)} hasBorder={hasBorder} doc={doc} icon={icon} />
+                  <SwipeListControlItem key={String(i)}>
+                    <LinkDocsListItem hasBorder={hasBorder} doc={doc} icon={icon} />
+                  </SwipeListControlItem>
                 ))
               : null}
           </SwipeListControl>

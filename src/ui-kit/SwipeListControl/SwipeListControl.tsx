@@ -1,6 +1,6 @@
 import { JSX } from '@redneckz/uni-jsx';
 import type { CSSProperties } from 'react';
-import type { SwipeListControlProps } from './SwipeListControlContent';
+import type { SwipeListControlProps } from './SwipeListControlProps';
 
 const DOT_STYLES = 'bg-primary-main opacity-30 w-1.5 h-1.5 min-w-1.5 min-h-1.5 rounded-full';
 const DOT_WIDTH = 6;

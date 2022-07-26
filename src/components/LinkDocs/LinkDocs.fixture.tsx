@@ -1,9 +1,9 @@
 import { context } from '../../setup-fixture';
 import { LinkDocs } from './LinkDocs';
 import { LinkDocs as LinkDocsMobile } from './LinkDocs.mobile';
-import type { LinkDocsContent } from './LinkDocsContent';
+import type { LinkDocsBaseContent, LinkDocsContent } from './LinkDocsContent';
 
-export const LINK_DOCS_BASE: LinkDocsContent = {
+export const LINK_DOCS_BASE: LinkDocsBaseContent = {
   title: 'Дополнительные документы',
   icon: 'DocIcon',
   documents: [

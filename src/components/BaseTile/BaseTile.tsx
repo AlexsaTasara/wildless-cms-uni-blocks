@@ -33,18 +33,18 @@ export const BaseTile = JSX<BaseTileProps>(
       <div className={`font-sans flex flex-col grow h-full items-start`}>
         {title && (
           <Title
-            size={titleSize || getTitleSizeByClassName(className)}
+            size={getTitleSize(titleSize, className)}
             className={`${TITLE_CLASSES} ${version === 'primary' ? 'text-primary-text' : ''}`}
           >
             {title}
           </Title>
         )}
-        <div className={`flex grow w-full justify-between`}>
-          <div className={`flex flex-col justify-between items-start`}>
+        <div className="flex grow w-full justify-between">
+          <div className="flex flex-col justify-between items-start">
             <div>
-              {description ? (
+              {description && (
                 <div className={`font-normal text-base mt-4 max-w-[600px]`}>{description}</div>
-              ) : null}
+              )}
               {children}
               {items?.length ? renderItems(items, version) : null}
             </div>
@@ -63,7 +63,11 @@ export const BaseTile = JSX<BaseTileProps>(
   },
 );
 
-function getTitleSizeByClassName(className = '') {
+function getTitleSize(titleSize, className = '') {
+  if (titleSize) {
+    return titleSize;
+  }
+
   const colSpan = getColSpan(className);
   if (colSpan <= 4) {
     return 'S';
@@ -78,7 +82,12 @@ function renderItems(items: string[] = [], version?: BlockVersion) {
   return (
     <section className="max-w-[600px] mt-5" role="list">
       {items.map((_, i) => (
-        <BlockItem key={String(i)} className={i ? 'mt-2.5' : ''} text={_} version={version} />
+        <BlockItem
+          key={String(i)}
+          className={i ? 'mt-2.5' : ''}
+          text={_}
+          white={version !== 'primary'}
+        />
       ))}
     </section>
   );
@@ -90,7 +99,7 @@ function renderButton({ icon, asSVG, ...button }: BaseTileIconButton, i: number)
   return icon ? (
     <Button
       key={String(i)}
-      appendLeft={<Icon name={icon} asSVG width="24" height="24" />}
+      appendLeft={<Icon name={icon} asSVG={asSVG} width="24" height="24" />}
       {...button}
     />
   ) : (

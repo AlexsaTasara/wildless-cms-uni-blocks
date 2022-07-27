@@ -59,8 +59,8 @@ export const SwipeListControl = JSX<SwipeListControlProps>(
     const [indexFraction, setIndexFraction] = context.useState<number>(0);
     const [childrenCount, setChildrenCount] = context.useState<number>(0);
 
-    const handleToggle = (e: any) => {
-      const container = e.currentTarget;
+    const handleToggle = (e: UIEvent) => {
+      const container = e.currentTarget as HTMLElement;
       const { scrollLeft } = container;
 
       const idx = scrollPoints.findIndex(
@@ -90,21 +90,17 @@ export const SwipeListControl = JSX<SwipeListControlProps>(
         >
           {children}
         </div>
-        {showDots && (
+        {showDots && childrenCount ? (
           <div className="flex gap-2 mx-auto mt-[22px] w-fit">
-            {childrenCount
-              ? new Array(childrenCount)
-                  .fill(0)
-                  .map((_, idx) => (
-                    <div
-                      key={String(idx)}
-                      className={`${DOT_STYLES}`}
-                      style={getDotStyles(idx, activeIndex, indexFraction)}
-                    />
-                  ))
-              : null}
+            {new Array(childrenCount).fill(0).map((_, idx) => (
+              <div
+                key={String(idx)}
+                className={`${DOT_STYLES}`}
+                style={getDotStyles(idx, activeIndex, indexFraction)}
+              />
+            ))}
           </div>
-        )}
+        ) : null}
       </div>
     );
   },

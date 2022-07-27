@@ -1,7 +1,7 @@
 import { JSX } from '@redneckz/uni-jsx';
 import type { UniBlockProps } from '../../types';
 import type { MobileLinkDocsContent } from './LinkDocsContent';
-import { Title } from '../../ui-kit/Title/Title';
+import { Title } from '../../ui-kit/Title/Title.mobile';
 import { SwipeListControl } from '../../ui-kit/SwipeListControl/SwipeListControl';
 import { LinkDocsListItem } from './LinkDocsListItem.mobile';
 import { SwipeListControlItem } from '../../ui-kit/SwipeListControl/SwipeListControlItem';
@@ -22,11 +22,11 @@ export const LinkDocs = JSX<LinkDocsProps>(
     return (
       <section className={`py-6 px-4 bg-white ${className}`}>
         {title && (
-          <Title className={`text-center ${subtitle ? 'mb-2' : 'mb-5'}`} size="3XS">
+          <Title className={`text-center ${subtitle ? 'mb-2' : 'mb-5'}`} size="M">
             {title}
           </Title>
         )}
-        {subtitle && <h3 className="mb-5 text-center text-md">{subtitle}</h3>}
+        {subtitle && <h3 className="mb-5 text-center text-m-base">{subtitle}</h3>}
         {listMode === 'vertical' ? (
           <div
             className={`text-sm text-primary-main flex flex-col ${hasBorder ? 'gap-3.5' : 'gap-2'}`}

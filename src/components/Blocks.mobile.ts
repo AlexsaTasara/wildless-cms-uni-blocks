@@ -3,6 +3,7 @@ import { Footer } from './Footer/Footer';
 import { Gallery } from './Gallery/Gallery';
 import { Header } from './Header/Header';
 import { Headline } from './Headline/Headline';
+import { LinkDocs } from './LinkDocs/LinkDocs';
 import { MobileAppTile } from './MobileAppTile/MobileAppTile';
 import { Navigation } from './Navigation/Navigation';
 import { PictureText } from './PictureText/PictureText';
@@ -19,6 +20,7 @@ export const Blocks = {
   Gallery,
   Header,
   Headline,
+  LinkDocs,
   MobileAppTile,
   PictureText,
   Placeholder,

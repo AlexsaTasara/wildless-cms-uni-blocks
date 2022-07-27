@@ -31073,7 +31073,7 @@ if (false) { var webpackRendererConnect; }
 
 /***/ }),
 
-/***/ 2306:
+/***/ 2474:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -31363,6 +31363,32 @@ const HEADLINE = {
     'right transparent': (jsx("div", { className: "container grid grid-cols-12", children: jsx(Headline, { className: "col-span-12", context: context, ...HEADLINE, align: "right", bgColor: "transparent" }) })),
 });
 
+;// CONCATENATED MODULE: ./src/components/LinkDocs/constants.ts
+const LINK_DOCS_BASE = {
+    title: 'Дополнительные документы',
+    icon: 'DocIcon',
+    documents: [
+        { text: 'target self', href: '/abc1/cooldoc.doc', target: '_self' },
+        { text: 'target blank', href: '/abc2/wtf.rtf', target: '_blank' },
+        { text: 'GlassIcon', href: '/abc3/map.jpeg' },
+        { text: 'no icon', href: '/abc4' },
+        { text: 'документ 5', href: '/abc5' },
+        { text: 'документ 6', href: '/abc6/abc.pdf' },
+        { text: 'Text text text', href: '/abc7/yolo.png' },
+        {
+            text: 'Some more generic text to stretch item, and even more, more text, and more generic text, and even more, more text, and even more',
+            href: '/abc8/archive.zip',
+            fileSize: '2.3МБ',
+        },
+        { text: 'И ещё немного текста', href: '/abc9/rarniw.rar', fileSize: '666МБ' },
+        {
+            text: 'Форматируем, сортируем, смотрим как отображается...',
+            href: '/abc10/',
+            fileSize: '65ГБ',
+        },
+    ],
+};
+
 ;// CONCATENATED MODULE: ./src/ProjectSettings.ts
 const projectSettings = new (class {
     _ = {
@@ -31405,234 +31431,6 @@ const Icon = JSX(({ className = '', name, alt = `Icon ${name}`, title = alt, asS
         return (jsxs("svg", { className: className, ...imgProps, "aria-hidden": "true", children: [title ? jsx("title", { children: title }) : null, alt ? jsx("desc", { children: alt }) : null, jsx("use", { href: `${href}#icon`, xlinkHref: `${href}#icon` })] }));
     }
     return (jsx("img", { className: className, src: href, alt: alt, title: title, ...imgProps, "aria-hidden": "true" }));
-});
-
-;// CONCATENATED MODULE: ./src/components/LinkDocs/formatSuffix.ts
-const formatSuffix = (ext, fileSize) => {
-    const prefix = ext || fileSize ? ',' : '';
-    const extension = ext ? ` ${ext}` : '';
-    const size = fileSize ? ` (${fileSize})` : '';
-    return prefix + extension + size;
-};
-
-;// CONCATENATED MODULE: ./src/components/LinkDocs/getExtFromHref.ts
-const getExtFromHref = (href) => {
-    if (!href)
-        return '';
-    const lastChunk = href.split('.').pop();
-    if (!lastChunk || lastChunk.includes('/'))
-        return '';
-    return lastChunk;
-};
-
-;// CONCATENATED MODULE: ./src/components/LinkDocs/LinkDocs.tsx
-
-
-
-
-
-
-const titleAlignStyleMap = {
-    left: 'text-left',
-    center: 'text-center',
-    right: 'text-right',
-};
-const titleMarginsStyleMap = {
-    double: 'mb-8',
-    single: 'mb-[26px]',
-};
-const linkColumnsModeStyleMap = {
-    double: 'gap-x-5 gap-y-[26px] flex-wrap',
-    single: 'gap-3.5 flex-col',
-};
-const LinkDocs = JSX(({ className, title, align, documents, icon, columnsMode = 'double' }) => {
-    const containerClasses = linkColumnsModeStyleMap[columnsMode];
-    return (jsxs("section", { className: `font-sans p-[50px] bg-white ${className}`, children: [title && (jsx(Title, { className: `font-medium mt-0 ${titleMarginsStyleMap[columnsMode]} ${titleAlignStyleMap[align ?? 'center']}`, children: title })), jsx("div", { className: `flex ${containerClasses}`, role: "list", children: documents?.length
-                    ? documents.map(({ text, fileSize, ...linkProps }, i) => (jsxs("a", { className: `group flex text-sm align-middle h-fit
-                   text-primary-text no-underline hover:text-primary-main
-                   ${columnsMode === 'double' ? 'basis-[calc(50%-20px)]' : ''}`, role: "listitem", ...linkProps, children: [icon && jsx(Icon, { className: "mr-2.5 h-fit", name: icon, width: "24px", height: "24px" }), jsxs("span", { className: "self-center", children: [text, jsx("span", { className: "text-secondary-text group-hover:text-primary-main", children: linkProps?.href && formatSuffix(getExtFromHref(linkProps.href), fileSize) })] })] }, String(i))))
-                    : null })] }));
-});
-
-;// CONCATENATED MODULE: ./src/ui-kit/Title/Title.mobile.tsx
-
-
-const Title_mobile_SizeTableClass = {
-    XL: 'text-m-title',
-    L: 'text-m-title',
-    M: 'text-m-title-md',
-    S: 'text-m-title-xs',
-    '2XS': 'text-m-title-xs',
-    '3XS': 'text-m-title-xs',
-};
-const Title_mobile_Title = JSX(({ size = 'L', className, children, ...rest }) => {
-    const Tag = size === 'XL' || size === 'L' ? 'h1' : 'h2';
-    return (jsx(Tag, { className: Title_mobile_getClasses(Title_mobile_SizeTableClass[size], className), ...rest, children: children }));
-});
-const Title_mobile_getClasses = (...classes) => classes.filter(Boolean).join(' ');
-
-;// CONCATENATED MODULE: ./src/ui-kit/SwipeListControl/SwipeListControl.tsx
-
-
-const DOT_STYLES = 'bg-primary-main opacity-30 w-1.5 h-1.5 min-w-1.5 min-h-1.5 rounded-full';
-const DOT_WIDTH = 6;
-const ACTIVE_DOT_WIDTH = 22;
-const DOT_OPACITY = 0.3;
-const ACTIVE_DOT_OPACITY = 1;
-const SwipeListControl = JSX(({ className = '', context, children, gap = 14, margin = -16, padding = 16, showDots = true, }) => {
-    const [randomHash] = context.useState(`slider-control-${String(Math.floor(Math.random() * 1e9))}`);
-    const [isFirstRun, setIsFirstRun] = context.useState(true);
-    if (isFirstRun) {
-        window.addEventListener('DOMContentLoaded', () => {
-            const container = document.querySelector(`[data-hash=${randomHash}]`);
-            const { clientWidth, childElementCount } = container;
-            setChildrenCount(childElementCount);
-            const itemWidth = container.children[0].offsetWidth;
-            const scrollItemWidth = itemWidth + gap;
-            const scrollableDistance = container.scrollWidth - clientWidth;
-            const edgeScrollDistance = (3 * itemWidth - clientWidth) / 2 + gap + padding;
-            const scrollableItemsCount = childElementCount - 1;
-            const scrollPoints = new Array(scrollableItemsCount)
-                .fill(0)
-                .map((_, idx) => idx === 0 || idx === scrollableItemsCount - 1
-                ? [
-                    idx > 0 ? scrollableDistance - edgeScrollDistance : 0,
-                    idx > 0 ? scrollableDistance : edgeScrollDistance,
-                ]
-                : [
-                    (idx - 1) * scrollItemWidth + edgeScrollDistance,
-                    idx * scrollItemWidth + edgeScrollDistance,
-                ]);
-            setScrollPoints(scrollPoints);
-        });
-        setIsFirstRun(false);
-    }
-    const [activeIndex, setActiveIndex] = context.useState(0);
-    const [scrollPoints, setScrollPoints] = context.useState([]);
-    const [indexFraction, setIndexFraction] = context.useState(0);
-    const [childrenCount, setChildrenCount] = context.useState(0);
-    const handleToggle = (e) => {
-        const container = e.currentTarget;
-        const { scrollLeft } = container;
-        const idx = scrollPoints.findIndex(([start, end]) => start <= scrollLeft && scrollLeft <= end);
-        setActiveIndex(idx);
-        const [start, end] = scrollPoints[idx];
-        const fraction = (scrollLeft - start) / (end - start);
-        setIndexFraction(fraction);
-    };
-    return (jsxs("div", { children: [jsx("div", { className: `overflow-auto flex horizontal-list no-scrollbar ${className}`, role: "list", onScroll: handleToggle, "data-hash": randomHash, style: {
-                    marginLeft: `${margin}px`,
-                    marginRight: `${margin}px`,
-                    paddingLeft: `${padding}px`,
-                    paddingRight: `${padding}px`,
-                    columnGap: `${gap}px`,
-                }, children: children }), showDots && childrenCount ? (jsx("div", { className: "flex gap-2 mx-auto mt-[22px] w-fit", children: new Array(childrenCount).fill(0).map((_, idx) => (jsx("div", { className: `${DOT_STYLES}`, style: getDotStyles(idx, activeIndex, indexFraction) }, String(idx)))) })) : null] }));
-});
-const getDotStyles = (currentIdx, activeIndex, indexFraction) => {
-    if (currentIdx < activeIndex || currentIdx > activeIndex + 1)
-        return undefined;
-    let styles;
-    const leftIndexMod = 1 - indexFraction;
-    const rightIndexMod = indexFraction;
-    if (currentIdx === activeIndex) {
-        styles = {
-            opacity: `${DOT_OPACITY + ACTIVE_DOT_OPACITY * leftIndexMod}`,
-            width: `${DOT_WIDTH + ACTIVE_DOT_WIDTH * leftIndexMod}px`,
-        };
-    }
-    else {
-        styles = {
-            opacity: `${DOT_OPACITY + ACTIVE_DOT_OPACITY * rightIndexMod}`,
-            width: `${DOT_WIDTH + ACTIVE_DOT_WIDTH * rightIndexMod}px`,
-        };
-    }
-    return styles;
-};
-
-;// CONCATENATED MODULE: ./src/components/LinkDocs/LinkDocsListItem.mobile.tsx
-
-
-
-
-
-const LinkDocsListItem = JSX(({ hasBorder, doc, icon }) => {
-    const { text, fileSize, ...linkProps } = doc;
-    return (jsxs("a", { className: `flex h-full ${hasBorder ? 'rounded-md border-main-stroke border p-4' : ''}`, role: "link", ...linkProps, children: [icon && (jsx(Icon, { className: `mr-4 min-w-6 min-h-6`, name: icon, width: "24px", height: "24px", asSVG: true })), text, linkProps?.href && formatSuffix(getExtFromHref(linkProps.href), fileSize)] }));
-});
-
-;// CONCATENATED MODULE: ./src/ui-kit/SwipeListControl/SwipeListControlItem.tsx
-
-
-const SwipeListControlItem = JSX(({ className = '', children }) => {
-    return (jsx("div", { className: `snap-center snap-always min-w-[calc(100%-8px)] ${className}`, role: "listitem", children: children }));
-});
-
-;// CONCATENATED MODULE: ./src/components/LinkDocs/LinkDocs.mobile.tsx
-
-
-
-
-
-
-const LinkDocs_mobile_LinkDocs = JSX(({ className = '', context, title, subtitle, icon = 'DocIcon', documents, listMode = 'vertical', hasBorder = true, }) => {
-    return (jsxs("section", { className: `py-6 px-4 bg-white ${className}`, children: [title && (jsx(Title_mobile_Title, { className: `text-center ${subtitle ? 'mb-2' : 'mb-5'}`, size: "M", children: title })), subtitle && jsx("h3", { className: "mb-5 text-center text-m-base", children: subtitle }), listMode === 'vertical' ? (jsx("div", { className: `text-sm text-primary-main flex flex-col ${hasBorder ? 'gap-3.5' : 'gap-2'}`, role: "list", children: documents?.length
-                    ? documents.map((doc, i) => (jsx("div", { role: "listitem", children: jsx(LinkDocsListItem, { hasBorder: hasBorder, doc: doc, icon: icon }) }, String(i))))
-                    : null })) : (jsx(SwipeListControl, { context: context, className: "text-sm text-primary-main", children: documents?.length
-                    ? documents.map((doc, i) => (jsx(SwipeListControlItem, { children: jsx(LinkDocsListItem, { hasBorder: hasBorder, doc: doc, icon: icon }) }, String(i))))
-                    : null }))] }));
-});
-
-;// CONCATENATED MODULE: ./src/components/LinkDocs/LinkDocs.fixture.tsx
-
-
-
-
-const LINK_DOCS_BASE = {
-    title: 'Дополнительные документы',
-    icon: 'DocIcon',
-    documents: [
-        { text: 'target self', href: '/abc1/cooldoc.doc', target: '_self' },
-        { text: 'target blank', href: '/abc2/wtf.rtf', target: '_blank' },
-        { text: 'GlassIcon', href: '/abc3/map.jpeg' },
-        { text: 'no icon', href: '/abc4' },
-        { text: 'документ 5', href: '/abc5' },
-        { text: 'документ 6', href: '/abc6/abc.pdf' },
-        { text: 'Text text text', href: '/abc7/yolo.png' },
-        {
-            text: 'Some more generic text to stretch item, and even more, more text, and more generic text, and even more, more text, and even more',
-            href: '/abc8/archive.zip',
-            fileSize: '2.3МБ',
-        },
-        { text: 'И ещё немного текста', href: '/abc9/rarniw.rar', fileSize: '666МБ' },
-        {
-            text: 'Форматируем, сортируем, смотрим как отображается...',
-            href: '/abc10/',
-            fileSize: '65ГБ',
-        },
-    ],
-};
-const LINK_DOCS_ONE_COLUMN = {
-    ...LINK_DOCS_BASE,
-    columnsMode: 'single',
-};
-const LINK_DOCS_ANOTHER_ICON = {
-    ...LINK_DOCS_BASE,
-    icon: 'GlassIcon',
-    title: '',
-};
-const LINK_DOCS_NO_ICON = {
-    ...LINK_DOCS_BASE,
-    icon: '',
-};
-/* harmony default export */ const LinkDocs_fixture = ({
-    'two columns (default)': (jsx("div", { className: "container grid grid-cols-12", children: jsx(LinkDocs, { className: "col-span-12", context: context, ...LINK_DOCS_BASE }) })),
-    'one column': (jsx("div", { className: "container grid grid-cols-12", children: jsx(LinkDocs, { className: "col-span-12", context: context, ...LINK_DOCS_ONE_COLUMN }) })),
-    'another icon': (jsx("div", { className: "container grid grid-cols-12", children: jsx(LinkDocs, { className: "col-span-12", context: context, ...LINK_DOCS_ANOTHER_ICON }) })),
-    'no icon and title': (jsx("div", { className: "container grid grid-cols-12", children: jsx(LinkDocs, { className: "col-span-12", context: context, ...LINK_DOCS_NO_ICON }) })),
-    'mobile vertical': (jsx("div", { className: "container grid grid-cols-12", children: jsx(LinkDocs_mobile_LinkDocs, { className: "col-span-12", context: context, subtitle: "\u041E\u0442\u043A\u0440\u043E\u0439\u0442\u0435 \u043C\u0443\u043B\u044C\u0442\u0438\u0432\u0430\u043B\u044E\u0442\u043D\u044B\u0439 \u0432\u043A\u043B\u0430\u0434, \u0447\u0442\u043E\u0431\u044B \u0440\u0430\u0441\u043F\u0440\u0435\u0434\u0435\u043B\u0438\u0442\u044C \u0441\u0432\u043E\u0438 \u0432\u043B\u043E\u0436\u0435\u043D\u0438\u044F", ...LINK_DOCS_BASE }) })),
-    'mobile vertical no border': (jsx("div", { className: "container grid grid-cols-12", children: jsx(LinkDocs_mobile_LinkDocs, { className: "col-span-12", context: context, hasBorder: false, ...LINK_DOCS_BASE }) })),
-    'mobile horizontal': (jsx("div", { className: "container grid grid-cols-12", children: jsx(LinkDocs_mobile_LinkDocs, { className: "col-span-12", context: context, ...LINK_DOCS_BASE, listMode: 'horizontal' }) })),
-    'mobile horizontal no dots': (jsx("div", { className: "container grid grid-cols-12", children: jsx(LinkDocs_mobile_LinkDocs, { className: "col-span-12", context: context, ...LINK_DOCS_BASE, listMode: 'horizontal' }) })),
 });
 
 ;// CONCATENATED MODULE: ./src/ui-kit/Img.tsx
@@ -31749,6 +31547,53 @@ const TEXT_BLOCK = {
     description: "Если не планируете поездку за границу, продолжайте пользоваться картой Своя. Для поездок за границу можно заказать карту 'Кредитная карта Своя Union Pay' на сайте и в приложении Россельхозбанка",
 };
 /* harmony default export */ const TextBlock_fixture = (jsx("div", { className: "container grid grid-cols-12", children: jsxs("div", { className: "font-sans overflow-hidden col-span-12", children: [jsxs("div", { children: [jsx("p", { children: "Private clients" }), jsxs("div", { className: "flex flex-col gap-6", "data-theme": "pc", children: [jsx(TextBlock, { context: context, ...TEXT_BLOCK, blockVersion: "primary", iconVersion: "small" }), jsx(TextBlock, { context: context, ...TEXT_BLOCK, blockVersion: "primary", iconVersion: "big", image: TextBlock_fixture_image }), jsx(TextBlock, { context: context, ...TEXT_BLOCK, blockVersion: "primary", iconVersion: "none" }), jsx(TextBlock, { context: context, ...TEXT_BLOCK, blockVersion: "primary", iconVersion: "small" }), jsx(TextBlock, { context: context, ...TEXT_BLOCK, blockVersion: "secondary", iconVersion: "small" }), jsx(TextBlock, { context: context, ...TEXT_BLOCK, blockVersion: "secondary-light", iconVersion: "small" })] })] }), jsxs("div", { children: [jsx("p", { children: "Business clients" }), jsxs("div", { className: "flex flex-col gap-6", "data-theme": "bc", children: [jsx(TextBlock, { context: context, ...TEXT_BLOCK, blockVersion: "primary", iconVersion: "small" }), jsx(TextBlock, { context: context, ...TEXT_BLOCK, blockVersion: "secondary", iconVersion: "small" }), jsx(TextBlock, { context: context, ...TEXT_BLOCK, blockVersion: "secondary-light", iconVersion: "small" })] })] }), jsxs("div", { children: [jsx("p", { children: "Ecosystem own" }), jsxs("div", { className: "flex flex-col gap-6", "data-theme": "eo", children: [jsx(TextBlock, { context: context, ...TEXT_BLOCK, blockVersion: "primary", iconVersion: "small" }), jsx(TextBlock, { context: context, ...TEXT_BLOCK, blockVersion: "secondary", iconVersion: "small" }), jsx(TextBlock, { context: context, ...TEXT_BLOCK, blockVersion: "secondary-light", iconVersion: "small" })] })] })] }) }));
+
+;// CONCATENATED MODULE: ./src/components/LinkDocs/formatSuffix.ts
+const formatSuffix = (ext, fileSize) => {
+    const prefix = ext || fileSize ? ',' : '';
+    const extension = ext ? ` ${ext}` : '';
+    const size = fileSize ? ` (${fileSize})` : '';
+    return prefix + extension + size;
+};
+
+;// CONCATENATED MODULE: ./src/components/LinkDocs/getExtFromHref.ts
+const getExtFromHref = (href) => {
+    if (!href)
+        return '';
+    const lastChunk = href.split('.').pop();
+    if (!lastChunk || lastChunk.includes('/'))
+        return '';
+    return lastChunk;
+};
+
+;// CONCATENATED MODULE: ./src/components/LinkDocs/LinkDocs.tsx
+
+
+
+
+
+
+const titleAlignStyleMap = {
+    left: 'text-left',
+    center: 'text-center',
+    right: 'text-right',
+};
+const titleMarginsStyleMap = {
+    double: 'mb-8',
+    single: 'mb-[26px]',
+};
+const linkColumnsModeStyleMap = {
+    double: 'gap-x-5 gap-y-[26px] flex-wrap',
+    single: 'gap-3.5 flex-col',
+};
+const LinkDocs = JSX(({ className, title, align, documents, icon, columnsMode = 'double' }) => {
+    const containerClasses = linkColumnsModeStyleMap[columnsMode];
+    return (jsxs("section", { className: `font-sans p-[50px] bg-white ${className}`, children: [title && (jsx(Title, { className: `font-medium mt-0 ${titleMarginsStyleMap[columnsMode]} ${titleAlignStyleMap[align ?? 'center']}`, children: title })), jsx("div", { className: `flex ${containerClasses}`, role: "list", children: documents?.length
+                    ? documents.map(({ text, fileSize, ...linkProps }, i) => (jsxs("a", { className: `group flex text-sm align-middle h-fit
+                   text-primary-text no-underline hover:text-primary-main
+                   ${columnsMode === 'double' ? 'basis-[calc(50%-20px)]' : ''}`, role: "listitem", ...linkProps, children: [icon && jsx(Icon, { className: "mr-2.5 h-fit", name: icon, width: "24px", height: "24px" }), jsxs("span", { className: "self-center", children: [text, jsx("span", { className: "text-secondary-text group-hover:text-primary-main", children: linkProps?.href && formatSuffix(getExtFromHref(linkProps.href), fileSize) })] })] }, String(i))))
+                    : null })] }));
+});
 
 ;// CONCATENATED MODULE: ./src/components/Accordion/AccordionBlocks.tsx
 
@@ -33827,6 +33672,31 @@ const onlyTitleProps = {
 
 
 /* harmony default export */ const LikeControl_fixture = (jsx("div", { className: "container grid grid-cols-12", children: jsx(LikeControl, { className: "col-span-12", context: context }) }));
+
+;// CONCATENATED MODULE: ./src/components/LinkDocs/LinkDocs.fixture.tsx
+
+
+
+
+const LINK_DOCS_ONE_COLUMN = {
+    ...LINK_DOCS_BASE,
+    columnsMode: 'single',
+};
+const LINK_DOCS_ANOTHER_ICON = {
+    ...LINK_DOCS_BASE,
+    icon: 'GlassIcon',
+    title: '',
+};
+const LINK_DOCS_NO_ICON = {
+    ...LINK_DOCS_BASE,
+    icon: '',
+};
+/* harmony default export */ const LinkDocs_fixture = ({
+    'two columns (default)': (jsx("div", { className: "container grid grid-cols-12", children: jsx(LinkDocs, { className: "col-span-12", context: context, ...LINK_DOCS_BASE }) })),
+    'one column': (jsx("div", { className: "container grid grid-cols-12", children: jsx(LinkDocs, { className: "col-span-12", context: context, ...LINK_DOCS_ONE_COLUMN }) })),
+    'another icon': (jsx("div", { className: "container grid grid-cols-12", children: jsx(LinkDocs, { className: "col-span-12", context: context, ...LINK_DOCS_ANOTHER_ICON }) })),
+    'no icon and title': (jsx("div", { className: "container grid grid-cols-12", children: jsx(LinkDocs, { className: "col-span-12", context: context, ...LINK_DOCS_NO_ICON }) })),
+});
 
 ;// CONCATENATED MODULE: ./src/components/MiniGallery/MiniGallery.fixture.tsx
 
@@ -40793,7 +40663,7 @@ mount();
 
 function mount() {
   // Use dynamic import to load updated modules upon hot reloading
-  var _require = __webpack_require__(2306),
+  var _require = __webpack_require__(2474),
       rendererConfig = _require.rendererConfig,
       fixtures = _require.fixtures,
       decorators = _require.decorators;

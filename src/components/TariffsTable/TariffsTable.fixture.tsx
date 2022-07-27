@@ -1,6 +1,7 @@
 import type { Picture } from '../../model/Picture';
 import { context } from '../../setup-fixture';
 import { TariffsTable } from './TariffsTable';
+import { TariffsTable as TariffsTableMobile } from './TariffsTable.mobile';
 import type { TariffsTableColumn, TariffsTableRowHeader } from './TariffsTableContent';
 
 const image: Picture = {
@@ -178,6 +179,17 @@ export default {
         context={context}
         rowHeaders={rowHeaders}
         columns={columns.slice(0, 3)}
+      />
+    </div>
+  ),
+  mobile: (
+    <div className="container grid grid-cols-12">
+      <TariffsTableMobile
+        className="col-span-12"
+        title="Другие дебетовые карты Россельхозбанка"
+        context={context}
+        rowHeaders={rowHeaders}
+        columns={columns.slice(0, 1)}
       />
     </div>
   ),

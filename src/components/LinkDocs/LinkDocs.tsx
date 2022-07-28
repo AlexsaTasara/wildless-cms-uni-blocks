@@ -4,8 +4,8 @@ import { Icon } from '../../ui-kit/Icon/Icon';
 import { Title } from '../../ui-kit/Title/Title';
 import type { AlignType } from '../BaseTile/BaseTileProps';
 import type { LinkColumnsMode, LinkDocsContent } from './LinkDocsContent';
-import { formatSuffix } from './formatSuffix';
-import { getExtFromHref } from './getExtFromHref';
+import { formatSuffix } from './utils/formatSuffix';
+import { getExtFromHref } from './utils/getExtFromHref';
 
 const titleAlignStyleMap: Record<AlignType, string> = {
   left: 'text-left',

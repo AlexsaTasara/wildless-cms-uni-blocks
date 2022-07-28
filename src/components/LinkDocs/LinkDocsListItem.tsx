@@ -1,9 +1,9 @@
 import { JSX } from '@redneckz/uni-jsx';
 import { Icon } from '../../ui-kit/Icon/Icon';
-import { formatSuffix } from './formatSuffix';
-import { getExtFromHref } from './getExtFromHref';
 import type { IconName } from '../../ui-kit/Icon/IconProps';
 import type { LinkDocsItem } from './LinkDocsContent';
+import { formatSuffix } from './utils/formatSuffix';
+import { getExtFromHref } from './utils/getExtFromHref';
 
 export interface LinkDocsListItemProps {
   hasBorder: boolean;

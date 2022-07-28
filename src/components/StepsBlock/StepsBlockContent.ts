@@ -19,6 +19,7 @@ export interface Step {
 export interface StepsBlockContent {
   /** @title Заголовок */
   title?: string;
+  /** @title Описание */
   description?: string; // TODO: mobile content
   /** @title Линии */
   showLines?: boolean;
@@ -28,5 +29,6 @@ export interface StepsBlockContent {
    * @maxItems 3
    */
   steps?: Step[];
+  /** @title Размер */
   size?: SizeVersion; // TODO: mobile content
 }

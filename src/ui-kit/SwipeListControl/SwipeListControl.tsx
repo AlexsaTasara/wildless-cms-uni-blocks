@@ -27,6 +27,8 @@ export const SwipeListControl = JSX<SwipeListControlProps>(
     const [childrenCount, setChildrenCount] = context.useState<number>(0);
     const [scrollPoints, setScrollPoints] = context.useState<[number, number][]>([]);
 
+    console.log('children %o');
+
     useDOMContentLoaded(context, () => {
       const container = document.querySelector(`[data-hash=${randomHash}]`) as Element;
       const { clientWidth, childElementCount, scrollWidth, children } = container;

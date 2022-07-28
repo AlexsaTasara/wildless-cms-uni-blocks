@@ -5157,7 +5157,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, "@font-face{font-display:swap;font-fami
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 ___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_1_use_1_node_modules_postcss_loader_dist_cjs_js_fonts_ubuntu_ubuntu_css__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Z);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "[data-theme=pc]{--color-primary-main:66,171,68;--color-primary-hover:36,131,65;--color-primary-active:36,95,52;--color-secondary-hover:216,242,217;--color-secondary-active:197,226,198;--color-gradient-from:141,189,76;--color-gradient-to:69,172,69}[data-theme=bc]{--color-primary-main:131,184,62;--color-primary-hover:92,146,29;--color-primary-active:60,94,16;--color-secondary-hover:232,244,217;--color-secondary-active:216,227,202;--color-gradient-from:141,189,76;--color-gradient-to:69,172,69}[data-theme=eo]{--color-primary-main:221,182,61;--color-primary-hover:187,151,39;--color-primary-active:126,99,12;--color-secondary-hover:241,236,221;--color-secondary-active:229,222,199;--color-gradient-from:141,189,76;--color-gradient-to:69,172,69}[data-theme=eo2]{--color-primary-main:255,204,0;--color-primary-hover:187,151,39;--color-primary-active:126,99,12;--color-secondary-hover:241,236,221;--color-secondary-active:229,222,199;--color-gradient-from:141,189,76;--color-gradient-to:69,172,69}[data-theme=eo3]{--color-primary-main:225,186,30;--color-primary-hover:187,151,39;--color-primary-active:126,99,12;--color-secondary-hover:241,236,221;--color-secondary-active:229,222,199;--color-gradient-from:141,189,76;--color-gradient-to:69,172,69}[data-theme=eo4]{--color-primary-main:233,191,23;--color-primary-hover:187,151,39;--color-primary-active:126,99,12;--color-secondary-hover:241,236,221;--color-secondary-active:229,222,199;--color-gradient-from:141,189,76;--color-gradient-to:69,172,69}.container{margin-left:auto;margin-right:auto;width:100%}@media (min-width:640px){.container{max-width:640px}}@media (min-width:768px){.container{max-width:768px}}@media (min-width:1024px){.container{max-width:1024px}}@media (min-width:1280px){.container{max-width:1280px}}.pointer-events-none{pointer-events:none}.pointer-events-auto{pointer-events:auto}.invisible{visibility:hidden}.absolute{position:absolute}.relative{position:relative}.sticky{position:-webkit-sticky;position:sticky}.inset-x-0{left:0;right:0}.top-1{top:.25rem}.right-1{right:.25rem}.top-7{top:1.75rem}.right-7{right:1.75rem}.top-0{top:0}.right-0{right:0}.bottom-0{bottom:0}.top-4{top:1rem}.right-4{right:1rem}.left-0{left:0}.top-1\\/2{top:50%}.left-8{left:2rem}.left-1{left:.25rem}.-bottom-2{bottom:-.5rem}.top-8{top:2rem}.z-10{z-index:10}.col-span-12{grid-column:span 12/span 12}.col-span-8{grid-column:span 8/span 8}.col-span-4{grid-column:span 4/span 4}.col-span-6{grid-column:span 6/span 6}.m-0{margin:0}.mx-auto{margin-left:auto;margin-right:auto}.mx-7{margin-left:1.75rem;margin-right:1.75rem}.my-4{margin-bottom:1rem;margin-top:1rem}.mx-1{margin-left:.25rem;margin-right:.25rem}.mx-2{margin-left:.5rem;margin-right:.5rem}.my-3{margin-bottom:.75rem;margin-top:.75rem}.mx-\\[-4px\\]{margin-left:-4px;margin-right:-4px}.mb-2\\.5{margin-bottom:.625rem}.mb-2{margin-bottom:.5rem}.mb-5{margin-bottom:1.25rem}.mt-3{margin-top:.75rem}.mt-5{margin-top:1.25rem}.mt-auto{margin-top:auto}.ml-7{margin-left:1.75rem}.mt-4{margin-top:1rem}.mt-9{margin-top:2.25rem}.mt-1\\.5{margin-top:.375rem}.mt-1{margin-top:.25rem}.mt-2\\.5{margin-top:.625rem}.mt-2{margin-top:.5rem}.mb-9{margin-bottom:2.25rem}.mb-4{margin-bottom:1rem}.mb-\\[18px\\]{margin-bottom:18px}.mr-6{margin-right:1.5rem}.mr-\\[42px\\]{margin-right:42px}.mt-\\[23px\\]{margin-top:23px}.mb-7{margin-bottom:1.75rem}.mb-3{margin-bottom:.75rem}.mr-3{margin-right:.75rem}.mr-2{margin-right:.5rem}.ml-2{margin-left:.5rem}.mb-8{margin-bottom:2rem}.mb-6{margin-bottom:1.5rem}.mt-6{margin-top:1.5rem}.mr-8{margin-right:2rem}.ml-auto{margin-left:auto}.mr-5{margin-right:1.25rem}.mr-7{margin-right:1.75rem}.mt-0{margin-top:0}.mb-\\[26px\\]{margin-bottom:26px}.mr-2\\.5{margin-right:.625rem}.mr-4{margin-right:1rem}.ml-4{margin-left:1rem}.ml-5{margin-left:1.25rem}.mb-3\\.5{margin-bottom:.875rem}.mb-1{margin-bottom:.25rem}.mb-0\\.5{margin-bottom:.125rem}.mb-0{margin-bottom:0}.ml-\\[34px\\]{margin-left:34px}.ml-\\[24px\\]{margin-left:24px}.ml-3{margin-left:.75rem}.mr-\\[14px\\]{margin-right:14px}.ml-px{margin-left:1px}.mt-0\\.5{margin-top:.125rem}.ml-0\\.5{margin-left:.125rem}.ml-0{margin-left:0}.ml-2\\.5{margin-left:.625rem}.mt-\\[22px\\]{margin-top:22px}.box-border{box-sizing:border-box}.block{display:block}.inline-block{display:inline-block}.flex{display:flex}.inline-flex{display:inline-flex}.table{display:table}.grid{display:grid}.hidden{display:none}.h-full{height:100%}.h-\\[24px\\]{height:24px}.h-12{height:3rem}.h-\\[70px\\]{height:70px}.h-\\[63px\\]{height:63px}.h-8{height:2rem}.h-fit{height:-webkit-fit-content;height:-moz-fit-content;height:fit-content}.h-10{height:2.5rem}.h-\\[38px\\]{height:38px}.h-\\[1px\\]{height:1px}.h-\\[90px\\]{height:90px}.h-\\[48px\\]{height:48px}.h-4{height:1rem}.h-\\[50px\\]{height:50px}.h-\\[3px\\]{height:3px}.h-0\\.5{height:.125rem}.h-0{height:0}.h-\\[100px\\]{height:100px}.h-2{height:.5rem}.h-\\[6px\\]{height:6px}.h-5{height:1.25rem}.h-\\[2px\\]{height:2px}.h-1\\.5{height:.375rem}.h-1{height:.25rem}.max-h-0{max-height:0}.max-h-6{max-height:1.5rem}.max-h-12{max-height:3rem}.min-h-\\[70px\\]{min-height:70px}.min-h-\\[63px\\]{min-height:63px}.min-h-\\[32px\\]{min-height:32px}.min-h-6{min-height:1.5rem}.min-h-\\[90px\\]{min-height:90px}.min-h-\\[420px\\]{min-height:420px}.min-h-\\[50px\\]{min-height:50px}.min-h-\\[100px\\]{min-height:100px}.min-h-\\[300px\\]{min-height:300px}.min-h-\\[320px\\]{min-height:320px}.min-h-\\[360px\\]{min-height:360px}.min-h-2{min-height:.5rem}.min-h-\\[6px\\]{min-height:6px}.min-h-12{min-height:3rem}.min-h-1\\.5{min-height:.375rem}.min-h-1{min-height:.25rem}.w-\\[24px\\]{width:24px}.w-full{width:100%}.w-\\[70px\\]{width:70px}.w-\\[84px\\]{width:84px}.w-80{width:20rem}.w-\\[63px\\]{width:63px}.w-\\[200px\\]{width:200px}.w-8{width:2rem}.w-max{width:-webkit-max-content;width:-moz-max-content;width:max-content}.w-\\[75px\\]{width:75px}.w-\\[280px\\]{width:280px}.w-\\[38px\\]{width:38px}.w-\\[364px\\]{width:364px}.w-\\[260px\\]{width:260px}.w-\\[125px\\]{width:125px}.w-\\[90px\\]{width:90px}.w-\\[48px\\]{width:48px}.w-\\[50px\\]{width:50px}.w-\\[2px\\]{width:2px}.w-\\[100px\\]{width:100px}.w-\\[276px\\]{width:276px}.w-12{width:3rem}.w-\\[354px\\]{width:354px}.w-4{width:1rem}.w-2{width:.5rem}.w-\\[6px\\]{width:6px}.w-\\[36px\\]{width:36px}.w-5{width:1.25rem}.w-\\[1280px\\]{width:1280px}.w-10{width:2.5rem}.w-1\\.5{width:.375rem}.w-1{width:.25rem}.w-fit{width:-webkit-fit-content;width:-moz-fit-content;width:fit-content}.min-w-\\[70px\\]{min-width:70px}.min-w-\\[63px\\]{min-width:63px}.min-w-\\[364px\\]{min-width:364px}.min-w-\\[260px\\]{min-width:260px}.min-w-\\[32px\\]{min-width:32px}.min-w-6{min-width:1.5rem}.min-w-\\[90px\\]{min-width:90px}.min-w-\\[600px\\]{min-width:600px}.min-w-\\[50px\\]{min-width:50px}.min-w-\\[100px\\]{min-width:100px}.min-w-2{min-width:.5rem}.min-w-\\[6px\\]{min-width:6px}.min-w-1\\.5{min-width:.375rem}.min-w-1{min-width:.25rem}.min-w-full{min-width:100%}.max-w-\\[170px\\]{max-width:170px}.max-w-\\[600px\\]{max-width:600px}.max-w-\\[47rem\\]{max-width:47rem}.max-w-\\[580px\\]{max-width:580px}.max-w-\\[292px\\]{max-width:292px}.max-w-\\[308px\\]{max-width:308px}.max-w-\\[490px\\]{max-width:490px}.max-w-\\[149px\\]{max-width:149px}.flex-none{flex:none}.flex-1{flex:1 1 0%}.flex-shrink-0,.shrink-0{flex-shrink:0}.flex-grow,.grow{flex-grow:1}.grow-0{flex-grow:0}.basis-\\[calc\\(50\\%-20px\\)\\]{flex-basis:calc(50% - 20px)}.basis-full{flex-basis:100%}.basis-0{flex-basis:0px}.-translate-x-full{--tw-translate-x:-100%}.-translate-x-full,.rotate-180{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.rotate-180{--tw-rotate:180deg}.transform{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@-webkit-keyframes progress{0%{transform:translateX(-100%)}to{transform:translateX(0)}}@keyframes progress{0%{transform:translateX(-100%)}to{transform:translateX(0)}}.animate-slide{-webkit-animation:progress linear;animation:progress linear}.cursor-pointer{cursor:pointer}.select-none{-webkit-user-select:none;-moz-user-select:none;user-select:none}.resize{resize:both}.snap-center{scroll-snap-align:center}.snap-always{scroll-snap-stop:always}.list-none{list-style-type:none}.appearance-none{-webkit-appearance:none;-moz-appearance:none;appearance:none}.grid-cols-12{grid-template-columns:repeat(12,minmax(0,1fr))}.grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.grid-cols-6{grid-template-columns:repeat(6,minmax(0,1fr))}.flex-row{flex-direction:row}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.content-center{align-content:center}.items-start{align-items:flex-start}.items-end{align-items:flex-end}.items-center{align-items:center}.items-baseline{align-items:baseline}.items-stretch{align-items:stretch}.justify-start{justify-content:flex-start}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-3\\.5{gap:.875rem}.gap-3{gap:.75rem}.gap-5{gap:1.25rem}.gap-4{gap:1rem}.gap-1{gap:.25rem}.gap-\\[54px\\]{gap:54px}.gap-11{gap:2.75rem}.gap-\\[14px\\]{gap:14px}.gap-2{gap:.5rem}.gap-6{gap:1.5rem}.gap-\\[6px\\]{gap:6px}.gap-8{gap:2rem}.gap-x-5{-moz-column-gap:1.25rem;column-gap:1.25rem}.gap-y-\\[26px\\]{row-gap:26px}.gap-x-\\[101px\\]{-moz-column-gap:101px;column-gap:101px}.self-start{align-self:flex-start}.self-center{align-self:center}.overflow-auto{overflow:auto}.overflow-hidden{overflow:hidden}.whitespace-pre-line{white-space:pre-line}.whitespace-pre-wrap{white-space:pre-wrap}.rounded{border-radius:.25rem}.rounded-full{border-radius:9999px}.rounded-md{border-radius:.375rem}.rounded-3xl{border-radius:1.5rem}.rounded-\\[40px\\]{border-radius:40px}.rounded-t-md{border-top-left-radius:.375rem;border-top-right-radius:.375rem}.rounded-b-md{border-bottom-left-radius:.375rem;border-bottom-right-radius:.375rem}.rounded-tl-lg{border-top-left-radius:.5rem}.rounded-bl-3xl{border-bottom-left-radius:1.5rem}.rounded-br-3xl{border-bottom-right-radius:1.5rem}.border{border-width:1px}.border-0{border-width:0}.border-\\[3px\\]{border-width:3px}.border-2{border-width:2px}.border-y-0{border-bottom-width:0;border-top-width:0}.border-x-0{border-left-width:0;border-right-width:0}.border-y{border-top-width:1px}.border-b,.border-y{border-bottom-width:1px}.border-b-0{border-bottom-width:0}.border-t-0{border-top-width:0}.border-t{border-top-width:1px}.border-r{border-right-width:1px}.border-solid{border-style:solid}.border-none{border-style:none}.border-main-divider{--tw-border-opacity:1;border-color:rgba(235,237,240,var(--tw-border-opacity))}.border-main-stroke{--tw-border-opacity:1;border-color:rgba(201,202,204,var(--tw-border-opacity))}.border-primary-main{--tw-border-opacity:1;border-color:rgba(var(--color-primary-main),var(--tw-border-opacity))}.border-main{--tw-border-opacity:1;border-color:rgba(240,244,240,var(--tw-border-opacity))}.border-white{--tw-border-opacity:1;border-color:rgb(255 255 255/var(--tw-border-opacity))}.border-black{--tw-border-opacity:1;border-color:rgb(0 0 0/var(--tw-border-opacity))}.border-transparent{border-color:transparent}.border-y-main-divider{--tw-border-opacity:1;border-bottom-color:rgba(235,237,240,var(--tw-border-opacity));border-top-color:rgba(235,237,240,var(--tw-border-opacity))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255/var(--tw-bg-opacity))}.bg-transparent{background-color:transparent}.bg-secondary-text{--tw-bg-opacity:1;background-color:rgba(125,126,127,var(--tw-bg-opacity))}.bg-main{--tw-bg-opacity:1;background-color:rgba(240,244,240,var(--tw-bg-opacity))}.bg-secondary-light{--tw-bg-opacity:1;background-color:rgba(245,247,249,var(--tw-bg-opacity))}.bg-primary-main{--tw-bg-opacity:1;background-color:rgba(var(--color-primary-main),var(--tw-bg-opacity))}.bg-main-divider{--tw-bg-opacity:1;background-color:rgba(235,237,240,var(--tw-bg-opacity))}.bg-inherit{background-color:inherit}.bg-white\\/30{background-color:hsla(0,0%,100%,.3)}.bg-primary-main\\/10{background-color:rgba(var(--color-primary-main),.1)}.bg-secondary-dark{--tw-bg-opacity:1;background-color:rgba(226,228,229,var(--tw-bg-opacity))}.bg-opacity-to-white{background-image:linear-gradient(270deg,#fff 34.89%,hsla(0,0%,100%,0) 92.52%);}.bg-gradient-to-r{background-image:linear-gradient(to right,var(--tw-gradient-stops))}.from-main-gradient-start{--tw-gradient-from:rgba(var(--color-gradient-from),1);--tw-gradient-to:rgba(var(--color-gradient-from),0);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-white{--tw-gradient-from:#fff;--tw-gradient-to:hsla(0,0%,100%,0);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.to-main-gradient-end{--tw-gradient-to:rgba(var(--color-gradient-to),1)}.to-transparent{--tw-gradient-to:transparent}.p-\\[50px\\]{padding:50px}.p-0{padding:0}.p-12{padding:3rem}.p-10{padding:2.5rem}.p-\\[49px\\]{padding:49px}.p-9{padding:2.25rem}.p-4{padding:1rem}.p-7{padding:1.75rem}.p-2{padding:.5rem}.p-14{padding:3.5rem}.p-\\[12px\\]{padding:12px}.p-\\[10px\\]{padding:10px}.p-\\[26px\\]{padding:26px}.px-9{padding-left:2.25rem;padding-right:2.25rem}.py-\\[9px\\]{padding-bottom:9px;padding-top:9px}.px-0{padding-left:0;padding-right:0}.py-5{padding-bottom:1.25rem;padding-top:1.25rem}.py-\\[50px\\]{padding-bottom:50px;padding-top:50px}.py-\\[11px\\]{padding-bottom:11px;padding-top:11px}.px-7{padding-left:1.75rem;padding-right:1.75rem}.py-7{padding-bottom:1.75rem;padding-top:1.75rem}.py-2{padding-bottom:.5rem;padding-top:.5rem}.py-10{padding-bottom:2.5rem;padding-top:2.5rem}.px-20{padding-left:5rem;padding-right:5rem}.px-4{padding-left:1rem;padding-right:1rem}.py-6{padding-bottom:1.5rem;padding-top:1.5rem}.py-2\\.5{padding-bottom:.625rem;padding-top:.625rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-0\\.5{padding-bottom:.125rem;padding-top:.125rem}.py-0{padding-bottom:0;padding-top:0}.px-\\[88px\\]{padding-left:88px;padding-right:88px}.py-\\[18px\\]{padding-bottom:18px;padding-top:18px}.py-4{padding-bottom:1rem;padding-top:1rem}.py-3\\.5{padding-bottom:.875rem;padding-top:.875rem}.py-3{padding-bottom:.75rem;padding-top:.75rem}.px-1{padding-left:.25rem;padding-right:.25rem}.pl-4{padding-left:1rem}.pl-12{padding-left:3rem}.pr-\\[6\\%\\]{padding-right:6%}.pr-2\\.5{padding-right:.625rem}.pr-2{padding-right:.5rem}.pb-5{padding-bottom:1.25rem}.pb-2{padding-bottom:.5rem}.pl-\\[50px\\]{padding-left:50px}.pr-\\[50px\\]{padding-right:50px}.pt-7{padding-top:1.75rem}.pb-\\[46px\\]{padding-bottom:46px}.pt-6{padding-top:1.5rem}.pr-\\[56px\\]{padding-right:56px}.pl-11{padding-left:2.75rem}.pt-4{padding-top:1rem}.pb-8{padding-bottom:2rem}.pt-\\[3px\\]{padding-top:3px}.pt-\\[30px\\]{padding-top:30px}.pb-7{padding-bottom:1.75rem}.pt-5{padding-top:1.25rem}.pb-\\[5px\\]{padding-bottom:5px}.pt-\\[5px\\]{padding-top:5px}.pt-10{padding-top:2.5rem}.pb-\\[50px\\]{padding-bottom:50px}.pr-\\[7\\.5rem\\]{padding-right:7.5rem}.pl-2\\.5{padding-left:.625rem}.pt-2\\.5{padding-top:.625rem}.pb-1\\.5{padding-bottom:.375rem}.pr-\\[6\\.25rem\\]{padding-right:6.25rem}.pl-2{padding-left:.5rem}.pt-2{padding-top:.5rem}.pb-1{padding-bottom:.25rem}.pb-\\[2px\\]{padding-bottom:2px}.pt-1{padding-top:.25rem}.pl-10{padding-left:2.5rem}.pb-3{padding-bottom:.75rem}.pt-1\\.5{padding-top:.375rem}.pl-1{padding-left:.25rem}.pr-4{padding-right:1rem}.pt-0\\.5{padding-top:.125rem}.pr-3{padding-right:.75rem}.pt-0{padding-top:0}.pr-28{padding-right:7rem}.pr-9{padding-right:2.25rem}.pr-\\[4\\.75rem\\]{padding-right:4.75rem}.pr-\\[9\\.4rem\\]{padding-right:9.4rem}.text-left{text-align:left}.text-center{text-align:center}.text-right{text-align:right}.align-middle{vertical-align:middle}.font-sans{font-family:Ubuntu,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji}.text-base{font-size:1rem;line-height:1.5rem}.text-sm{font-size:.875rem;line-height:1.375rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:.75rem;line-height:1.125rem}.text-lg{font-size:2.188rem;line-height:3rem}.text-2xs{font-size:.625rem;line-height:.625rem}.text-m-md{font-size:.9375rem;line-height:1.5rem}.text-m-base{font-size:1rem;line-height:1.5rem}.text-m-title{font-size:1.375rem;line-height:1.8125rem}.text-m-title-xs{font-size:1.0625rem;line-height:1.375rem}.text-title-sm{font-size:1.75rem;line-height:2.5rem}.text-button{font-size:.875rem;line-height:1.25rem}.text-m-title-md{font-size:1.25rem;line-height:1.625rem}.text-title-lg{font-size:2.5rem;line-height:3rem}.text-title{font-size:2rem;line-height:2.5rem}.text-title-xs{font-size:1.5rem;line-height:1.875rem}.text-title-2xs{font-size:1.25rem;line-height:1.625rem}.font-normal{font-weight:400}.font-medium{font-weight:500}.font-semibold{font-weight:600}.leading-4{line-height:1rem}.leading-5{line-height:1.25rem}.leading-\\[14px\\]{line-height:14px}.text-secondary-text{--tw-text-opacity:1;color:rgba(125,126,127,var(--tw-text-opacity))}.text-black{--tw-text-opacity:1;color:rgb(0 0 0/var(--tw-text-opacity))}.text-primary-text{--tw-text-opacity:1;color:rgba(28,28,28,var(--tw-text-opacity))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity))}.text-primary-main{--tw-text-opacity:1;color:rgba(var(--color-primary-main),var(--tw-text-opacity))}.text-secondary-light{--tw-text-opacity:1;color:rgba(245,247,249,var(--tw-text-opacity))}.text-white\\/80{color:hsla(0,0%,100%,.8)}.no-underline{-webkit-text-decoration-line:none;text-decoration-line:none}.opacity-80{opacity:.8}.opacity-60{opacity:.6}.opacity-30{opacity:.3}.opacity-0{opacity:0}.shadow-\\[0_8px_32px_0px_\\#00000014\\]{--tw-shadow:0 8px 32px 0px #00000014;--tw-shadow-colored:0 8px 32px 0px var(--tw-shadow-color)}.shadow-\\[0_4px_25px_rgba\\(0\\2c 0\\2c 0\\2c 0\\.07\\)\\],.shadow-\\[0_8px_32px_0px_\\#00000014\\]{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-\\[0_4px_25px_rgba\\(0\\2c 0\\2c 0\\2c 0\\.07\\)\\]{--tw-shadow:0 4px 25px rgba(0,0,0,.07);--tw-shadow-colored:0 4px 25px var(--tw-shadow-color)}.outline-none{outline:2px solid transparent;outline-offset:2px}.transition-all{transition-duration:.15s;transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1)}.duration-300{transition-duration:.3s}.duration-1000{transition-duration:1s}.rotate-180{transform:rotate(180deg)}.-translate-x-full{transform:translateX(-100%)}.no-scrollbar::-webkit-scrollbar{display:none}.no-scrollbar{-ms-overflow-style:none;scrollbar-width:none}.horizontal-list{-webkit-overflow-scrolling:touch;display:flex;overflow-x:scroll;overscroll-behavior:contain;scroll-snap-type:x mandatory;touch-action:pan-x}.horizontal-list-item{flex-shrink:0;scroll-snap-align:start;scroll-snap-stop:always;width:100%}input[type=range].slider{-webkit-appearance:none;background:transparent;background-image:linear-gradient(#42ab44,#42ab44);background-repeat:no-repeat;border-radius:5px;height:4px}input[type=range].slider::-webkit-slider-thumb{-webkit-appearance:none;background:#fff;border:3px solid #42ab44;border-radius:50%;box-shadow:none;cursor:pointer;height:18px;width:18px}input[type=range].slider::-moz-range-thumb{background:#fff;border:3px solid #42ab44;border-radius:50%;box-shadow:none;cursor:pointer;height:12px;width:12px}input[type=range].slider::-ms-thumb{background:#fff;border:3px solid #42ab44;border-radius:50%;box-shadow:none;cursor:pointer;height:18px;width:18px}.first\\:rounded-tl-md:first-child{border-top-left-radius:.375rem}.first\\:rounded-bl-md:first-child{border-bottom-left-radius:.375rem}.first\\:pt-7:first-child{padding-top:1.75rem}.first\\:pl-0:first-child{padding-left:0}.first\\:pt-5:first-child{padding-top:1.25rem}.last\\:mb-0:last-child{margin-bottom:0}.last\\:rounded-tr-md:last-child{border-top-right-radius:.375rem}.last\\:rounded-br-md:last-child{border-bottom-right-radius:.375rem}.last\\:border-b-0:last-child{border-bottom-width:0}.last\\:pb-7:last-child{padding-bottom:1.75rem}.last\\:pb-5:last-child{padding-bottom:1.25rem}.visited\\:text-secondary-text:visited{color:rgba(125,126,127,var(--tw-text-opacity))}.checked\\:border-primary-main:checked{--tw-border-opacity:1;border-color:rgba(var(--color-primary-main),var(--tw-border-opacity))}.checked\\:bg-primary-main:checked{--tw-bg-opacity:1;background-color:rgba(var(--color-primary-main),var(--tw-bg-opacity))}.hover\\:border-primary-main:hover{--tw-border-opacity:1;border-color:rgba(var(--color-primary-main),var(--tw-border-opacity))}.hover\\:bg-secondary-hover:hover{--tw-bg-opacity:1;background-color:rgba(var(--color-secondary-hover),var(--tw-bg-opacity))}.hover\\:bg-primary-hover:hover{--tw-bg-opacity:1;background-color:rgba(var(--color-primary-hover),var(--tw-bg-opacity))}.hover\\:fill-primary-main:hover{fill:rgba(var(--color-primary-main),1)}.hover\\:text-primary-main:hover{--tw-text-opacity:1;color:rgba(var(--color-primary-main),var(--tw-text-opacity))}.hover\\:text-primary-text:hover{--tw-text-opacity:1;color:rgba(28,28,28,var(--tw-text-opacity))}.hover\\:text-secondary-hover:hover{--tw-text-opacity:1;color:rgba(var(--color-secondary-hover),var(--tw-text-opacity))}.focus\\:border-primary-text:focus{--tw-border-opacity:1;border-color:rgba(28,28,28,var(--tw-border-opacity))}.active\\:bg-secondary-active:active{--tw-bg-opacity:1;background-color:rgba(var(--color-secondary-active),var(--tw-bg-opacity))}.active\\:bg-primary-active:active{--tw-bg-opacity:1;background-color:rgba(var(--color-primary-active),var(--tw-bg-opacity))}.group:last-child .group-last\\:last\\:pb-0:last-child{padding-bottom:0}.group:hover .group-hover\\:text-primary-main{--tw-text-opacity:1;color:rgba(var(--color-primary-main),var(--tw-text-opacity))}.group:hover .group-hover\\:text-primary-text{--tw-text-opacity:1;color:rgba(28,28,28,var(--tw-text-opacity))}.peer:checked~.peer-checked\\:block{display:block}.peer:focus~.peer-focus\\:visible{visibility:visible}@media (min-width:1280px) and (max-width:1535px){.xl\\:w-\\[220px\\]{width:220px}.xl\\:gap-8{gap:2rem}.xl\\:gap-5{gap:1.25rem}}", "",{"version":3,"sources":["webpack://./src/common.css","<no source>"],"names":[],"mappings":"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","sourcesContent":["@import '../fonts/ubuntu/ubuntu.css';\n\n/* Private clients | Green */\n[data-theme='pc'] {\n  --color-primary-main: 66, 171, 68;\n  --color-primary-hover: 36, 131, 65;\n  --color-primary-active: 36, 95, 52;\n  --color-secondary-hover: 216, 242, 217;\n  --color-secondary-active: 197, 226, 198;\n  --color-gradient-from: 141, 189, 76;\n  --color-gradient-to: 69, 172, 69;\n}\n/* Business clients | Light-Green */\n[data-theme='bc'] {\n  --color-primary-main: 131, 184, 62;\n  --color-primary-hover: 92, 146, 29;\n  --color-primary-active: 60, 94, 16;\n  --color-secondary-hover: 232, 244, 217;\n  --color-secondary-active: 216, 227, 202;\n  --color-gradient-from: 141, 189, 76; /* TODO: change color to theme bc */\n  --color-gradient-to: 69, 172, 69; /* TODO: change color to theme bc */\n}\n/* Ecosystem own | Yellow */\n[data-theme='eo'] {\n  --color-primary-main: 221, 182, 61;\n  --color-primary-hover: 187, 151, 39;\n  --color-primary-active: 126, 99, 12;\n  --color-secondary-hover: 241, 236, 221;\n  --color-secondary-active: 229, 222, 199;\n  --color-gradient-from: 141, 189, 76; /* TODO: change color to theme eo */\n  --color-gradient-to: 69, 172, 69; /* TODO: change color to theme eo */\n}\n\n[data-theme='eo2'] {\n  --color-primary-main: 255, 204, 0;\n  --color-primary-hover: 187, 151, 39;\n  --color-primary-active: 126, 99, 12;\n  --color-secondary-hover: 241, 236, 221;\n  --color-secondary-active: 229, 222, 199;\n  --color-gradient-from: 141, 189, 76; /* TODO: change color to theme eo */\n  --color-gradient-to: 69, 172, 69; /* TODO: change color to theme eo */\n}\n\n[data-theme='eo3'] {\n  --color-primary-main: 225, 186, 30;\n  --color-primary-hover: 187, 151, 39;\n  --color-primary-active: 126, 99, 12;\n  --color-secondary-hover: 241, 236, 221;\n  --color-secondary-active: 229, 222, 199;\n  --color-gradient-from: 141, 189, 76; /* TODO: change color to theme eo */\n  --color-gradient-to: 69, 172, 69; /* TODO: change color to theme eo */\n}\n\n[data-theme='eo4'] {\n  --color-primary-main: 233, 191, 23;\n  --color-primary-hover: 187, 151, 39;\n  --color-primary-active: 126, 99, 12;\n  --color-secondary-hover: 241, 236, 221;\n  --color-secondary-active: 229, 222, 199;\n  --color-gradient-from: 141, 189, 76; /* TODO: change color to theme eo */\n  --color-gradient-to: 69, 172, 69; /* TODO: change color to theme eo */\n}\n\n@tailwind components;\n@tailwind utilities;\n\n@layer utilities {\n  .rotate-180 {\n    transform: rotate(180deg);\n  }\n\n  .-translate-x-full {\n    transform: translateX(-100%);\n  }\n\n  /* Chrome, Safari and Opera */\n  .no-scrollbar::-webkit-scrollbar {\n    display: none;\n  }\n\n  .no-scrollbar {\n    -ms-overflow-style: none; /* IE and Edge */\n    scrollbar-width: none; /* Firefox */\n  }\n\n  .horizontal-list {\n    display: flex;\n    overflow-x: scroll;\n    overscroll-behavior: contain;\n    -webkit-overflow-scrolling: touch;\n    touch-action: pan-x;\n    scroll-snap-type: x mandatory;\n  }\n\n  .horizontal-list-item {\n    flex-shrink: 0;\n    scroll-snap-align: start;\n    scroll-snap-stop: always;\n    width: 100%;\n  }\n\n  input[type='range'].slider {\n    -webkit-appearance: none;\n    height: 4px;\n    background: transparent;\n    border-radius: 5px;\n    background-image: linear-gradient(#42ab44, #42ab44);\n    background-repeat: no-repeat;\n  }\n\n  input[type='range'].slider::-webkit-slider-thumb {\n    -webkit-appearance: none;\n    height: 18px;\n    width: 18px;\n    border-radius: 50%;\n    background: #fff;\n    cursor: pointer;\n    box-shadow: none;\n    border: 3px solid #42ab44;\n  }\n\n  input[type='range'].slider::-moz-range-thumb {\n    height: 12px;\n    width: 12px;\n    border-radius: 50%;\n    background: #fff;\n    cursor: pointer;\n    box-shadow: none;\n    border: 3px solid #42ab44;\n  }\n\n  input[type='range'].slider::-ms-thumb {\n    height: 18px;\n    width: 18px;\n    border-radius: 50%;\n    background: #fff;\n    cursor: pointer;\n    box-shadow: none;\n    border: 3px solid #42ab44;\n  }\n}\n",null],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "[data-theme=pc]{--color-primary-main:66,171,68;--color-primary-hover:36,131,65;--color-primary-active:36,95,52;--color-secondary-hover:216,242,217;--color-secondary-active:197,226,198;--color-gradient-from:141,189,76;--color-gradient-to:69,172,69}[data-theme=bc]{--color-primary-main:131,184,62;--color-primary-hover:92,146,29;--color-primary-active:60,94,16;--color-secondary-hover:232,244,217;--color-secondary-active:216,227,202;--color-gradient-from:141,189,76;--color-gradient-to:69,172,69}[data-theme=eo]{--color-primary-main:221,182,61;--color-primary-hover:187,151,39;--color-primary-active:126,99,12;--color-secondary-hover:241,236,221;--color-secondary-active:229,222,199;--color-gradient-from:141,189,76;--color-gradient-to:69,172,69}[data-theme=eo2]{--color-primary-main:255,204,0;--color-primary-hover:187,151,39;--color-primary-active:126,99,12;--color-secondary-hover:241,236,221;--color-secondary-active:229,222,199;--color-gradient-from:141,189,76;--color-gradient-to:69,172,69}[data-theme=eo3]{--color-primary-main:225,186,30;--color-primary-hover:187,151,39;--color-primary-active:126,99,12;--color-secondary-hover:241,236,221;--color-secondary-active:229,222,199;--color-gradient-from:141,189,76;--color-gradient-to:69,172,69}[data-theme=eo4]{--color-primary-main:233,191,23;--color-primary-hover:187,151,39;--color-primary-active:126,99,12;--color-secondary-hover:241,236,221;--color-secondary-active:229,222,199;--color-gradient-from:141,189,76;--color-gradient-to:69,172,69}.container{margin-left:auto;margin-right:auto;width:100%}@media (min-width:640px){.container{max-width:640px}}@media (min-width:768px){.container{max-width:768px}}@media (min-width:1024px){.container{max-width:1024px}}@media (min-width:1280px){.container{max-width:1280px}}.pointer-events-none{pointer-events:none}.pointer-events-auto{pointer-events:auto}.invisible{visibility:hidden}.absolute{position:absolute}.relative{position:relative}.sticky{position:-webkit-sticky;position:sticky}.inset-x-0{left:0;right:0}.top-1{top:.25rem}.right-1{right:.25rem}.top-7{top:1.75rem}.right-7{right:1.75rem}.top-0{top:0}.right-0{right:0}.bottom-0{bottom:0}.top-4{top:1rem}.right-4{right:1rem}.left-0{left:0}.top-1\\/2{top:50%}.left-8{left:2rem}.left-1{left:.25rem}.-bottom-3{bottom:-.75rem}.top-8{top:2rem}.z-10{z-index:10}.col-span-12{grid-column:span 12/span 12}.col-span-8{grid-column:span 8/span 8}.col-span-4{grid-column:span 4/span 4}.col-span-6{grid-column:span 6/span 6}.m-auto{margin:auto}.m-0{margin:0}.mx-auto{margin-left:auto;margin-right:auto}.mx-7{margin-left:1.75rem;margin-right:1.75rem}.my-4{margin-bottom:1rem;margin-top:1rem}.mx-1{margin-left:.25rem;margin-right:.25rem}.mx-2{margin-left:.5rem;margin-right:.5rem}.my-3{margin-bottom:.75rem;margin-top:.75rem}.mx-\\[-4px\\]{margin-left:-4px;margin-right:-4px}.mb-2{margin-bottom:.5rem}.mb-5{margin-bottom:1.25rem}.mb-2\\.5{margin-bottom:.625rem}.mb-4{margin-bottom:1rem}.mt-3{margin-top:.75rem}.mt-\\[18px\\]{margin-top:18px}.mt-auto{margin-top:auto}.ml-7{margin-left:1.75rem}.mt-4{margin-top:1rem}.mt-9{margin-top:2.25rem}.mt-1\\.5{margin-top:.375rem}.mt-1{margin-top:.25rem}.mt-5{margin-top:1.25rem}.mt-2\\.5{margin-top:.625rem}.mt-2{margin-top:.5rem}.mb-9{margin-bottom:2.25rem}.mb-\\[18px\\]{margin-bottom:18px}.mr-6{margin-right:1.5rem}.mr-\\[42px\\]{margin-right:42px}.mt-\\[23px\\]{margin-top:23px}.mb-7{margin-bottom:1.75rem}.mb-3{margin-bottom:.75rem}.mr-3{margin-right:.75rem}.mr-2{margin-right:.5rem}.ml-2{margin-left:.5rem}.mb-8{margin-bottom:2rem}.mb-6{margin-bottom:1.5rem}.mt-6{margin-top:1.5rem}.mr-8{margin-right:2rem}.ml-auto{margin-left:auto}.mr-5{margin-right:1.25rem}.mr-7{margin-right:1.75rem}.mt-0{margin-top:0}.mb-\\[26px\\]{margin-bottom:26px}.mr-2\\.5{margin-right:.625rem}.mr-4{margin-right:1rem}.ml-4{margin-left:1rem}.ml-5{margin-left:1.25rem}.mt-\\[19px\\]{margin-top:19px}.mb-3\\.5{margin-bottom:.875rem}.mr-1\\.5{margin-right:.375rem}.mr-1{margin-right:.25rem}.mb-1{margin-bottom:.25rem}.mb-0\\.5{margin-bottom:.125rem}.mb-0{margin-bottom:0}.ml-\\[34px\\]{margin-left:34px}.ml-\\[24px\\]{margin-left:24px}.ml-3{margin-left:.75rem}.mr-\\[14px\\]{margin-right:14px}.mr-auto{margin-right:auto}.ml-px{margin-left:1px}.mt-0\\.5{margin-top:.125rem}.ml-0\\.5{margin-left:.125rem}.ml-0{margin-left:0}.ml-2\\.5{margin-left:.625rem}.mt-\\[22px\\]{margin-top:22px}.box-border{box-sizing:border-box}.block{display:block}.inline-block{display:inline-block}.flex{display:flex}.inline-flex{display:inline-flex}.table{display:table}.grid{display:grid}.hidden{display:none}.h-full{height:100%}.h-\\[20px\\]{height:20px}.h-12{height:3rem}.h-\\[70px\\]{height:70px}.h-\\[63px\\]{height:63px}.h-8{height:2rem}.h-fit{height:-webkit-fit-content;height:-moz-fit-content;height:fit-content}.h-10{height:2.5rem}.h-\\[38px\\]{height:38px}.h-\\[50px\\]{height:50px}.h-\\[1px\\]{height:1px}.h-\\[24px\\]{height:24px}.h-\\[90px\\]{height:90px}.h-\\[48px\\]{height:48px}.h-4{height:1rem}.h-\\[25px\\]{height:25px}.h-\\[3px\\]{height:3px}.h-0\\.5{height:.125rem}.h-0{height:0}.h-\\[100px\\]{height:100px}.h-2{height:.5rem}.h-\\[6px\\]{height:6px}.h-5{height:1.25rem}.h-\\[2px\\]{height:2px}.h-1\\.5{height:.375rem}.h-1{height:.25rem}.max-h-0{max-height:0}.max-h-6{max-height:1.5rem}.max-h-12{max-height:3rem}.min-h-\\[70px\\]{min-height:70px}.min-h-\\[63px\\]{min-height:63px}.min-h-\\[32px\\]{min-height:32px}.min-h-6{min-height:1.5rem}.min-h-\\[90px\\]{min-height:90px}.min-h-\\[420px\\]{min-height:420px}.min-h-\\[50px\\]{min-height:50px}.min-h-\\[100px\\]{min-height:100px}.min-h-\\[300px\\]{min-height:300px}.min-h-\\[320px\\]{min-height:320px}.min-h-\\[360px\\]{min-height:360px}.min-h-2{min-height:.5rem}.min-h-\\[6px\\]{min-height:6px}.min-h-12{min-height:3rem}.min-h-1\\.5{min-height:.375rem}.min-h-1{min-height:.25rem}.w-\\[20px\\]{width:20px}.w-full{width:100%}.w-\\[70px\\]{width:70px}.w-\\[84px\\]{width:84px}.w-80{width:20rem}.w-\\[63px\\]{width:63px}.w-\\[200px\\]{width:200px}.w-8{width:2rem}.w-max{width:-webkit-max-content;width:-moz-max-content;width:max-content}.w-\\[75px\\]{width:75px}.w-\\[280px\\]{width:280px}.w-\\[38px\\]{width:38px}.w-\\[364px\\]{width:364px}.w-\\[260px\\]{width:260px}.w-\\[24px\\]{width:24px}.w-\\[125px\\]{width:125px}.w-\\[50px\\]{width:50px}.w-\\[33px\\]{width:33px}.w-\\[90px\\]{width:90px}.w-\\[48px\\]{width:48px}.w-\\[25px\\]{width:25px}.w-\\[2px\\]{width:2px}.w-\\[100px\\]{width:100px}.w-\\[276px\\]{width:276px}.w-12{width:3rem}.w-\\[354px\\]{width:354px}.w-4{width:1rem}.w-2{width:.5rem}.w-\\[6px\\]{width:6px}.w-\\[36px\\]{width:36px}.w-5{width:1.25rem}.w-\\[1280px\\]{width:1280px}.w-10{width:2.5rem}.w-auto{width:auto}.w-1\\.5{width:.375rem}.w-1{width:.25rem}.w-fit{width:-webkit-fit-content;width:-moz-fit-content;width:fit-content}.min-w-\\[70px\\]{min-width:70px}.min-w-\\[63px\\]{min-width:63px}.min-w-\\[364px\\]{min-width:364px}.min-w-\\[260px\\]{min-width:260px}.min-w-\\[32px\\]{min-width:32px}.min-w-6{min-width:1.5rem}.min-w-\\[90px\\]{min-width:90px}.min-w-\\[600px\\]{min-width:600px}.min-w-\\[50px\\]{min-width:50px}.min-w-\\[100px\\]{min-width:100px}.min-w-2{min-width:.5rem}.min-w-\\[6px\\]{min-width:6px}.min-w-1\\.5{min-width:.375rem}.min-w-1{min-width:.25rem}.min-w-full{min-width:100%}.max-w-\\[170px\\]{max-width:170px}.max-w-\\[600px\\]{max-width:600px}.max-w-\\[47rem\\]{max-width:47rem}.max-w-\\[580px\\]{max-width:580px}.max-w-\\[292px\\]{max-width:292px}.max-w-\\[308px\\]{max-width:308px}.max-w-\\[490px\\]{max-width:490px}.max-w-\\[149px\\]{max-width:149px}.flex-none{flex:none}.flex-1{flex:1 1 0%}.flex-shrink-0,.shrink-0{flex-shrink:0}.flex-grow,.grow{flex-grow:1}.grow-0{flex-grow:0}.basis-\\[calc\\(50\\%-20px\\)\\]{flex-basis:calc(50% - 20px)}.basis-0{flex-basis:0px}.basis-full{flex-basis:100%}.-translate-x-full{--tw-translate-x:-100%}.-translate-x-full,.rotate-180{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.rotate-180{--tw-rotate:180deg}.transform{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@-webkit-keyframes progress{0%{transform:translateX(-100%)}to{transform:translateX(0)}}@keyframes progress{0%{transform:translateX(-100%)}to{transform:translateX(0)}}.animate-slide{-webkit-animation:progress linear;animation:progress linear}.cursor-pointer{cursor:pointer}.select-none{-webkit-user-select:none;-moz-user-select:none;user-select:none}.resize{resize:both}.snap-center{scroll-snap-align:center}.snap-always{scroll-snap-stop:always}.list-none{list-style-type:none}.appearance-none{-webkit-appearance:none;-moz-appearance:none;appearance:none}.grid-cols-12{grid-template-columns:repeat(12,minmax(0,1fr))}.grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.grid-cols-6{grid-template-columns:repeat(6,minmax(0,1fr))}.flex-row{flex-direction:row}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.content-center{align-content:center}.items-start{align-items:flex-start}.items-end{align-items:flex-end}.items-center{align-items:center}.items-baseline{align-items:baseline}.items-stretch{align-items:stretch}.justify-start{justify-content:flex-start}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-3\\.5{gap:.875rem}.gap-3{gap:.75rem}.gap-5{gap:1.25rem}.gap-4{gap:1rem}.gap-1{gap:.25rem}.gap-\\[54px\\]{gap:54px}.gap-11{gap:2.75rem}.gap-\\[14px\\]{gap:14px}.gap-2{gap:.5rem}.gap-6{gap:1.5rem}.gap-\\[6px\\]{gap:6px}.gap-8{gap:2rem}.gap-x-5{-moz-column-gap:1.25rem;column-gap:1.25rem}.gap-y-\\[26px\\]{row-gap:26px}.gap-x-\\[101px\\]{-moz-column-gap:101px;column-gap:101px}.self-start{align-self:flex-start}.self-center{align-self:center}.overflow-auto{overflow:auto}.overflow-hidden{overflow:hidden}.overflow-y-hidden{overflow-y:hidden}.overflow-x-scroll{overflow-x:scroll}.whitespace-nowrap{white-space:nowrap}.whitespace-pre-line{white-space:pre-line}.whitespace-pre-wrap{white-space:pre-wrap}.rounded{border-radius:.25rem}.rounded-full{border-radius:9999px}.rounded-md{border-radius:.375rem}.rounded-3xl{border-radius:1.5rem}.rounded-\\[40px\\]{border-radius:40px}.rounded-t-md{border-top-left-radius:.375rem;border-top-right-radius:.375rem}.rounded-b-md{border-bottom-left-radius:.375rem;border-bottom-right-radius:.375rem}.rounded-tl-lg{border-top-left-radius:.5rem}.border{border-width:1px}.border-0{border-width:0}.border-\\[3px\\]{border-width:3px}.border-2{border-width:2px}.border-y-0{border-bottom-width:0;border-top-width:0}.border-x-0{border-left-width:0;border-right-width:0}.border-y{border-top-width:1px}.border-b,.border-y{border-bottom-width:1px}.border-b-0{border-bottom-width:0}.border-t-0{border-top-width:0}.border-t{border-top-width:1px}.border-r{border-right-width:1px}.border-solid{border-style:solid}.border-none{border-style:none}.border-main-divider{--tw-border-opacity:1;border-color:rgba(235,237,240,var(--tw-border-opacity))}.border-main-stroke{--tw-border-opacity:1;border-color:rgba(201,202,204,var(--tw-border-opacity))}.border-primary-main{--tw-border-opacity:1;border-color:rgba(var(--color-primary-main),var(--tw-border-opacity))}.border-main{--tw-border-opacity:1;border-color:rgba(240,244,240,var(--tw-border-opacity))}.border-white{--tw-border-opacity:1;border-color:rgb(255 255 255/var(--tw-border-opacity))}.border-black{--tw-border-opacity:1;border-color:rgb(0 0 0/var(--tw-border-opacity))}.border-transparent{border-color:transparent}.border-y-main-divider{--tw-border-opacity:1;border-bottom-color:rgba(235,237,240,var(--tw-border-opacity));border-top-color:rgba(235,237,240,var(--tw-border-opacity))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255/var(--tw-bg-opacity))}.bg-transparent{background-color:transparent}.bg-secondary-text{--tw-bg-opacity:1;background-color:rgba(125,126,127,var(--tw-bg-opacity))}.bg-main{--tw-bg-opacity:1;background-color:rgba(240,244,240,var(--tw-bg-opacity))}.bg-secondary-light{--tw-bg-opacity:1;background-color:rgba(245,247,249,var(--tw-bg-opacity))}.bg-primary-main{--tw-bg-opacity:1;background-color:rgba(var(--color-primary-main),var(--tw-bg-opacity))}.bg-main-divider{--tw-bg-opacity:1;background-color:rgba(235,237,240,var(--tw-bg-opacity))}.bg-inherit{background-color:inherit}.bg-white\\/30{background-color:hsla(0,0%,100%,.3)}.bg-primary-main\\/10{background-color:rgba(var(--color-primary-main),.1)}.bg-secondary-dark{--tw-bg-opacity:1;background-color:rgba(226,228,229,var(--tw-bg-opacity))}.bg-opacity-to-white{background-image:linear-gradient(270deg,#fff 34.89%,hsla(0,0%,100%,0) 92.52%);}.bg-gradient-to-r{background-image:linear-gradient(to right,var(--tw-gradient-stops))}.from-main-gradient-start{--tw-gradient-from:rgba(var(--color-gradient-from),1);--tw-gradient-to:rgba(var(--color-gradient-from),0);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-white{--tw-gradient-from:#fff;--tw-gradient-to:hsla(0,0%,100%,0);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.to-main-gradient-end{--tw-gradient-to:rgba(var(--color-gradient-to),1)}.to-transparent{--tw-gradient-to:transparent}.p-0{padding:0}.p-\\[50px\\]{padding:50px}.p-4{padding:1rem}.\\!p-0{padding:0!important}.p-12{padding:3rem}.p-10{padding:2.5rem}.p-\\[49px\\]{padding:49px}.p-9{padding:2.25rem}.p-7{padding:1.75rem}.p-2{padding:.5rem}.p-14{padding:3.5rem}.p-\\[12px\\]{padding:12px}.p-\\[10px\\]{padding:10px}.p-\\[26px\\]{padding:26px}.px-9{padding-left:2.25rem;padding-right:2.25rem}.py-\\[9px\\]{padding-bottom:9px;padding-top:9px}.py-6{padding-bottom:1.5rem;padding-top:1.5rem}.px-4{padding-left:1rem;padding-right:1rem}.py-\\[14px\\]{padding-bottom:14px;padding-top:14px}.px-0{padding-left:0;padding-right:0}.py-5{padding-bottom:1.25rem;padding-top:1.25rem}.py-2\\.5{padding-bottom:.625rem;padding-top:.625rem}.py-2{padding-bottom:.5rem;padding-top:.5rem}.py-\\[50px\\]{padding-bottom:50px;padding-top:50px}.py-\\[11px\\]{padding-bottom:11px;padding-top:11px}.px-7{padding-left:1.75rem;padding-right:1.75rem}.py-7{padding-bottom:1.75rem;padding-top:1.75rem}.py-\\[26px\\]{padding-bottom:26px;padding-top:26px}.py-10{padding-bottom:2.5rem;padding-top:2.5rem}.py-0{padding-bottom:0;padding-top:0}.px-20{padding-left:5rem;padding-right:5rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-0\\.5{padding-bottom:.125rem;padding-top:.125rem}.px-\\[88px\\]{padding-left:88px;padding-right:88px}.py-\\[18px\\]{padding-bottom:18px;padding-top:18px}.py-4{padding-bottom:1rem;padding-top:1rem}.py-3\\.5{padding-bottom:.875rem;padding-top:.875rem}.py-3{padding-bottom:.75rem;padding-top:.75rem}.px-1{padding-left:.25rem;padding-right:.25rem}.pl-4{padding-left:1rem}.pl-12{padding-left:3rem}.pr-\\[6\\%\\]{padding-right:6%}.pr-2\\.5{padding-right:.625rem}.pr-2{padding-right:.5rem}.pb-5{padding-bottom:1.25rem}.pb-2{padding-bottom:.5rem}.pl-\\[50px\\]{padding-left:50px}.pr-\\[50px\\]{padding-right:50px}.pt-7{padding-top:1.75rem}.pb-\\[46px\\]{padding-bottom:46px}.pt-6{padding-top:1.5rem}.pr-\\[56px\\]{padding-right:56px}.pl-11{padding-left:2.75rem}.pt-4{padding-top:1rem}.pt-0{padding-top:0}.pb-0{padding-bottom:0}.pb-4{padding-bottom:1rem}.pr-1{padding-right:.25rem}.pl-0\\.5{padding-left:.125rem}.pl-0{padding-left:0}.pb-8{padding-bottom:2rem}.pt-\\[3px\\]{padding-top:3px}.pb-6{padding-bottom:1.5rem}.pt-\\[30px\\]{padding-top:30px}.pb-7{padding-bottom:1.75rem}.pt-5{padding-top:1.25rem}.pb-\\[5px\\]{padding-bottom:5px}.pt-\\[5px\\]{padding-top:5px}.pr-4{padding-right:1rem}.pl-3{padding-left:.75rem}.pt-10{padding-top:2.5rem}.pb-\\[50px\\]{padding-bottom:50px}.pr-\\[7\\.5rem\\]{padding-right:7.5rem}.pl-2\\.5{padding-left:.625rem}.pt-2\\.5{padding-top:.625rem}.pb-1\\.5{padding-bottom:.375rem}.pr-\\[6\\.25rem\\]{padding-right:6.25rem}.pl-2{padding-left:.5rem}.pt-2{padding-top:.5rem}.pb-1{padding-bottom:.25rem}.pb-\\[2px\\]{padding-bottom:2px}.pt-1{padding-top:.25rem}.pl-10{padding-left:2.5rem}.pb-3{padding-bottom:.75rem}.pt-1\\.5{padding-top:.375rem}.pl-1{padding-left:.25rem}.pt-0\\.5{padding-top:.125rem}.pr-3{padding-right:.75rem}.pr-28{padding-right:7rem}.pr-9{padding-right:2.25rem}.pr-\\[4\\.75rem\\]{padding-right:4.75rem}.pr-\\[9\\.4rem\\]{padding-right:9.4rem}.text-left{text-align:left}.text-center{text-align:center}.text-right{text-align:right}.align-middle{vertical-align:middle}.font-sans{font-family:Ubuntu,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji}.text-sm{font-size:.875rem;line-height:1.375rem}.text-base{font-size:1rem;line-height:1.5rem}.text-m-md{font-size:.9375rem;line-height:1.5rem}.text-m-title-xs{font-size:1.0625rem;line-height:1.375rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:.75rem;line-height:1.125rem}.text-lg{font-size:2.188rem;line-height:3rem}.text-2xs{font-size:.625rem;line-height:.625rem}.text-m-base{font-size:1rem;line-height:1.5rem}.text-m-sm{font-size:.875rem;line-height:1.375rem}.text-m-title{font-size:1.375rem;line-height:1.8125rem}.text-title-sm{font-size:1.75rem;line-height:2.5rem}.text-m-2xs{font-size:.75rem;line-height:1.125rem}.text-button,.text-m-button{font-size:.875rem;line-height:1.25rem}.text-m-title-md{font-size:1.25rem;line-height:1.625rem}.text-title-lg{font-size:2.5rem;line-height:3rem}.text-title{font-size:2rem;line-height:2.5rem}.text-title-xs{font-size:1.5rem;line-height:1.875rem}.text-title-2xs{font-size:1.25rem;line-height:1.625rem}.font-normal{font-weight:400}.font-medium{font-weight:500}.font-semibold{font-weight:600}.leading-4{line-height:1rem}.leading-5{line-height:1.25rem}.leading-\\[14px\\]{line-height:14px}.text-secondary-text{--tw-text-opacity:1;color:rgba(125,126,127,var(--tw-text-opacity))}.text-black{--tw-text-opacity:1;color:rgb(0 0 0/var(--tw-text-opacity))}.text-primary-text{--tw-text-opacity:1;color:rgba(28,28,28,var(--tw-text-opacity))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity))}.text-primary-main{--tw-text-opacity:1;color:rgba(var(--color-primary-main),var(--tw-text-opacity))}.text-secondary-light{--tw-text-opacity:1;color:rgba(245,247,249,var(--tw-text-opacity))}.text-white\\/80{color:hsla(0,0%,100%,.8)}.no-underline{-webkit-text-decoration-line:none;text-decoration-line:none}.opacity-80{opacity:.8}.opacity-60{opacity:.6}.opacity-30{opacity:.3}.opacity-0{opacity:0}.shadow-\\[0_8px_32px_0px_\\#00000014\\]{--tw-shadow:0 8px 32px 0px #00000014;--tw-shadow-colored:0 8px 32px 0px var(--tw-shadow-color)}.shadow-\\[0_4px_25px_rgba\\(0\\2c 0\\2c 0\\2c 0\\.07\\)\\],.shadow-\\[0_8px_32px_0px_\\#00000014\\]{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-\\[0_4px_25px_rgba\\(0\\2c 0\\2c 0\\2c 0\\.07\\)\\]{--tw-shadow:0 4px 25px rgba(0,0,0,.07);--tw-shadow-colored:0 4px 25px var(--tw-shadow-color)}.outline-none{outline:2px solid transparent;outline-offset:2px}.transition-all{transition-duration:.15s;transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1)}.duration-300{transition-duration:.3s}.duration-1000{transition-duration:1s}.rotate-180{transform:rotate(180deg)}.-translate-x-full{transform:translateX(-100%)}.no-scrollbar::-webkit-scrollbar{display:none}.no-scrollbar{-ms-overflow-style:none;scrollbar-width:none}.horizontal-list{-webkit-overflow-scrolling:touch;display:flex;overflow-x:scroll;overscroll-behavior:contain;scroll-snap-type:x mandatory;touch-action:pan-x}.horizontal-list-item{flex-shrink:0;scroll-snap-align:start;scroll-snap-stop:always;width:100%}input[type=range].slider{-webkit-appearance:none;background:transparent;background-image:linear-gradient(#42ab44,#42ab44);background-repeat:no-repeat;border-radius:5px;height:4px}input[type=range].slider::-webkit-slider-thumb{-webkit-appearance:none;background:#fff;border:3px solid #42ab44;border-radius:50%;box-shadow:none;cursor:pointer;height:18px;width:18px}input[type=range].slider::-moz-range-thumb{background:#fff;border:3px solid #42ab44;border-radius:50%;box-shadow:none;cursor:pointer;height:12px;width:12px}input[type=range].slider::-ms-thumb{background:#fff;border:3px solid #42ab44;border-radius:50%;box-shadow:none;cursor:pointer;height:18px;width:18px}.first\\:mt-0:first-child{margin-top:0}.first\\:rounded-tl-md:first-child{border-top-left-radius:.375rem}.first\\:rounded-bl-md:first-child{border-bottom-left-radius:.375rem}.first\\:pt-7:first-child{padding-top:1.75rem}.first\\:pl-0:first-child{padding-left:0}.first\\:pt-5:first-child{padding-top:1.25rem}.last\\:mb-0:last-child{margin-bottom:0}.last\\:mr-0:last-child{margin-right:0}.last\\:rounded-tr-md:last-child{border-top-right-radius:.375rem}.last\\:rounded-br-md:last-child{border-bottom-right-radius:.375rem}.last\\:border-b-0:last-child{border-bottom-width:0}.last\\:pb-7:last-child{padding-bottom:1.75rem}.last\\:pb-5:last-child{padding-bottom:1.25rem}.visited\\:text-secondary-text:visited{color:rgba(125,126,127,var(--tw-text-opacity))}.checked\\:border-primary-main:checked{--tw-border-opacity:1;border-color:rgba(var(--color-primary-main),var(--tw-border-opacity))}.checked\\:bg-primary-main:checked{--tw-bg-opacity:1;background-color:rgba(var(--color-primary-main),var(--tw-bg-opacity))}.hover\\:border-primary-main:hover{--tw-border-opacity:1;border-color:rgba(var(--color-primary-main),var(--tw-border-opacity))}.hover\\:bg-secondary-hover:hover{--tw-bg-opacity:1;background-color:rgba(var(--color-secondary-hover),var(--tw-bg-opacity))}.hover\\:bg-primary-hover:hover{--tw-bg-opacity:1;background-color:rgba(var(--color-primary-hover),var(--tw-bg-opacity))}.hover\\:fill-primary-main:hover{fill:rgba(var(--color-primary-main),1)}.hover\\:text-primary-main:hover{--tw-text-opacity:1;color:rgba(var(--color-primary-main),var(--tw-text-opacity))}.hover\\:text-primary-text:hover{--tw-text-opacity:1;color:rgba(28,28,28,var(--tw-text-opacity))}.hover\\:text-secondary-hover:hover{--tw-text-opacity:1;color:rgba(var(--color-secondary-hover),var(--tw-text-opacity))}.focus\\:border-primary-text:focus{--tw-border-opacity:1;border-color:rgba(28,28,28,var(--tw-border-opacity))}.active\\:bg-secondary-active:active{--tw-bg-opacity:1;background-color:rgba(var(--color-secondary-active),var(--tw-bg-opacity))}.active\\:bg-primary-active:active{--tw-bg-opacity:1;background-color:rgba(var(--color-primary-active),var(--tw-bg-opacity))}.group:last-child .group-last\\:last\\:pb-0:last-child{padding-bottom:0}.group:hover .group-hover\\:text-primary-main{--tw-text-opacity:1;color:rgba(var(--color-primary-main),var(--tw-text-opacity))}.group:hover .group-hover\\:text-primary-text{--tw-text-opacity:1;color:rgba(28,28,28,var(--tw-text-opacity))}.peer:checked~.peer-checked\\:block{display:block}.peer:focus~.peer-focus\\:visible{visibility:visible}@media (min-width:1280px) and (max-width:1535px){.xl\\:w-\\[220px\\]{width:220px}.xl\\:gap-8{gap:2rem}.xl\\:gap-5{gap:1.25rem}}", "",{"version":3,"sources":["webpack://./src/common.css","<no source>"],"names":[],"mappings":"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AA,ADAA,kCAAA,+BCAA,ADAA,kCAAA,kCCAA,ADAA,yBAAA,oBCAA,ADAA,yBAAA,eCAA,ADAA,yBAAA,oBCAA,ADAA,uBAAA,gBCAA,ADAA,uBAAA,eCAA,ADAA,gCAAA,gCCAA,ADAA,gCAAA,mCCAA,ADAA,6BAAA,sBCAA,ADAA,uBAAA,uBCAA,ADAA,uBAAA,uBCAA,ADAA,sCAAA,+CCAA,ADAA,sCAAA,sBCAA,ADAA,sECAA,ADAA,kCAAA,kBCAA,ADAA,sECAA,ADAA,kCAAA,sBCAA,ADAA,sECAA,ADAA,iCAAA,kBCAA,ADAA,yECAA,ADAA,+BAAA,kBCAA,ADAA,uECAA,ADAA,gCAAA,uCCAA,ADAA,gCAAA,oBCAA,ADAA,6DCAA,ADAA,gCAAA,oBCAA,ADAA,4CCAA,ADAA,mCAAA,oBCAA,ADAA,gECAA,ADAA,kCAAA,sBCAA,ADAA,qDCAA,ADAA,oCAAA,kBCAA,ADAA,0ECAA,ADAA,kCAAA,kBCAA,ADAA,wECAA,ADAA,qDAAA,iBCAA,ADAA,6CAAA,oBCAA,ADAA,6DCAA,ADAA,6CAAA,oBCAA,ADAA,4CCAA,ADAA,mCAAA,cCAA,ADAA,iCAAA,mBCAA,ADAA,iDAAA,iBAAA,YCAA,ADAA,WAAA,SCAA,ADAA,WAAA,YCAA,CAAA","sourcesContent":["@import '../fonts/ubuntu/ubuntu.css';\n\n/* Private clients | Green */\n[data-theme='pc'] {\n  --color-primary-main: 66, 171, 68;\n  --color-primary-hover: 36, 131, 65;\n  --color-primary-active: 36, 95, 52;\n  --color-secondary-hover: 216, 242, 217;\n  --color-secondary-active: 197, 226, 198;\n  --color-gradient-from: 141, 189, 76;\n  --color-gradient-to: 69, 172, 69;\n}\n/* Business clients | Light-Green */\n[data-theme='bc'] {\n  --color-primary-main: 131, 184, 62;\n  --color-primary-hover: 92, 146, 29;\n  --color-primary-active: 60, 94, 16;\n  --color-secondary-hover: 232, 244, 217;\n  --color-secondary-active: 216, 227, 202;\n  --color-gradient-from: 141, 189, 76; /* TODO: change color to theme bc */\n  --color-gradient-to: 69, 172, 69; /* TODO: change color to theme bc */\n}\n/* Ecosystem own | Yellow */\n[data-theme='eo'] {\n  --color-primary-main: 221, 182, 61;\n  --color-primary-hover: 187, 151, 39;\n  --color-primary-active: 126, 99, 12;\n  --color-secondary-hover: 241, 236, 221;\n  --color-secondary-active: 229, 222, 199;\n  --color-gradient-from: 141, 189, 76; /* TODO: change color to theme eo */\n  --color-gradient-to: 69, 172, 69; /* TODO: change color to theme eo */\n}\n\n[data-theme='eo2'] {\n  --color-primary-main: 255, 204, 0;\n  --color-primary-hover: 187, 151, 39;\n  --color-primary-active: 126, 99, 12;\n  --color-secondary-hover: 241, 236, 221;\n  --color-secondary-active: 229, 222, 199;\n  --color-gradient-from: 141, 189, 76; /* TODO: change color to theme eo */\n  --color-gradient-to: 69, 172, 69; /* TODO: change color to theme eo */\n}\n\n[data-theme='eo3'] {\n  --color-primary-main: 225, 186, 30;\n  --color-primary-hover: 187, 151, 39;\n  --color-primary-active: 126, 99, 12;\n  --color-secondary-hover: 241, 236, 221;\n  --color-secondary-active: 229, 222, 199;\n  --color-gradient-from: 141, 189, 76; /* TODO: change color to theme eo */\n  --color-gradient-to: 69, 172, 69; /* TODO: change color to theme eo */\n}\n\n[data-theme='eo4'] {\n  --color-primary-main: 233, 191, 23;\n  --color-primary-hover: 187, 151, 39;\n  --color-primary-active: 126, 99, 12;\n  --color-secondary-hover: 241, 236, 221;\n  --color-secondary-active: 229, 222, 199;\n  --color-gradient-from: 141, 189, 76; /* TODO: change color to theme eo */\n  --color-gradient-to: 69, 172, 69; /* TODO: change color to theme eo */\n}\n\n@tailwind components;\n@tailwind utilities;\n\n@layer utilities {\n  .rotate-180 {\n    transform: rotate(180deg);\n  }\n\n  .-translate-x-full {\n    transform: translateX(-100%);\n  }\n\n  /* Chrome, Safari and Opera */\n  .no-scrollbar::-webkit-scrollbar {\n    display: none;\n  }\n\n  .no-scrollbar {\n    -ms-overflow-style: none; /* IE and Edge */\n    scrollbar-width: none; /* Firefox */\n  }\n\n  .horizontal-list {\n    display: flex;\n    overflow-x: scroll;\n    overscroll-behavior: contain;\n    -webkit-overflow-scrolling: touch;\n    touch-action: pan-x;\n    scroll-snap-type: x mandatory;\n  }\n\n  .horizontal-list-item {\n    flex-shrink: 0;\n    scroll-snap-align: start;\n    scroll-snap-stop: always;\n    width: 100%;\n  }\n\n  input[type='range'].slider {\n    -webkit-appearance: none;\n    height: 4px;\n    background: transparent;\n    border-radius: 5px;\n    background-image: linear-gradient(#42ab44, #42ab44);\n    background-repeat: no-repeat;\n  }\n\n  input[type='range'].slider::-webkit-slider-thumb {\n    -webkit-appearance: none;\n    height: 18px;\n    width: 18px;\n    border-radius: 50%;\n    background: #fff;\n    cursor: pointer;\n    box-shadow: none;\n    border: 3px solid #42ab44;\n  }\n\n  input[type='range'].slider::-moz-range-thumb {\n    height: 12px;\n    width: 12px;\n    border-radius: 50%;\n    background: #fff;\n    cursor: pointer;\n    box-shadow: none;\n    border: 3px solid #42ab44;\n  }\n\n  input[type='range'].slider::-ms-thumb {\n    height: 18px;\n    width: 18px;\n    border-radius: 50%;\n    background: #fff;\n    cursor: pointer;\n    box-shadow: none;\n    border: 3px solid #42ab44;\n  }\n}\n",null],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -31073,7 +31073,7 @@ if (false) { var webpackRendererConnect; }
 
 /***/ }),
 
-/***/ 3381:
+/***/ 1247:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -31316,6 +31316,100 @@ const mobileContext = {
     }),
 };
 
+;// CONCATENATED MODULE: ./src/ui-kit/Img.mobile.tsx
+
+
+const Img = JSX(({ className = '', image: { size, ...image } }) => {
+    const style = {
+        width: size?.width ? `${size?.width}px` : '100%',
+        height: size?.height ? `${size?.height}px` : '100%',
+    };
+    return (jsxs("picture", { className: className, children: [image.sources?.length
+                ? image.sources.map(({ src, format }, index) => (jsx("source", { srcSet: src, type: formatToMimeType(format) }, `${index}_${src}`)))
+                : null, jsx("img", { src: image.src, className: `m-auto ${image.className || ''}`, alt: image.alt || image.title, title: image.title, style: style, ...size })] }));
+});
+function formatToMimeType(format) {
+    return format ? `image/${String(format)}` : undefined;
+}
+
+;// CONCATENATED MODULE: ./src/ui-kit/Title/Title.mobile.tsx
+
+
+const SizeTableClass = {
+    XL: 'text-m-title',
+    L: 'text-m-title',
+    M: 'text-m-title-md',
+    S: 'text-m-title-xs',
+    '2XS': 'text-m-title-xs',
+    '3XS': 'text-m-title-xs',
+};
+const Title = JSX(({ size = 'L', className, children, ...rest }) => {
+    const Tag = size === 'XL' || size === 'L' ? 'h1' : 'h2';
+    return (jsx(Tag, { className: getClasses(SizeTableClass[size], className), ...rest, children: children }));
+});
+const getClasses = (...classes) => classes.filter(Boolean).join(' ');
+
+;// CONCATENATED MODULE: ./src/components/Headline/Headline.mobile.tsx
+
+
+
+
+const Headline = JSX(({ bgColor = 'transparent', className = '', title, description, image }) => {
+    return (jsxs("section", { className: `px-4 py-6 ${bgColor} ${className}`, children: [title && (jsx(Title, { size: "L", className: "text-primary-text mt-0 font-medium", children: title })), description && (jsx("p", { className: `font-normal text-m-md ${title ? 'mt-2.5' : ''}`, children: description })), image?.src && (jsx("div", { className: "mt-5 mx-auto flex justify-center", children: jsx(Img, { image: image }) }))] }));
+});
+
+;// CONCATENATED MODULE: ./src/components/Headline/Headline.fixture.mobile.tsx
+
+
+
+const HEADLINE = {
+    title: 'Своя кредитная карта',
+    description: 'Карта работает в 180 странах мира. Бесплатное снятие наличных в любых банкоматах.',
+    align: 'center',
+    bgColor: 'transparent',
+};
+const Headline_fixture_mobile_image = {
+    src: 'globe-1.png',
+    format: 'webp',
+    size: {
+        width: 180,
+        height: 180,
+    },
+};
+/* harmony default export */ const Headline_fixture_mobile = ({
+    default: (jsx("div", { className: "container grid grid-cols-12", children: jsx(Headline, { className: "col-span-12", context: context, title: "\u041A\u043E\u043F\u0438\u0442\u0435 \u0432 \u043D\u0435\u0441\u043A\u043E\u043B\u044C\u043A\u0438\u0445 \u0432\u0430\u043B\u044E\u0442\u0430\u0445", description: "\u041E\u0442\u043A\u0440\u043E\u0439\u0442\u0435 \u043C\u0443\u043B\u044C\u0442\u0438\u0432\u0430\u043B\u044E\u0442\u043D\u044B\u0439 \u0432\u043A\u043B\u0430\u0434, \u0447\u0442\u043E\u0431\u044B \u0440\u0430\u0441\u043F\u0440\u0435\u0434\u0435\u043B\u0438\u0442\u044C \u0441\u0432\u043E\u0438 \u0432\u043B\u043E\u0436\u0435\u043D\u0438\u044F. \u042D\u0442\u043E \u0434\u043E 4 \u0441\u0447\u0435\u0442\u043E\u0432 \u0432 \u0440\u0430\u0437\u043D\u044B\u0445 \u0432\u0430\u043B\u044E\u0442\u0430\u0445 \u0432\u043D\u0443\u0442\u0440\u0438 \u043E\u0434\u043D\u043E\u0433\u043E \u0432\u043A\u043B\u0430\u0434\u0430", image: Headline_fixture_mobile_image }) })),
+    'title-img': (jsx("div", { className: "container grid grid-cols-12", children: jsx(Headline, { className: "col-span-12", context: context, title: "\u041A\u043E\u043F\u0438\u0442\u0435 \u0432 \u043D\u0435\u0441\u043A\u043E\u043B\u044C\u043A\u0438\u0445 \u0432\u0430\u043B\u044E\u0442\u0430\u0445", image: Headline_fixture_mobile_image }) })),
+    'desc-img': (jsx("div", { className: "container grid grid-cols-12", children: jsx(Headline, { className: "col-span-12", context: context, description: "\u041E\u0442\u043A\u0440\u043E\u0439\u0442\u0435 \u043C\u0443\u043B\u044C\u0442\u0438\u0432\u0430\u043B\u044E\u0442\u043D\u044B\u0439 \u0432\u043A\u043B\u0430\u0434, \u0447\u0442\u043E\u0431\u044B \u0440\u0430\u0441\u043F\u0440\u0435\u0434\u0435\u043B\u0438\u0442\u044C \u0441\u0432\u043E\u0438 \u0432\u043B\u043E\u0436\u0435\u043D\u0438\u044F. \u042D\u0442\u043E \u0434\u043E 4 \u0441\u0447\u0435\u0442\u043E\u0432 \u0432 \u0440\u0430\u0437\u043D\u044B\u0445 \u0432\u0430\u043B\u044E\u0442\u0430\u0445 \u0432\u043D\u0443\u0442\u0440\u0438 \u043E\u0434\u043D\u043E\u0433\u043E \u0432\u043A\u043B\u0430\u0434\u0430", image: Headline_fixture_mobile_image }) })),
+    white: (jsx("div", { className: "container grid grid-cols-12", children: jsx(Headline, { className: "col-span-12", context: context, title: "\u041A\u043E\u043F\u0438\u0442\u0435 \u0432 \u043D\u0435\u0441\u043A\u043E\u043B\u044C\u043A\u0438\u0445 \u0432\u0430\u043B\u044E\u0442\u0430\u0445", description: "\u041E\u0442\u043A\u0440\u043E\u0439\u0442\u0435 \u043C\u0443\u043B\u044C\u0442\u0438\u0432\u0430\u043B\u044E\u0442\u043D\u044B\u0439 \u0432\u043A\u043B\u0430\u0434, \u0447\u0442\u043E\u0431\u044B \u0440\u0430\u0441\u043F\u0440\u0435\u0434\u0435\u043B\u0438\u0442\u044C \u0441\u0432\u043E\u0438 \u0432\u043B\u043E\u0436\u0435\u043D\u0438\u044F. \u042D\u0442\u043E \u0434\u043E 4 \u0441\u0447\u0435\u0442\u043E\u0432 \u0432 \u0440\u0430\u0437\u043D\u044B\u0445 \u0432\u0430\u043B\u044E\u0442\u0430\u0445 \u0432\u043D\u0443\u0442\u0440\u0438 \u043E\u0434\u043D\u043E\u0433\u043E \u0432\u043A\u043B\u0430\u0434\u0430", bgColor: "bg-white", image: Headline_fixture_mobile_image }) })),
+});
+
+;// CONCATENATED MODULE: ./src/components/LinkDocs/fixtureConstants.ts
+const LINK_DOCS_BASE = {
+    title: 'Дополнительные документы',
+    subtitle: 'Ответы на часто задаваемые вопросы',
+    icon: 'DocIcon',
+    documents: [
+        { text: 'target self', href: '/abc1/cooldoc.doc', target: '_self' },
+        { text: 'target blank', href: '/abc2/wtf.rtf', target: '_blank' },
+        { text: 'GlassIcon', href: '/abc3/map.jpeg' },
+        { text: 'no icon', href: '/abc4' },
+        { text: 'документ 5', href: '/abc5' },
+        { text: 'документ 6', href: '/abc6/abc.pdf' },
+        { text: 'Text text text', href: '/abc7/yolo.png' },
+        {
+            text: 'Some more generic text to stretch item, and even more, more text, and more generic text, and even more, more text, and even more',
+            href: '/abc8/archive.zip',
+            fileSize: '2.3МБ',
+        },
+        { text: 'И ещё немного текста', href: '/abc9/rarniw.rar', fileSize: '666МБ' },
+        {
+            text: 'Форматируем, сортируем, смотрим как отображается...',
+            href: '/abc10/',
+            fileSize: '65ГБ',
+        },
+    ],
+};
+
 ;// CONCATENATED MODULE: ./src/ProjectSettings.ts
 const projectSettings = new (class {
     _ = {
@@ -31360,140 +31454,51 @@ const Icon = JSX(({ className = '', name, alt = `Icon ${name}`, title = alt, asS
     return (jsx("img", { className: className, src: href, alt: alt, title: title, ...imgProps, "aria-hidden": "true" }));
 });
 
-;// CONCATENATED MODULE: ./src/utils/getColSpan.ts
-const getColSpan = (className) => {
-    const colSpanPrefix = 'col-span-';
-    const colSpanStr = className.split(/\s+/).find((_) => _.startsWith(colSpanPrefix));
-    return colSpanStr ? parseInt(colSpanStr.substring(colSpanPrefix.length), 10) : 12;
-};
-
-;// CONCATENATED MODULE: ./src/ui-kit/Title/Title.mobile.tsx
+;// CONCATENATED MODULE: ./src/components/PictureText/PictureText.tsx
 
 
-const SizeTableClass = {
-    XL: 'text-m-title',
-    L: 'text-m-title',
-    M: 'text-m-title-md',
-    S: 'text-m-title-xs',
-    '2XS': 'text-m-title-xs',
-    '3XS': 'text-m-title-xs',
-};
-const Title = JSX(({ size = 'L', className, children, ...rest }) => {
-    const Tag = size === 'XL' || size === 'L' ? 'h1' : 'h2';
-    return (jsx(Tag, { className: getClasses(SizeTableClass[size], className), ...rest, children: children }));
+
+
+
+const PictureText = JSX(({ className, title, image, benefits }) => {
+    return (jsxs("section", { className: `relative font-sans text-primary-text bg-white p-14 ${className}`, children: [jsx(Title, { className: "font-medium m-0 text-center", children: title }), jsxs("div", { className: 'flex justify-center mt-9', children: [image?.src && jsx(Img, { className: "mr-6", image: image }), benefits?.length ? (jsx("div", { className: "flex flex-col", children: benefits.map(renderBenefit) })) : null] })] }));
 });
-const getClasses = (...classes) => classes.filter(Boolean).join(' ');
-
-;// CONCATENATED MODULE: ./src/utils/url.ts
-const isURL = (href) => href?.includes('//');
-const withoutQuery = (href) => (href || '').replace(/\/?\?.*/, '');
-const getOrigin = (href) => {
-    if (!href || !isURL(href)) {
-        return undefined;
-    }
-    const url = href;
-    const protoSeparator = '//';
-    const endOfProto = url.indexOf(protoSeparator);
-    const endOfOrigin = url.indexOf('/', endOfProto + protoSeparator.length);
-    return endOfOrigin !== -1 ? url.substring(0, endOfOrigin) : url;
-};
-
-;// CONCATENATED MODULE: ./src/utils/withoutMobilePath.ts
-const MOBILE_URL_PATH = '/mobile';
-const withoutMobilePath = (href) => (href || '').replace(MOBILE_URL_PATH, '');
-
-;// CONCATENATED MODULE: ./src/utils/adjustHref.ts
-
-
-const adjustHref = (href, router) => {
-    if (!href) {
-        return href;
-    }
-    const relativeHref = toRelativeHref(href, router) || '';
-    const isMobilePage = router?.pathname.startsWith(MOBILE_URL_PATH);
-    return isMobilePage && !isURL(relativeHref) ? `${MOBILE_URL_PATH}${relativeHref}` : relativeHref;
-};
-const toRelativeHref = (href, router) => {
-    if (!href) {
-        return href;
-    }
-    const origin = getOrigin(router?.href);
-    return origin ? href.replace(origin, '') || '/' : href;
-};
-
-;// CONCATENATED MODULE: ./src/hooks/useLink.ts
-
-
-const defaultHandlerDecorator = (handler) => handler;
-function useLink({ router, handlerDecorator = defaultHandlerDecorator, }, link) {
-    const href = adjustHref(link.href, router);
-    return {
-        ...link,
-        href,
-        ariaLabel: link.text,
-        onClick: handlerDecorator((ev) => {
-            const isLocalHref = href && !isURL(href);
-            const isLocalTarget = !link.target || link.target === '_self';
-            if (isLocalHref && isLocalTarget) {
-                ev.preventDefault();
-                router.push(href);
-            }
-        }, link),
-    };
+function renderBenefit(benefit, i) {
+    return (jsxs("div", { className: "flex flex-row mb-8", children: [benefit.icon && (jsx(Icon, { className: "w-[48px] h-[48px] bg-main rounded-full box-border p-[12px]", name: benefit.icon, width: "48", height: "48" })), jsxs("div", { className: "flex gap-1 flex-col h-full ml-5 max-w-[490px]", children: [benefit.label && (jsx("div", { className: "font-medium text-primary-text text-xl m-0", children: benefit.label })), benefit.description && (jsx("div", { className: "font-normal text-sm text-secondary-text", children: benefit.description }))] })] }, String(i)));
 }
 
-;// CONCATENATED MODULE: ./src/ui-kit/Img.tsx
+;// CONCATENATED MODULE: ./src/components/PictureText/PictureText.fixture.tsx
 
 
-const Img = JSX(({ className, image: { size, ...image } }) => {
-    const style = {
-        width: size?.width ? `${size?.width}px` : '100%',
-        height: size?.height ? `${size?.height}px` : '100%',
-    };
-    return (jsxs("picture", { className: `flex-none ${className || ''}`, children: [image.sources?.length
-                ? image.sources.map(({ src, format }, index) => (jsx("source", { srcSet: src, type: formatToMimeType(format) }, `${index}_${src}`)))
-                : null, jsx("img", { src: image.src, alt: image.alt || image.title, title: image.title, style: style, ...size })] }));
-});
-function formatToMimeType(format) {
-    return format ? `image/${String(format)}` : undefined;
-}
 
-;// CONCATENATED MODULE: ./src/ui-kit/Button/Button.mobile.tsx
-
-/* eslint-disable max-lines-per-function */
-/* eslint-disable complexity */
-
-const buttonStyleMap = {
-    primary: 'text-white bg-primary-main hover:bg-primary-hover active:bg-primary-active',
-    secondary: 'text-primary-main bg-secondary-light hover:bg-secondary-hover active:bg-secondary-active',
+const PictureText_fixture_image = {
+    src: 'legal-support-business.png',
+    format: 'webp',
+    size: {
+        width: 200,
+        height: 200,
+    },
+    alt: 'Варианты потребительского кредита',
 };
-const buttonDisabledStyleMap = {
-    primary: 'bg-secondary-dark text-secondary-text',
-    secondary: 'bg-secondary-light text-secondary-text',
+const PICTURE_TEXT = {
+    title: 'Варианты потребительского кредита',
+    benefits: [
+        {
+            label: 'Кредит по одному документу',
+            description: 'До 300 тыс ₽ по упрощённой процедуре получения кредита',
+            icon: 'DocumentTextIcon',
+        },
+        {
+            label: 'Кредит на общих условиях',
+            description: 'До 5 млн ₽ на общих условиях получения кредита',
+            icon: 'DocumentTextIcon',
+        },
+    ],
+    image: PictureText_fixture_image,
 };
-const styleButton = 'w-full text-center font-sans select-none';
-const Button = JSX(({ className, text, aboveText, appendLeft, href, target, onClick, children, disabled, rounded, version = 'none', ariaLabel, ...rest }) => {
-    const buttonInner = children ?? (jsx(ButtonInner, { text: text, aboveText: aboveText, appendLeft: appendLeft, rounded: rounded }));
-    if (disabled) {
-        return (jsx("div", { role: "button", "aria-disabled": "true", "aria-label": ariaLabel, tabIndex: "-1", className: `inline-block ${styleButton} ${buttonDisabledStyleMap[version] || ''} ${rounded ? 'rounded-full' : 'rounded-md'} ${className || ''}`, children: buttonInner }));
-    }
-    return (jsx("a", { className: `${styleButton} inline-block cursor-pointer no-underline ${buttonStyleMap[version] || ''} ${rounded ? 'rounded-full' : 'rounded-md'} ${className || ''}`, href: href, target: target, onClick: onClick, "aria-label": ariaLabel, role: !href ? 'button' : 'link', ...rest, children: buttonInner }));
+/* harmony default export */ const PictureText_fixture = ({
+    default: (jsx("div", { className: "container grid grid-cols-12", children: jsx(PictureText, { className: "col-span-12", context: context, ...PICTURE_TEXT }) })),
 });
-const ButtonInner = JSX(({ text, aboveText, appendLeft, rounded }) => {
-    const withoutText = !text && !aboveText && Boolean(appendLeft);
-    const buttonInnerClasses = `flex items-center justify-center ${withoutText ? 'h-12 w-12' : `px-9 gap-2 ${aboveText ? 'py-2' : 'py-3.5'}`} ${rounded ? 'rounded-full' : ''}`;
-    return (jsxs("div", { className: buttonInnerClasses, children: [appendLeft ? appendLeft : null, withoutText ? null : (jsxs("div", { children: [jsx("div", { className: "text-2xs text-left", children: aboveText }), jsx("div", { className: "text-button font-medium text-left", children: text })] }))] }));
-});
-
-;// CONCATENATED MODULE: ./src/components/BaseTile/renderButton.mobile.tsx
-
-
-
-function renderButton({ icon, ...button }, i) {
-    if (!button?.text)
-        return;
-    return icon ? (jsx(Button, { appendLeft: jsx(Icon, { name: icon, width: "24", height: "24" }), ...button }, String(i))) : (jsx(Button, { ...button }, String(i)));
-}
 
 ;// CONCATENATED MODULE: ./src/ui-kit/BlockItem/BlockItem.tsx
 
@@ -31518,352 +31523,66 @@ const getListStyle = (version, white) => {
     return `${LIST_STYLE_CLASSES} ${color} ${size}`;
 };
 
-;// CONCATENATED MODULE: ./src/components/BaseTile/renderItems.mobile.tsx
-
-
-function renderItems(items = [], version) {
-    return (jsx("section", { className: "mt-1.5", role: "list", children: items.map((_, i) => (jsx(BlockItem, { className: i ? 'mt-2.5' : '', text: _, version: version }, String(i)))) }));
-}
-
-;// CONCATENATED MODULE: ./src/components/BaseTile/BaseTileInner.mobile.tsx
+;// CONCATENATED MODULE: ./src/components/TextBlock/TextBlock.mobile.tsx
 
 
 
 
-
-
-const BaseTileInner = JSX(({ context, description, children, buttons, image, items, version = 'primary' }) => {
-    const router = context.useRouter();
-    const { handlerDecorator } = context;
-    return (jsxs("div", { children: [description && jsx("div", { className: `font-normal text-base mt-3`, children: description }), children, items?.length && renderItems(items, version), buttons?.length && (jsx("div", { className: "mt-5", children: buttons.map((button, index) => renderButton(useLink({ router, handlerDecorator }, button), index)) })), image?.src && jsx(Img, { className: "mt-auto ml-7", image: image })] }));
-});
-
-;// CONCATENATED MODULE: ./src/components/BaseTile/getTitleSizeByClassName.ts
-
-function getTitleSizeByClassName(className = '') {
-    const colSpan = getColSpan(className);
-    if (colSpan <= 4) {
-        return 'S';
-    }
-    else if (colSpan <= 8) {
-        return 'M';
-    }
-    else {
-        return 'L';
-    }
-}
-
-;// CONCATENATED MODULE: ./src/components/BaseTile/BaseTile.mobile.tsx
-
-
-
-
-
-const alignBlock = {
-    left: 'items-start',
-    center: 'items-center',
-    right: 'items-end',
-};
-const TITLE_CLASSES = 'font-medium m-0 whitespace-pre-wrap max-w-[600px]';
-const BaseTile = JSX(({ className, context, title, titleSize, description, children, buttons, image, items, version = 'primary', align = 'left', }) => {
-    return (jsxs("div", { className: `font-sans flex flex-col grow h-full ${alignBlock[align]}`, children: [title && (jsx(Title, { size: titleSize || getTitleSizeByClassName(className), className: `${TITLE_CLASSES} ${version === 'primary' ? 'text-primary-text' : ''}`, children: title })), jsx(BaseTileInner, { context: context, buttons: buttons, image: image, children: children, description: description, items: items })] }));
-});
-
-;// CONCATENATED MODULE: ./src/components/Tile/Tile.tsx
-
-
-
-
-const tileStyleMap = {
-    primary: 'bg-white text-primary-text',
-    secondary: 'bg-primary-main text-white',
-};
-const Tile = JSX((props) => {
-    const { children, className = '', version = 'primary', role } = props;
-    return (jsx("section", { className: `font-sans p-9 box-border ${className} ${tileStyleMap[version]} ${getContainerPaddingRight(className)} ${getContainerMinHeight(className)} `, role: role, children: jsx(BaseTile, { ...props, children: children }) }));
-});
-function getContainerPaddingRight(className = '') {
-    const colSpan = getColSpan(className);
-    if (colSpan <= 6) {
-        return 'pr-9';
-    }
-    else if (colSpan <= 8) {
-        return 'pr-[4.75rem]';
-    }
-    else {
-        return 'pr-[9.4rem]';
-    }
-}
-function getContainerMinHeight(className = '') {
-    const colSpan = getColSpan(className);
-    if (colSpan <= 6) {
-        return 'min-h-[300px]';
-    }
-    else if (colSpan <= 8) {
-        return 'min-h-[320px]';
-    }
-    else {
-        return 'min-h-[360px]';
-    }
-}
-
-;// CONCATENATED MODULE: ./src/components/ExchangeRateTile/ExchangeRateTile.tsx
-
-
-
-
-const CBR_EXCHANGE_RATE_URL = 'https://www.cbr-xml-daily.ru/daily_json.js';
-const CURRENCY_CODES = ['USD', 'EUR'];
-const CURRENCY_ICONS_MAP = {
-    USD: 'DollarIcon',
-    EUR: 'EuroIcon',
-};
-const buttons = [
-    {
-        text: 'Все показатели',
-        href: 'https://cbr.ru/currency_base/daily/',
-        version: 'secondary',
+const textBlockStyleMaps = {
+    primary: {
+        background: 'bg-white',
+        icon: 'bg-primary-main text-white',
+        title: 'text-primary-text',
+        description: 'text-secondary-text',
     },
-];
-const ExchangeRateTile = JSX(({ className, context, title }) => {
-    const { data } = context.useAsyncData(CBR_EXCHANGE_RATE_URL, fetchExchangeRate);
-    return (jsx(Tile, { className: className, context: context, title: title || 'Курсы обмена валют', buttons: buttons, children: jsxs("table", { children: [jsx("thead", { children: jsxs("tr", { children: [jsx(CurrencyTH, { children: "\u0412\u0430\u043B\u044E\u0442\u0430" }), jsx(CurrencyTH, { className: "pl-11", children: "\u041A\u0443\u0440\u0441" })] }) }), jsx("tbody", { children: CURRENCY_CODES.map((code) => {
-                        const value = (data?.Valute || {})[code]?.Value;
-                        return (jsxs("tr", { children: [jsx(CurrencyTD, { className: "pt-4", children: jsxs("div", { className: "flex items-center", children: [jsx(Icon, { name: CURRENCY_ICONS_MAP[code], width: "24", height: "24" }), jsx("span", { className: "ml-2", children: code })] }) }), jsx(CurrencyTD, { className: "pt-4 pl-11", children: formatCurrency(value) })] }, code));
-                    }) })] }) }));
+    secondary: {
+        background: 'bg-primary-main',
+        icon: 'bg-white text-primary-main',
+        title: 'text-white',
+        description: 'text-white',
+    },
+    'secondary-light': {
+        background: 'bg-primary-main/10',
+        icon: 'bg-primary-main text-white',
+        title: 'text-primary-text',
+        description: 'text-secondary-text',
+    },
+};
+const TextBlock = JSX(({ title, description, blockVersion = 'primary', iconVersion, image, className = '', items }) => {
+    const textBlockStyleMap = textBlockStyleMaps[blockVersion];
+    return (jsxs("section", { className: `font-sans px-4 py-[18px] flex flex-col ${textBlockStyleMap.background} ${className}`, children: [iconVersion === 'small' ? renderIcon(textBlockStyleMap.icon) : null, iconVersion === 'big' ? renderImage(image) : null, jsxs("div", { className: "py-0.5", children: [title ? (jsx("div", { className: `font-medium text-base mb-1 ${textBlockStyleMap.title}`, children: title })) : null, description ? (jsx("div", { className: `text-sm ${textBlockStyleMap.description}`, children: description })) : null, items?.length ? renderItems(items) : null] })] }));
 });
-const CurrencyTH = JSX(({ className = '', children }) => (jsx("th", { className: `text-left font-normal text-sm text-secondary-text ${className}`, children: children })));
-const CurrencyTD = JSX(({ className = '', children }) => (jsx("td", { className: `text-left font-normal text-base text-primary-text ${className}`, children: children })));
-async function fetchExchangeRate() {
-    const response = await fetch(CBR_EXCHANGE_RATE_URL);
-    return await response.json();
+function renderItems(items = [], version) {
+    return (jsx("section", { className: "mt-1", role: "list", children: items.map((_, i) => (jsx(BlockItem, { text: _, version: version }, String(i)))) }));
 }
-const currencyNumberFormat = new Intl.NumberFormat('ru', { style: 'currency', currency: 'RUB' });
-const formatCurrency = (value) => (value ? currencyNumberFormat.format(value) : '');
-
-;// CONCATENATED MODULE: ./src/components/Footer/TextInformation.tsx
-
-
-
-const TextInformation = JSX(({ className, links, context }) => {
-    const router = context.useRouter();
-    const { handlerDecorator } = context;
-    return (jsxs("div", { className: `${className || ''}`, children: [jsx("div", { className: "pt-5 pb-[5px]", children: jsx("span", { className: "font-sans font-normal text-xs text-secondary-text", children: `\u00a9\u00A02000-${new Date().getFullYear()}\u00A0АО \u00ABРоссельхозбанк\u00BB Генеральная лицензия Банка России \u2116\u00A03349 от\u00A012.08.2015\u00A0г.` }) }), links?.length ? (jsx("div", { className: "flex justify-start items-start gap-5 pt-[5px]", children: links.map((_, i) => (jsx(TextInformationLink, { index: i, ...useLink({ router, handlerDecorator }, _) }, String(i)))) })) : null] }));
-});
-const TextInformationLink = JSX(({ className, index, text, href, target, onClick }) => (jsx("a", { className: `font-sans font-normal text-xs text-secondary-text visited:text-secondary-text hover:text-primary-text inline-block no-underline max-w-[292px] ${className || ''}`, href: href, target: target, onClick: onClick, children: text || `Документ ${index}` })));
-
-;// CONCATENATED MODULE: ./src/components/Footer/Footer.mobile.tsx
-
-
-
-const Footer = JSX(({ className, context }) => (jsx("footer", { className: `${className} px-9 py-2 bg-white rounded-bl-3xl rounded-br-3xl`, children: jsx(TextInformation, { context: context }) })));
-
-;// CONCATENATED MODULE: ./src/components/Gallery/Gallery.mobile.tsx
-
-
-
-
-
-
-const Gallery = JSX(({ title, description, cards = [], className }) => {
-    return (jsxs("section", { className: `relative font-sans text-primary-text bg-white p-4 overflow-hidden ${className}`, children: [jsxs("div", { className: "flex flex-col items-center mb-8", children: [jsx(Title, { className: "font-medium m-0 text-centers", children: title }), description ? (jsx("div", { className: "font-normal text-base max-w-[600px] mt-3", children: description })) : null] }), jsx("div", { className: "horizontal-list no-scrollbar", role: "list", children: cards?.map(renderCard) })] }));
-});
-function renderCard(card, key) {
-    return (jsxs("div", { className: "box-border horizontal-list-item border-solid border rounded-md border-main-divider p-4 mx-1 flex flex-col justify-between items-stretch", role: "listitem", children: [jsxs("div", { children: [card.image?.src ? (jsx("div", { className: "flex justify-center", children: jsx(Img, { className: "mb-6", image: card.image }) })) : null, card.title ? (jsx("h4", { className: `font-medium text-xl m-0 ${!card.description && !card.items?.length ? 'text-center' : ''}`, children: card.title })) : null, card.description ? (jsx("div", { className: "font-normal text-sm text-secondary-text mt-2", children: card.description })) : null, card.items?.length ? Gallery_mobile_renderItems(card.items) : null] }), card?.button?.href ? jsx(Button, { className: "mt-6", ...card.button }) : null] }, key));
+function renderIcon(className) {
+    return (jsx("div", { className: "mb-3", children: jsx("div", { className: `rounded-full h-4 w-4 text-center text-xs ${className}`, children: "i" }) }));
 }
-function Gallery_mobile_renderItems(items = []) {
-    return (jsx("section", { className: "max-w-[308px] mt-2", role: "list", children: items.map((item, i) => (jsx(BlockItem, { children: jsx("span", { className: "text-sm text-secondary-text", children: item }) }, String(i)))) }));
+function renderImage(image) {
+    return image?.src ? jsx(Img, { className: "pb-3 mr-auto", image: image }) : null;
 }
 
-;// CONCATENATED MODULE: ./src/utils/maxBy.ts
-const maxBy = (discriminator) => (list) => list.reduceRight((a, b) => (discriminator(a) > discriminator(b) ? a : b));
-const minBy = (discriminator) => maxBy((_) => -discriminator(_));
-
-;// CONCATENATED MODULE: ./src/services/sitemap/isHrefActive.ts
+;// CONCATENATED MODULE: ./src/components/TextBlock/TextBlock.fixture.mobile.tsx
 
 
-const isHrefActive = (href, router, cmp = (href, baseHref) => baseHref.startsWith(href)) => {
-    return cmp(withoutQuery(href), withoutMobilePath(withoutQuery(isURL(href) ? router.href : router.pathname)));
+
+const TextBlock_fixture_mobile_image = {
+    src: 'bank-card.png',
+    format: 'webp',
+    size: {
+        width: 43,
+        height: 43,
+    },
 };
-
-;// CONCATENATED MODULE: ./src/services/sitemap/isSubItemActive.ts
-
-const isSubItemActive = (router) => (subItem) => isHrefActive(subItem.href, router);
-
-;// CONCATENATED MODULE: ./src/services/sitemap/findActiveSubItem.ts
-
-
-const findActiveSubItem = (router) => (items = []) => {
-    const possibleActiveSubItems = items?.filter(isSubItemActive(router));
-    const activeSubItem = possibleActiveSubItems?.length
-        ? maxBy((_) => _.href?.length || 0)(possibleActiveSubItems) // More specific item with max length
-        : null;
-    return activeSubItem;
+const TEXT_BLOCK = {
+    title: 'Все карты Россельхозбанка работают',
+    description: "Если не планируете поездку за границу, продолжайте пользоваться картой Своя. Для поездок за границу можно заказать карту 'Кредитная карта Своя Union Pay' на сайте и в приложении Россельхозбанка",
 };
-
-;// CONCATENATED MODULE: ./src/services/sitemap/isTopItemActive.ts
-
-
-const isTopItemActive = (router) => (topItem) => topItem.items?.some(isSubItemActive(router)) || isHrefActive(topItem.href, router);
-
-;// CONCATENATED MODULE: ./src/services/sitemap/mergeTopItems.ts
-const cmp = (a) => (b) => a?.href === b?.href;
-const substitute = (items, substitution) => (items || []).map((_) => substitution?.find(cmp(_)) || _);
-const subtract = (minuend, subtrahend) => (minuend || []).filter((_) => !subtrahend?.find(cmp(_)));
-const mergeTopItems = (left, right) => substitute(left, right).concat(subtract(right, left));
-
-;// CONCATENATED MODULE: ./src/services/sitemap/useSitemap.ts
-
-function useSitemap(useAsyncData) {
-    const { data } = useAsyncData(sitemapURL(), fetchSitemap);
-    return data || {};
-}
-async function fetchSitemap() {
-    const response = await fetch(sitemapURL());
-    return await response.json();
-}
-function sitemapURL() {
-    return `/wcms-resources/${projectSettings.SITEMAP || 'sitemap'}.json`;
-}
-
-;// CONCATENATED MODULE: ./src/ui-kit/HeaderItem/HeaderItem.tsx
-
-
-const TEXT_CLASSES = 'font-sans font-normal text-base';
-const BORDER_CLASSES = 'absolute left-0 -bottom-2 w-full h-[2px]';
-const HeaderItem = JSX(({ className, text, href, target, active, onClick, children, bgColor = 'bg-white' }) => (jsxs("a", { className: `relative inline-block bg-transparent text-center no-underline ${className || ''}`, href: href, target: target, onClick: onClick, children: [jsx("span", { className: getTextClasses(bgColor, active), children: text || children }), active ? jsx("div", { className: getBorderClasses(bgColor, active) }) : null] })));
-const getTextClasses = (bgColor, active) => {
-    let classes = 'text-white';
-    if (bgColor === 'bg-white') {
-        classes = active ? 'text-primary-main' : 'text-primary-text hover:text-primary-main';
-    }
-    return `${classes} ${TEXT_CLASSES}`;
-};
-const getBorderClasses = (bgColor, active) => {
-    if (!active) {
-        return BORDER_CLASSES;
-    }
-    return `${bgColor === 'bg-white' ? bgColor : 'bg-primary-main'} ${BORDER_CLASSES}`;
-};
-
-;// CONCATENATED MODULE: ./src/ui-kit/SVG.tsx
-
-
-const SVG = JSX(({ className, viewBox, fill = 'none', width, height, paths, ...commonOptions }) => {
-    return (jsx("svg", { xmlns: "http://www.w3.org/2000/svg", className: className, viewBox: viewBox, fill: fill, width: width, height: height, children: paths.map(({ d, fill, ...options }, i) => (jsx("path", { d: d, fill: fill || 'currentColor', ...commonOptions, ...options }, i))) }));
-});
-
-;// CONCATENATED MODULE: ./src/ui-kit/Logo/Logo.tsx
-
-
-
-const LOGO_PATHS = [
-    'm13.72 25.51 4.42-4.33v-2.95l-4.42 4.32v2.96Zm0-10.98 4.42-4.35V7.41l-4.42 4.31v2.8Zm0 3.63 4.42-4.33v-2.78l-4.42 4.32v2.8ZM12.46 7.44l-.6-.56V0h-.66v6.22l-.58-.57V0h-.67v5l-.59-.58V0H8.7v6.56l4.44 4.33V0h-.67v7.44Zm1.26 14.35 4.42-4.33v-2.78L13.72 19v2.8Zm-5.03-.61 4.44 4.33v-2.96l-4.44-4.32v2.95Zm8.79-16.76-.59.58V0h-.66v5.66l-.6.56V0h-.66v6.87l-.58.57V0h-.67v10.9l4.42-4.34V0h-.66v4.42Zm-8.79 5.76 4.44 4.35v-2.8L8.69 7.4v2.77Zm0 3.65 4.44 4.33v-2.8l-4.44-4.3v2.77Zm0 3.63 4.44 4.33V19l-4.44-4.31v2.78Zm26.37 2.29H24.3a2.25 2.25 0 0 0 .36-1.22 2.32 2.32 0 0 0-2.33-2.31 2.32 2.32 0 0 0-2.31 2.31c0 .5.16.96.43 1.34a.74.74 0 0 0-.33.61c0 .26.14.49.33.62a2.32 2.32 0 0 0-.43 1.34 2.31 2.31 0 0 0 2.31 2.31 2.32 2.32 0 0 0 2.33-2.31c0-.45-.13-.87-.36-1.22h8.01v.49h-.8v.68h.8v.7h-.8v1.3h.8v-.58h1.17v.58h.79v-1.3h-.79v-.7h.79v-.68h-.79v-.5h1.58a.56.56 0 0 0 .56-.56v-.34a.57.57 0 0 0-.56-.56Zm-11.53 2.7a1.2 1.2 0 0 1-2.4 0c0-.24.08-.47.2-.66l.34-.56a.97.97 0 0 1-.34-.75c0-.3.13-.56.33-.74l-.32-.56a1.13 1.13 0 0 1-.2-.66 1.2 1.2 0 0 1 2.4 0c0 .49-.56 1.65-.56 1.65v.62c-.01.01.55 1.17.55 1.66ZM4.67 18.34v2.89c0 2.75 1.2 4.53 1.9 5.21l4.58 4.5c1.28 1.25 1.5 1.66 1.79 2.37v-3.2c0-2.84-1.44-3.94-2.19-4.67-1.73-1.68-2.89-2.8-3.82-3.73a8.98 8.98 0 0 1-2.26-3.37Zm6.08 14.24c-1.73-1.7-2.89-2.8-3.82-3.73a10 10 0 0 1-2.25-2.98v2.49a7.87 7.87 0 0 0 1.89 5.24l4.58 4.47c1.28 1.25 1.5 1.85 1.79 2.55v-3.37c0-2.85-1.45-3.95-2.19-4.67Z',
-    'M19.88 5.34c-.32 0-.64 0-.96.02V6.7a18.5 18.5 0 1 1 .95 36.94A18.5 18.5 0 0 1 1.35 25.17c0-5.67 2.55-10.73 6.58-14.13V9.32A19.78 19.78 0 0 0 0 25.17C0 36.12 8.9 45 19.88 45a19.85 19.85 0 0 0 19.86-19.83c0-10.95-8.9-19.83-19.87-19.83Z',
-    'M33.93 35.53c.3-.41.6-.85.87-1.3v-2.66h-.87v3.96Zm2.54-4.92c.12-.4.24-.78.34-1.16h-2.88v.7h.43c.77-.02 1.63-.03 2.11.46Zm-19.19-1.27h-.78v7.91h.78v-7.9Z',
-    'M14.7 27.83h2.58c.67 0 1.14.14 1.4.4.27.25.4.72.4 1.38v7.4c0 .66-.12 1.12-.4 1.38-.4.41-1.16.41-1.78.41l-.4-.01v3.5l.78.14v-2.88c1.2 0 1.97-.4 2.34-1.22v4.29h.26l.5-.01V29.74c0-.68.13-1.16.4-1.43.25-.27.72-.4 1.37-.4.67 0 1.65-.1 2.16.4.26.27.38.76.38 1.43v3.8h-1.77v-4.06h-.77v12.99c.26-.03.5-.07.77-.12V34.3h1.77v7.64c.36-.1.72-.21 1.08-.34v-7c0-.8.19-1.4 1-1.67l-.9-4.87h1.8l.3 5.31h.22l.3-5.31h1.88l-1.01 4.87c.84.3 1.01.81 1.01 1.66v4.53a16.63 16.63 0 0 0 1.5-1.27v-9.83h5.25l.1-.72H24.93l.17.89c-.38-.72-1.12-1.08-2.2-1.08h-.77c-1.3 0-2.1.52-2.4 1.55-.27-1.08-1.1-1.62-2.46-1.62h-3.36v14.52c.26.09.52.18.78.25V27.84Zm16.29 5.58-.85-.8.85-4.37v5.17Z',
-    'M27.66 40.79c.27-.14.55-.28.8-.43v-5.98h-.8v6.4Z',
-];
-const SVG_COLOR = {
-    'bg-white': 'text-primary-main',
-    transparent: 'text-white',
-};
-const TEXT_COLOR = {
-    'bg-white': 'text-black',
-    transparent: 'text-white',
-};
-const Logo = JSX(({ className, href, children, targetBlank, bgColor = 'bg-white' }) => {
-    return (jsxs("a", { className: `inline-flex items-center font-sans no-underline ${className || ''}`, href: href || 'https://rshb.ru/', target: targetBlank ? '_blank' : '_self', children: [jsx(SVG, { className: `${SVG_COLOR[bgColor]} w-10`, viewBox: "0 0 40 45", paths: LOGO_PATHS.map((d) => ({ d })) }), jsx("span", { className: `${TEXT_COLOR[bgColor]} text-base font-medium ml-2.5`, children: children || 'Россельхозбанк' })] }));
-});
-
-;// CONCATENATED MODULE: ./src/ui-kit/TopItem/TopItem.tsx
-
-
-const TopItem_TEXT_CLASSES = 'font-sans font-normal text-sm';
-const LINK_CLASSES = 'inline-block border border-solid bg-transparent text-center no-underline';
-const TopItem = JSX(({ className = '', text, href, target, active, flat, onClick, children, ariaLabel, bgColor = 'bg-white', }) => (jsx("a", { className: `${getLinkClasses(bgColor, active, flat)} ${className}`, href: href, target: target, onClick: onClick, rel: "noopener noreferrer", "aria-label": ariaLabel, children: jsx("span", { className: TopItem_getTextClasses(bgColor, active, flat), children: text || children }) })));
-const getLinkClasses = (bgColor, active, flat) => {
-    let classes = 'border-transparent';
-    if (active) {
-        classes = `rounded-md ${bgColor === 'bg-white' ? 'border-primary-main' : 'border-white'}`;
-    }
-    return `${classes} ${LINK_CLASSES} ${flat ? '' : 'px-4 py-2'}`;
-};
-const TopItem_getTextClasses = (bgColor, active, flat) => {
-    let classes = 'text-white';
-    if (bgColor === 'bg-white') {
-        classes = active
-            ? 'text-primary-main'
-            : `${flat ? 'text-primary-text' : 'text-secondary-text'} hover:text-primary-main`;
-    }
-    return `${classes} ${TopItem_TEXT_CLASSES}`;
-};
-
-;// CONCATENATED MODULE: ./src/components/Header/HeaderSecondaryMenuButton.tsx
-
-
-const HeaderSecondaryMenuButton = JSX(({ className = '', children, ariaLabel }) => (jsx("button", { type: "button", className: `border-0 p-0 w-[24px] h-[24px] flex items-center bg-inherit cursor-pointer ${className}`, disabled: true, "aria-label": ariaLabel, children: children })));
-
-;// CONCATENATED MODULE: ./src/components/Header/HeaderSecondaryMenu.tsx
-
-
-
-
-
-const COLORS_MAP = {
-    'bg-white': 'text-primary-text hover:text-primary-main',
-    transparent: 'text-white',
-};
-const DOP_LINKS_COLORS_MAP = {
-    'bg-white': 'text-secondary-light hover:text-secondary-hover',
-    transparent: 'text-white',
-};
-const DOP_LINKS_ICON_NAME_MAP = {
-    'bg-white': 'GridIcon',
-    transparent: 'GridIconWhite',
-};
-const HeaderSecondaryMenu = JSX(({ context, className, defaultLocation = '', bgColor = 'bg-white' }) => {
-    const [city, getCity] = context.useGeolocation(defaultLocation);
-    return (jsxs("div", { className: `flex items-center ${className || ''}`, children: [jsx(TopItem, { className: "mr-5", flat: true, href: "#", text: city, ariaLabel: "\u041C\u0435\u0441\u0442\u043E\u043F\u043E\u043B\u043E\u0436\u0435\u043D\u0438\u0435", onClick: getCity, bgColor: bgColor }), jsx(TopItem, { className: "mr-7", flat: true, href: "#", text: "\u041E\u0444\u0438\u0441\u044B \u0438 \u0431\u0430\u043D\u043A\u043E\u043C\u0430\u0442\u044B", ariaLabel: "\u0421\u043F\u0438\u0441\u043E\u043A \u0432\u0441\u0435\u0445 \u0434\u043E\u0441\u0442\u0443\u043F\u043D\u044B\u0445 \u043E\u0444\u0438\u0441\u043E\u0432 \u0438 \u0431\u0430\u043D\u043A\u043E\u043C\u0430\u0442\u043E\u0432", bgColor: bgColor }), jsx(HeaderSecondaryMenuButton, { className: `mr-5 ${COLORS_MAP[bgColor]}`, ariaLabel: "\u041F\u043E\u0438\u0441\u043A \u043F\u043E \u0441\u0430\u0439\u0442\u0443", children: jsx(Icon, { name: "LoupeIcon", className: "h-full", asSVG: true }) }), jsx(HeaderSecondaryMenuButton, { className: `mr-5 ${COLORS_MAP[bgColor]}`, ariaLabel: "\u041F\u0440\u043E\u0444\u0438\u043B\u044C", children: jsx(Icon, { name: "ProfileIcon", className: "h-full", asSVG: true }) }), jsx(HeaderSecondaryMenuButton, { className: `${DOP_LINKS_COLORS_MAP[bgColor]} min-w-[32px] min-h-[32px]`, ariaLabel: "\u0414\u043E\u043F\u043E\u043B\u043D\u0438\u0442\u0435\u043B\u044C\u043D\u044B\u0435 \u0441\u0441\u044B\u043B\u043A\u0438", children: jsx(Icon, { name: DOP_LINKS_ICON_NAME_MAP[bgColor], className: "h-full", asSVG: true }) })] }));
-});
-
-;// CONCATENATED MODULE: ./src/components/Header/Header.tsx
-
-
-
-
-
-
-
-
-
-
-
-const BORDER_COLORS = {
-    'bg-white': 'bg-main-divider',
-    transparent: 'bg-main-divider opacity-30',
-};
-const Header = JSX(({ className, defaultLocation, bgColor = 'bg-white', context, topItems }) => {
-    const router = context.useRouter();
-    const sitemap = useSitemap(context.useAsyncData);
-    const { handlerDecorator } = context;
-    const mergedItems = mergeTopItems(sitemap.topItems, topItems);
-    const activeTopItem = mergedItems.find(isTopItemActive(router));
-    const subItems = activeTopItem?.items;
-    const activeSubItem = findActiveSubItem(router)(subItems);
-    const topMenu = mergedItems.map((_, i) => (jsx(TopItem, { active: _ === activeTopItem, ...useLink({ router, handlerDecorator }, _), ariaLabel: _.text, bgColor: bgColor }, String(i))));
-    const subMenu = subItems?.map((_) => (jsx(HeaderItem, { className: "mr-8", active: _ === activeSubItem, ...useLink({ router, handlerDecorator }, _), bgColor: bgColor }, _.href)));
-    return (jsx("header", { className: `pt-5 pb-8 px-20 ${bgColor} ${className || ''}`, children: jsxs("div", { className: "container", children: [jsxs("div", { className: "flex items-center", children: [jsx(Logo, { className: "mr-8", bgColor: bgColor }), topMenu, jsx(HeaderSecondaryMenu, { context: context, className: "ml-auto", defaultLocation: defaultLocation, bgColor: bgColor })] }), jsx("div", { className: `mt-5 h-[1px] ${BORDER_COLORS[bgColor]}` }), jsx("nav", { className: "mt-5", children: subMenu })] }) }));
-});
-
-;// CONCATENATED MODULE: ./src/components/Headline/Headline.mobile.tsx
-
-
-
-
-const Headline = JSX(({ bgColor = 'transparent', className = '', title, description, image }) => {
-    return (jsxs("section", { className: `px-4 py-6 ${bgColor} ${className}`, children: [title && (jsx(Title, { size: "L", className: "text-primary-text mt-0 font-medium", children: title })), description && (jsx("p", { className: `font-normal text-m-md ${title ? 'mt-2.5' : ''}`, children: description })), image?.src && (jsx("div", { className: "mt-5 mx-auto flex justify-center", children: jsx(Img, { image: image }) }))] }));
-});
+/* harmony default export */ const TextBlock_fixture_mobile = (jsx("div", { className: "container grid grid-cols-12", children: jsxs("div", { className: "col-span-12", children: [jsxs("div", { children: [jsx("p", { children: "Private clients" }), jsxs("div", { className: "flex flex-col gap-[6px]", "data-theme": "pc", children: [jsx(TextBlock, { context: context, ...TEXT_BLOCK, blockVersion: "primary", iconVersion: "small" }), jsx(TextBlock, { context: context, ...TEXT_BLOCK, blockVersion: "primary", iconVersion: "big", image: TextBlock_fixture_mobile_image }), jsx(TextBlock, { context: context, ...TEXT_BLOCK, blockVersion: "primary", iconVersion: "none" }), jsx(TextBlock, { context: context, description: "\u0415\u0441\u043B\u0438 \u043D\u0435 \u043F\u043B\u0430\u043D\u0438\u0440\u0443\u0435\u0442\u0435 \u043F\u043E\u0435\u0437\u0434\u043A\u0443 \u0437\u0430 \u0433\u0440\u0430\u043D\u0438\u0446\u0443, \u043F\u0440\u043E\u0434\u043E\u043B\u0436\u0430\u0439\u0442\u0435 \u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u044C\u0441\u044F \u043A\u0430\u0440\u0442\u043E\u0439 \u0421\u0432\u043E\u044F. \u0414\u043B\u044F \u043F\u043E\u0435\u0437\u0434\u043E\u043A \u0437\u0430 \u0433\u0440\u0430\u043D\u0438\u0446\u0443", blockVersion: "primary" }), jsx(TextBlock, { context: context, title: "\u0412\u0441\u0435 \u043A\u0430\u0440\u0442\u044B \u0420\u043E\u0441\u0441\u0435\u043B\u044C\u0445\u043E\u0437\u0431\u0430\u043D\u043A\u0430 \u0440\u0430\u0431\u043E\u0442\u0430\u044E\u0442", blockVersion: "primary" }), jsx(TextBlock, { context: context, title: "\u0412\u0441\u0435 \u043A\u0430\u0440\u0442\u044B \u0420\u043E\u0441\u0441\u0435\u043B\u044C\u0445\u043E\u0437\u0431\u0430\u043D\u043A\u0430 \u0440\u0430\u0431\u043E\u0442\u0430\u044E\u0442", blockVersion: "primary", iconVersion: "small", items: [
+                                    'Вклады до 1,4 млн застрахованы',
+                                    'Вклады до 1,4 млн застрахованы',
+                                    'Вклады до 1,4 млн застрахованы',
+                                ] })] })] }), jsxs("div", { children: [jsx("p", { children: "Business clients" }), jsxs("div", { className: "flex flex-col gap-[6px]", "data-theme": "bc", children: [jsx(TextBlock, { className: "flex flex-col", context: context, ...TEXT_BLOCK, blockVersion: "primary", iconVersion: "small" }), jsx(TextBlock, { context: context, ...TEXT_BLOCK, iconVersion: "small", blockVersion: "secondary" }), jsx(TextBlock, { context: context, ...TEXT_BLOCK, iconVersion: "small", blockVersion: "secondary-light" })] })] }), jsxs("div", { children: [jsx("p", { children: "Ecosystem own" }), jsxs("div", { className: "flex flex-col gap-[6px]", "data-theme": "eo", children: [jsx(TextBlock, { context: context, ...TEXT_BLOCK, iconVersion: "small", blockVersion: "primary" }), jsx(TextBlock, { context: context, ...TEXT_BLOCK, iconVersion: "small", blockVersion: "secondary" }), jsx(TextBlock, { context: context, ...TEXT_BLOCK, iconVersion: "small", blockVersion: "secondary-light" })] })] })] }) }));
 
 ;// CONCATENATED MODULE: ./src/ui-kit/SwipeListControl/getScrollPoints.ts
 const getScrollPoints = ({ gap, padding, clientWidth, scrollWidth, childElementCount, itemWidth, }) => {
@@ -31931,6 +31650,7 @@ const SwipeListControl = JSX(({ className = '', context, children, gap = 14, mar
     const [randomHash] = context.useState(getSwipeListControlHash());
     const [childrenCount, setChildrenCount] = context.useState(0);
     const [scrollPoints, setScrollPoints] = context.useState([]);
+    console.log('children %o');
     useDOMContentLoaded(context, () => {
         const container = document.querySelector(`[data-hash=${randomHash}]`);
         const { clientWidth, childElementCount, scrollWidth, children } = container;
@@ -32020,13 +31740,668 @@ const LinkDocs = JSX(({ className = '', context, title, subtitle, icon = 'DocIco
                     : null }))] }));
 });
 
-;// CONCATENATED MODULE: ./src/components/MobileAppTile/MobileAppTile.tsx
+;// CONCATENATED MODULE: ./src/components/Accordion/AccordionBlocks.tsx
 
 
 
-const MobileAppTile = JSX(({ className, context, title = 'Мобильное приложение', qr, buttons = [] }) => {
-    return (jsx(Tile, { className: className, context: context, title: title, buttons: buttons, children: jsxs("div", { className: "flex items-center", children: [qr?.src && qr?.href && (jsx("a", { href: qr.href, target: "_blank", children: jsx("img", { src: qr.src, alt: title, title: title, width: "164", height: "164", className: "w-[90px] h-[90px] min-w-[90px] min-h-[90px] bg-secondary-light" }) })), jsx("span", { className: "font-normal text-sm text-secondary-text ml-4", children: "\u041D\u0430\u0432\u0435\u0434\u0438\u0442\u0435 \u043A\u0430\u043C\u0435\u0440\u0443 \u0442\u0435\u043B\u0435\u0444\u043E\u043D\u0430 \u043D\u0430 QR-\u043A\u043E\u0434 \u0438 \u0441\u043A\u0430\u0447\u0430\u0439\u0442\u0435 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0435" })] }) }));
+
+const AccordionBlocks = {
+    Headline: Headline,
+    LinkDocs: LinkDocs,
+    TextBlock: TextBlock,
+    PictureText: PictureText,
+};
+
+;// CONCATENATED MODULE: ./src/components/Accordion/AccordionItemInner.mobile.tsx
+
+
+
+const AccordionItemInner = JSX(({ blocks, context }) => {
+    return (jsx("div", { className: `transition-all duration-300 max-h-0 overflow-hidden group-last:last:pb-0 `, children: blocks?.length ? blocks.map(renderBlock(context)) : null }));
 });
+const renderBlock = (context) => (block, i) => {
+    const type = block?.accordionBlockType;
+    if (!type || !(type in AccordionBlocks)) {
+        return null;
+    }
+    const AccordionBlock = AccordionBlocks[type];
+    return (jsx("div", { className: "mb-5 last:mb-0 py-2.5", children: jsx(AccordionBlock, { context: context, ...block, className: "!p-0" }) }, `block_${i}`));
+};
+
+;// CONCATENATED MODULE: ./src/components/Accordion/utils/isActiveHandler.ts
+const isActiveHandler = ({ context, blocks }) => {
+    const [isActive, setIsActive] = context.useState(false);
+    const hasContent = blocks?.length;
+    const icon = isActive ? 'MinusIcon' : 'PlusIcon';
+    const getContentBlock = ({ target }) => target.tagName === 'BUTTON' ? target.nextSibling : target.parentNode.nextSibling;
+    const handleToggle = (e) => {
+        if (!hasContent) {
+            return;
+        }
+        setIsActive(!isActive);
+        const contentBlock = getContentBlock(e);
+        contentBlock.style.maxHeight = contentBlock.style.maxHeight
+            ? null
+            : `${contentBlock.scrollHeight}px`;
+    };
+    return { isActive, hasContent, icon, handleToggle };
+};
+
+;// CONCATENATED MODULE: ./src/components/Accordion/AccordionItem.mobile.tsx
+
+
+
+
+
+const AccordionItem = JSX(({ label, blocks, bordered, context }) => {
+    const { hasContent, icon, handleToggle } = isActiveHandler({
+        context,
+        blocks,
+    });
+    return (jsxs("li", { className: `${bordered ? 'border p-4 rounded mb-4' : 'border-0 border-b last:border-b-0 py-[14px]'} border-solid border-main-divider`, children: [jsxs("button", { className: `border-none bg-transparent flex justify-between text-left w-full font-sans text-primary-text
+        ${hasContent ? 'group cursor-pointer' : ''}`, onClick: handleToggle, children: [jsx("span", { className: `text-m-title-xs pr-2.5 font-medium ${hasContent ? 'group-hover:text-primary-main' : ''}`, children: label }), hasContent ? jsx(Icon, { name: icon, width: "24", height: "24" }) : null] }), hasContent ? jsx(AccordionItemInner, { blocks: blocks, context: context }) : null] }));
+});
+
+;// CONCATENATED MODULE: ./src/components/Accordion/Accordion.mobile.tsx
+
+
+
+
+const Accordion = JSX(({ title, description, accordionItems, context, className = '', bordered }) => {
+    return (jsxs("section", { className: `py-6 font-sans bg-white text-primary-text ${bordered ? 'px-4' : ''} ${className}`, children: [title ? (jsx(Title, { className: "m-0 mb-2 font-medium text-center", size: "M", children: title })) : null, description ? jsx("div", { className: "mb-5 text-m-md text-center", children: description }) : null, accordionItems?.length ? (jsx("ul", { className: "list-none m-0 p-0", children: accordionItems.map((item, i) => (jsx(AccordionItem, { ...item, context: context, bordered: bordered }, `AccordionItem${i}`))) })) : null] }));
+});
+
+;// CONCATENATED MODULE: ./src/components/Accordion/Accordion.fixture.mobile.tsx
+
+
+
+
+
+
+
+const TEXT_BLOCK_ACCORDION_BLOCK = {
+    accordionBlockType: 'TextBlock',
+    ...TEXT_BLOCK,
+};
+const HEADLINE_ACCORDION_BLOCK = {
+    accordionBlockType: 'Headline',
+    ...HEADLINE,
+};
+const PICTURE_TEXT_ACCORDION_BLOCK = {
+    accordionBlockType: 'PictureText',
+    ...PICTURE_TEXT,
+};
+const LINK_DOCS_ACCORDION_BLOCK = {
+    accordionBlockType: 'LinkDocs',
+    ...LINK_DOCS_BASE,
+    title: '',
+};
+const propsTextBlock = {
+    title: 'Accordion title',
+    description: 'Accordion description 2',
+    bordered: true,
+    context: context,
+    accordionItems: [
+        {
+            label: 'Accordion label 1',
+            blocks: [TEXT_BLOCK_ACCORDION_BLOCK, TEXT_BLOCK_ACCORDION_BLOCK],
+        },
+        {
+            label: 'Accordion label 2',
+            blocks: [PICTURE_TEXT_ACCORDION_BLOCK],
+        },
+        {
+            label: 'Accordion label 3',
+            blocks: [HEADLINE_ACCORDION_BLOCK],
+        },
+        {
+            label: 'Accordion label 4',
+            blocks: [LINK_DOCS_ACCORDION_BLOCK],
+        },
+    ],
+};
+/* harmony default export */ const Accordion_fixture_mobile = (jsx("div", { className: "container grid grid-cols-12", children: jsx(Accordion, { className: "col-span-12", ...propsTextBlock }) }));
+
+;// CONCATENATED MODULE: ./src/utils/getColSpan.ts
+const getColSpan = (className) => {
+    const colSpanPrefix = 'col-span-';
+    const colSpanStr = className.split(/\s+/).find((_) => _.startsWith(colSpanPrefix));
+    return colSpanStr ? parseInt(colSpanStr.substring(colSpanPrefix.length), 10) : 12;
+};
+
+;// CONCATENATED MODULE: ./src/utils/url.ts
+const isURL = (href) => href?.includes('//');
+const withoutQuery = (href) => (href || '').replace(/\/?\?.*/, '');
+const getOrigin = (href) => {
+    if (!href || !isURL(href)) {
+        return undefined;
+    }
+    const url = href;
+    const protoSeparator = '//';
+    const endOfProto = url.indexOf(protoSeparator);
+    const endOfOrigin = url.indexOf('/', endOfProto + protoSeparator.length);
+    return endOfOrigin !== -1 ? url.substring(0, endOfOrigin) : url;
+};
+
+;// CONCATENATED MODULE: ./src/utils/withoutMobilePath.ts
+const MOBILE_URL_PATH = '/mobile';
+const withoutMobilePath = (href) => (href || '').replace(MOBILE_URL_PATH, '');
+
+;// CONCATENATED MODULE: ./src/utils/adjustHref.ts
+
+
+const adjustHref = (href, router) => {
+    if (!href) {
+        return href;
+    }
+    const relativeHref = toRelativeHref(href, router) || '';
+    const isMobilePage = router?.pathname.startsWith(MOBILE_URL_PATH);
+    return isMobilePage && !isURL(relativeHref) ? `${MOBILE_URL_PATH}${relativeHref}` : relativeHref;
+};
+const toRelativeHref = (href, router) => {
+    if (!href) {
+        return href;
+    }
+    const origin = getOrigin(router?.href);
+    return origin ? href.replace(origin, '') || '/' : href;
+};
+
+;// CONCATENATED MODULE: ./src/hooks/useLink.ts
+
+
+const defaultHandlerDecorator = (handler) => handler;
+function useLink({ router, handlerDecorator = defaultHandlerDecorator, }, link) {
+    const href = adjustHref(link.href, router);
+    return {
+        ...link,
+        href,
+        ariaLabel: link.text,
+        onClick: handlerDecorator((ev) => {
+            const isLocalHref = href && !isURL(href);
+            const isLocalTarget = !link.target || link.target === '_self';
+            if (isLocalHref && isLocalTarget) {
+                ev.preventDefault();
+                router.push(href);
+            }
+        }, link),
+    };
+}
+
+;// CONCATENATED MODULE: ./src/ui-kit/Button/Button.mobile.tsx
+
+/* eslint-disable max-lines-per-function */
+/* eslint-disable complexity */
+
+const buttonStyleMap = {
+    primary: 'text-white bg-primary-main hover:bg-primary-hover active:bg-primary-active',
+    secondary: 'text-primary-main bg-secondary-light hover:bg-secondary-hover active:bg-secondary-active',
+};
+const buttonDisabledStyleMap = {
+    primary: 'bg-secondary-dark text-secondary-text',
+    secondary: 'bg-secondary-light text-secondary-text',
+};
+const styleButton = 'w-full text-center font-sans select-none';
+const Button = JSX(({ className, text, aboveText, appendLeft, href, target, onClick, children, disabled, rounded, version = 'none', ariaLabel, ...rest }) => {
+    const buttonInner = children ?? (jsx(ButtonInner, { text: text, aboveText: aboveText, appendLeft: appendLeft, rounded: rounded }));
+    if (disabled) {
+        return (jsx("div", { role: "button", "aria-disabled": "true", "aria-label": ariaLabel, tabIndex: "-1", className: `inline-block ${styleButton} ${buttonDisabledStyleMap[version] || ''} ${rounded ? 'rounded-full' : 'rounded-md'} ${className || ''}`, children: buttonInner }));
+    }
+    return (jsx("a", { className: `${styleButton} inline-block cursor-pointer no-underline ${buttonStyleMap[version] || ''} ${rounded ? 'rounded-full' : 'rounded-md'} ${className || ''}`, href: href, target: target, onClick: onClick, "aria-label": ariaLabel, role: !href ? 'button' : 'link', ...rest, children: buttonInner }));
+});
+const ButtonInner = JSX(({ text, aboveText, appendLeft, rounded }) => {
+    const withoutText = !text && !aboveText && Boolean(appendLeft);
+    const buttonInnerClasses = `flex items-center justify-center ${withoutText ? 'h-12 w-12' : `px-9 gap-2 ${aboveText ? 'py-2' : 'py-3.5'}`} ${rounded ? 'rounded-full' : ''}`;
+    return (jsxs("div", { className: buttonInnerClasses, children: [appendLeft ? appendLeft : null, withoutText ? null : (jsxs("div", { children: [jsx("div", { className: "text-m-2xs text-left", children: aboveText }), jsx("div", { className: "text-m-button font-medium text-left", children: text })] }))] }));
+});
+
+;// CONCATENATED MODULE: ./src/components/BaseTile/renderButton.mobile.tsx
+
+
+
+const PADDING_TOP_CLASSES = 'first:mt-0 mt-3';
+function renderButton({ icon, ...button }, i) {
+    if (!button?.text)
+        return;
+    return icon ? (jsx(Button, { className: PADDING_TOP_CLASSES, appendLeft: jsx(Icon, { name: icon, width: "24", height: "24" }), ...button }, String(i))) : (jsx(Button, { className: PADDING_TOP_CLASSES, ...button }, String(i)));
+}
+
+;// CONCATENATED MODULE: ./src/components/BaseTile/renderItems.mobile.tsx
+
+
+function renderItems_mobile_renderItems(items = [], version) {
+    return (jsx("section", { className: "mt-3", role: "list", children: items.map((_, i) => (jsx(BlockItem, { className: "mt-1.5 first:mt-0", text: _, version: version }, String(i)))) }));
+}
+
+;// CONCATENATED MODULE: ./src/components/BaseTile/BaseTileInner.mobile.tsx
+
+
+
+
+
+
+const BaseTileInner = JSX(({ context, description, children, buttons, image, items, version = 'primary' }) => {
+    const router = context.useRouter();
+    const { handlerDecorator } = context;
+    return (jsxs("div", { children: [description && jsx("div", { className: `font-normal text-base mt-3`, children: description }), children, items?.length && renderItems_mobile_renderItems(items, version), buttons?.length && (jsx("div", { className: "mt-[18px]", children: buttons.map((button, index) => renderButton(useLink({ router, handlerDecorator }, button), index)) })), image?.src && jsx(Img, { className: "mt-auto ml-7", image: image })] }));
+});
+
+;// CONCATENATED MODULE: ./src/components/BaseTile/getTitleSizeByClassName.ts
+
+function getTitleSizeByClassName(className = '') {
+    const colSpan = getColSpan(className);
+    if (colSpan <= 4) {
+        return 'S';
+    }
+    else if (colSpan <= 8) {
+        return 'M';
+    }
+    else {
+        return 'L';
+    }
+}
+
+;// CONCATENATED MODULE: ./src/components/BaseTile/BaseTile.mobile.tsx
+
+
+
+
+
+const alignBlock = {
+    left: 'items-start',
+    center: 'items-center',
+    right: 'items-end',
+};
+const TITLE_CLASSES = 'font-medium m-0 whitespace-pre-wrap max-w-[600px]';
+const BaseTile = JSX(({ className, context, title, titleSize, description, children, buttons, image, items, version = 'primary', align = 'left', }) => {
+    return (jsxs("div", { className: `font-sans flex flex-col grow h-full ${alignBlock[align]}`, children: [title && (jsx(Title, { size: titleSize || getTitleSizeByClassName(className), className: `${TITLE_CLASSES} ${version === 'primary' ? 'text-primary-text' : ''}`, children: title })), jsx(BaseTileInner, { context: context, buttons: buttons, image: image, children: children, description: description, items: items })] }));
+});
+
+;// CONCATENATED MODULE: ./src/components/Tile/Tile.tsx
+
+
+
+
+const tileStyleMap = {
+    primary: 'bg-white text-primary-text',
+    secondary: 'bg-primary-main text-white',
+};
+const Tile = JSX((props) => {
+    const { children, className = '', version = 'primary', role } = props;
+    return (jsx("section", { className: `font-sans p-9 box-border ${className || ''} ${tileStyleMap[version]} ${getContainerPaddingRight(className)} ${getContainerMinHeight(className)} `, role: role, children: jsx(BaseTile, { ...props, children: children }) }));
+});
+function getContainerPaddingRight(className = '') {
+    const colSpan = getColSpan(className);
+    if (colSpan <= 6) {
+        return 'pr-9';
+    }
+    else if (colSpan <= 8) {
+        return 'pr-[4.75rem]';
+    }
+    else {
+        return 'pr-[9.4rem]';
+    }
+}
+function getContainerMinHeight(className = '') {
+    const colSpan = getColSpan(className);
+    if (colSpan <= 6) {
+        return 'min-h-[300px]';
+    }
+    else if (colSpan <= 8) {
+        return 'min-h-[320px]';
+    }
+    else {
+        return 'min-h-[360px]';
+    }
+}
+
+;// CONCATENATED MODULE: ./src/components/ExchangeRateTile/ExchangeRateTile.tsx
+
+
+
+
+const CBR_EXCHANGE_RATE_URL = 'https://www.cbr-xml-daily.ru/daily_json.js';
+const CURRENCY_CODES = ['USD', 'EUR'];
+const CURRENCY_ICONS_MAP = {
+    USD: 'DollarIcon',
+    EUR: 'EuroIcon',
+};
+const buttons = [
+    {
+        text: 'Все показатели',
+        href: 'https://cbr.ru/currency_base/daily/',
+        version: 'secondary',
+    },
+];
+const ExchangeRateTile = JSX(({ className, context, title }) => {
+    const { data } = context.useAsyncData(CBR_EXCHANGE_RATE_URL, fetchExchangeRate);
+    return (jsx(Tile, { className: className, context: context, title: title || 'Курсы обмена валют', buttons: buttons, children: jsxs("table", { children: [jsx("thead", { children: jsxs("tr", { children: [jsx(CurrencyTH, { children: "\u0412\u0430\u043B\u044E\u0442\u0430" }), jsx(CurrencyTH, { className: "pl-11", children: "\u041A\u0443\u0440\u0441" })] }) }), jsx("tbody", { children: CURRENCY_CODES.map((code) => {
+                        const value = (data?.Valute || {})[code]?.Value;
+                        return (jsxs("tr", { children: [jsx(CurrencyTD, { className: "pt-4", children: jsxs("div", { className: "flex items-center", children: [jsx(Icon, { name: CURRENCY_ICONS_MAP[code], width: "24", height: "24" }), jsx("span", { className: "ml-2", children: code })] }) }), jsx(CurrencyTD, { className: "pt-4 pl-11", children: formatCurrency(value) })] }, code));
+                    }) })] }) }));
+});
+const CurrencyTH = JSX(({ className = '', children }) => (jsx("th", { className: `text-left font-normal text-sm text-secondary-text ${className}`, children: children })));
+const CurrencyTD = JSX(({ className = '', children }) => (jsx("td", { className: `text-left font-normal text-base text-primary-text ${className}`, children: children })));
+async function fetchExchangeRate() {
+    const response = await fetch(CBR_EXCHANGE_RATE_URL);
+    return await response.json();
+}
+const currencyNumberFormat = new Intl.NumberFormat('ru', { style: 'currency', currency: 'RUB' });
+const formatCurrency = (value) => (value ? currencyNumberFormat.format(value) : '');
+
+;// CONCATENATED MODULE: ./src/ui-kit/SVG.tsx
+
+
+const SVG = JSX(({ className, viewBox, fill = 'none', width, height, paths, ...commonOptions }) => {
+    return (jsx("svg", { xmlns: "http://www.w3.org/2000/svg", className: className, viewBox: viewBox, fill: fill, width: width, height: height, children: paths.map(({ d, fill, ...options }, i) => (jsx("path", { d: d, fill: fill || 'currentColor', ...commonOptions, ...options }, i))) }));
+});
+
+;// CONCATENATED MODULE: ./src/ui-kit/Logo/Logo.mobile.tsx
+
+
+
+const LOGO_PATHS = [
+    'm13.72 25.51 4.42-4.33v-2.95l-4.42 4.32v2.96Zm0-10.98 4.42-4.35V7.41l-4.42 4.31v2.8Zm0 3.63 4.42-4.33v-2.78l-4.42 4.32v2.8ZM12.46 7.44l-.6-.56V0h-.66v6.22l-.58-.57V0h-.67v5l-.59-.58V0H8.7v6.56l4.44 4.33V0h-.67v7.44Zm1.26 14.35 4.42-4.33v-2.78L13.72 19v2.8Zm-5.03-.61 4.44 4.33v-2.96l-4.44-4.32v2.95Zm8.79-16.76-.59.58V0h-.66v5.66l-.6.56V0h-.66v6.87l-.58.57V0h-.67v10.9l4.42-4.34V0h-.66v4.42Zm-8.79 5.76 4.44 4.35v-2.8L8.69 7.4v2.77Zm0 3.65 4.44 4.33v-2.8l-4.44-4.3v2.77Zm0 3.63 4.44 4.33V19l-4.44-4.31v2.78Zm26.37 2.29H24.3a2.25 2.25 0 0 0 .36-1.22 2.32 2.32 0 0 0-2.33-2.31 2.32 2.32 0 0 0-2.31 2.31c0 .5.16.96.43 1.34a.74.74 0 0 0-.33.61c0 .26.14.49.33.62a2.32 2.32 0 0 0-.43 1.34 2.31 2.31 0 0 0 2.31 2.31 2.32 2.32 0 0 0 2.33-2.31c0-.45-.13-.87-.36-1.22h8.01v.49h-.8v.68h.8v.7h-.8v1.3h.8v-.58h1.17v.58h.79v-1.3h-.79v-.7h.79v-.68h-.79v-.5h1.58a.56.56 0 0 0 .56-.56v-.34a.57.57 0 0 0-.56-.56Zm-11.53 2.7a1.2 1.2 0 0 1-2.4 0c0-.24.08-.47.2-.66l.34-.56a.97.97 0 0 1-.34-.75c0-.3.13-.56.33-.74l-.32-.56a1.13 1.13 0 0 1-.2-.66 1.2 1.2 0 0 1 2.4 0c0 .49-.56 1.65-.56 1.65v.62c-.01.01.55 1.17.55 1.66ZM4.67 18.34v2.89c0 2.75 1.2 4.53 1.9 5.21l4.58 4.5c1.28 1.25 1.5 1.66 1.79 2.37v-3.2c0-2.84-1.44-3.94-2.19-4.67-1.73-1.68-2.89-2.8-3.82-3.73a8.98 8.98 0 0 1-2.26-3.37Zm6.08 14.24c-1.73-1.7-2.89-2.8-3.82-3.73a10 10 0 0 1-2.25-2.98v2.49a7.87 7.87 0 0 0 1.89 5.24l4.58 4.47c1.28 1.25 1.5 1.85 1.79 2.55v-3.37c0-2.85-1.45-3.95-2.19-4.67Z',
+    'M19.88 5.34c-.32 0-.64 0-.96.02V6.7a18.5 18.5 0 1 1 .95 36.94A18.5 18.5 0 0 1 1.35 25.17c0-5.67 2.55-10.73 6.58-14.13V9.32A19.78 19.78 0 0 0 0 25.17C0 36.12 8.9 45 19.88 45a19.85 19.85 0 0 0 19.86-19.83c0-10.95-8.9-19.83-19.87-19.83Z',
+    'M33.93 35.53c.3-.41.6-.85.87-1.3v-2.66h-.87v3.96Zm2.54-4.92c.12-.4.24-.78.34-1.16h-2.88v.7h.43c.77-.02 1.63-.03 2.11.46Zm-19.19-1.27h-.78v7.91h.78v-7.9Z',
+    'M14.7 27.83h2.58c.67 0 1.14.14 1.4.4.27.25.4.72.4 1.38v7.4c0 .66-.12 1.12-.4 1.38-.4.41-1.16.41-1.78.41l-.4-.01v3.5l.78.14v-2.88c1.2 0 1.97-.4 2.34-1.22v4.29h.26l.5-.01V29.74c0-.68.13-1.16.4-1.43.25-.27.72-.4 1.37-.4.67 0 1.65-.1 2.16.4.26.27.38.76.38 1.43v3.8h-1.77v-4.06h-.77v12.99c.26-.03.5-.07.77-.12V34.3h1.77v7.64c.36-.1.72-.21 1.08-.34v-7c0-.8.19-1.4 1-1.67l-.9-4.87h1.8l.3 5.31h.22l.3-5.31h1.88l-1.01 4.87c.84.3 1.01.81 1.01 1.66v4.53a16.63 16.63 0 0 0 1.5-1.27v-9.83h5.25l.1-.72H24.93l.17.89c-.38-.72-1.12-1.08-2.2-1.08h-.77c-1.3 0-2.1.52-2.4 1.55-.27-1.08-1.1-1.62-2.46-1.62h-3.36v14.52c.26.09.52.18.78.25V27.84Zm16.29 5.58-.85-.8.85-4.37v5.17Z',
+    'M27.66 40.79c.27-.14.55-.28.8-.43v-5.98h-.8v6.4Z',
+];
+const SVG_COLOR = {
+    'bg-white': 'text-primary-main',
+    transparent: 'text-white',
+};
+const TEXT_COLOR = {
+    'bg-white': 'text-black',
+    transparent: 'text-white',
+};
+const Logo = JSX(({ className = '', href, children, targetBlank, bgColor = 'bg-white', hideTitle }) => {
+    return (jsxs("a", { className: `inline-flex items-center font-sans no-underline ${className}`, href: href || 'https://rshb.ru/', target: targetBlank ? '_blank' : '_self', children: [jsx(SVG, { className: `${SVG_COLOR[bgColor]} w-10 h-[38px]`, viewBox: "0 0 40 45", paths: LOGO_PATHS.map((d) => ({ d })) }), !hideTitle && (jsx("span", { className: `${TEXT_COLOR[bgColor]} text-sm font-medium ml-2.5`, children: children || 'Россельхозбанк' }))] }));
+});
+
+;// CONCATENATED MODULE: ./src/components/MobileAppTile/MobileAppTile.mobile.tsx
+
+
+
+const MobileAppTile = JSX(({ className, title = 'Мобильное приложение', description, href = '#' }) => {
+    return (jsx("div", { className: `col-span-12 rounded-md cursor-pointer p-4 mt-6 mb-6 bg-secondary-light ${className || ''}`, children: href ? (jsxs("div", { className: "flex", children: [jsx("div", { className: "flex justify-center align-middle rounded-md bg-primary-main w-[50px] h-[50px]", children: jsx(Logo, { className: "w-[33px]", bgColor: "transparent", hideTitle: true }) }), jsxs("a", { href: href, target: "_blank", className: "flex flex-col justify-center pl-3", children: [jsx("div", { className: "text-sm font-medium", children: title }), jsx("div", { className: "text-xs text-secondary-text", children: description })] })] })) : null }));
+});
+
+;// CONCATENATED MODULE: ./src/components/Footer/Contacts.tsx
+
+
+
+
+const Contacts = JSX(({ className, items, hasButton, context }) => {
+    const router = context.useRouter();
+    const { handlerDecorator } = context;
+    return (jsxs("div", { className: `flex flex-col ${className || ''}`, children: [items?.length ? items.map(renderContact) : null, hasButton ? (jsx(Button, { version: "primary", className: "my-4", ...useLink({ router, handlerDecorator }, {
+                    text: 'Обратная связь',
+                    href: '/',
+                    target: '_blank',
+                }) })) : null] }));
+});
+const renderContact = (item, index) => {
+    const { type, text, description } = item;
+    return (jsxs("div", { className: "mb-4", children: [jsx("div", { children: renderText(type, text) }), jsx("div", { className: "font-sans text-sm text-secondary-text", children: description })] }, String(index)));
+};
+const renderText = (type, text = '') => {
+    switch (type) {
+        case 'tel':
+            return (jsx("a", { className: "font-sans font-medium text-xl text-primary-text no-underline", href: `tel:${formatTel(text)}`, children: text }));
+        case 'email':
+            return (jsx("a", { className: "font-sans font-medium text-xl text-primary-text no-underline", href: `mailto:${text}`, children: text }));
+        default:
+            return jsx("span", { children: text });
+    }
+};
+const formatTel = (s) => s.replaceAll(/\D/g, '');
+
+;// CONCATENATED MODULE: ./src/components/Footer/HorizontalNavigation.mobile.tsx
+
+
+
+const HorizontalNavigation = JSX(({ title, links, className = '', context }) => {
+    const router = context.useRouter();
+    const { handlerDecorator } = context;
+    return (jsxs("div", { className: className, children: [jsx("span", { className: "text-primary-text font-sans font-medium text-sm", children: title }), links?.length ? (jsx("div", { className: "flex flex-col gap-5 py-5", children: links.map((_, i) => (jsx(HorizontalNavigationLink, { index: i, ...useLink({ router, handlerDecorator }, _) }, String(i)))) })) : null] }));
+});
+const HorizontalNavigationLink = JSX(({ className = '', index, text, href, target, onClick }) => (jsx("a", { className: `font-sans font-normal text-sm text-secondary-text hover:text-primary-main inline-block no-underline ${className}`, href: href, target: target, onClick: onClick, children: text || `Документ ${index}` })));
+
+;// CONCATENATED MODULE: ./src/components/Footer/MediaButton.tsx
+
+
+
+const ICONS_MAP = [
+    {
+        origins: ['t.me', 'telegram.org'],
+        icon: 'TelegramIcon',
+        label: 'Телеграм',
+        width: '20px',
+        height: '16px',
+    },
+    { origins: ['vk.com'], icon: 'VKIcon', label: 'ВКонтакте', width: '24px', height: '12px' },
+    { origins: ['ok.ru'], icon: 'OkIcon', label: 'Одноклассники', width: '12px', height: '20px' },
+];
+const MediaButton = JSX(({ href }) => {
+    const { icon, width, height } = ICONS_MAP.find(({ origins }) => origins.some((_) => href?.includes(_))) || {};
+    if (!icon)
+        return null;
+    return (jsx("a", { className: "flex items-center justify-center border border-solid border-main-divider rounded-full no-underline outline-none w-[38px] h-[38px] hover:fill-primary-main", href: href, target: "_blank", rel: "noopener noreferrer", children: Icon && jsx(Icon, { name: icon, width: width, height: height, asSVG: true, className: "block" }) }));
+});
+
+;// CONCATENATED MODULE: ./src/components/Footer/SocialMedia.mobile.tsx
+
+
+
+
+const SocialMedia = JSX(({ className, media, context }) => {
+    const router = context.useRouter();
+    const { handlerDecorator } = context;
+    return (jsx("div", { className: `flex gap-2 items-start justify-start pt-6 pb-6 ${className || ''}`, children: media?.map((_, index) => (jsx(MediaButton, { ...useLink({ router, handlerDecorator }, _) }, String(index)))) }));
+});
+
+;// CONCATENATED MODULE: ./src/components/Footer/TextInformation.mobile.tsx
+
+
+
+const TextInformation = JSX(({ className, links, context }) => {
+    const router = context.useRouter();
+    const { handlerDecorator } = context;
+    return (jsxs("div", { className: `${className || ''}`, children: [jsx("div", { className: "pt-5 pb-[5px]", children: jsx("span", { className: "font-sans font-normal text-xs text-secondary-text", children: `\u00a9\u00A02000-${new Date().getFullYear()}\u00A0АО \u00ABРоссельхозбанк\u00BB Генеральная лицензия Банка России \u2116\u00A03349 от\u00A012.08.2015\u00A0г.` }) }), links?.length ? (jsx("div", { className: `flex flex-col justify-start items-start gap-5 pt-[5px]`, children: links.map((_, i) => (jsx(TextInformationLink, { index: i, ...useLink({ router, handlerDecorator }, _) }, String(i)))) })) : null] }));
+});
+const TextInformationLink = JSX(({ className, index, text, href, target, onClick }) => (jsx("a", { className: `font-sans font-normal text-xs text-secondary-text visited:text-secondary-text hover:text-primary-text inline-block no-underline max-w-[292px] ${className || ''}`, href: href, target: target, onClick: onClick, children: text || `Документ ${index}` })));
+
+;// CONCATENATED MODULE: ./src/ui-kit/SearchBar/SearchBar.mobile.tsx
+
+
+
+
+const SearchBar = JSX(({ className, context }) => {
+    const { term, setTerm } = context.useSearch();
+    return (jsxs("form", { className: `relative ${className || ''}`, children: [jsxs("div", { className: "absolute rounded h-full flex items-center justify-center pl-4 max-w-[170px] gap-3.5 pointer-events-none", children: [jsx("div", { className: "w-[20px] h-[20px]", children: jsx(Icon, { name: "LoupeIcon", width: "24", height: "24" }) }), !term && (jsx("label", { htmlFor: "search-bar-input", className: "font-sans font-normal text-sm text-secondary-text", children: "\u041F\u043E\u0438\u0441\u043A \u043F\u043E \u0441\u0430\u0439\u0442\u0443" }))] }), jsx("input", { id: "search-bar-input", className: 'h-12 pl-12 w-full peer font-sans font-normal text-base text-black border border-solid rounded h-full box-border outline-none pr-[6%] border-main-divider focus:border-primary-text', value: term, onChange: (e) => setTerm(e.target.value), type: "text", name: "search-bar-input" }), jsx(Button, { version: "primary", text: "\u041D\u0430\u0439\u0442\u0438", className: "w-auto invisible peer-focus:visible absolute top-1 right-1", onClick: (e) => {
+                    e.preventDefault();
+                    console.log('click');
+                }, children: jsx("div", { className: "font-normal text-sm px-9 py-[9px]", children: "\u041D\u0430\u0439\u0442\u0438" }) })] }));
+});
+
+;// CONCATENATED MODULE: ./src/utils/getAccordionItems.ts
+const getAccordionItems = (items) => items?.map((item) => ({
+    label: item.text || '',
+    blocks: [
+        {
+            accordionBlockType: 'LinkDocs',
+            documents: item.items || [],
+        },
+    ],
+}));
+
+;// CONCATENATED MODULE: ./src/components/Footer/Footer.mobile.tsx
+
+
+
+
+
+
+
+
+
+
+
+
+const Footer = JSX(({ className = '', documents, relatedEnterprises, contacts, socialMedia, topItems, context, horizontalNavigationTitle, subMenu, }) => {
+    const propsTextBlock = {
+        context,
+        accordionItems: getAccordionItems(topItems),
+    };
+    return (jsxs("footer", { className: `px-4 py-[26px] bg-white ${className}`, children: [jsx(Contacts, { className: "overflow-hidden", items: contacts, context: context, hasButton: true }), jsx(Accordion, { className: "p-0 pt-0 pb-0 mb-4", ...propsTextBlock }), jsx("div", { children: subMenu?.map(renderSubMenuItem) }), jsx(MobileAppTile, { context: context, title: "\u041C\u043E\u0431\u0438\u043B\u044C\u043D\u043E\u0435 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0435", description: "\u0417\u0430\u0433\u0440\u0443\u0437\u0438\u0442\u044C \u0434\u043B\u044F IOS \u0438 Android" }), jsx(SearchBar, { context: context, className: "grow" }), jsx(SocialMedia, { className: "pb-4", media: socialMedia, context: context }), jsx(HorizontalNavigation, { title: horizontalNavigationTitle, links: relatedEnterprises, context: context }), jsx(TextInformation, { links: documents, context: context })] }));
+});
+const renderSubMenuItem = (menu, i) => {
+    const { icon, href, text } = menu;
+    return (jsxs(Button, { href: href, className: "flex text-sm mb-4", children: [icon ? jsx(Icon, { className: "pr-1", name: icon, width: "24", height: "24", asSVG: true }) : null, jsx("span", { className: "pl-0.5 font-medium", children: text })] }, `footer-${i}`));
+};
+
+;// CONCATENATED MODULE: ./src/components/Gallery/Gallery.mobile.tsx
+
+
+
+
+
+
+const Gallery = JSX(({ title, description, cards = [], className }) => {
+    return (jsxs("section", { className: `relative font-sans text-primary-text bg-white p-4 overflow-hidden ${className}`, children: [jsxs("div", { className: "flex flex-col items-center mb-8", children: [jsx(Title, { className: "font-medium m-0 text-centers", children: title }), description ? (jsx("div", { className: "font-normal text-base max-w-[600px] mt-3", children: description })) : null] }), jsx("div", { className: "horizontal-list no-scrollbar", role: "list", children: cards?.map(renderCard) })] }));
+});
+function renderCard(card, key) {
+    return (jsxs("div", { className: "box-border horizontal-list-item border-solid border rounded-md border-main-divider p-4 mx-1 flex flex-col justify-between items-stretch", role: "listitem", children: [jsxs("div", { children: [card.image?.src ? (jsx("div", { className: "flex justify-center", children: jsx(Img, { className: "mb-6", image: card.image }) })) : null, card.title ? (jsx("h4", { className: `font-medium text-xl m-0 ${!card.description && !card.items?.length ? 'text-center' : ''}`, children: card.title })) : null, card.description ? (jsx("div", { className: "font-normal text-sm text-secondary-text mt-2", children: card.description })) : null, card.items?.length ? Gallery_mobile_renderItems(card.items) : null] }), card?.button?.href ? jsx(Button, { className: "mt-6", ...card.button }) : null] }, key));
+}
+function Gallery_mobile_renderItems(items = []) {
+    return (jsx("section", { className: "max-w-[308px] mt-2", role: "list", children: items.map((item, i) => (jsx(BlockItem, { children: jsx("span", { className: "text-sm text-secondary-text", children: item }) }, String(i)))) }));
+}
+
+;// CONCATENATED MODULE: ./src/utils/maxBy.ts
+const maxBy = (discriminator) => (list) => list.reduceRight((a, b) => (discriminator(a) > discriminator(b) ? a : b));
+const minBy = (discriminator) => maxBy((_) => -discriminator(_));
+
+;// CONCATENATED MODULE: ./src/services/sitemap/isHrefActive.ts
+
+
+const isHrefActive = (href, router, cmp = (href, baseHref) => baseHref.startsWith(href)) => {
+    return cmp(withoutQuery(href), withoutMobilePath(withoutQuery(isURL(href) ? router.href : router.pathname)));
+};
+
+;// CONCATENATED MODULE: ./src/services/sitemap/isSubItemActive.ts
+
+const isSubItemActive = (router) => (subItem) => isHrefActive(subItem.href, router);
+
+;// CONCATENATED MODULE: ./src/services/sitemap/findActiveSubItem.ts
+
+
+const findActiveSubItem = (router) => (items = []) => {
+    const possibleActiveSubItems = items?.filter(isSubItemActive(router));
+    const activeSubItem = possibleActiveSubItems?.length
+        ? maxBy((_) => _.href?.length || 0)(possibleActiveSubItems) // More specific item with max length
+        : null;
+    return activeSubItem;
+};
+
+;// CONCATENATED MODULE: ./src/services/sitemap/isTopItemActive.ts
+
+
+const isTopItemActive = (router) => (topItem) => topItem.items?.some(isSubItemActive(router)) || isHrefActive(topItem.href, router);
+
+;// CONCATENATED MODULE: ./src/services/sitemap/mergeTopItems.ts
+const cmp = (a) => (b) => a?.href === b?.href;
+const substitute = (items, substitution) => (items || []).map((_) => substitution?.find(cmp(_)) || _);
+const subtract = (minuend, subtrahend) => (minuend || []).filter((_) => !subtrahend?.find(cmp(_)));
+const mergeTopItems = (left, right) => substitute(left, right).concat(subtract(right, left));
+
+;// CONCATENATED MODULE: ./src/services/sitemap/useSitemap.ts
+
+function useSitemap(useAsyncData) {
+    const { data } = useAsyncData(sitemapURL(), fetchSitemap);
+    return data || {};
+}
+async function fetchSitemap() {
+    const response = await fetch(sitemapURL());
+    return await response.json();
+}
+function sitemapURL() {
+    return `/wcms-resources/${projectSettings.SITEMAP || 'sitemap'}.json`;
+}
+
+;// CONCATENATED MODULE: ./src/ui-kit/HeaderItem/HeaderItem.mobile.tsx
+
+
+const TEXT_CLASSES = 'font-sans font-normal text-sm';
+const BORDER_CLASSES = 'absolute left-0 -bottom-3 w-full h-[2px]';
+const HeaderItem = JSX(({ className, text, href, target, active, onClick, children, bgColor = 'bg-white' }) => {
+    return (jsxs("a", { className: `relative inline-block bg-transparent text-center no-underline ${className || ''}`, href: href, target: target, onClick: onClick, children: [jsx("span", { className: getTextClasses(bgColor, active), children: text || children }), active ? jsx("div", { className: getBorderClasses(bgColor, active) }) : null] }));
+});
+const getTextClasses = (bgColor, active) => {
+    let classes = 'text-white';
+    if (bgColor === 'bg-white') {
+        classes = active ? 'text-primary-main' : 'text-secondary-text hover:text-primary-main';
+    }
+    return `${classes} ${TEXT_CLASSES}`;
+};
+const getBorderClasses = (bgColor, active) => {
+    if (!active) {
+        return BORDER_CLASSES;
+    }
+    return `${bgColor === 'bg-white' ? 'bg-primary-main' : bgColor} ${BORDER_CLASSES}`;
+};
+
+;// CONCATENATED MODULE: ./src/components/Header/HeaderBurger.tsx
+
+
+
+
+
+const HeaderBurger = JSX(({ context, burgerSubMenu, onClick, defaultLocation = '', children }) => {
+    const [city, getCity] = context.useGeolocation(defaultLocation);
+    return (jsxs("div", { className: "absolute top-0 left-0 w-full h-full bg-white p-4", children: [jsx("button", { className: "absolute top-4 right-4", onClick: onClick, children: jsx(Icon, { name: "CloseIcon", width: "24", height: "24", asSVG: true }) }), jsxs(Button, { onClick: getCity, className: "flex items-center text-sm text-secondary-text mb-4", children: [jsx(Icon, { name: "GeolocationIcon", width: "24", height: "24", className: "box-border mr-2", asSVG: true }), city] }), children, jsx("div", { className: "mb-7", children: burgerSubMenu?.map(renderBurgerSubMenuItem) }), jsx(SearchBar, { context: context, className: "grow" })] }));
+});
+const renderBurgerSubMenuItem = (menu, i) => {
+    const { icon, href, text } = menu;
+    return (jsxs(Button, { href: href, className: "flex text-sm mb-4", children: [icon ? jsx(Icon, { className: "pr-1", name: icon, width: "24", height: "24", asSVG: true }) : null, jsx("span", { className: "pl-0.5 font-medium", children: text })] }, `headerSubMenu-${i}`));
+};
+
+;// CONCATENATED MODULE: ./src/components/Header/HeaderTop.tsx
+
+
+
+
+const HeaderTop = JSX(({ onClick, bgColor }) => (jsxs("div", { className: "flex items-center justify-between border-0 border-b border-main-divider h-[50px]", children: [jsxs("div", { className: "flex items-center", children: [jsx("button", { className: "pr-4", onClick: onClick, children: jsx(Icon, { name: bgColor === 'bg-white' ? 'BurgerIcon' : 'BurgerIconWhite', width: "24", height: "24", asSVG: true }) }), jsx(Logo, { bgColor: bgColor })] }), jsx("button", { className: `${bgColor === 'bg-white' ? 'text-primary-main' : 'text-white'} text-sm`, children: "\u0412\u043E\u0439\u0442\u0438" })] })));
+
+;// CONCATENATED MODULE: ./src/components/Header/Header.mobile.tsx
+
+
+
+
+
+
+
+
+
+
+
+
+const Header = JSX(({ className = '', defaultLocation, bgColor = 'bg-white', context, topItems, burgerSubMenu }) => {
+    const router = context.useRouter();
+    const sitemap = useSitemap(context.useAsyncData);
+    const { handlerDecorator } = context;
+    const mergedItems = mergeTopItems(sitemap.topItems, topItems);
+    const activeTopItem = mergedItems.find(isTopItemActive(router));
+    const subItems = activeTopItem?.items;
+    const activeSubItem = findActiveSubItem(router)(subItems);
+    const [burgerMenuShow, setBurgerMenuShow] = context.useState(false);
+    const toggleBurgerMenu = () => setBurgerMenuShow(!burgerMenuShow);
+    return (jsxs("header", { className: `${bgColor} ${className}`, children: [jsxs("div", { className: "container px-4 py-0", children: [jsx(HeaderTop, { onClick: toggleBurgerMenu, bgColor: bgColor }), jsx("nav", { className: "flex items-center m-0 p-0 overflow-x-scroll overflow-y-hidden w-full h-[50px]", children: jsx("div", { className: "flex", children: subItems?.map((_, i) => renderSubItem({
+                                ...useLink({ router, handlerDecorator }, _),
+                                active: _ === activeSubItem,
+                                bgColor,
+                            }, i)) }) })] }), burgerMenuShow ? (jsx(HeaderBurger, { context: context, onClick: toggleBurgerMenu, burgerSubMenu: burgerSubMenu, defaultLocation: defaultLocation, children: jsx(Accordion, { context: context, accordionItems: getAccordionItems(topItems), className: "p-0 pt-0 pb-0 mb-4" }) })) : null] }));
+});
+const renderSubItem = (item, i) => (jsx(HeaderItem, { className: "mr-8 whitespace-nowrap text-sm", ...item }, String(i)));
 
 ;// CONCATENATED MODULE: ./src/components/Navigation/NavigationItem.tsx
 
@@ -32048,19 +32423,6 @@ const Navigation = JSX(({ className, context, title, buttons }) => {
                     .map((button, i) => (jsx(NavigationItem, { className: "first:rounded-tl-md first:rounded-bl-md last:rounded-tr-md last:rounded-br-md", isActive: button === activeButton, ...useLink({ router, handlerDecorator }, button) }, String(i)))) })) : null] }));
 });
 
-;// CONCATENATED MODULE: ./src/components/PictureText/PictureText.tsx
-
-
-
-
-
-const PictureText = JSX(({ className, title, image, benefits }) => {
-    return (jsxs("section", { className: `relative font-sans text-primary-text bg-white p-14 ${className}`, children: [jsx(Title, { className: "font-medium m-0 text-center", children: title }), jsxs("div", { className: 'flex justify-center mt-9', children: [image?.src && jsx(Img, { className: "mr-6", image: image }), benefits?.length ? (jsx("div", { className: "flex flex-col", children: benefits.map(renderBenefit) })) : null] })] }));
-});
-function renderBenefit(benefit, i) {
-    return (jsxs("div", { className: "flex flex-row mb-8", children: [benefit.icon && (jsx(Icon, { className: "w-[48px] h-[48px] bg-main rounded-full box-border p-[12px]", name: benefit.icon, width: "48", height: "48" })), jsxs("div", { className: "flex gap-1 flex-col h-full ml-5 max-w-[490px]", children: [benefit.label && (jsx("div", { className: "font-medium text-primary-text text-xl m-0", children: benefit.label })), benefit.description && (jsx("div", { className: "font-normal text-sm text-secondary-text", children: benefit.description }))] })] }, String(i)));
-}
-
 ;// CONCATENATED MODULE: ./src/components/Placeholder/Placeholder.tsx
 
 
@@ -32075,16 +32437,9 @@ const renderShimmer = (size = 3) => goldenSequence(100, size)
 const renderShimmerItem = (width = 100, index) => (jsx("div", { style: { width: `${width}%` }, className: "h-4 mt-2 bg-secondary-light" }, String(index)));
 const goldenSequence = (first, size) => [first].concat(size > 0 ? goldenSequence(first / GOLDEN_RATIO, size - 1) : []);
 
-;// CONCATENATED MODULE: ./src/components/ProductBlock/ProductBlockInner.tsx
+;// CONCATENATED MODULE: ./src/components/ProductBlock/renderBenefit.mobile.tsx
 
 
-
-
-
-const benefitIconBgStyleMap = {
-    primary: 'bg-main',
-    secondary: 'bg-white/30',
-};
 const benefitTitleStyleMap = {
     primary: 'text-primary-text',
     secondary: 'text-white',
@@ -32093,12 +32448,19 @@ const benefitDescStyleMap = {
     primary: 'text-secondary-text',
     secondary: 'text-white',
 };
-const ProductBlockInner = JSX(({ className, context, title, titleSize, description, benefits, buttons, image, items, version = 'primary', }) => {
-    return (jsxs("div", { className: `flex grow justify-between items-stretch ${className || ''}`, children: [jsx("div", { className: 'flex flex-col', children: jsx(BaseTile, { context: context, title: title, titleSize: titleSize || 'XL', description: description, items: items, buttons: buttons, version: version, children: benefits?.length ? (jsx("div", { className: "flex gap-6 mt-6 mb-3.5", children: benefits.map((_, i) => ProductBlockInner_renderBenefit(_, i, version)) })) : null }) }), image?.src && jsx(Img, { className: "mt-auto", image: image })] }));
-});
-function ProductBlockInner_renderBenefit(benefit, i, version) {
-    return (jsxs("div", { className: "flex gap-4 items-center", children: [benefit.icon && (jsx(Icon, { className: `w-[50px] h-[50px] min-w-[50px] min-h-[50px] rounded-full p-[10px] box-border ${benefitIconBgStyleMap[version]}`, name: benefit.icon, width: "24", height: "24" })), jsxs("div", { className: "flex gap-1 flex-col h-full max-w-[149px]", children: [jsx("h4", { className: `font-medium text-xl m-0 ${benefitTitleStyleMap[version]}`, children: benefit.label }), benefit.description && (jsx("div", { className: `font-normal text-sm ${benefitDescStyleMap[version]}`, children: benefit.description }))] })] }, String(i)));
+function renderBenefit_mobile_renderBenefit(benefit, i, version) {
+    return (jsxs("div", { className: "flex gap-3 items-center mb-2.5 last:mb-0", children: [benefit.icon && (jsx(Icon, { className: "w-[25px] h-[25px] rounded-full box-border", name: benefit.icon, width: "24", height: "24" })), jsx("h4", { className: `font-medium text-m-base m-0 ${benefitTitleStyleMap[version]}`, children: benefit.label }), benefit.description && (jsx("div", { className: `font-normal text-m-sm ${benefitDescStyleMap[version]}`, children: benefit.description }))] }, String(i)));
 }
+
+;// CONCATENATED MODULE: ./src/components/ProductBlock/ProductBlockInner.mobile.tsx
+
+
+
+
+
+const ProductBlockInner = JSX(({ className, context, title, titleSize, description, benefits, buttons, image, items, version = 'primary', }) => {
+    return (jsxs("div", { className: `${className || ''}`, children: [jsx("div", { children: jsx(BaseTile, { context: context, title: title, titleSize: titleSize || 'XL', description: description, items: items, buttons: buttons, children: benefits?.length ? (jsx("div", { className: "mt-[19px]", children: benefits.map((_, i) => renderBenefit_mobile_renderBenefit(_, i, version)) })) : null }) }), image?.src && (jsx("div", { className: "mt-5", children: jsx(Img, { image: { className: 'block', ...image } }) }))] }));
+});
 
 ;// CONCATENATED MODULE: ./src/components/ProductBlock/ProductBlock.mobile.tsx
 
@@ -32106,9 +32468,9 @@ function ProductBlockInner_renderBenefit(benefit, i, version) {
 
 const ProductBlock = JSX(
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-({ titleSize, image, benefits, ...props } /* Get rid of image and benefits */) => {
+(props /* Get rid of image and benefits */) => {
     const { className } = props;
-    return (jsx("section", { className: `font-sans bg-white pt-10 pl-[50px] pb-[50px] pr-[7.5rem] ${className || ''}`, children: jsx(ProductBlockInner, { ...props, titleSize: "L" }) }));
+    return (jsx("section", { className: `font-sans bg-white px-4 py-6 ${className || ''}`, children: jsx(ProductBlockInner, { ...props }) }));
 });
 
 ;// CONCATENATED MODULE: ./src/components/ProductTile/ProductTile.tsx
@@ -32148,45 +32510,6 @@ const renderStepTitle = ({ step, size }, i, array) => {
     const iconTextSize = size === 'normal' ? 'text-m-title' : 'text-m-title-xs';
     return (jsxs("div", { children: [jsxs("div", { className: "flex flex-row text-center relative", children: [jsx("div", { className: `${iconAreaSize} bg-secondary-light rounded-full z-10 mr-3 flex justify-center content-center`, children: jsx("span", { className: `font-medium text-secondary-text self-center ${iconTextSize}`, children: (step.icon && jsx(Icon, { name: step.icon, width: iconSize, height: iconSize })) || i + 1 }) }), jsxs("div", { className: "flex flex-col justify-center relative", children: [step.label && (jsx("div", { className: "font-medium text-m-title-xs m-0 text-left", children: step.label })), step.description && (jsx("div", { className: `font-normal text-sm text-secondary-text text-left ${step.label ? 'mt-1' : ''}`, children: step.description }))] })] }, String(i)), !isLastStep && jsx("div", { className: `h-8 w-[2px] bg-secondary-light ${margin}` })] }));
 };
-
-;// CONCATENATED MODULE: ./src/components/TextBlock/TextBlock.mobile.tsx
-
-
-
-
-const textBlockStyleMaps = {
-    primary: {
-        background: 'bg-white',
-        icon: 'bg-primary-main text-white',
-        title: 'text-primary-text',
-        description: 'text-secondary-text',
-    },
-    secondary: {
-        background: 'bg-primary-main',
-        icon: 'bg-white text-primary-main',
-        title: 'text-white',
-        description: 'text-white',
-    },
-    'secondary-light': {
-        background: 'bg-primary-main/10',
-        icon: 'bg-primary-main text-white',
-        title: 'text-primary-text',
-        description: 'text-secondary-text',
-    },
-};
-const TextBlock = JSX(({ title, description, blockVersion = 'primary', iconVersion, image, className = '', items }) => {
-    const textBlockStyleMap = textBlockStyleMaps[blockVersion];
-    return (jsxs("section", { className: `font-sans px-4 py-[18px] flex flex-col ${textBlockStyleMap.background} ${className}`, children: [iconVersion === 'small' ? renderIcon(textBlockStyleMap.icon) : null, iconVersion === 'big' ? renderImage(image) : null, jsxs("div", { className: "py-0.5", children: [title ? (jsx("div", { className: `font-medium text-base mb-1 ${textBlockStyleMap.title}`, children: title })) : null, description ? (jsx("div", { className: `text-sm ${textBlockStyleMap.description}`, children: description })) : null, items?.length ? TextBlock_mobile_renderItems(items) : null] })] }));
-});
-function TextBlock_mobile_renderItems(items = [], version) {
-    return (jsx("section", { className: "mt-1", role: "list", children: items.map((_, i) => (jsx(BlockItem, { text: _, version: version }, String(i)))) }));
-}
-function renderIcon(className) {
-    return (jsx("div", { className: "mb-3", children: jsx("div", { className: `rounded-full h-4 w-4 text-center text-xs ${className}`, children: "i" }) }));
-}
-function renderImage(image) {
-    return image?.src ? jsx(Img, { className: "pb-3", image: image }) : null;
-}
 
 ;// CONCATENATED MODULE: ./src/components/Blocks.mobile.ts
 
@@ -32253,9 +32576,9 @@ const LikeControl = JSX(({ className, context }) => {
 const defaultBlockDecorator = ({ blockClassName, block, render }) => render({ blockClassName, block });
 const ContentPage = JSX(({ className, context, blocksRegistry, data: { style: pageStyle, blocks, slots = {}, likeControl, colorPalette = 'pc' }, blockDecorator = defaultBlockDecorator, }) => {
     const { header } = slots;
-    return (jsxs("section", { className: `relative ${style2className(pageStyle)} ${className || ''}`, "data-theme": colorPalette, children: [header?.blocks?.length ? (jsx("div", { className: `${style2className(header?.style)}`, children: header.blocks.map((block, i) => renderBlock({ block, blockDecorator, blocksRegistry, context }, i)) })) : null, blocks?.length ? (jsx("div", { className: "container grid grid-cols-12 gap-1", children: blocks.map((block, i) => renderBlock({ block, blockDecorator, blocksRegistry, context }, i)) })) : null, likeControl && (jsx("div", { className: "flex items-end absolute bottom-0 right-0 h-full pointer-events-none", children: jsx(LikeControl, { className: "rounded-tl-lg sticky bottom-0 pointer-events-auto", context: context }) }))] }));
+    return (jsxs("section", { className: `relative ${style2className(pageStyle)} ${className || ''}`, "data-theme": colorPalette, children: [header?.blocks?.length ? (jsx("div", { className: `${style2className(header?.style)}`, children: header.blocks.map((block, i) => ContentPage_renderBlock({ block, blockDecorator, blocksRegistry, context }, i)) })) : null, blocks?.length ? (jsx("div", { className: "container grid grid-cols-12 gap-1", children: blocks.map((block, i) => ContentPage_renderBlock({ block, blockDecorator, blocksRegistry, context }, i)) })) : null, likeControl && (jsx("div", { className: "flex items-end absolute bottom-0 right-0 h-full pointer-events-none", children: jsx(LikeControl, { className: "rounded-tl-lg sticky bottom-0 pointer-events-auto", context: context }) }))] }));
 });
-function renderBlock({ block, blockDecorator, blocksRegistry, context }, i) {
+function ContentPage_renderBlock({ block, blockDecorator, blocksRegistry, context }, i) {
     const { type } = block;
     if (!(type in blocksRegistry)) {
         console.warn(`No block with "${type}" is registered`);
@@ -32267,7 +32590,7 @@ function renderBlock({ block, blockDecorator, blocksRegistry, context }, i) {
         render: (props) => {
             const { version, content, blocks } = props.block;
             return (jsx(BlockComponent, { className: props.blockClassName, version: version, context: context, ...content, children: blocks?.length
-                    ? blocks.map((block, i) => renderBlock({ block, blockDecorator, blocksRegistry, context }, i))
+                    ? blocks.map((block, i) => ContentPage_renderBlock({ block, blockDecorator, blocksRegistry, context }, i))
                     : null }, `${type}-${i}`));
         },
     }, `block-${i}`);
@@ -32321,57 +32644,480 @@ const ContentPage_page_namespaceObject = JSON.parse('{"title":"Кредиты","
     default: (jsx(ContentPage, { className: "bg-secondary-text", context: mobileContext, blocksRegistry: Blocks, data: toMobilePage(ContentPage_page_namespaceObject) })),
 });
 
-;// CONCATENATED MODULE: ./src/components/Headline/Headline.fixture.mobile.tsx
+;// CONCATENATED MODULE: ./src/components/Footer/Footer.fixture.mobile.tsx
 
 
 
-const HEADLINE = {
-    title: 'Своя кредитная карта',
-    description: 'Карта работает в 180 странах мира. Бесплатное снятие наличных в любых банкоматах.',
-    align: 'center',
-    bgColor: 'transparent',
-};
-const Headline_fixture_mobile_image = {
-    src: 'globe-1.png',
-    format: 'webp',
-    size: {
-        width: 180,
-        height: 180,
-    },
-};
-/* harmony default export */ const Headline_fixture_mobile = ({
-    default: (jsx("div", { className: "container grid grid-cols-12", children: jsx(Headline, { className: "col-span-12", context: context, title: "\u041A\u043E\u043F\u0438\u0442\u0435 \u0432 \u043D\u0435\u0441\u043A\u043E\u043B\u044C\u043A\u0438\u0445 \u0432\u0430\u043B\u044E\u0442\u0430\u0445", description: "\u041E\u0442\u043A\u0440\u043E\u0439\u0442\u0435 \u043C\u0443\u043B\u044C\u0442\u0438\u0432\u0430\u043B\u044E\u0442\u043D\u044B\u0439 \u0432\u043A\u043B\u0430\u0434, \u0447\u0442\u043E\u0431\u044B \u0440\u0430\u0441\u043F\u0440\u0435\u0434\u0435\u043B\u0438\u0442\u044C \u0441\u0432\u043E\u0438 \u0432\u043B\u043E\u0436\u0435\u043D\u0438\u044F. \u042D\u0442\u043E \u0434\u043E 4 \u0441\u0447\u0435\u0442\u043E\u0432 \u0432 \u0440\u0430\u0437\u043D\u044B\u0445 \u0432\u0430\u043B\u044E\u0442\u0430\u0445 \u0432\u043D\u0443\u0442\u0440\u0438 \u043E\u0434\u043D\u043E\u0433\u043E \u0432\u043A\u043B\u0430\u0434\u0430", image: Headline_fixture_mobile_image }) })),
-    'title-img': (jsx("div", { className: "container grid grid-cols-12", children: jsx(Headline, { className: "col-span-12", context: context, title: "\u041A\u043E\u043F\u0438\u0442\u0435 \u0432 \u043D\u0435\u0441\u043A\u043E\u043B\u044C\u043A\u0438\u0445 \u0432\u0430\u043B\u044E\u0442\u0430\u0445", image: Headline_fixture_mobile_image }) })),
-    'desc-img': (jsx("div", { className: "container grid grid-cols-12", children: jsx(Headline, { className: "col-span-12", context: context, description: "\u041E\u0442\u043A\u0440\u043E\u0439\u0442\u0435 \u043C\u0443\u043B\u044C\u0442\u0438\u0432\u0430\u043B\u044E\u0442\u043D\u044B\u0439 \u0432\u043A\u043B\u0430\u0434, \u0447\u0442\u043E\u0431\u044B \u0440\u0430\u0441\u043F\u0440\u0435\u0434\u0435\u043B\u0438\u0442\u044C \u0441\u0432\u043E\u0438 \u0432\u043B\u043E\u0436\u0435\u043D\u0438\u044F. \u042D\u0442\u043E \u0434\u043E 4 \u0441\u0447\u0435\u0442\u043E\u0432 \u0432 \u0440\u0430\u0437\u043D\u044B\u0445 \u0432\u0430\u043B\u044E\u0442\u0430\u0445 \u0432\u043D\u0443\u0442\u0440\u0438 \u043E\u0434\u043D\u043E\u0433\u043E \u0432\u043A\u043B\u0430\u0434\u0430", image: Headline_fixture_mobile_image }) })),
-    white: (jsx("div", { className: "container grid grid-cols-12", children: jsx(Headline, { className: "col-span-12", context: context, title: "\u041A\u043E\u043F\u0438\u0442\u0435 \u0432 \u043D\u0435\u0441\u043A\u043E\u043B\u044C\u043A\u0438\u0445 \u0432\u0430\u043B\u044E\u0442\u0430\u0445", description: "\u041E\u0442\u043A\u0440\u043E\u0439\u0442\u0435 \u043C\u0443\u043B\u044C\u0442\u0438\u0432\u0430\u043B\u044E\u0442\u043D\u044B\u0439 \u0432\u043A\u043B\u0430\u0434, \u0447\u0442\u043E\u0431\u044B \u0440\u0430\u0441\u043F\u0440\u0435\u0434\u0435\u043B\u0438\u0442\u044C \u0441\u0432\u043E\u0438 \u0432\u043B\u043E\u0436\u0435\u043D\u0438\u044F. \u042D\u0442\u043E \u0434\u043E 4 \u0441\u0447\u0435\u0442\u043E\u0432 \u0432 \u0440\u0430\u0437\u043D\u044B\u0445 \u0432\u0430\u043B\u044E\u0442\u0430\u0445 \u0432\u043D\u0443\u0442\u0440\u0438 \u043E\u0434\u043D\u043E\u0433\u043E \u0432\u043A\u043B\u0430\u0434\u0430", bgColor: "bg-white", image: Headline_fixture_mobile_image }) })),
+const DEFAULT_ORIGIN = 'https://rshb.ru/';
+/* harmony default export */ const Footer_fixture_mobile = (jsx("div", { className: "container grid grid-cols-12", children: jsx(Footer, { className: "col-span-12", topItems: [
+            {
+                href: DEFAULT_ORIGIN,
+                text: 'Частным клиентам',
+                target: '_blank',
+                items: [
+                    {
+                        href: DEFAULT_ORIGIN,
+                        text: 'Кредитные карты',
+                    },
+                    {
+                        href: DEFAULT_ORIGIN,
+                        text: 'Дебетовые карты',
+                    },
+                    {
+                        href: DEFAULT_ORIGIN,
+                        text: 'Кредиты',
+                    },
+                    {
+                        href: DEFAULT_ORIGIN,
+                        text: 'Ипотека',
+                    },
+                    {
+                        href: DEFAULT_ORIGIN,
+                        text: 'Вклады и сбережения',
+                    },
+                    {
+                        href: DEFAULT_ORIGIN,
+                        text: 'Инвестиции',
+                    },
+                    {
+                        href: DEFAULT_ORIGIN,
+                        text: 'Страхование',
+                    },
+                    {
+                        href: DEFAULT_ORIGIN,
+                        text: 'Премиальным клиентам',
+                    },
+                    {
+                        href: DEFAULT_ORIGIN,
+                        text: 'Биометрическая регистрация',
+                    },
+                    {
+                        href: DEFAULT_ORIGIN,
+                        text: 'Перевод денег',
+                    },
+                    {
+                        href: DEFAULT_ORIGIN,
+                        text: 'Обмен денег',
+                    },
+                    {
+                        href: DEFAULT_ORIGIN,
+                        text: 'Акции',
+                    },
+                    {
+                        href: DEFAULT_ORIGIN,
+                        text: 'Тарифы',
+                    },
+                    {
+                        href: DEFAULT_ORIGIN,
+                        text: 'Архивная информация',
+                    },
+                ],
+            },
+            {
+                href: DEFAULT_ORIGIN,
+                text: 'Бизнес клиентам',
+                target: '_blank',
+                items: [
+                    {
+                        href: DEFAULT_ORIGIN,
+                        text: 'РКО',
+                    },
+                    {
+                        href: DEFAULT_ORIGIN,
+                        text: 'Кредиты',
+                    },
+                    {
+                        href: DEFAULT_ORIGIN,
+                        text: 'Депозиты',
+                    },
+                    {
+                        href: DEFAULT_ORIGIN,
+                        text: 'Эквайринг',
+                    },
+                    {
+                        href: DEFAULT_ORIGIN,
+                        text: 'Банковские карты',
+                    },
+                    {
+                        href: DEFAULT_ORIGIN,
+                        text: 'ВЭД',
+                    },
+                    {
+                        href: DEFAULT_ORIGIN,
+                        text: 'Инвестиции',
+                    },
+                    {
+                        href: DEFAULT_ORIGIN,
+                        text: 'Обмен валюты',
+                    },
+                    {
+                        href: DEFAULT_ORIGIN,
+                        text: 'Страхование',
+                    },
+                    {
+                        href: DEFAULT_ORIGIN,
+                        text: 'Партнёрские программы',
+                    },
+                    {
+                        href: DEFAULT_ORIGIN,
+                        text: 'Онлайн-сервисы',
+                    },
+                    {
+                        href: DEFAULT_ORIGIN,
+                        text: 'Акции',
+                    },
+                    {
+                        href: DEFAULT_ORIGIN,
+                        text: 'Тарифы',
+                    },
+                    {
+                        href: DEFAULT_ORIGIN,
+                        text: 'Архивная информация',
+                    },
+                ],
+            },
+            {
+                href: DEFAULT_ORIGIN,
+                text: 'О банке',
+                target: '_blank',
+                items: [
+                    {
+                        href: DEFAULT_ORIGIN,
+                        text: 'О банке',
+                    },
+                    {
+                        href: DEFAULT_ORIGIN,
+                        text: 'Новости',
+                    },
+                    {
+                        href: DEFAULT_ORIGIN,
+                        text: 'Офисы и отделения',
+                    },
+                    {
+                        href: DEFAULT_ORIGIN,
+                        text: 'Карьера в банке',
+                    },
+                    {
+                        href: DEFAULT_ORIGIN,
+                        text: 'Пресс-центр',
+                    },
+                    {
+                        href: DEFAULT_ORIGIN,
+                        text: 'Кредитным организациям',
+                    },
+                    {
+                        href: DEFAULT_ORIGIN,
+                        text: 'Закупки',
+                    },
+                    {
+                        href: DEFAULT_ORIGIN,
+                        text: 'Непрофильные/Профильные нецелевые активы',
+                    },
+                    {
+                        href: DEFAULT_ORIGIN,
+                        text: 'Инсайдерам',
+                    },
+                    {
+                        href: DEFAULT_ORIGIN,
+                        text: 'Противодействие коррупции',
+                    },
+                    {
+                        href: DEFAULT_ORIGIN,
+                        text: 'Меры безопасности',
+                    },
+                    {
+                        href: DEFAULT_ORIGIN,
+                        text: 'Залоговое имущество',
+                    },
+                ],
+            },
+        ], subMenu: [
+            {
+                text: 'Офисы',
+                href: '#',
+                icon: 'BankIcon',
+            },
+            {
+                text: 'Банкоматы',
+                href: '#',
+                icon: 'AtmIcon',
+            },
+        ], socialMedia: [
+            { href: 'https://t.me' },
+            { href: 'https://vk.com' },
+            { href: 'https://ok.ru' },
+        ], contacts: [
+            {
+                text: '+7 (495) 787-7-787',
+                description: 'Для звонков из-за границы',
+                type: 'tel',
+            },
+            {
+                text: 'example@example.com',
+                description: 'Для писем',
+                type: 'email',
+            },
+            {
+                text: '7787',
+                description: 'Абонентам МТС, Мегафон, Билайн и Tele2',
+                type: 'tel',
+            },
+        ], horizontalNavigationTitle: "\u041A\u043E\u043C\u043F\u0430\u043D\u0438\u0438 \u0420\u043E\u0441\u0441\u0435\u043B\u044C\u0445\u043E\u0437\u0431\u0430\u043D\u043A\u0430", relatedEnterprises: [
+            {
+                text: 'РСХБ Страхование',
+                href: DEFAULT_ORIGIN,
+                target: '_blank',
+            },
+            {
+                text: 'РСХБ Страхование жизни',
+                href: DEFAULT_ORIGIN,
+                target: '_blank',
+            },
+            {
+                text: 'РСХБ Управление активами',
+                href: DEFAULT_ORIGIN,
+                target: '_blank',
+            },
+            {
+                text: 'РСХБ Лизинг',
+                href: DEFAULT_ORIGIN,
+                target: '_blank',
+            },
+            {
+                text: 'РСХБ Факторинг',
+                href: DEFAULT_ORIGIN,
+                target: '_blank',
+            },
+        ], documents: [
+            {
+                text: 'Информация о процентных ставках по договорам банковского вклада с физическими лицами',
+                href: DEFAULT_ORIGIN,
+                target: '_blank',
+            },
+            {
+                text: 'Раскрытие информации профессиональным участником рынка ценных бумаг',
+                href: DEFAULT_ORIGIN,
+                target: '_blank',
+            },
+            {
+                text: 'Раскрытие информации',
+                href: DEFAULT_ORIGIN,
+                target: '_blank',
+            },
+            {
+                text: 'Удостоверяющий центр',
+                href: DEFAULT_ORIGIN,
+                target: '_blank',
+            },
+            {
+                text: 'Финансовая культура',
+                href: DEFAULT_ORIGIN,
+                target: '_blank',
+            },
+        ], context: context }) }));
+
+;// CONCATENATED MODULE: ./src/components/Header/Header.fixture.mobile.tsx
+
+
+
+const Header_fixture_mobile_DEFAULT_ORIGIN = 'https://rshb.ru/';
+/* harmony default export */ const Header_fixture_mobile = ({
+    default: (jsx(Header, { context: context, defaultLocation: "\u041C\u043E\u0441\u043A\u0432\u0430", topItems: [
+            {
+                href: Header_fixture_mobile_DEFAULT_ORIGIN,
+                text: 'Частным клиентам',
+                target: '_blank',
+                items: [
+                    {
+                        href: Header_fixture_mobile_DEFAULT_ORIGIN,
+                        text: 'Кредитные карты',
+                    },
+                    {
+                        href: Header_fixture_mobile_DEFAULT_ORIGIN,
+                        text: 'Дебетовые карты',
+                    },
+                    {
+                        href: Header_fixture_mobile_DEFAULT_ORIGIN,
+                        text: 'Кредиты',
+                    },
+                    {
+                        href: Header_fixture_mobile_DEFAULT_ORIGIN,
+                        text: 'Ипотека',
+                    },
+                    {
+                        href: Header_fixture_mobile_DEFAULT_ORIGIN,
+                        text: 'Вклады и сбережения',
+                    },
+                    {
+                        href: Header_fixture_mobile_DEFAULT_ORIGIN,
+                        text: 'Инвестиции',
+                    },
+                    {
+                        href: Header_fixture_mobile_DEFAULT_ORIGIN,
+                        text: 'Страхование',
+                    },
+                    {
+                        href: Header_fixture_mobile_DEFAULT_ORIGIN,
+                        text: 'Премиальным клиентам',
+                    },
+                    {
+                        href: Header_fixture_mobile_DEFAULT_ORIGIN,
+                        text: 'Биометрическая регистрация',
+                    },
+                    {
+                        href: Header_fixture_mobile_DEFAULT_ORIGIN,
+                        text: 'Перевод денег',
+                    },
+                    {
+                        href: Header_fixture_mobile_DEFAULT_ORIGIN,
+                        text: 'Обмен денег',
+                    },
+                    {
+                        href: Header_fixture_mobile_DEFAULT_ORIGIN,
+                        text: 'Акции',
+                    },
+                    {
+                        href: Header_fixture_mobile_DEFAULT_ORIGIN,
+                        text: 'Тарифы',
+                    },
+                    {
+                        href: Header_fixture_mobile_DEFAULT_ORIGIN,
+                        text: 'Архивная информация',
+                    },
+                ],
+            },
+            {
+                href: Header_fixture_mobile_DEFAULT_ORIGIN,
+                text: 'Бизнес клиентам',
+                target: '_blank',
+                items: [
+                    {
+                        href: Header_fixture_mobile_DEFAULT_ORIGIN,
+                        text: 'РКО',
+                    },
+                    {
+                        href: Header_fixture_mobile_DEFAULT_ORIGIN,
+                        text: 'Кредиты',
+                    },
+                    {
+                        href: Header_fixture_mobile_DEFAULT_ORIGIN,
+                        text: 'Депозиты',
+                    },
+                    {
+                        href: Header_fixture_mobile_DEFAULT_ORIGIN,
+                        text: 'Эквайринг',
+                    },
+                    {
+                        href: Header_fixture_mobile_DEFAULT_ORIGIN,
+                        text: 'Банковские карты',
+                    },
+                    {
+                        href: Header_fixture_mobile_DEFAULT_ORIGIN,
+                        text: 'ВЭД',
+                    },
+                    {
+                        href: Header_fixture_mobile_DEFAULT_ORIGIN,
+                        text: 'Инвестиции',
+                    },
+                    {
+                        href: Header_fixture_mobile_DEFAULT_ORIGIN,
+                        text: 'Обмен валюты',
+                    },
+                    {
+                        href: Header_fixture_mobile_DEFAULT_ORIGIN,
+                        text: 'Страхование',
+                    },
+                    {
+                        href: Header_fixture_mobile_DEFAULT_ORIGIN,
+                        text: 'Партнёрские программы',
+                    },
+                    {
+                        href: Header_fixture_mobile_DEFAULT_ORIGIN,
+                        text: 'Онлайн-сервисы',
+                    },
+                    {
+                        href: Header_fixture_mobile_DEFAULT_ORIGIN,
+                        text: 'Акции',
+                    },
+                    {
+                        href: Header_fixture_mobile_DEFAULT_ORIGIN,
+                        text: 'Тарифы',
+                    },
+                    {
+                        href: Header_fixture_mobile_DEFAULT_ORIGIN,
+                        text: 'Архивная информация',
+                    },
+                ],
+            },
+            {
+                href: Header_fixture_mobile_DEFAULT_ORIGIN,
+                text: 'О банке',
+                target: '_blank',
+                items: [
+                    {
+                        href: Header_fixture_mobile_DEFAULT_ORIGIN,
+                        text: 'О банке',
+                    },
+                    {
+                        href: Header_fixture_mobile_DEFAULT_ORIGIN,
+                        text: 'Новости',
+                    },
+                    {
+                        href: Header_fixture_mobile_DEFAULT_ORIGIN,
+                        text: 'Офисы и отделения',
+                    },
+                    {
+                        href: Header_fixture_mobile_DEFAULT_ORIGIN,
+                        text: 'Карьера в банке',
+                    },
+                    {
+                        href: Header_fixture_mobile_DEFAULT_ORIGIN,
+                        text: 'Пресс-центр',
+                    },
+                    {
+                        href: Header_fixture_mobile_DEFAULT_ORIGIN,
+                        text: 'Кредитным организациям',
+                    },
+                    {
+                        href: Header_fixture_mobile_DEFAULT_ORIGIN,
+                        text: 'Закупки',
+                    },
+                    {
+                        href: Header_fixture_mobile_DEFAULT_ORIGIN,
+                        text: 'Непрофильные/Профильные нецелевые активы',
+                    },
+                    {
+                        href: Header_fixture_mobile_DEFAULT_ORIGIN,
+                        text: 'Инсайдерам',
+                    },
+                    {
+                        href: Header_fixture_mobile_DEFAULT_ORIGIN,
+                        text: 'Противодействие коррупции',
+                    },
+                    {
+                        href: Header_fixture_mobile_DEFAULT_ORIGIN,
+                        text: 'Меры безопасности',
+                    },
+                    {
+                        href: Header_fixture_mobile_DEFAULT_ORIGIN,
+                        text: 'Залоговое имущество',
+                    },
+                ],
+            },
+        ], burgerSubMenu: [
+            {
+                text: 'Офисы',
+                href: '#',
+                icon: 'BankIcon',
+            },
+            {
+                text: 'Банкоматы',
+                href: '#',
+                icon: 'AtmIcon',
+            },
+        ] })),
+    transparent: jsx(Header, { context: context, defaultLocation: "\u041C\u043E\u0441\u043A\u0432\u0430", bgColor: "transparent" }),
 });
-
-;// CONCATENATED MODULE: ./src/components/LinkDocs/fixtureConstants.ts
-const LINK_DOCS_BASE = {
-    title: 'Дополнительные документы',
-    subtitle: 'Ответы на часто задаваемые вопросы',
-    icon: 'DocIcon',
-    documents: [
-        { text: 'target self', href: '/abc1/cooldoc.doc', target: '_self' },
-        { text: 'target blank', href: '/abc2/wtf.rtf', target: '_blank' },
-        { text: 'GlassIcon', href: '/abc3/map.jpeg' },
-        { text: 'no icon', href: '/abc4' },
-        { text: 'документ 5', href: '/abc5' },
-        { text: 'документ 6', href: '/abc6/abc.pdf' },
-        { text: 'Text text text', href: '/abc7/yolo.png' },
-        {
-            text: 'Some more generic text to stretch item, and even more, more text, and more generic text, and even more, more text, and even more',
-            href: '/abc8/archive.zip',
-            fileSize: '2.3МБ',
-        },
-        { text: 'И ещё немного текста', href: '/abc9/rarniw.rar', fileSize: '666МБ' },
-        {
-            text: 'Форматируем, сортируем, смотрим как отображается...',
-            href: '/abc10/',
-            fileSize: '65ГБ',
-        },
-    ],
-};
 
 ;// CONCATENATED MODULE: ./src/components/LinkDocs/LinkDocs.fixture.mobile.tsx
 
@@ -32382,6 +33128,202 @@ const LINK_DOCS_BASE = {
     'vertical (default)': (jsx("div", { className: "container grid grid-cols-12", children: jsx(LinkDocs, { className: "col-span-12", context: mobileContext, subtitle: "\u041E\u0442\u043A\u0440\u043E\u0439\u0442\u0435 \u043C\u0443\u043B\u044C\u0442\u0438\u0432\u0430\u043B\u044E\u0442\u043D\u044B\u0439 \u0432\u043A\u043B\u0430\u0434, \u0447\u0442\u043E\u0431\u044B \u0440\u0430\u0441\u043F\u0440\u0435\u0434\u0435\u043B\u0438\u0442\u044C \u0441\u0432\u043E\u0438 \u0432\u043B\u043E\u0436\u0435\u043D\u0438\u044F", ...LINK_DOCS_BASE }) })),
     'vertical, no border': (jsx("div", { className: "container grid grid-cols-12", children: jsx(LinkDocs, { className: "col-span-12", context: mobileContext, hasBorder: false, ...LINK_DOCS_BASE }) })),
     'horizontal, swipe list': (jsx("div", { className: "container grid grid-cols-12", children: jsx(LinkDocs, { className: "col-span-12", context: mobileContext, ...LINK_DOCS_BASE, listMode: 'horizontal' }) })),
+});
+
+;// CONCATENATED MODULE: ./src/components/MobileAppTile/MobileAppTile.fixture.mobile.tsx
+
+
+
+/* harmony default export */ const MobileAppTile_fixture_mobile = (jsx("div", { className: "container grid grid-cols-12", children: jsx(MobileAppTile, { context: context, title: "\u041C\u043E\u0431\u0438\u043B\u044C\u043D\u043E\u0435 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0435!", description: "\u0417\u0430\u0433\u0440\u0443\u0437\u0438\u0442\u044C \u0434\u043B\u044F IOS \u0438 Android" }) }));
+
+;// CONCATENATED MODULE: ./src/components/ProductBlock/ProductBlock.fixture.mobile.tsx
+
+
+
+
+const ProductBlock_fixture_mobile_image = {
+    src: 'money-1.png',
+    format: 'webp',
+    alt: 'Потребительский кредит наличными',
+    size: {
+        width: 280,
+        height: 280,
+    },
+};
+/* harmony default export */ const ProductBlock_fixture_mobile = ({
+    primary: (jsx("div", { className: "container grid grid-cols-12", children: jsx(ProductBlock, { className: "col-span-12", context: context, title: 'Кредит до 5 000 000 Р\nбез залога и поручителей', description: "\u041A\u0440\u0435\u0434\u0438\u0442 \u043D\u0430\u043B\u0438\u0447\u043D\u044B\u043C\u0438 \u0431\u0435\u0437 \u0437\u0430\u043B\u043E\u0433\u0430 \u0438 \u043F\u043E\u0440\u0443\u0447\u0438\u0442\u0435\u043B\u044C\u0441\u0442\u0432\u0430. \u041F\u043E\u0442\u0440\u0435\u0431\u0438\u0442\u0435\u043B\u044C\u0441\u043A\u0438\u0439 \u043A\u0440\u0435\u0434\u0438\u0442 \u043D\u0430 \u043B\u044E\u0431\u044B\u0435 \u0446\u0435\u043B\u0438. \u041D\u0443\u0436\u0435\u043D \u0442\u043E\u043B\u044C\u043A\u043E \u043F\u0430\u0441\u043F\u043E\u0440\u0442.", benefits: [
+                {
+                    label: 'До 5 млн ₽',
+                    description: 'Кредитный лимит',
+                    icon: 'EmptyWalletIcon',
+                },
+                {
+                    label: 'От 16,9%',
+                    description: 'Ставка по кредиту',
+                    icon: 'PercentageSquareIcon',
+                },
+                {
+                    label: 'До 5 лет',
+                    description: 'Срок кредитования',
+                    icon: 'CalendarIcon',
+                },
+            ], buttons: [
+                {
+                    href: 'https://rshb.ru',
+                    text: 'Оформить карту',
+                    target: '_blank',
+                    version: 'primary',
+                },
+                {
+                    href: 'https://rshb.ru',
+                    text: 'Подробнее',
+                    target: '_blank',
+                    version: 'secondary',
+                },
+            ], image: ProductBlock_fixture_mobile_image }) })),
+});
+
+;// CONCATENATED MODULE: ./src/components/ProductGallery/ProductGalleryBlock.mobile.tsx
+
+
+
+const ProductGalleryBlock = JSX(({ block, titleSize, context }) => {
+    return (jsx("section", { className: "flex grow-0 shrink-0 basis-full px-4 py-6", role: "listitem", children: jsx("div", { className: "flex grow", children: jsx(ProductBlockInner, { context: context, titleSize: titleSize, ...block }) }) }));
+});
+
+;// CONCATENATED MODULE: ./src/components/ProductGallery/ProductGallery.mobile.tsx
+
+
+
+const ProductGallery = JSX(({ className, context, duration = 0, slides = [] }) => {
+    const galleryBlocks = slides.map((s) => s.productBlock);
+    const [activeSlideIndex, setActiveSlideIndex] = context.useState(0);
+    return (jsxs("section", { className: `font-sans bg-white overflow-hidden w-100 ${className || ''}`, children: [jsx("div", { className: `flex duration-1000`, style: { transform: `translateX(-${activeSlideIndex}00%)` }, role: "list", children: galleryBlocks.map((block, i) => (jsx(ProductGalleryBlock, { block: block, context: context }, String(i)))) }), jsx("div", { className: "flex px-4 py-6", children: slides.map((_, i) => renderNavButton({
+                    i,
+                    activeSlideIndex,
+                    onClick: () => setActiveSlideIndex(i),
+                    duration,
+                })) })] }));
+});
+function renderNavButton({ i, activeSlideIndex, onClick, duration }) {
+    const isActiveBtn = i === activeSlideIndex;
+    const progressBarClassName = isActiveBtn ? 'animate-slide bg-primary-main' : 'bg-main-divider';
+    return (jsx("button", { type: "button", onClick: onClick, className: `relative overflow-hidden border-0 bg-inherit cursor-pointer pl-0 mr-1.5 pt-4 pb-5 last:mr-0 grow basis-0`, children: jsx("div", { className: `absolute bottom-0 left-0 w-full h-[3px] ${progressBarClassName}`, style: { animationDuration: `${duration}s`, animationFillMode: 'forwards' } }) }, String(i)));
+}
+
+;// CONCATENATED MODULE: ./src/components/ProductGallery/ProductGallery.fixture.mobile.tsx
+
+
+
+
+const moneyImage = {
+    src: 'money-1.png',
+    format: 'webp',
+    size: {
+        width: 280,
+        height: 280,
+    },
+    alt: 'Варианты потребительского кредита',
+};
+const worker = {
+    src: 'money-2.png',
+    format: 'webp',
+    size: {
+        width: 280,
+        height: 280,
+    },
+};
+const creditCard = {
+    src: 'credit-card-1.png',
+    format: 'webp',
+    size: {
+        width: 280,
+        height: 280,
+    },
+};
+/* harmony default export */ const ProductGallery_fixture_mobile = ({
+    primary: (jsx("div", { className: "p-2", children: jsx("div", { className: "container grid grid-cols-12", children: jsx(ProductGallery, { className: "col-span-12", context: context, slides: [
+                    {
+                        productBlock: {
+                            title: 'Акция «Кредит на все, что хочется!»',
+                            items: [
+                                'Потребительский кредит по специальной процентной ставке',
+                                'Получите деньги без залога и поручительства',
+                                'Кредитный лимит до 5 млн рублей',
+                            ],
+                            buttons: [
+                                {
+                                    href: 'https://rshb.ru',
+                                    text: 'Подробнее',
+                                    target: '_blank',
+                                    version: 'primary',
+                                },
+                            ],
+                            image: moneyImage,
+                        },
+                    },
+                    {
+                        productBlock: {
+                            title: 'Ставка от 12,5% годовых на срок до 3 лет!',
+                            items: [
+                                'Потребительский кредит по специальной процентной ставке',
+                                'Получите деньги без залога и поручительства',
+                                'Кредитный лимит до 5 млн рублей',
+                            ],
+                            buttons: [
+                                {
+                                    href: 'https://rshb.ru',
+                                    text: 'Подробнее',
+                                    target: '_blank',
+                                    version: 'primary',
+                                },
+                            ],
+                            image: worker,
+                        },
+                    },
+                    {
+                        nav: {
+                            title: 'Выгодно покупать',
+                            desc: 'Дополнительные бонусные баллы за покупки',
+                        },
+                        productBlock: {
+                            title: 'Дополнительные бонусные баллы за покупки!',
+                            items: [
+                                'Потребительский кредит по специальной процентной ставке',
+                                'Получите деньги без залога и поручительства',
+                                'Кредитный лимит до 5 млн рублей',
+                            ],
+                            buttons: [
+                                {
+                                    href: 'https://rshb.ru',
+                                    text: 'Подробнее',
+                                    target: '_blank',
+                                    version: 'primary',
+                                },
+                            ],
+                            image: creditCard,
+                        },
+                    },
+                    {
+                        productBlock: {
+                            title: 'Карты Unionpay',
+                            items: [
+                                'Потребительский кредит по специальной процентной ставке',
+                                'Получите деньги без залога и поручительства',
+                                'Кредитный лимит до 5 млн рублей',
+                            ],
+                            buttons: [
+                                {
+                                    href: 'https://rshb.ru',
+                                    text: 'Подробнее',
+                                    target: '_blank',
+                                    version: 'primary',
+                                },
+                            ],
+                            image: creditCard,
+                        },
+                    },
+                ] }) }) })),
 });
 
 ;// CONCATENATED MODULE: ./src/components/StepsBlock/StepsBlock.fixture.mobile.tsx
@@ -32441,28 +33383,6 @@ const steps = [
         ] })),
 });
 
-;// CONCATENATED MODULE: ./src/components/TextBlock/TextBlock.fixture.mobile.tsx
-
-
-
-const TextBlock_fixture_mobile_image = {
-    src: 'bank-card.png',
-    format: 'webp',
-    size: {
-        width: 43,
-        height: 43,
-    },
-};
-const TEXT_BLOCK = {
-    title: 'Все карты Россельхозбанка работают',
-    description: "Если не планируете поездку за границу, продолжайте пользоваться картой Своя. Для поездок за границу можно заказать карту 'Кредитная карта Своя Union Pay' на сайте и в приложении Россельхозбанка",
-};
-/* harmony default export */ const TextBlock_fixture_mobile = (jsx("div", { className: "container grid grid-cols-12", children: jsxs("div", { className: "col-span-12", children: [jsxs("div", { children: [jsx("p", { children: "Private clients" }), jsxs("div", { className: "flex flex-col gap-[6px]", "data-theme": "pc", children: [jsx(TextBlock, { context: context, ...TEXT_BLOCK, blockVersion: "primary", iconVersion: "small" }), jsx(TextBlock, { context: context, ...TEXT_BLOCK, blockVersion: "primary", iconVersion: "big", image: TextBlock_fixture_mobile_image }), jsx(TextBlock, { context: context, ...TEXT_BLOCK, blockVersion: "primary", iconVersion: "none" }), jsx(TextBlock, { context: context, description: "\u0415\u0441\u043B\u0438 \u043D\u0435 \u043F\u043B\u0430\u043D\u0438\u0440\u0443\u0435\u0442\u0435 \u043F\u043E\u0435\u0437\u0434\u043A\u0443 \u0437\u0430 \u0433\u0440\u0430\u043D\u0438\u0446\u0443, \u043F\u0440\u043E\u0434\u043E\u043B\u0436\u0430\u0439\u0442\u0435 \u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u044C\u0441\u044F \u043A\u0430\u0440\u0442\u043E\u0439 \u0421\u0432\u043E\u044F. \u0414\u043B\u044F \u043F\u043E\u0435\u0437\u0434\u043E\u043A \u0437\u0430 \u0433\u0440\u0430\u043D\u0438\u0446\u0443", blockVersion: "primary" }), jsx(TextBlock, { context: context, title: "\u0412\u0441\u0435 \u043A\u0430\u0440\u0442\u044B \u0420\u043E\u0441\u0441\u0435\u043B\u044C\u0445\u043E\u0437\u0431\u0430\u043D\u043A\u0430 \u0440\u0430\u0431\u043E\u0442\u0430\u044E\u0442", blockVersion: "primary" }), jsx(TextBlock, { context: context, title: "\u0412\u0441\u0435 \u043A\u0430\u0440\u0442\u044B \u0420\u043E\u0441\u0441\u0435\u043B\u044C\u0445\u043E\u0437\u0431\u0430\u043D\u043A\u0430 \u0440\u0430\u0431\u043E\u0442\u0430\u044E\u0442", blockVersion: "primary", iconVersion: "small", items: [
-                                    'Вклады до 1,4 млн застрахованы',
-                                    'Вклады до 1,4 млн застрахованы',
-                                    'Вклады до 1,4 млн застрахованы',
-                                ] })] })] }), jsxs("div", { children: [jsx("p", { children: "Business clients" }), jsxs("div", { className: "flex flex-col gap-[6px]", "data-theme": "bc", children: [jsx(TextBlock, { className: "flex flex-col", context: context, ...TEXT_BLOCK, blockVersion: "primary", iconVersion: "small" }), jsx(TextBlock, { context: context, ...TEXT_BLOCK, iconVersion: "small", blockVersion: "secondary" }), jsx(TextBlock, { context: context, ...TEXT_BLOCK, iconVersion: "small", blockVersion: "secondary-light" })] })] }), jsxs("div", { children: [jsx("p", { children: "Ecosystem own" }), jsxs("div", { className: "flex flex-col gap-[6px]", "data-theme": "eo", children: [jsx(TextBlock, { context: context, ...TEXT_BLOCK, iconVersion: "small", blockVersion: "primary" }), jsx(TextBlock, { context: context, ...TEXT_BLOCK, iconVersion: "small", blockVersion: "secondary" }), jsx(TextBlock, { context: context, ...TEXT_BLOCK, iconVersion: "small", blockVersion: "secondary-light" })] })] })] }) }));
-
 ;// CONCATENATED MODULE: ./src/ui-kit/Button/Button.fixture.mobile.tsx
 
 
@@ -32509,14 +33429,26 @@ const TEXT_BLOCK = {
 
 
 
+
+
+
+
+
+
 const rendererConfig = {
   "containerQuerySelector": null
 };
 
 const fixtures = {
+  'src/components/Accordion/Accordion.fixture.mobile.tsx': { module: { default: Accordion_fixture_mobile } },
   'src/components/ContentPage/ContentPage.fixture.mobile.tsx': { module: { default: ContentPage_fixture_mobile } },
+  'src/components/Footer/Footer.fixture.mobile.tsx': { module: { default: Footer_fixture_mobile } },
+  'src/components/Header/Header.fixture.mobile.tsx': { module: { default: Header_fixture_mobile } },
   'src/components/Headline/Headline.fixture.mobile.tsx': { module: { default: Headline_fixture_mobile } },
   'src/components/LinkDocs/LinkDocs.fixture.mobile.tsx': { module: { default: LinkDocs_fixture_mobile } },
+  'src/components/MobileAppTile/MobileAppTile.fixture.mobile.tsx': { module: { default: MobileAppTile_fixture_mobile } },
+  'src/components/ProductBlock/ProductBlock.fixture.mobile.tsx': { module: { default: ProductBlock_fixture_mobile } },
+  'src/components/ProductGallery/ProductGallery.fixture.mobile.tsx': { module: { default: ProductGallery_fixture_mobile } },
   'src/components/StepsBlock/StepsBlock.fixture.mobile.tsx': { module: { default: StepsBlock_fixture_mobile } },
   'src/components/TextBlock/TextBlock.fixture.mobile.tsx': { module: { default: TextBlock_fixture_mobile } },
   'src/ui-kit/Button/Button.fixture.mobile.tsx': { module: { default: Button_fixture_mobile } }
@@ -38514,7 +39446,7 @@ mount();
 
 function mount() {
   // Use dynamic import to load updated modules upon hot reloading
-  var _require = __webpack_require__(3381),
+  var _require = __webpack_require__(1247),
       rendererConfig = _require.rendererConfig,
       fixtures = _require.fixtures,
       decorators = _require.decorators;

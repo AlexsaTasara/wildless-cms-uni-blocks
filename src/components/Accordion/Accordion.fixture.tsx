@@ -30,6 +30,7 @@ const PICTURE_TEXT_ACCORDION_BLOCK: PictureTextAccordionBlock = {
 const LINK_DOCS_ACCORDION_BLOCK: LinkDocsAccordionBlock = {
   accordionBlockType: 'LinkDocs',
   ...LINK_DOCS_BASE,
+  title: '',
 };
 
 const propsTextBlock: AccordionProps = {

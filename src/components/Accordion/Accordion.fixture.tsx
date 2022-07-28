@@ -1,6 +1,6 @@
 import { context } from '../../setup-fixture';
 import { HEADLINE } from '../Headline/Headline.fixture';
-import { LINK_DOCS_BASE } from '../LinkDocs/constants';
+import { LINK_DOCS_BASE } from '../LinkDocs/fixtureConstants';
 import { PICTURE_TEXT } from '../PictureText/PictureText.fixture';
 import { TEXT_BLOCK } from '../TextBlock/TextBlock.fixture';
 import type { AccordionProps } from './Accordion';

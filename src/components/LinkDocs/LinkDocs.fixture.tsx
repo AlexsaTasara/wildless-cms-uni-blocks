@@ -1,5 +1,5 @@
 import { context } from '../../setup-fixture';
-import { LINK_DOCS_BASE } from './constants';
+import { LINK_DOCS_BASE } from './fixtureConstants';
 import { LinkDocs } from './LinkDocs';
 import type { LinkDocsContent } from './LinkDocsContent';
 
@@ -16,7 +16,7 @@ export const LINK_DOCS_ANOTHER_ICON: LinkDocsContent = {
 
 export const LINK_DOCS_NO_ICON: LinkDocsContent = {
   ...LINK_DOCS_BASE,
-  icon: undefined,
+  icon: '',
 };
 
 export default {

@@ -1,5 +1,5 @@
 import { mobileContext } from '../../setup-fixture';
-import { LINK_DOCS_BASE } from './constants';
+import { LINK_DOCS_BASE } from './fixtureConstants';
 import { LinkDocs } from './LinkDocs';
 
 export default {

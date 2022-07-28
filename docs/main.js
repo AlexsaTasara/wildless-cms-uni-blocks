@@ -31073,7 +31073,7 @@ if (false) { var webpackRendererConnect; }
 
 /***/ }),
 
-/***/ 7825:
+/***/ 8372:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -31376,7 +31376,7 @@ const Headline_fixture_image = {
     'mobile white': (jsx("div", { className: "container grid grid-cols-12", children: jsx(Headline, { className: "col-span-12", context: context, title: "\u041A\u043E\u043F\u0438\u0442\u0435 \u0432 \u043D\u0435\u0441\u043A\u043E\u043B\u044C\u043A\u0438\u0445 \u0432\u0430\u043B\u044E\u0442\u0430\u0445", description: "\u041E\u0442\u043A\u0440\u043E\u0439\u0442\u0435 \u043C\u0443\u043B\u044C\u0442\u0438\u0432\u0430\u043B\u044E\u0442\u043D\u044B\u0439 \u0432\u043A\u043B\u0430\u0434, \u0447\u0442\u043E\u0431\u044B \u0440\u0430\u0441\u043F\u0440\u0435\u0434\u0435\u043B\u0438\u0442\u044C \u0441\u0432\u043E\u0438 \u0432\u043B\u043E\u0436\u0435\u043D\u0438\u044F. \u042D\u0442\u043E \u0434\u043E 4 \u0441\u0447\u0435\u0442\u043E\u0432 \u0432 \u0440\u0430\u0437\u043D\u044B\u0445 \u0432\u0430\u043B\u044E\u0442\u0430\u0445 \u0432\u043D\u0443\u0442\u0440\u0438 \u043E\u0434\u043D\u043E\u0433\u043E \u0432\u043A\u043B\u0430\u0434\u0430", bgColor: "bg-white", image: Headline_fixture_image }) })),
 });
 
-;// CONCATENATED MODULE: ./src/components/LinkDocs/constants.ts
+;// CONCATENATED MODULE: ./src/components/LinkDocs/fixtureConstants.ts
 const LINK_DOCS_BASE = {
     title: 'Дополнительные документы',
     subtitle: 'Ответы на часто задаваемые вопросы',
@@ -33719,7 +33719,7 @@ const LINK_DOCS_ANOTHER_ICON = {
 };
 const LINK_DOCS_NO_ICON = {
     ...LINK_DOCS_BASE,
-    icon: undefined,
+    icon: '',
 };
 /* harmony default export */ const LinkDocs_fixture = ({
     'two columns (default)': (jsx("div", { className: "container grid grid-cols-12", children: jsx(LinkDocs, { className: "col-span-12", context: context, ...LINK_DOCS_BASE }) })),
@@ -40694,7 +40694,7 @@ mount();
 
 function mount() {
   // Use dynamic import to load updated modules upon hot reloading
-  var _require = __webpack_require__(7825),
+  var _require = __webpack_require__(8372),
       rendererConfig = _require.rendererConfig,
       fixtures = _require.fixtures,
       decorators = _require.decorators;

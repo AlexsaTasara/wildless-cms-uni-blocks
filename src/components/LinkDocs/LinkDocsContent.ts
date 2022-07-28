@@ -12,7 +12,7 @@ import type { BaseTileCommonProps } from '../BaseTile/BaseTileProps';
 export type LinkColumnsMode = 'single' | 'double';
 
 /**
- * @title Отображение списка
+ * @title Отображение списка (моб.)
  * @enumNames [
  *    "Вертикально",
  *    "Горизонтально",
@@ -31,27 +31,15 @@ export interface LinkDocsItem extends LinkProps {
 /**
  * @title Список документов
  */
-export interface LinkDocsBaseContent extends Pick<BaseTileCommonProps, 'title' | 'align'> {
+export interface LinkDocsContent extends Pick<BaseTileCommonProps, 'title' | 'align'> {
   /** @title Подзаголовок */
   subtitle?: string;
   /** @title Название иконки */
   icon?: IconName;
   /** @title Список */
   documents?: LinkDocsItem[];
-}
-
-/**
- * @title Список документов
- */
-export interface LinkDocsContent extends LinkDocsBaseContent {
   columnsMode?: LinkColumnsMode;
-}
-
-/**
- * @title Список документов
- */
-export interface MobileLinkDocsContent extends LinkDocsBaseContent {
   listMode?: LinkListMode;
-  /** @title Рамка элементов */
+  /** @title Рамка элементов (моб.) */
   hasBorder?: boolean;
 }

@@ -1,7 +1,8 @@
-import type { LinkDocsBaseContent } from './LinkDocsContent';
+import type { LinkDocsContent } from './LinkDocsContent';
 
-export const LINK_DOCS_BASE: LinkDocsBaseContent = {
+export const LINK_DOCS_BASE: LinkDocsContent = {
   title: 'Дополнительные документы',
+  subtitle: 'Ответы на часто задаваемые вопросы',
   icon: 'DocIcon',
   documents: [
     { text: 'target self', href: '/abc1/cooldoc.doc', target: '_self' },

@@ -1,12 +1,12 @@
 import { JSX } from '@redneckz/uni-jsx';
 import type { UniBlockProps } from '../../types';
-import type { MobileLinkDocsContent } from './LinkDocsContent';
+import type { LinkDocsContent } from './LinkDocsContent';
 import { Title } from '../../ui-kit/Title/Title';
 import { SwipeListControl } from '../../ui-kit/SwipeListControl/SwipeListControl';
 import { LinkDocsListItem } from './LinkDocsListItem';
 import { SwipeListControlItem } from '../../ui-kit/SwipeListControl/SwipeListControlItem';
 
-export interface LinkDocsProps extends MobileLinkDocsContent, UniBlockProps {}
+export interface LinkDocsProps extends LinkDocsContent, UniBlockProps {}
 
 export const LinkDocs = JSX<LinkDocsProps>(
   ({

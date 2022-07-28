@@ -21,12 +21,12 @@ export const LinkDocs = JSX<LinkDocsProps>(
   }) => {
     return (
       <section className={`py-6 px-4 bg-white ${className}`}>
-        {title && (
+        {title ? (
           <Title className={`text-center ${subtitle ? 'mb-2' : 'mb-5'}`} size="M">
             {title}
           </Title>
-        )}
-        {subtitle && <h3 className="mb-5 text-center text-m-base">{subtitle}</h3>}
+        ) : null}
+        {subtitle ? <h3 className="mb-5 text-center text-m-base">{subtitle}</h3> : null}
         {listMode === 'vertical' ? (
           <div
             className={`text-sm text-primary-main flex flex-col ${hasBorder ? 'gap-3.5' : 'gap-2'}`}

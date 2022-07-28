@@ -19,9 +19,9 @@ export const LinkDocsListItem = JSX<LinkDocsListItemProps>(({ hasBorder, doc, ic
       role="link"
       {...linkProps}
     >
-      {icon && (
+      {icon ? (
         <Icon className={`mr-4 min-w-6 min-h-6`} name={icon} width="24px" height="24px" asSVG />
-      )}
+      ) : null}
       {text}
       {linkProps?.href && formatSuffix(getExtFromHref(linkProps.href), fileSize)}
     </a>

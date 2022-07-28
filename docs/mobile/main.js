@@ -32005,7 +32005,7 @@ const getExtFromHref = (href) => {
 
 const LinkDocsListItem = JSX(({ hasBorder, doc, icon }) => {
     const { text, fileSize, ...linkProps } = doc;
-    return (jsxs("a", { className: `flex h-full ${hasBorder ? 'rounded-md border-main-stroke border p-4' : ''}`, role: "link", ...linkProps, children: [icon && (jsx(Icon, { className: `mr-4 min-w-6 min-h-6`, name: icon, width: "24px", height: "24px", asSVG: true })), text, linkProps?.href && formatSuffix(getExtFromHref(linkProps.href), fileSize)] }));
+    return (jsxs("a", { className: `flex h-full ${hasBorder ? 'rounded-md border-main-stroke border p-4' : ''}`, role: "link", ...linkProps, children: [icon ? (jsx(Icon, { className: `mr-4 min-w-6 min-h-6`, name: icon, width: "24px", height: "24px", asSVG: true })) : null, text, linkProps?.href && formatSuffix(getExtFromHref(linkProps.href), fileSize)] }));
 });
 
 ;// CONCATENATED MODULE: ./src/ui-kit/SwipeListControl/SwipeListControlItem.tsx
@@ -32023,7 +32023,7 @@ const SwipeListControlItem = JSX(({ className = '', children }) => {
 
 
 const LinkDocs = JSX(({ className = '', context, title, subtitle, icon = 'DocIcon', documents, listMode = 'vertical', hasBorder = true, }) => {
-    return (jsxs("section", { className: `py-6 px-4 bg-white ${className}`, children: [title && (jsx(Title, { className: `text-center ${subtitle ? 'mb-2' : 'mb-5'}`, size: "M", children: title })), subtitle && jsx("h3", { className: "mb-5 text-center text-m-base", children: subtitle }), listMode === 'vertical' ? (jsx("div", { className: `text-sm text-primary-main flex flex-col ${hasBorder ? 'gap-3.5' : 'gap-2'}`, role: "list", children: documents?.length
+    return (jsxs("section", { className: `py-6 px-4 bg-white ${className}`, children: [title ? (jsx(Title, { className: `text-center ${subtitle ? 'mb-2' : 'mb-5'}`, size: "M", children: title })) : null, subtitle ? jsx("h3", { className: "mb-5 text-center text-m-base", children: subtitle }) : null, listMode === 'vertical' ? (jsx("div", { className: `text-sm text-primary-main flex flex-col ${hasBorder ? 'gap-3.5' : 'gap-2'}`, role: "list", children: documents?.length
                     ? documents.map((doc, i) => (jsx("div", { role: "listitem", children: jsx(LinkDocsListItem, { hasBorder: hasBorder, doc: doc, icon: icon }) }, String(i))))
                     : null })) : (jsx(SwipeListControl, { context: context, className: "text-sm text-primary-main", children: documents?.length
                     ? documents.map((doc, i) => (jsx(SwipeListControlItem, { children: jsx(LinkDocsListItem, { hasBorder: hasBorder, doc: doc, icon: icon }) }, String(i))))

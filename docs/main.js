@@ -31587,10 +31587,10 @@ const linkColumnsModeStyleMap = {
 };
 const LinkDocs = JSX(({ className, title, subtitle, align, documents, icon, columnsMode = 'double' }) => {
     const containerClasses = linkColumnsModeStyleMap[columnsMode];
-    return (jsxs("section", { className: `font-sans p-[50px] bg-white ${className}`, children: [title && (jsx(Title, { className: `font-medium mt-0 ${subtitle ? 'mb-2' : titleMarginsStyleMap[columnsMode]} ${titleAlignStyleMap[align ?? 'center']}`, children: title })), subtitle && (jsx("h3", { className: `text-base ${title ? 'mt-2.5' : 'mt-0'} ${titleMarginsStyleMap[columnsMode]} ${titleAlignStyleMap[align ?? 'center']}`, children: subtitle })), jsx("div", { className: `flex ${containerClasses}`, role: "list", children: documents?.length
+    return (jsxs("section", { className: `font-sans p-[50px] bg-white ${className}`, children: [title ? (jsx(Title, { className: `font-medium mt-0 ${subtitle ? 'mb-2' : titleMarginsStyleMap[columnsMode]} ${titleAlignStyleMap[align ?? 'center']}`, children: title })) : null, subtitle ? (jsx("h3", { className: `text-base ${title ? 'mt-2.5' : 'mt-0'} ${titleMarginsStyleMap[columnsMode]} ${titleAlignStyleMap[align ?? 'center']}`, children: subtitle })) : null, jsx("div", { className: `flex ${containerClasses}`, role: "list", children: documents?.length
                     ? documents.map(({ text, fileSize, ...linkProps }, i) => (jsxs("a", { className: `group flex text-sm align-middle h-fit
                    text-primary-text no-underline hover:text-primary-main
-                   ${columnsMode === 'double' ? 'basis-[calc(50%-20px)]' : ''}`, role: "listitem", ...linkProps, children: [icon && jsx(Icon, { className: "mr-2.5 h-fit", name: icon, width: "24px", height: "24px" }), jsxs("span", { className: "self-center", children: [text, jsx("span", { className: "text-secondary-text group-hover:text-primary-main", children: linkProps?.href && formatSuffix(getExtFromHref(linkProps.href), fileSize) })] })] }, String(i))))
+                   ${columnsMode === 'double' ? 'basis-[calc(50%-20px)]' : ''}`, role: "listitem", ...linkProps, children: [icon ? (jsx(Icon, { className: "mr-2.5 h-fit", name: icon, width: "24px", height: "24px" })) : null, jsxs("span", { className: "self-center", children: [text, jsx("span", { className: "text-secondary-text group-hover:text-primary-main", children: linkProps?.href && formatSuffix(getExtFromHref(linkProps.href), fileSize) })] })] }, String(i))))
                     : null })] }));
 });
 

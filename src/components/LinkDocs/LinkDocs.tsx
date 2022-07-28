@@ -31,7 +31,7 @@ export const LinkDocs = JSX<LinkDocsProps>(
 
     return (
       <section className={`font-sans p-[50px] bg-white ${className}`}>
-        {title && (
+        {title ? (
           <Title
             className={`font-medium mt-0 ${subtitle ? 'mb-2' : titleMarginsStyleMap[columnsMode]} ${
               titleAlignStyleMap[align ?? 'center']
@@ -39,8 +39,8 @@ export const LinkDocs = JSX<LinkDocsProps>(
           >
             {title}
           </Title>
-        )}
-        {subtitle && (
+        ) : null}
+        {subtitle ? (
           <h3
             className={`text-base ${title ? 'mt-2.5' : 'mt-0'} ${
               titleMarginsStyleMap[columnsMode]
@@ -48,7 +48,7 @@ export const LinkDocs = JSX<LinkDocsProps>(
           >
             {subtitle}
           </h3>
-        )}
+        ) : null}
         <div className={`flex ${containerClasses}`} role="list">
           {documents?.length
             ? documents.map(({ text, fileSize, ...linkProps }, i) => (
@@ -60,7 +60,9 @@ export const LinkDocs = JSX<LinkDocsProps>(
                   role="listitem"
                   {...linkProps}
                 >
-                  {icon && <Icon className="mr-2.5 h-fit" name={icon} width="24px" height="24px" />}
+                  {icon ? (
+                    <Icon className="mr-2.5 h-fit" name={icon} width="24px" height="24px" />
+                  ) : null}
                   <span className="self-center">
                     {text}
                     <span className="text-secondary-text group-hover:text-primary-main">

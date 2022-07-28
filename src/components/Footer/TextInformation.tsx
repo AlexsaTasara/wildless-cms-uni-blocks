@@ -1,7 +1,7 @@
 import { JSX } from '@redneckz/uni-jsx';
 import { useLink } from '../../hooks/useLink';
 import type { LinkProps } from '../../model/LinkProps';
-import { FooterLink } from './FooterLink';
+import type { FooterLink } from './FooterLink';
 
 export const TextInformation = JSX<FooterLink>(({ className, links, context }) => {
   const router = context.useRouter();

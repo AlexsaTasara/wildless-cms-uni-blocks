@@ -29,6 +29,5 @@ export interface StepsBlockContent {
    * @maxItems 3
    */
   steps?: Step[];
-  /** @title Размер */
   size?: SizeVersion; // TODO: mobile content
 }

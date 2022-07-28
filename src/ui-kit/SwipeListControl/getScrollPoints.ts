@@ -1,20 +1,23 @@
-export const getScrollPoints = (
-  gap: number,
-  padding: number,
-  containerProps: {
-    clientWidth: number;
-    scrollWidth: number;
-    children: HTMLCollection;
-  },
-) => {
-  const { clientWidth, scrollWidth, children } = containerProps;
-
-  const itemWidth = (children[0] as HTMLElement).offsetWidth;
+export const getScrollPoints = ({
+  gap,
+  padding,
+  clientWidth,
+  scrollWidth,
+  childElementCount,
+  itemWidth,
+}: {
+  gap: number;
+  padding: number;
+  clientWidth: number;
+  scrollWidth: number;
+  childElementCount: number;
+  itemWidth: number;
+}) => {
   const scrollItemWidth = itemWidth + gap;
   const scrollableDistance = scrollWidth - clientWidth;
   const edgeScrollDistance = (3 * itemWidth - clientWidth) / 2 + gap + padding;
 
-  const scrollableItemsCount = children.length - 1;
+  const scrollableItemsCount = childElementCount - 1;
   const scrollPoints: [number, number][] = new Array(scrollableItemsCount)
     .fill(0)
     .map((_, idx) =>

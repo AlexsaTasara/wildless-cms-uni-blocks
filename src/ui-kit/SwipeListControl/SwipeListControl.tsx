@@ -31,8 +31,13 @@ export const SwipeListControl = JSX<SwipeListControlProps>(
       const container = document.querySelector(`[data-hash=${randomHash}]`) as Element;
       const { clientWidth, childElementCount, scrollWidth, children } = container;
 
+      // 8px to compensate padding-margin combo of child container without CSS calc function
+      const itemWidth = (children[0] as HTMLElement).offsetWidth - 8;
+
       setChildrenCount(childElementCount);
-      setScrollPoints(getScrollPoints(gap, padding, { clientWidth, scrollWidth, children }));
+      setScrollPoints(
+        getScrollPoints({ gap, padding, clientWidth, scrollWidth, childElementCount, itemWidth }),
+      );
     });
 
     const [activeIndex, setActiveIndex] = context.useState<number>(0);

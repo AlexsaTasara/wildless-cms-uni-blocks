@@ -1,7 +1,7 @@
 import { context } from '../../setup-fixture';
 import { LinkDocs } from './LinkDocs';
 import type { LinkDocsContent } from './LinkDocsContent';
-import { LINK_DOCS_BASE } from './constants';
+import { LINK_DOCS_BASE } from './linkDocsBase';
 
 export const LINK_DOCS_ONE_COLUMN: LinkDocsContent = {
   ...LINK_DOCS_BASE,

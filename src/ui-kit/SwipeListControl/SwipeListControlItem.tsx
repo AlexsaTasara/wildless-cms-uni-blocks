@@ -5,7 +5,7 @@ export const SwipeListControlItem = JSX<SwipeListControlItemProps>(
   ({ className = '', children }) => {
     return (
       <div
-        className={`snap-center snap-always min-w-[calc(100%-8px)] ${className}`}
+        className={`snap-center snap-always min-w-full mx-[-4px] px-1 ${className}`}
         role="listitem"
       >
         {children}

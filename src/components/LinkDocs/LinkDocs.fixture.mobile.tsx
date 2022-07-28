@@ -1,6 +1,6 @@
 import { LinkDocs } from './LinkDocs.mobile';
 import { mobileContext } from '../../setup-fixture';
-import { LINK_DOCS_BASE } from './constants';
+import { LINK_DOCS_BASE } from './linkDocsBase';
 
 export default {
   'vertical (default)': (

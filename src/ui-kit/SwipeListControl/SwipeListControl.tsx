@@ -1,6 +1,10 @@
 import { JSX } from '@redneckz/uni-jsx';
 import type { CSSProperties } from 'react';
 import type { SwipeListControlProps } from './SwipeListControlProps';
+import { getScrollPoints } from './getScrollPoints';
+import { useDOMContentLoaded } from '../../hooks/useDOMContentLoaded';
+import { getIndexParts } from './getIndexParts';
+import { getSwipeListControlHash } from './getSwipeListControlHash';
 
 const DOT_STYLES = 'bg-primary-main opacity-30 w-1.5 h-1.5 min-w-1.5 min-h-1.5 rounded-full';
 const DOT_WIDTH = 6;
@@ -18,58 +22,26 @@ export const SwipeListControl = JSX<SwipeListControlProps>(
     padding = 16,
     showDots = true,
   }) => {
-    const [randomHash] = context.useState<string>(
-      `slider-control-${String(Math.floor(Math.random() * 1e9))}`,
-    );
-    const [isFirstRun, setIsFirstRun] = context.useState(true);
+    const [randomHash] = context.useState<string>(getSwipeListControlHash());
 
-    if (isFirstRun) {
-      window.addEventListener('DOMContentLoaded', () => {
-        const container = document.querySelector(`[data-hash=${randomHash}]`) as Element;
+    const [childrenCount, setChildrenCount] = context.useState<number>(0);
+    const [scrollPoints, setScrollPoints] = context.useState<[number, number][]>([]);
 
-        const { clientWidth, childElementCount } = container;
-        setChildrenCount(childElementCount);
+    useDOMContentLoaded(context, () => {
+      const container = document.querySelector(`[data-hash=${randomHash}]`) as Element;
+      const { clientWidth, childElementCount, scrollWidth, children } = container;
 
-        const itemWidth = (container.children[0] as HTMLElement).offsetWidth;
-        const scrollItemWidth = itemWidth + gap;
-        const scrollableDistance = container.scrollWidth - clientWidth;
-        const edgeScrollDistance = (3 * itemWidth - clientWidth) / 2 + gap + padding;
-
-        const scrollableItemsCount = childElementCount - 1;
-        const scrollPoints: [number, number][] = new Array(scrollableItemsCount)
-          .fill(0)
-          .map((_, idx) =>
-            idx === 0 || idx === scrollableItemsCount - 1
-              ? [
-                  idx > 0 ? scrollableDistance - edgeScrollDistance : 0,
-                  idx > 0 ? scrollableDistance : edgeScrollDistance,
-                ]
-              : [
-                  (idx - 1) * scrollItemWidth + edgeScrollDistance,
-                  idx * scrollItemWidth + edgeScrollDistance,
-                ],
-          );
-        setScrollPoints(scrollPoints);
-      });
-      setIsFirstRun(false);
-    }
+      setChildrenCount(childElementCount);
+      setScrollPoints(getScrollPoints(gap, padding, { clientWidth, scrollWidth, children }));
+    });
 
     const [activeIndex, setActiveIndex] = context.useState<number>(0);
-    const [scrollPoints, setScrollPoints] = context.useState<[number, number][]>([]);
     const [indexFraction, setIndexFraction] = context.useState<number>(0);
-    const [childrenCount, setChildrenCount] = context.useState<number>(0);
 
     const handleToggle = (e: UIEvent) => {
-      const container = e.currentTarget as HTMLElement;
-      const { scrollLeft } = container;
-
-      const idx = scrollPoints.findIndex(
-        ([start, end]) => start <= scrollLeft && scrollLeft <= end,
-      );
-      setActiveIndex(idx);
-
-      const [start, end] = scrollPoints[idx];
-      const fraction = (scrollLeft - start) / (end - start);
+      const { scrollLeft } = e.currentTarget as HTMLElement;
+      const { index, fraction } = getIndexParts(scrollLeft, scrollPoints);
+      setActiveIndex(index);
       setIndexFraction(fraction);
     };
 
@@ -111,7 +83,7 @@ const getDotStyles = (
   activeIndex: number,
   indexFraction: number,
 ): CSSProperties | undefined => {
-  if (currentIdx < activeIndex || currentIdx > activeIndex + 1) return undefined;
+  if (currentIdx < activeIndex || currentIdx > activeIndex + 1) return null;
 
   let styles: CSSProperties;
   const leftIndexMod = 1 - indexFraction;

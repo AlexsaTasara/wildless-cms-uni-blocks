@@ -31874,7 +31874,7 @@ const Headline = JSX(({ bgColor = 'transparent', align = 'left', className, titl
 const getScrollPoints = ({ gap, padding, clientWidth, scrollWidth, childElementCount, itemWidth, }) => {
     const scrollItemWidth = itemWidth + gap;
     const scrollableDistance = scrollWidth - clientWidth;
-    const edgeScrollDistance = (3 * itemWidth - clientWidth) / 2 + gap + padding;
+    const edgeScrollDistance = clientWidth - gap - padding;
     const scrollableItemsCount = childElementCount - 1;
     const scrollPoints = new Array(scrollableItemsCount)
         .fill(0)
@@ -31963,22 +31963,17 @@ const SwipeListControl = JSX(({ className = '', context, children, gap = 14, mar
 const getDotStyles = (currentIdx, activeIndex, indexFraction) => {
     if (currentIdx < activeIndex || currentIdx > activeIndex + 1)
         return null;
-    let styles;
     const leftIndexMod = 1 - indexFraction;
     const rightIndexMod = indexFraction;
-    if (currentIdx === activeIndex) {
-        styles = {
+    if (currentIdx === activeIndex)
+        return {
             opacity: `${DOT_OPACITY + ACTIVE_DOT_OPACITY * leftIndexMod}`,
             width: `${DOT_WIDTH + ACTIVE_DOT_WIDTH * leftIndexMod}px`,
         };
-    }
-    else {
-        styles = {
-            opacity: `${DOT_OPACITY + ACTIVE_DOT_OPACITY * rightIndexMod}`,
-            width: `${DOT_WIDTH + ACTIVE_DOT_WIDTH * rightIndexMod}px`,
-        };
-    }
-    return styles;
+    return {
+        opacity: `${DOT_OPACITY + ACTIVE_DOT_OPACITY * rightIndexMod}`,
+        width: `${DOT_WIDTH + ACTIVE_DOT_WIDTH * rightIndexMod}px`,
+    };
 };
 
 ;// CONCATENATED MODULE: ./src/components/LinkDocs/formatSuffix.ts

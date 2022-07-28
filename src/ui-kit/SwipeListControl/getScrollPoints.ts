@@ -15,7 +15,7 @@ export const getScrollPoints = ({
 }) => {
   const scrollItemWidth = itemWidth + gap;
   const scrollableDistance = scrollWidth - clientWidth;
-  const edgeScrollDistance = (3 * itemWidth - clientWidth) / 2 + gap + padding;
+  const edgeScrollDistance = clientWidth - gap - padding;
 
   const scrollableItemsCount = childElementCount - 1;
   const scrollPoints: [number, number][] = new Array(scrollableItemsCount)

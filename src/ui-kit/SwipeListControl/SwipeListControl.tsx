@@ -90,20 +90,17 @@ const getDotStyles = (
 ): CSSProperties | undefined => {
   if (currentIdx < activeIndex || currentIdx > activeIndex + 1) return null;
 
-  let styles: CSSProperties;
   const leftIndexMod = 1 - indexFraction;
   const rightIndexMod = indexFraction;
 
-  if (currentIdx === activeIndex) {
-    styles = {
+  if (currentIdx === activeIndex)
+    return {
       opacity: `${DOT_OPACITY + ACTIVE_DOT_OPACITY * leftIndexMod}`,
       width: `${DOT_WIDTH + ACTIVE_DOT_WIDTH * leftIndexMod}px`,
     };
-  } else {
-    styles = {
-      opacity: `${DOT_OPACITY + ACTIVE_DOT_OPACITY * rightIndexMod}`,
-      width: `${DOT_WIDTH + ACTIVE_DOT_WIDTH * rightIndexMod}px`,
-    };
-  }
-  return styles;
+
+  return {
+    opacity: `${DOT_OPACITY + ACTIVE_DOT_OPACITY * rightIndexMod}`,
+    width: `${DOT_WIDTH + ACTIVE_DOT_WIDTH * rightIndexMod}px`,
+  };
 };

@@ -1,15 +1,10 @@
 import { JSX } from '@redneckz/uni-jsx';
-import type { CSSProperties } from 'react';
 import type { SwipeListControlProps } from './SwipeListControlProps';
-import { getScrollPoints } from './getScrollPoints';
-import { getIndexParts } from './getIndexParts';
-import { SwipeListControlItem } from './SwipeListControlItem';
+import { getScrollPoints } from './utils/getScrollPoints';
+import { getIndexParts } from './utils/getIndexParts';
+import { SwipeListControlChildren } from './SwipeListControlChildren';
+import { SwipeListControlDots } from './SwipeListControlDots';
 
-const DOT_STYLES = 'bg-primary-main opacity-30 w-1.5 h-1.5 min-w-1.5 min-h-1.5 rounded-full';
-const DOT_WIDTH = 6;
-const ACTIVE_DOT_WIDTH = 22;
-const DOT_OPACITY = 0.3;
-const ACTIVE_DOT_OPACITY = 1;
 const GAP = 14;
 const PADDING = 16;
 
@@ -21,7 +16,7 @@ export const SwipeListControl = JSX<SwipeListControlProps>(
     const [activeIndex, setActiveIndex] = context.useState<number>(0);
     const [indexFraction, setIndexFraction] = context.useState<number>(0);
 
-    const handleToggle = (e: UIEvent) => {
+    const scrollHandler = (e: UIEvent) => {
       const container = e.currentTarget as HTMLElement;
 
       if (!scrollPoints) {
@@ -50,54 +45,16 @@ export const SwipeListControl = JSX<SwipeListControlProps>(
     };
 
     return (
-      <div>
-        <div
-          className={`mx-[-16px] px-4 gap-3.5 overflow-auto flex horizontal-list no-scrollbar ${className}`}
-          role="list"
-          onScroll={handleToggle}
+      <div className={className}>
+        <SwipeListControlChildren onScroll={scrollHandler}>{children}</SwipeListControlChildren>
+        <SwipeListControlDots
+          activeIndex={activeIndex}
+          indexFraction={indexFraction}
+          showDots={showDots}
         >
-          {children?.length ? (
-            children.map((child, idx) => (
-              <SwipeListControlItem key={String(idx)}>{child}</SwipeListControlItem>
-            ))
-          ) : (
-            <SwipeListControlItem>{children}</SwipeListControlItem>
-          )}
-        </div>
-        {showDots && children?.length ? (
-          <div className="flex gap-2 mx-auto mt-[22px] w-fit">
-            {children?.map((_, idx) => (
-              <div
-                key={String(idx)}
-                className={`${DOT_STYLES}`}
-                style={getDotStyles(idx, activeIndex, indexFraction)}
-              />
-            ))}
-          </div>
-        ) : null}
+          {children}
+        </SwipeListControlDots>
       </div>
     );
   },
 );
-
-const getDotStyles = (
-  currentIdx: number,
-  activeIndex: number,
-  indexFraction: number,
-): CSSProperties | undefined => {
-  if (currentIdx < activeIndex || currentIdx > activeIndex + 1) return null;
-
-  const leftIndexMod = 1 - indexFraction;
-  const rightIndexMod = indexFraction;
-
-  if (currentIdx === activeIndex)
-    return {
-      opacity: `${DOT_OPACITY + ACTIVE_DOT_OPACITY * leftIndexMod}`,
-      width: `${DOT_WIDTH + ACTIVE_DOT_WIDTH * leftIndexMod}px`,
-    };
-
-  return {
-    opacity: `${DOT_OPACITY + ACTIVE_DOT_OPACITY * rightIndexMod}`,
-    width: `${DOT_WIDTH + ACTIVE_DOT_WIDTH * rightIndexMod}px`,
-  };
-};

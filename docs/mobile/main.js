@@ -31073,7 +31073,7 @@ if (false) { var webpackRendererConnect; }
 
 /***/ }),
 
-/***/ 7759:
+/***/ 3955:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -31584,7 +31584,7 @@ const TEXT_BLOCK = {
                                     'Вклады до 1,4 млн застрахованы',
                                 ] })] })] }), jsxs("div", { children: [jsx("p", { children: "Business clients" }), jsxs("div", { className: "flex flex-col gap-[6px]", "data-theme": "bc", children: [jsx(TextBlock, { className: "flex flex-col", context: context, ...TEXT_BLOCK, blockVersion: "primary", iconVersion: "small" }), jsx(TextBlock, { context: context, ...TEXT_BLOCK, iconVersion: "small", blockVersion: "secondary" }), jsx(TextBlock, { context: context, ...TEXT_BLOCK, iconVersion: "small", blockVersion: "secondary-light" })] })] }), jsxs("div", { children: [jsx("p", { children: "Ecosystem own" }), jsxs("div", { className: "flex flex-col gap-[6px]", "data-theme": "eo", children: [jsx(TextBlock, { context: context, ...TEXT_BLOCK, iconVersion: "small", blockVersion: "primary" }), jsx(TextBlock, { context: context, ...TEXT_BLOCK, iconVersion: "small", blockVersion: "secondary" }), jsx(TextBlock, { context: context, ...TEXT_BLOCK, iconVersion: "small", blockVersion: "secondary-light" })] })] })] }) }));
 
-;// CONCATENATED MODULE: ./src/ui-kit/SwipeListControl/getScrollPoints.ts
+;// CONCATENATED MODULE: ./src/ui-kit/SwipeListControl/utils/getScrollPoints.ts
 const getScrollPoints = ({ gap, padding, clientWidth, scrollWidth, childElementCount, itemWidth, }) => {
     const scrollItemWidth = itemWidth + gap;
     const scrollableDistance = scrollWidth - clientWidth;
@@ -31604,7 +31604,7 @@ const getScrollPoints = ({ gap, padding, clientWidth, scrollWidth, childElementC
     return scrollPoints;
 };
 
-;// CONCATENATED MODULE: ./src/ui-kit/SwipeListControl/getIndexParts.ts
+;// CONCATENATED MODULE: ./src/ui-kit/SwipeListControl/utils/getIndexParts.ts
 const getIndexParts = (scrollLeft, scrollPoints) => {
     const index = scrollPoints.findIndex(([start, end]) => start <= scrollLeft && scrollLeft <= end);
     const [start, end] = scrollPoints[index];
@@ -31619,10 +31619,15 @@ const SwipeListControlItem = JSX(({ className = '', style, children }) => {
     return (jsx("div", { className: `snap-center snap-always min-w-full mx-[-4px] px-1 ${className}`, style: style, role: "listitem", children: children }));
 });
 
-;// CONCATENATED MODULE: ./src/ui-kit/SwipeListControl/SwipeListControl.tsx
+;// CONCATENATED MODULE: ./src/ui-kit/SwipeListControl/SwipeListControlChildren.tsx
 
 
 
+const SwipeListControlChildren = JSX(({ className, children, onScroll }) => {
+    return (jsx("div", { className: `mx-[-16px] px-4 gap-3.5 overflow-auto flex horizontal-list no-scrollbar ${className}`, role: "list", onScroll: onScroll, children: children?.length ? (children.map((child, idx) => (jsx(SwipeListControlItem, { children: child }, String(idx))))) : (jsx(SwipeListControlItem, { children: children })) }));
+});
+
+;// CONCATENATED MODULE: ./src/ui-kit/SwipeListControl/SwipeListControlDots.tsx
 
 
 const DOT_STYLES = 'bg-primary-main opacity-30 w-1.5 h-1.5 min-w-1.5 min-h-1.5 rounded-full';
@@ -31630,13 +31635,39 @@ const DOT_WIDTH = 6;
 const ACTIVE_DOT_WIDTH = 22;
 const DOT_OPACITY = 0.3;
 const ACTIVE_DOT_OPACITY = 1;
+const SwipeListControlDots = JSX(({ children, activeIndex, indexFraction, showDots }) => {
+    return showDots && children?.length ? (jsx("div", { className: "flex gap-2 mx-auto mt-[22px] w-fit", children: children?.map((_, idx) => (jsx("div", { className: `${DOT_STYLES}`, style: getDotStyles(idx, activeIndex, indexFraction) }, String(idx)))) })) : null;
+});
+const getDotStyles = (currentIdx, activeIndex, indexFraction) => {
+    if (currentIdx < activeIndex || currentIdx > activeIndex + 1)
+        return null;
+    const leftIndexMod = 1 - indexFraction;
+    const rightIndexMod = indexFraction;
+    if (currentIdx === activeIndex)
+        return {
+            opacity: `${DOT_OPACITY + ACTIVE_DOT_OPACITY * leftIndexMod}`,
+            width: `${DOT_WIDTH + ACTIVE_DOT_WIDTH * leftIndexMod}px`,
+        };
+    return {
+        opacity: `${DOT_OPACITY + ACTIVE_DOT_OPACITY * rightIndexMod}`,
+        width: `${DOT_WIDTH + ACTIVE_DOT_WIDTH * rightIndexMod}px`,
+    };
+};
+
+;// CONCATENATED MODULE: ./src/ui-kit/SwipeListControl/SwipeListControl.tsx
+
+
+
+
+
+
 const GAP = 14;
 const PADDING = 16;
 const SwipeListControl = JSX(({ className = '', context, children, showDots = true }) => {
     const [scrollPoints, setScrollPoints] = context.useState(undefined);
     const [activeIndex, setActiveIndex] = context.useState(0);
     const [indexFraction, setIndexFraction] = context.useState(0);
-    const handleToggle = (e) => {
+    const scrollHandler = (e) => {
         const container = e.currentTarget;
         if (!scrollPoints) {
             const { clientWidth, childElementCount, scrollWidth, children } = container;
@@ -31657,23 +31688,8 @@ const SwipeListControl = JSX(({ className = '', context, children, showDots = tr
         setActiveIndex(index);
         setIndexFraction(fraction);
     };
-    return (jsxs("div", { children: [jsx("div", { className: `mx-[-16px] px-4 gap-3.5 overflow-auto flex horizontal-list no-scrollbar ${className}`, role: "list", onScroll: handleToggle, children: children?.length ? (children.map((child, idx) => (jsx(SwipeListControlItem, { children: child }, String(idx))))) : (jsx(SwipeListControlItem, { children: children })) }), showDots && children?.length ? (jsx("div", { className: "flex gap-2 mx-auto mt-[22px] w-fit", children: children?.map((_, idx) => (jsx("div", { className: `${DOT_STYLES}`, style: getDotStyles(idx, activeIndex, indexFraction) }, String(idx)))) })) : null] }));
+    return (jsxs("div", { className: className, children: [jsx(SwipeListControlChildren, { onScroll: scrollHandler, children: children }), jsx(SwipeListControlDots, { activeIndex: activeIndex, indexFraction: indexFraction, showDots: showDots, children: children })] }));
 });
-const getDotStyles = (currentIdx, activeIndex, indexFraction) => {
-    if (currentIdx < activeIndex || currentIdx > activeIndex + 1)
-        return null;
-    const leftIndexMod = 1 - indexFraction;
-    const rightIndexMod = indexFraction;
-    if (currentIdx === activeIndex)
-        return {
-            opacity: `${DOT_OPACITY + ACTIVE_DOT_OPACITY * leftIndexMod}`,
-            width: `${DOT_WIDTH + ACTIVE_DOT_WIDTH * leftIndexMod}px`,
-        };
-    return {
-        opacity: `${DOT_OPACITY + ACTIVE_DOT_OPACITY * rightIndexMod}`,
-        width: `${DOT_WIDTH + ACTIVE_DOT_WIDTH * rightIndexMod}px`,
-    };
-};
 
 ;// CONCATENATED MODULE: ./src/components/LinkDocs/utils/formatSuffix.ts
 const formatSuffix = (ext, fileSize) => {
@@ -39422,7 +39438,7 @@ mount();
 
 function mount() {
   // Use dynamic import to load updated modules upon hot reloading
-  var _require = __webpack_require__(7759),
+  var _require = __webpack_require__(3955),
       rendererConfig = _require.rendererConfig,
       fixtures = _require.fixtures,
       decorators = _require.decorators;

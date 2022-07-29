@@ -1,12 +1,11 @@
-import { UniBlockProps } from '../../types';
+import type { UniBlockProps } from '../../types';
+import type { CSSProperties } from 'react';
 
 export interface SwipeListControlProps extends UniBlockProps {
-  gap?: number;
-  margin?: number;
-  padding?: number;
   showDots?: boolean;
 }
 
 export interface SwipeListControlItemProps {
   className?: string;
+  style?: CSSProperties;
 }

@@ -2,49 +2,48 @@ import { JSX } from '@redneckz/uni-jsx';
 import type { CSSProperties } from 'react';
 import type { SwipeListControlProps } from './SwipeListControlProps';
 import { getScrollPoints } from './getScrollPoints';
-import { useDOMContentLoaded } from '../../hooks/useDOMContentLoaded';
 import { getIndexParts } from './getIndexParts';
-import { getSwipeListControlHash } from './getSwipeListControlHash';
+import { SwipeListControlItem } from './SwipeListControlItem';
 
 const DOT_STYLES = 'bg-primary-main opacity-30 w-1.5 h-1.5 min-w-1.5 min-h-1.5 rounded-full';
 const DOT_WIDTH = 6;
 const ACTIVE_DOT_WIDTH = 22;
 const DOT_OPACITY = 0.3;
 const ACTIVE_DOT_OPACITY = 1;
+const GAP = 14;
+const PADDING = 16;
 
 export const SwipeListControl = JSX<SwipeListControlProps>(
-  ({
-    className = '',
-    context,
-    children,
-    gap = 14,
-    margin = -16,
-    padding = 16,
-    showDots = true,
-  }) => {
-    const [randomHash] = context.useState<string>(getSwipeListControlHash());
-
-    const [childrenCount, setChildrenCount] = context.useState<number>(0);
-    const [scrollPoints, setScrollPoints] = context.useState<[number, number][]>([]);
-
-    useDOMContentLoaded(context, () => {
-      const container = document.querySelector(`[data-hash=${randomHash}]`) as Element;
-      const { clientWidth, childElementCount, scrollWidth, children } = container;
-
-      // 8px to compensate padding-margin combo of child container without CSS calc function
-      const itemWidth = (children[0] as HTMLElement).offsetWidth - 8;
-
-      setChildrenCount(childElementCount);
-      setScrollPoints(
-        getScrollPoints({ gap, padding, clientWidth, scrollWidth, childElementCount, itemWidth }),
-      );
-    });
-
+  ({ className = '', context, children, showDots = true }) => {
+    const [scrollPoints, setScrollPoints] = context.useState<[number, number][] | undefined>(
+      undefined,
+    );
     const [activeIndex, setActiveIndex] = context.useState<number>(0);
     const [indexFraction, setIndexFraction] = context.useState<number>(0);
 
     const handleToggle = (e: UIEvent) => {
-      const { scrollLeft } = e.currentTarget as HTMLElement;
+      const container = e.currentTarget as HTMLElement;
+
+      if (!scrollPoints) {
+        const { clientWidth, childElementCount, scrollWidth, children } = container;
+
+        // 8px to compensate padding-margin combo of child container without CSS calc function
+        const itemWidth = (children[0] as HTMLElement).offsetWidth - 8;
+
+        setScrollPoints(
+          getScrollPoints({
+            gap: GAP,
+            padding: PADDING,
+            clientWidth,
+            scrollWidth,
+            childElementCount,
+            itemWidth,
+          }),
+        );
+        return;
+      }
+
+      const { scrollLeft } = container;
       const { index, fraction } = getIndexParts(scrollLeft, scrollPoints);
       setActiveIndex(index);
       setIndexFraction(fraction);
@@ -53,23 +52,21 @@ export const SwipeListControl = JSX<SwipeListControlProps>(
     return (
       <div>
         <div
-          className={`overflow-auto flex horizontal-list no-scrollbar ${className}`}
+          className={`mx-[-16px] px-4 gap-3.5 overflow-auto flex horizontal-list no-scrollbar ${className}`}
           role="list"
           onScroll={handleToggle}
-          data-hash={randomHash}
-          style={{
-            marginLeft: `${margin}px`,
-            marginRight: `${margin}px`,
-            paddingLeft: `${padding}px`,
-            paddingRight: `${padding}px`,
-            columnGap: `${gap}px`,
-          }}
         >
-          {children}
+          {children?.length ? (
+            children.map((child, idx) => (
+              <SwipeListControlItem key={String(idx)}>{child}</SwipeListControlItem>
+            ))
+          ) : (
+            <SwipeListControlItem>{children}</SwipeListControlItem>
+          )}
         </div>
-        {showDots && childrenCount ? (
+        {showDots && children?.length ? (
           <div className="flex gap-2 mx-auto mt-[22px] w-fit">
-            {new Array(childrenCount).fill(0).map((_, idx) => (
+            {children?.map((_, idx) => (
               <div
                 key={String(idx)}
                 className={`${DOT_STYLES}`}

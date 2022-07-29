@@ -17,7 +17,6 @@ export default {
   primary: (
     <div className="container grid grid-cols-12">
       <ProductBlock
-        className="col-span-12"
         context={context}
         title={'Кредит до 5 000 000 Р\nбез залога и поручителей'}
         description="Кредит наличными без залога и поручительства. Потребительский кредит на любые цели. Нужен только паспорт."

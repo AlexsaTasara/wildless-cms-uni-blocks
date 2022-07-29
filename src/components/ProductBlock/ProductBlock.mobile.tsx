@@ -10,7 +10,7 @@ export const ProductBlock = JSX<ProductBlockProps>(
   (props /* Get rid of image and benefits */) => {
     const { className } = props;
     return (
-      <section className={`font-sans bg-white px-4 py-6 ${className || ''}`}>
+      <section className={`col-span-12 font-sans bg-white px-4 py-6 ${className || ''}`}>
         <ProductBlockInner {...props} />
       </section>
     );

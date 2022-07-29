@@ -31073,7 +31073,7 @@ if (false) { var webpackRendererConnect; }
 
 /***/ }),
 
-/***/ 8430:
+/***/ 3141:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -31768,13 +31768,6 @@ const propsTextBlock = {
 };
 /* harmony default export */ const Accordion_fixture_mobile = (jsx("div", { className: "container grid grid-cols-12", children: jsx(Accordion, { className: "col-span-12", ...propsTextBlock }) }));
 
-;// CONCATENATED MODULE: ./src/utils/getColSpan.ts
-const getColSpan = (className) => {
-    const colSpanPrefix = 'col-span-';
-    const colSpanStr = className.split(/\s+/).find((_) => _.startsWith(colSpanPrefix));
-    return colSpanStr ? parseInt(colSpanStr.substring(colSpanPrefix.length), 10) : 12;
-};
-
 ;// CONCATENATED MODULE: ./src/utils/url.ts
 const isURL = (href) => href?.includes('//');
 const withoutQuery = (href) => (href || '').replace(/\/?\?.*/, '');
@@ -31891,6 +31884,13 @@ const BaseTileInner = JSX(({ context, description, children, buttons, image, ite
     return (jsxs("div", { children: [description && jsx("div", { className: `font-normal text-base mt-3`, children: description }), children, items?.length && renderItems_mobile_renderItems(items, version), buttons?.length && (jsx("div", { className: "mt-[18px]", children: buttons.map((button, index) => renderButton(useLink({ router, handlerDecorator }, button), index)) })), image?.src && jsx(Img, { className: "mt-auto ml-7", image: image })] }));
 });
 
+;// CONCATENATED MODULE: ./src/utils/getColSpan.ts
+const getColSpan = (className) => {
+    const colSpanPrefix = 'col-span-';
+    const colSpanStr = className.split(/\s+/).find((_) => _.startsWith(colSpanPrefix));
+    return colSpanStr ? parseInt(colSpanStr.substring(colSpanPrefix.length), 10) : 12;
+};
+
 ;// CONCATENATED MODULE: ./src/components/BaseTile/getTitleSizeByClassName.ts
 
 function getTitleSizeByClassName(className = '') {
@@ -31922,8 +31922,7 @@ const BaseTile = JSX(({ className, context, title, titleSize, description, child
     return (jsxs("div", { className: `font-sans flex flex-col grow h-full ${alignBlock[align]}`, children: [title && (jsx(Title, { size: titleSize || getTitleSizeByClassName(className), className: `${TITLE_CLASSES} ${version === 'primary' ? 'text-primary-text' : ''}`, children: title })), jsx(BaseTileInner, { context: context, buttons: buttons, image: image, children: children, description: description, items: items })] }));
 });
 
-;// CONCATENATED MODULE: ./src/components/Tile/Tile.tsx
-
+;// CONCATENATED MODULE: ./src/components/Tile/Tile.mobile.tsx
 
 
 
@@ -31933,32 +31932,8 @@ const tileStyleMap = {
 };
 const Tile = JSX((props) => {
     const { children, className = '', version = 'primary', role } = props;
-    return (jsx("section", { className: `font-sans p-9 box-border ${className || ''} ${tileStyleMap[version]} ${getContainerPaddingRight(className)} ${getContainerMinHeight(className)} `, role: role, children: jsx(BaseTile, { ...props, children: children }) }));
+    return (jsx("section", { className: `col-span-12 font-sans px-4 py-6 box-border ${className || ''} ${tileStyleMap[version]}`, role: role, children: jsx(BaseTile, { ...props, children: children }) }));
 });
-function getContainerPaddingRight(className = '') {
-    const colSpan = getColSpan(className);
-    if (colSpan <= 6) {
-        return 'pr-9';
-    }
-    else if (colSpan <= 8) {
-        return 'pr-[4.75rem]';
-    }
-    else {
-        return 'pr-[9.4rem]';
-    }
-}
-function getContainerMinHeight(className = '') {
-    const colSpan = getColSpan(className);
-    if (colSpan <= 6) {
-        return 'min-h-[300px]';
-    }
-    else if (colSpan <= 8) {
-        return 'min-h-[320px]';
-    }
-    else {
-        return 'min-h-[360px]';
-    }
-}
 
 ;// CONCATENATED MODULE: ./src/components/ExchangeRateTile/ExchangeRateTile.tsx
 
@@ -32355,7 +32330,7 @@ const benefitDescStyleMap = {
     secondary: 'text-white',
 };
 function renderBenefit_mobile_renderBenefit(benefit, i, version) {
-    return (jsxs("div", { className: "flex gap-3 items-center mb-2.5 last:mb-0", children: [benefit.icon && (jsx(Icon, { className: `w-[25px] h-[25px] rounded-full box-border`, name: benefit.icon, width: "24", height: "24" })), jsx("h4", { className: `font-medium text-m-base m-0 ${benefitTitleStyleMap[version]}`, children: benefit.label }), benefit.description && (jsx("div", { className: `font-normal text-m-sm ${benefitDescStyleMap[version]}`, children: benefit.description }))] }, String(i)));
+    return (jsxs("div", { className: "flex gap-3 items-center mb-2.5 last:mb-0", children: [benefit.icon && (jsx(Icon, { className: "w-[25px] h-[25px] rounded-full box-border", name: benefit.icon, width: "24", height: "24" })), jsx("h4", { className: `font-medium text-m-base m-0 ${benefitTitleStyleMap[version]}`, children: benefit.label }), benefit.description && (jsx("div", { className: `font-normal text-m-sm ${benefitDescStyleMap[version]}`, children: benefit.description }))] }, String(i)));
 }
 
 ;// CONCATENATED MODULE: ./src/components/ProductBlock/ProductBlockInner.mobile.tsx
@@ -32376,7 +32351,7 @@ const ProductBlock = JSX(
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 (props /* Get rid of image and benefits */) => {
     const { className } = props;
-    return (jsx("section", { className: `font-sans bg-white px-4 py-6 ${className || ''}`, children: jsx(ProductBlockInner, { ...props }) }));
+    return (jsx("section", { className: `col-span-12 font-sans bg-white px-4 py-6 ${className || ''}`, children: jsx(ProductBlockInner, { ...props }) }));
 });
 
 ;// CONCATENATED MODULE: ./src/components/ProductTile/ProductTile.tsx
@@ -33044,7 +33019,7 @@ const ProductBlock_fixture_mobile_image = {
     },
 };
 /* harmony default export */ const ProductBlock_fixture_mobile = ({
-    primary: (jsx("div", { className: "container grid grid-cols-12", children: jsx(ProductBlock, { className: "col-span-12", context: context, title: 'Кредит до 5 000 000 Р\nбез залога и поручителей', description: "\u041A\u0440\u0435\u0434\u0438\u0442 \u043D\u0430\u043B\u0438\u0447\u043D\u044B\u043C\u0438 \u0431\u0435\u0437 \u0437\u0430\u043B\u043E\u0433\u0430 \u0438 \u043F\u043E\u0440\u0443\u0447\u0438\u0442\u0435\u043B\u044C\u0441\u0442\u0432\u0430. \u041F\u043E\u0442\u0440\u0435\u0431\u0438\u0442\u0435\u043B\u044C\u0441\u043A\u0438\u0439 \u043A\u0440\u0435\u0434\u0438\u0442 \u043D\u0430 \u043B\u044E\u0431\u044B\u0435 \u0446\u0435\u043B\u0438. \u041D\u0443\u0436\u0435\u043D \u0442\u043E\u043B\u044C\u043A\u043E \u043F\u0430\u0441\u043F\u043E\u0440\u0442.", benefits: [
+    primary: (jsx("div", { className: "container grid grid-cols-12", children: jsx(ProductBlock, { context: context, title: 'Кредит до 5 000 000 Р\nбез залога и поручителей', description: "\u041A\u0440\u0435\u0434\u0438\u0442 \u043D\u0430\u043B\u0438\u0447\u043D\u044B\u043C\u0438 \u0431\u0435\u0437 \u0437\u0430\u043B\u043E\u0433\u0430 \u0438 \u043F\u043E\u0440\u0443\u0447\u0438\u0442\u0435\u043B\u044C\u0441\u0442\u0432\u0430. \u041F\u043E\u0442\u0440\u0435\u0431\u0438\u0442\u0435\u043B\u044C\u0441\u043A\u0438\u0439 \u043A\u0440\u0435\u0434\u0438\u0442 \u043D\u0430 \u043B\u044E\u0431\u044B\u0435 \u0446\u0435\u043B\u0438. \u041D\u0443\u0436\u0435\u043D \u0442\u043E\u043B\u044C\u043A\u043E \u043F\u0430\u0441\u043F\u043E\u0440\u0442.", benefits: [
                 {
                     label: 'До 5 млн ₽',
                     description: 'Кредитный лимит',
@@ -33276,6 +33251,33 @@ const steps = [
         ] })),
 });
 
+;// CONCATENATED MODULE: ./src/components/Tile/Tile.fixture.mobile.tsx
+
+
+
+
+const Tile_fixture_mobile_image = {
+    src: 'money-1.png',
+    format: 'webp',
+    size: {
+        width: 280,
+        height: 280,
+    },
+};
+/* harmony default export */ const Tile_fixture_mobile = ({
+    credit: (jsx("div", { className: "p-2", children: jsx("div", { className: "container grid grid-cols-12", children: jsx(Tile, { context: context, title: 'Кредит до 5 000 000 Р\nбез залога и поручителей', items: [
+                    'Потребительский кредит по специальной процентной ставке',
+                    'Получите деньги без залога и поручительства',
+                    'Кредитный лимит до 5 млн ₽',
+                ], buttons: [
+                    {
+                        text: 'Оформить кредит',
+                        href: '/credit-cards',
+                        version: 'primary',
+                    },
+                ], image: Tile_fixture_mobile_image }) }) })),
+});
+
 ;// CONCATENATED MODULE: ./src/ui-kit/Button/Button.fixture.mobile.tsx
 
 
@@ -33327,6 +33329,7 @@ const steps = [
 
 
 
+
 const rendererConfig = {
   "containerQuerySelector": null
 };
@@ -33342,6 +33345,7 @@ const fixtures = {
   'src/components/ProductGallery/ProductGallery.fixture.mobile.tsx': { module: { default: ProductGallery_fixture_mobile } },
   'src/components/StepsBlock/StepsBlock.fixture.mobile.tsx': { module: { default: StepsBlock_fixture_mobile } },
   'src/components/TextBlock/TextBlock.fixture.mobile.tsx': { module: { default: TextBlock_fixture_mobile } },
+  'src/components/Tile/Tile.fixture.mobile.tsx': { module: { default: Tile_fixture_mobile } },
   'src/ui-kit/Button/Button.fixture.mobile.tsx': { module: { default: Button_fixture_mobile } }
 };
 
@@ -39337,7 +39341,7 @@ mount();
 
 function mount() {
   // Use dynamic import to load updated modules upon hot reloading
-  var _require = __webpack_require__(8430),
+  var _require = __webpack_require__(3141),
       rendererConfig = _require.rendererConfig,
       fixtures = _require.fixtures,
       decorators = _require.decorators;

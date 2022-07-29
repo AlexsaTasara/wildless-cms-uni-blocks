@@ -1,7 +1,7 @@
-import { context } from '../../setup-fixture';
-
-import { Tile } from './Tile';
+import React from 'react';
 import type { Picture } from '../../model/Picture';
+import { context } from '../../setup-fixture';
+import { Tile } from './Tile';
 
 const image: Picture = {
   src: 'money-1.png',

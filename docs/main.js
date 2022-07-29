@@ -34401,6 +34401,7 @@ const TariffsTable_fixture_columns = [
 
 
 
+
 const Tile_fixture_image = {
     src: 'money-1.png',
     format: 'webp',

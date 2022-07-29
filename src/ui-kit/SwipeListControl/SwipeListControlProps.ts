@@ -9,3 +9,8 @@ export interface SwipeListControlItemProps {
   className?: string;
   style?: CSSProperties;
 }
+
+export interface SwipeListControlChildrenProps {
+  className?: string;
+  onScroll?: (e: UIEvent) => void;
+}

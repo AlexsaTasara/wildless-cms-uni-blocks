@@ -13,7 +13,7 @@ export const BaseTileInner = JSX<BaseTileInnerProps>(
     const router = context.useRouter();
     const { handlerDecorator } = context;
     return (
-      <div className={`flex grow w-full justify-between}`}>
+      <div className={`flex grow w-full justify-between`}>
         <div className={`flex flex-col justify-between items-start}`}>
           <div>
             {description && (

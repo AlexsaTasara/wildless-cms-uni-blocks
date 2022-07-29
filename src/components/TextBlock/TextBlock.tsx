@@ -37,8 +37,8 @@ export const TextBlock = JSX<TextBlockProps>(
       <section
         className={`font-sans px-9 py-4 flex ${textBlockStyleMap.background} ${className || ''}`}
       >
-        {iconVersion && iconVersion === 'small' ? renderIcon(textBlockStyleMap.icon) : null}
-        {iconVersion && iconVersion === 'big' ? renderImage(image) : null}
+        {iconVersion === 'small' ? renderIcon(textBlockStyleMap.icon) : null}
+        {iconVersion === 'big' ? renderImage(image) : null}
         <div className="py-0.5">
           {title && (
             <div className={`font-medium text-base mb-1 ${textBlockStyleMap.title}`}>{title}</div>
@@ -54,7 +54,7 @@ export const TextBlock = JSX<TextBlockProps>(
 
 function renderIcon(className: string) {
   return (
-    <div className={`pt-1.5 pl-1 pr-4`}>
+    <div className="pt-1.5 pl-1 pr-4">
       <div className={`rounded-full h-4 w-4 text-center text-xs ${className}`}>i</div>
     </div>
   );

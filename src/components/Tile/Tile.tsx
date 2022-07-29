@@ -3,7 +3,7 @@ import type { BlockVersion } from '../../model/BlockVersion';
 import type { UniBlockProps } from '../../types';
 import { getColSpan } from '../../utils/getColSpan';
 import { BaseTile } from '../BaseTile/BaseTile';
-import type { TileContent } from '../Tile/TileContent';
+import type { TileContent } from './TileContent';
 
 export interface TileProps extends TileContent, UniBlockProps {
   role?: string;
@@ -19,7 +19,7 @@ export const Tile = JSX<TileProps>((props) => {
 
   return (
     <section
-      className={`font-sans p-9 box-border ${className} ${
+      className={`font-sans p-9 box-border ${className || ''} ${
         tileStyleMap[version]
       } ${getContainerPaddingRight(className)} ${getContainerMinHeight(className)} `}
       role={role}

@@ -6,20 +6,21 @@ export interface ImageProps {
   image: Picture;
 }
 
-export const Img = JSX<ImageProps>(({ className, image: { size, ...image } }) => {
+export const Img = JSX<ImageProps>(({ className = '', image: { size, ...image } }) => {
   const style = {
     width: size?.width ? `${size?.width}px` : '100%',
     height: size?.height ? `${size?.height}px` : '100%',
   };
 
   return (
-    <picture className={`flex-none ${className || ''}`}>
+    <picture className={`flex-none ${className}`}>
       {image.sources?.length
         ? image.sources.map(({ src, format }, index) => (
             <source key={`${index}_${src}`} srcSet={src} type={formatToMimeType(format)} />
           ))
         : null}
       <img
+        className={image.className || ''}
         src={image.src}
         alt={image.alt || image.title}
         title={image.title}

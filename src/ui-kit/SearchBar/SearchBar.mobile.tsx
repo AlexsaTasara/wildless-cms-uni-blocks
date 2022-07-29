@@ -23,7 +23,7 @@ export const SearchBar = JSX<UniBlockProps>(({ className, context }) => {
       <input
         id="search-bar-input"
         className={
-          'h-12 pl-12 w-full peer font-sans font-normal text-base text-black border border-solid rounded h-full box-border outline-none pr-[6%] border-main-divider focus:border-primary-text'
+          'h-12 pl-12 w-full peer font-sans font-normal text-base text-black border border-solid rounded box-border outline-none pr-[6%] border-main-divider focus:border-primary-text'
         }
         value={term}
         onChange={(e) => setTerm(e.target.value)}
@@ -33,7 +33,7 @@ export const SearchBar = JSX<UniBlockProps>(({ className, context }) => {
       <Button
         version="primary"
         text="Найти"
-        className="w-auto invisible peer-focus:visible absolute top-1 right-1"
+        className="invisible peer-focus:visible absolute top-1 right-1 bottom-1 max-w-[112px]"
         onClick={(e) => {
           e.preventDefault();
           console.log('click');

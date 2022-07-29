@@ -18,9 +18,7 @@ export const Tile = JSX<TileProps>((props) => {
 
   return (
     <section
-      className={`col-span-12 font-sans px-4 py-6 box-border ${className || ''} ${
-        tileStyleMap[version]
-      }`}
+      className={`col-span-12 font-sans px-4 py-6 box-border ${className} ${tileStyleMap[version]}`}
       role={role}
     >
       <BaseTile {...props}>{children}</BaseTile>

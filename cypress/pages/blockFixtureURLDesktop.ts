@@ -1,216 +1,216 @@
-import * as blockWrapper from './blockWrapper';
+import { BlockFixture } from './blockFixture';
 
-const blockURL = new Map<blockWrapper.blockType, string>([
+const blockFixtureURLsMap = new Map<BlockFixture, string>([
   [
-    blockWrapper.blockType.Accordion,
+    BlockFixture.Accordion,
     '_fixtureId=%7B%22path%22%3A%22src%2Fcomponents%2FAccordion%2FAccordion.fixture.tsx%22%7D',
   ],
   [
-    blockWrapper.blockType.BenefitsBlock,
+    BlockFixture.BenefitsBlock,
     '_fixtureId=%7B%22path%22%3A%22src%2Fcomponents%2FBenefitsBlock%2FBenefitsBlock.fixture.tsx%22%7D',
   ],
   [
-    blockWrapper.blockType.ComparisonTable_with_images,
+    BlockFixture.ComparisonTable_with_images,
     '_fixtureId=%7B%22path%22%3A%22src%2Fcomponents%2FComparisonTable%2FComparisonTable.fixture.tsx%22%2C%22name%22%3A%22with%20images%22%7D',
   ],
   [
-    blockWrapper.blockType.ComparisonTable_with_images_and_hidden_rows,
+    BlockFixture.ComparisonTable_with_images_and_hidden_rows,
     '_fixtureId=%7B%22path%22%3A%22src%2Fcomponents%2FComparisonTable%2FComparisonTable.fixture.tsx%22%2C%22name%22%3A%22with%20images%20and%20hidden%20rows%22%7D',
   ],
   [
-    blockWrapper.blockType.ComparisonTable_with_images_and_colored_first_column,
+    BlockFixture.ComparisonTable_with_images_and_colored_first_column,
     '_fixtureId=%7B%22path%22%3A%22src%2Fcomponents%2FComparisonTable%2FComparisonTable.fixture.tsx%22%2C%22name%22%3A%22with%20images%20and%20colored%20first%20column%22%7D',
   ],
   [
-    blockWrapper.blockType.ComparisonTable_with_icons,
+    BlockFixture.ComparisonTable_with_icons,
     '_fixtureId=%7B%22path%22%3A%22src%2Fcomponents%2FComparisonTable%2FComparisonTable.fixture.tsx%22%2C%22name%22%3A%22with%20icons%22%7D',
   ],
   [
-    blockWrapper.blockType.ComparisonTable_with_icons_and_two_cols,
+    BlockFixture.ComparisonTable_with_icons_and_two_cols,
     '_fixtureId=%7B%22path%22%3A%22src%2Fcomponents%2FComparisonTable%2FComparisonTable.fixture.tsx%22%2C%22name%22%3A%22with%20icons%20and%20two%20cols%22%7D',
   ],
   [
-    blockWrapper.blockType.CreditCalculator,
+    BlockFixture.CreditCalculator,
     '_fixtureId=%7B%22path%22%3A%22src%2Fcomponents%2FCreditCalculator%2FCreditCalculator.fixture.tsx%22%7D',
   ],
   [
-    blockWrapper.blockType.ExchangeRateTile_default,
+    BlockFixture.ExchangeRateTile_default,
     '_fixtureId=%7B%22path%22%3A%22src%2Fcomponents%2FExchangeRateTile%2FExchangeRateTile.fixture.tsx%22%2C%22name%22%3A%22default%22%7D',
   ],
   [
-    blockWrapper.blockType.Footer,
+    BlockFixture.Footer,
     '_fixtureId=%7B%22path%22%3A%22src%2Fcomponents%2FFooter%2FFooter.fixture.tsx%22%7D',
   ],
   [
-    blockWrapper.blockType.Gallery_default,
+    BlockFixture.Gallery_default,
     '_fixtureId=%7B%22path%22%3A%22src%2Fcomponents%2FGallery%2FGallery.fixture.tsx%22%2C%22name%22%3A%22default%22%7D',
   ],
   [
-    blockWrapper.blockType.Gallery_text_and_button,
+    BlockFixture.Gallery_text_and_button,
     '_fixtureId=%7B%22path%22%3A%22src%2Fcomponents%2FGallery%2FGallery.fixture.tsx%22%2C%22name%22%3A%22text%20and%20button%22%7D',
   ],
   [
-    blockWrapper.blockType.Gallery_list_and_button,
+    BlockFixture.Gallery_list_and_button,
     '_fixtureId=%7B%22path%22%3A%22src%2Fcomponents%2FGallery%2FGallery.fixture.tsx%22%2C%22name%22%3A%22list%20and%20button%22%7D',
   ],
   [
-    blockWrapper.blockType.Gallery_text_and_no_button,
+    BlockFixture.Gallery_text_and_no_button,
     '_fixtureId=%7B%22path%22%3A%22src%2Fcomponents%2FGallery%2FGallery.fixture.tsx%22%2C%22name%22%3A%22text%20and%20no%20button%22%7D',
   ],
   [
-    blockWrapper.blockType.Gallery_only_title,
+    BlockFixture.Gallery_only_title,
     '_fixtureId=%7B%22path%22%3A%22src%2Fcomponents%2FGallery%2FGallery.fixture.tsx%22%2C%22name%22%3A%22only%20title%22%7D',
   ],
   [
-    blockWrapper.blockType.Gallery_mobile,
+    BlockFixture.Gallery_mobile,
     '_fixtureId=%7B%22path%22%3A%22src%2Fcomponents%2FGallery%2FGallery.fixture.tsx%22%2C%22name%22%3A%22mobile%22%7D',
   ],
   [
-    blockWrapper.blockType.Header_default,
+    BlockFixture.Header_default,
     '_fixtureId=%7B%22path%22%3A%22src%2Fcomponents%2FHeader%2FHeader.fixture.tsx%22%2C%22name%22%3A%22default%22%7D',
   ],
   [
-    blockWrapper.blockType.Header_transparent,
+    BlockFixture.Header_transparent,
     '_fixtureId=%7B%22path%22%3A%22src%2Fcomponents%2FHeader%2FHeader.fixture.tsx%22%2C%22name%22%3A%22transparent%22%7D',
   ],
   [
-    blockWrapper.blockType.Headline_default,
+    BlockFixture.Headline_default,
     '_fixtureId=%7B%22path%22%3A%22src%2Fcomponents%2FHeadline%2FHeadline.fixture.tsx%22%2C%22name%22%3A%22default%22%7D',
   ],
   [
-    blockWrapper.blockType.Headline_left_white,
+    BlockFixture.Headline_left_white,
     '_fixtureId=%7B%22path%22%3A%22src%2Fcomponents%2FHeadline%2FHeadline.fixture.tsx%22%2C%22name%22%3A%22left%20white%22%7D',
   ],
   [
-    blockWrapper.blockType.Headline_right_transparent,
+    BlockFixture.Headline_right_transparent,
     '_fixtureId=%7B%22path%22%3A%22src%2Fcomponents%2FHeadline%2FHeadline.fixture.tsx%22%2C%22name%22%3A%22right%20transparent%22%7D',
   ],
   [
-    blockWrapper.blockType.LikeControl,
+    BlockFixture.LikeControl,
     '_fixtureId=%7B"path"%3A"src%2Fcomponents%2FLikeControl%2FLikeControl.fixture.tsx"%7D',
   ],
   [
-    blockWrapper.blockType.LinkDocs_two_columns_default,
+    BlockFixture.LinkDocs_two_columns_default,
     '_fixtureId=%7B%22path%22%3A%22src%2Fcomponents%2FLinkDocs%2FLinkDocs.fixture.tsx%22%2C%22name%22%3A%22two%20columns%20%28default%29%22%7D',
   ],
   [
-    blockWrapper.blockType.LinkDocs_one_column,
+    BlockFixture.LinkDocs_one_column,
     '_fixtureId=%7B%22path%22%3A%22src%2Fcomponents%2FLinkDocs%2FLinkDocs.fixture.tsx%22%2C%22name%22%3A%22one%20column%22%7D',
   ],
   [
-    blockWrapper.blockType.LinkDocs_another_icon,
+    BlockFixture.LinkDocs_another_icon,
     '_fixtureId=%7B%22path%22%3A%22src%2Fcomponents%2FLinkDocs%2FLinkDocs.fixture.tsx%22%2C%22name%22%3A%22another%20icon%22%7D',
   ],
   [
-    blockWrapper.blockType.LinkDocs_no_icon_and_title,
+    BlockFixture.LinkDocs_no_icon_and_title,
     '_fixtureId=%7B%22path%22%3A%22src%2Fcomponents%2FLinkDocs%2FLinkDocs.fixture.tsx%22%2C%22name%22%3A%22no%20icon%20and%20title%22%7D',
   ],
   [
-    blockWrapper.blockType.MiniGallery_default,
+    BlockFixture.MiniGallery_default,
     '_fixtureId=%7B%22path%22%3A%22src%2Fcomponents%2FMiniGallery%2FMiniGallery.fixture.tsx%22%2C%22name%22%3A%22default%22%7D',
   ],
   [
-    blockWrapper.blockType.MiniGallery_only_title,
+    BlockFixture.MiniGallery_only_title,
     '_fixtureId=%7B%22path%22%3A%22src%2Fcomponents%2FMiniGallery%2FMiniGallery.fixture.tsx%22%2C%22name%22%3A%22only%20title%22%7D',
   ],
   [
-    blockWrapper.blockType.MobileAppTile_default,
+    BlockFixture.MobileAppTile_default,
     '_fixtureId=%7B%22path%22%3A%22src%2Fcomponents%2FMobileAppTile%2FMobileAppTile.fixture.tsx%22%2C%22name%22%3A%22default%22%7D',
   ],
   [
-    blockWrapper.blockType.Navigation,
+    BlockFixture.Navigation,
     '_fixtureId=%7B%22path%22%3A%22src%2Fcomponents%2FNavigation%2FNavigation.fixture.tsx%22%7D',
   ],
   [
-    blockWrapper.blockType.Placeholder,
+    BlockFixture.Placeholder,
     '_fixtureId=%7B"path"%3A"src%2Fcomponents%2FPlaceholder%2FPlaceholder.fixture.tsx"%7D',
   ],
   [
-    blockWrapper.blockType.PictureText_default,
+    BlockFixture.PictureText_default,
     '_fixtureId=%7B%22path%22%3A%22src%2Fcomponents%2FPictureText%2FPictureText.fixture.tsx%22%2C%22name%22%3A%22default%22%7D',
   ],
   [
-    blockWrapper.blockType.ProductBlock_default,
+    BlockFixture.ProductBlock_default,
     '_fixtureId=%7B%22path%22%3A%22src%2Fcomponents%2FProductBlock%2FProductBlock.fixture.tsx%22%2C%22name%22%3A%22default%22%7D',
   ],
   [
-    blockWrapper.blockType.ProductBlock_secondary,
+    BlockFixture.ProductBlock_secondary,
     '_fixtureId=%7B%22path%22%3A%22src%2Fcomponents%2FProductBlock%2FProductBlock.fixture.tsx%22%2C%22name%22%3A%22secondary%22%7D',
   ],
   [
-    blockWrapper.blockType.ProductBlock_with_items,
+    BlockFixture.ProductBlock_with_items,
     '_fixtureId=%7B%22path%22%3A%22src%2Fcomponents%2FProductBlock%2FProductBlock.fixture.tsx%22%2C%22name%22%3A%22with%20items%22%7D',
   ],
   [
-    blockWrapper.blockType.ProductGallery,
+    BlockFixture.ProductGallery,
     '_fixtureId=%7B%22path%22%3A%22src%2Fcomponents%2FProductGallery%2FProductGallery.fixture.tsx%22%7D',
   ],
   [
-    blockWrapper.blockType.ProductTile_credit,
+    BlockFixture.ProductTile_credit,
     '_fixtureId=%7B%22path%22%3A%22src%2Fcomponents%2FProductTile%2FProductTile.fixture.tsx%22%2C%22name%22%3A%22credit%22%7D',
   ],
   [
-    blockWrapper.blockType.ProductTile_pension,
+    BlockFixture.ProductTile_pension,
     '_fixtureId=%7B%22path%22%3A%22src%2Fcomponents%2FProductTile%2FProductTile.fixture.tsx%22%2C%22name%22%3A%22pension%22%7D',
   ],
   [
-    blockWrapper.blockType.ProductTile_credit_card,
+    BlockFixture.ProductTile_credit_card,
     '_fixtureId=%7B%22path%22%3A%22src%2Fcomponents%2FProductTile%2FProductTile.fixture.tsx%22%2C%22name%22%3A%22credit-card%22%7D',
   ],
   [
-    blockWrapper.blockType.ProductTile_pension_credit,
+    BlockFixture.ProductTile_pension_credit,
     '_fixtureId=%7B%22path%22%3A%22src%2Fcomponents%2FProductTile%2FProductTile.fixture.tsx%22%2C%22name%22%3A%22pension-credit%22%7D',
   ],
   [
-    blockWrapper.blockType.PromoTile_default,
+    BlockFixture.PromoTile_default,
     '_fixtureId=%7B%22path%22%3A%22src%2Fcomponents%2FPromoTile%2FPromoTile.fixture.tsx%22%2C%22name%22%3A%22default%22%7D',
   ],
   [
-    blockWrapper.blockType.StepsBlock,
+    BlockFixture.StepsBlock,
     '_fixtureId=%7B%22path%22%3A%22src%2Fcomponents%2FStepsBlock%2FStepsBlock.fixture.tsx%22%7D',
   ],
   [
-    blockWrapper.blockType.TariffsTable_default,
+    BlockFixture.TariffsTable_default,
     '_fixtureId=%7B%22path%22%3A%22src%2Fcomponents%2FTariffsTable%2FTariffsTable.fixture.tsx%22%2C%22name%22%3A%22default%22%7D',
   ],
   [
-    blockWrapper.blockType.TariffsTable_1_column,
+    BlockFixture.TariffsTable_1_column,
     '_fixtureId=%7B%22path%22%3A%22src%2Fcomponents%2FTariffsTable%2FTariffsTable.fixture.tsx%22%2C%22name%22%3A%221%20column%22%7D',
   ],
   [
-    blockWrapper.blockType.TariffsTable_2_columns,
+    BlockFixture.TariffsTable_2_columns,
     '_fixtureId=%7B%22path%22%3A%22src%2Fcomponents%2FTariffsTable%2FTariffsTable.fixture.tsx%22%2C%22name%22%3A%222%20columns%22%7D',
   ],
   [
-    blockWrapper.blockType.TariffsTable_3_columns,
+    BlockFixture.TariffsTable_3_columns,
     '_fixtureId=%7B%22path%22%3A%22src%2Fcomponents%2FTariffsTable%2FTariffsTable.fixture.tsx%22%2C%22name%22%3A%223%20columns%22%7D',
   ],
   [
-    blockWrapper.blockType.TextBlock,
+    BlockFixture.TextBlock,
     '_fixtureId=%7B%22path%22%3A%22src%2Fcomponents%2FTextBlock%2FTextBlock.fixture.tsx%22%7D',
   ],
   [
-    blockWrapper.blockType.Tile_credit,
+    BlockFixture.Tile_credit,
     '_fixtureId=%7B%22path%22%3A%22src%2Fcomponents%2FTile%2FTile.fixture.tsx%22%2C%22name%22%3A%22credit%22%7D',
   ],
   [
-    blockWrapper.blockType.Tile_mortgage,
+    BlockFixture.Tile_mortgage,
     '_fixtureId=%7B%22path%22%3A%22src%2Fcomponents%2FTile%2FTile.fixture.tsx%22%2C%22name%22%3A%22mortgage%22%7D',
   ],
   [
-    blockWrapper.blockType.Tile_credit_card,
+    BlockFixture.Tile_credit_card,
     '_fixtureId=%7B%22path%22%3A%22src%2Fcomponents%2FTile%2FTile.fixture.tsx%22%2C%22name%22%3A%22credit-card%22%7D',
   ],
   [
-    blockWrapper.blockType.Tile_premium,
+    BlockFixture.Tile_premium,
     '_fixtureId=%7B%22path%22%3A%22src%2Fcomponents%2FTile%2FTile.fixture.tsx%22%2C%22name%22%3A%22premium%22%7D',
   ],
   [
-    blockWrapper.blockType.Tile_ecosystem,
+    BlockFixture.Tile_ecosystem,
     '_fixtureId=%7B%22path%22%3A%22src%2Fcomponents%2FTile%2FTile.fixture.tsx%22%2C%22name%22%3A%22ecosystem%22%7D',
   ],
 ]);
 
-export const getURL = (block: blockWrapper.blockType): string => {
-  return `${Cypress.config().baseUrl}${blockURL.get(block)}`;
+export const getBlockFixtureURL = (block: BlockFixture): string => {
+  return `${Cypress.config().baseUrl}${blockFixtureURLsMap.get(block)}`;
 };

@@ -8,7 +8,7 @@ export default defineConfig({
     experimentalSessionAndOrigin: true,
     defaultCommandTimeout: 10000,
     viewportWidth: 1366,
-    viewportHeight: 1366,
+    viewportHeight: 768,
     video: false,
 
     setupNodeEvents(on, config) {

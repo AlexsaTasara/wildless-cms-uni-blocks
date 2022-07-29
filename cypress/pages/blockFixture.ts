@@ -1,4 +1,4 @@
-export const enum blockType {
+export const enum BlockFixture {
   Accordion = 'Accordion',
   BenefitsBlock = 'BenefitsBlock',
   ComparisonTable_with_images = 'ComparisonTable with images',

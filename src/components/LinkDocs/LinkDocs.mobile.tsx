@@ -28,7 +28,9 @@ export const LinkDocs = JSX<LinkDocsProps>(
         {subtitle ? <h3 className="mb-5 text-center text-m-base">{subtitle}</h3> : null}
         {listMode === 'vertical' ? (
           <div
-            className={`text-sm text-primary-main flex flex-col ${hasBorder ? 'gap-3.5' : 'gap-2'}`}
+            className={`text-m-sm text-primary-main flex flex-col ${
+              hasBorder ? 'gap-3.5' : 'gap-2'
+            }`}
             role="list"
           >
             {documents?.length
@@ -40,7 +42,7 @@ export const LinkDocs = JSX<LinkDocsProps>(
               : null}
           </div>
         ) : (
-          <SwipeListControl context={context} className="text-sm text-primary-main">
+          <SwipeListControl context={context} className="text-m-sm text-primary-main">
             {documents?.length
               ? documents.map((doc, i) => (
                   <LinkDocsListItem key={String(i)} hasBorder={hasBorder} doc={doc} icon={icon} />

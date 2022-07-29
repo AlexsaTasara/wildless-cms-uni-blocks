@@ -31709,9 +31709,9 @@ const LinkDocsListItem = JSX(({ hasBorder, doc, icon }) => {
 
 
 const LinkDocs = JSX(({ className = '', context, title, subtitle, icon = 'DocIcon', documents, listMode = 'vertical', hasBorder = true, }) => {
-    return (jsxs("section", { className: `py-6 px-4 bg-white ${className}`, children: [title ? (jsx(Title, { className: `text-center ${subtitle ? 'mb-2' : 'mb-5'}`, size: "M", children: title })) : null, subtitle ? jsx("h3", { className: "mb-5 text-center text-m-base", children: subtitle }) : null, listMode === 'vertical' ? (jsx("div", { className: `text-sm text-primary-main flex flex-col ${hasBorder ? 'gap-3.5' : 'gap-2'}`, role: "list", children: documents?.length
+    return (jsxs("section", { className: `py-6 px-4 bg-white ${className}`, children: [title ? (jsx(Title, { className: `text-center ${subtitle ? 'mb-2' : 'mb-5'}`, size: "M", children: title })) : null, subtitle ? jsx("h3", { className: "mb-5 text-center text-m-base", children: subtitle }) : null, listMode === 'vertical' ? (jsx("div", { className: `text-m-sm text-primary-main flex flex-col ${hasBorder ? 'gap-3.5' : 'gap-2'}`, role: "list", children: documents?.length
                     ? documents.map((doc, i) => (jsx("div", { role: "listitem", children: jsx(LinkDocsListItem, { hasBorder: hasBorder, doc: doc, icon: icon }) }, String(i))))
-                    : null })) : (jsx(SwipeListControl, { context: context, className: "text-sm text-primary-main", children: documents?.length
+                    : null })) : (jsx(SwipeListControl, { context: context, className: "text-m-sm text-primary-main", children: documents?.length
                     ? documents.map((doc, i) => (jsx(LinkDocsListItem, { hasBorder: hasBorder, doc: doc, icon: icon }, String(i))))
                     : null }))] }));
 });

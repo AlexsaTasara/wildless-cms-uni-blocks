@@ -2,6 +2,7 @@ import { context } from '../../setup-fixture';
 
 import { Tile } from './Tile';
 import type { Picture } from '../../model/Picture';
+import type { TileContent } from './TileContent';
 
 const image: Picture = {
   src: 'money-1.png',
@@ -21,6 +22,23 @@ const image3: Picture = {
 const image4: Picture = {
   src: 'globe-1.png',
   format: 'webp',
+};
+
+export const TILE: TileContent = {
+  title: 'Кредиты',
+  items: [
+    'Кредитный лимит до 10 млн ₽',
+    'Кредиты наличными на любые цели',
+    'Получите деньги без залога и поручителей',
+  ],
+  buttons: [
+    {
+      text: 'Подробнее',
+      href: '/credit-cards',
+      version: 'secondary',
+    },
+  ],
+  image,
 };
 
 export default {

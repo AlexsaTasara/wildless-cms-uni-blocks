@@ -3,6 +3,10 @@ import { HEADLINE } from '../Headline/Headline.fixture';
 import { LINK_DOCS } from '../LinkDocs/LinkDocs.fixture';
 import { PICTURE_TEXT } from '../PictureText/PictureText.fixture';
 import { TEXT_BLOCK } from '../TextBlock/TextBlock.fixture';
+import { TILE } from '../Tile/Tile.fixture';
+import { PRODUCT_TILE } from '../ProductTile/ProductTile.fixture';
+import { defaultProps as GALLERY } from '../Gallery/Gallery.fixture';
+import { defaultProps as MINI_GALLERY } from '../MiniGallery/MiniGallery.fixture';
 import type { AccordionProps } from './Accordion';
 import { Accordion } from './Accordion';
 import type {
@@ -10,6 +14,10 @@ import type {
   LinkDocsAccordionBlock,
   PictureTextAccordionBlock,
   TextBlockAccordionBlock,
+  TileAccordionBlock,
+  ProductTileAccordionBlock,
+  GalleryAccordionBlock,
+  MiniGalleryAccordionBlock,
 } from './AccordionContent';
 
 const TEXT_BLOCK_ACCORDION_BLOCK: TextBlockAccordionBlock = {
@@ -33,6 +41,26 @@ const LINK_DOCS_ACCORDION_BLOCK: LinkDocsAccordionBlock = {
   title: '',
 };
 
+const TILES_ACCORDION_BLOCK: TileAccordionBlock = {
+  accordionBlockType: 'Tile',
+  ...TILE,
+};
+
+const PRODUCT_TILES_ACCORDION_BLOCK: ProductTileAccordionBlock = {
+  accordionBlockType: 'ProductTile',
+  ...PRODUCT_TILE,
+};
+
+const GALLERY_ACCORDION_BLOCK: GalleryAccordionBlock = {
+  accordionBlockType: 'Gallery',
+  ...GALLERY,
+};
+
+const MINI_GALLERY_ACCORDION_BLOCK: MiniGalleryAccordionBlock = {
+  accordionBlockType: 'MiniGallery',
+  ...MINI_GALLERY,
+};
+
 const propsTextBlock: AccordionProps = {
   title: 'Accordion title',
   context,
@@ -52,6 +80,22 @@ const propsTextBlock: AccordionProps = {
     {
       label: 'Accordion label 4',
       blocks: [LINK_DOCS_ACCORDION_BLOCK],
+    },
+    {
+      label: 'Accordion label 5',
+      blocks: [TILES_ACCORDION_BLOCK],
+    },
+    {
+      label: 'Accordion label 6',
+      blocks: [PRODUCT_TILES_ACCORDION_BLOCK],
+    },
+    {
+      label: 'Accordion label 7',
+      blocks: [GALLERY_ACCORDION_BLOCK],
+    },
+    {
+      label: 'Accordion label 8',
+      blocks: [MINI_GALLERY_ACCORDION_BLOCK],
     },
   ],
 };

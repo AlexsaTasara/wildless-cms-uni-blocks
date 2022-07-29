@@ -2,11 +2,23 @@ import type { HeadlineContent } from '../Headline/HeadlineContent';
 import type { LinkDocsContent } from '../LinkDocs/LinkDocsContent';
 import type { PictureTextContent } from '../PictureText/PictureTextContent';
 import type { TextBlockContent } from '../TextBlock/TextBlockContent';
+import type { TileContent } from '../Tile/TileContent';
+import type { ProductTileContent } from '../ProductTile/ProductTileContent';
+import type { GalleryContent } from '../Gallery/GalleryContent';
+import type { MiniGalleryContent } from '../MiniGallery/MiniGalleryContent';
 
 /**
  * @title Тип блока
  */
-export type AccordionTypeBlock = 'Headline' | 'LinkDocs' | 'TextBlock' | 'PictureText';
+export type AccordionTypeBlock =
+  | 'Headline'
+  | 'LinkDocs'
+  | 'PictureText'
+  | 'TextBlock'
+  | 'Tile'
+  | 'ProductTile'
+  | 'Gallery'
+  | 'MiniGallery';
 
 /**
  * @title Заголовок
@@ -41,6 +53,34 @@ export interface PictureTextAccordionBlock extends PictureTextContent {
 }
 
 /**
+ * @title Плитка
+ */
+export interface TileAccordionBlock extends TileContent {
+  accordionBlockType: AccordionTypeBlock;
+}
+
+/**
+ * @title Продуктовая плитка
+ */
+export interface ProductTileAccordionBlock extends ProductTileContent {
+  accordionBlockType: AccordionTypeBlock;
+}
+
+/**
+ * @title Галлерея
+ */
+export interface GalleryAccordionBlock extends GalleryContent {
+  accordionBlockType: AccordionTypeBlock;
+}
+
+/**
+ * @title Мини-галлерея
+ */
+export interface MiniGalleryAccordionBlock extends MiniGalleryContent {
+  accordionBlockType: AccordionTypeBlock;
+}
+
+/**
  * @title Выберите блок
  */
 export type EmptyOption = null;
@@ -53,7 +93,11 @@ export type AccordionBlockProps =
   | HeadlineAccordionBlock
   | LinkDocsAccordionBlock
   | TextBlockAccordionBlock
-  | PictureTextAccordionBlock;
+  | PictureTextAccordionBlock
+  | TileAccordionBlock
+  | ProductTileAccordionBlock
+  | GalleryAccordionBlock
+  | MiniGalleryAccordionBlock;
 
 /**
  * @title Элемент списка

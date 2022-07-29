@@ -32403,17 +32403,21 @@ function renderBenefitDescription(benefit, i, version = 'primary') {
 
 
 const StepsBlock = JSX(({ className, title, description, steps, size = 'normal' }) => {
-    return (jsxs("section", { className: `box-border font-sans text-primary-text bg-white px-4 py-6 flex flex-col ${className || ''}`, children: [title && (jsx(Title, { size: "M", className: "font-medium m-0 text-center", children: title })), description && jsx("p", { className: `text-m-md text-center ${title && 'mt-2'}`, children: description }), steps?.length ? (jsx("div", { className: `box-border py-0.5 mb-0.5 mt-5`, children: jsx("div", { className: "flex flex-col justify-between gap-x-[101px]", children: steps.map((step, i, array) => renderStepTitle({ step, size }, i, array)) }) })) : null] }));
+    return (jsxs("section", { className: `box-border font-sans text-primary-text bg-white px-4 py-6 flex flex-col ${className || ''}`, children: [title && (jsx(Title, { size: "M", className: "font-medium m-0 text-center", children: title })), description && jsx("p", { className: `text-m-md text-center ${title && 'mt-2'}`, children: description }), steps?.length ? (jsx("div", { className: `box-border py-0.5 mb-0.5 mt-5`, children: jsx("div", { className: "flex flex-col justify-between gap-x-[101px]", children: steps.map((step, i) => renderStepTitle({ step, size, i, length: steps.length })) }) })) : null] }));
 });
-const renderStepTitle = ({ step, size }, i, array) => {
-    const isLastStep = array.length - 1 === i;
+const renderStepTitle = (params) => {
+    const { step, size, i, length } = params;
+    const isLastStep = length - 1 === i;
+    const margin = size === 'normal' ? 'ml-[34px]' : 'ml-[24px]';
+    return (jsxs("div", { children: [jsxs("div", { className: "flex flex-row text-center relative", children: [renderIconArea(step, size, i), jsxs("div", { className: "flex flex-col justify-center relative", children: [step.label && (jsx("div", { className: "font-medium text-m-title-xs m-0 text-left", children: step.label })), step.description && (jsx("div", { className: `font-normal text-sm text-secondary-text text-left ${step.label ? 'mt-1' : ''}`, children: step.description }))] })] }, String(i)), !isLastStep && jsx("div", { className: `h-8 w-[2px] bg-secondary-light ${margin}` })] }, String(i)));
+};
+const renderIconArea = (step, size, i) => {
     const iconAreaSize = size === 'normal'
         ? 'h-[70px] w-[70px] min-w-[70px] min-h-[70px]'
         : 'h-[50px] w-[50px] min-w-[50px] min-h-[50px]';
     const iconSize = size === 'normal' ? '38' : '27';
-    const margin = size === 'normal' ? 'ml-[34px]' : 'ml-[24px]';
     const iconTextSize = size === 'normal' ? 'text-m-title' : 'text-m-title-xs';
-    return (jsxs("div", { children: [jsxs("div", { className: "flex flex-row text-center relative", children: [jsx("div", { className: `${iconAreaSize} bg-secondary-light rounded-full z-10 mr-3 flex justify-center content-center`, children: jsx("span", { className: `font-medium text-secondary-text self-center ${iconTextSize}`, children: (step.icon && jsx(Icon, { name: step.icon, width: iconSize, height: iconSize })) || i + 1 }) }), jsxs("div", { className: "flex flex-col justify-center relative", children: [step.label && (jsx("div", { className: "font-medium text-m-title-xs m-0 text-left", children: step.label })), step.description && (jsx("div", { className: `font-normal text-sm text-secondary-text text-left ${step.label ? 'mt-1' : ''}`, children: step.description }))] })] }, String(i)), !isLastStep && jsx("div", { className: `h-8 w-[2px] bg-secondary-light ${margin}` })] }));
+    return (jsx("div", { className: `${iconAreaSize} bg-secondary-light rounded-full z-10 mr-3 flex justify-center content-center`, children: jsx("span", { className: `font-medium text-secondary-text self-center ${iconTextSize}`, children: (step.icon && jsx(Icon, { name: step.icon, width: iconSize, height: iconSize })) || i + 1 }) }));
 };
 
 ;// CONCATENATED MODULE: ./src/components/Blocks.mobile.ts

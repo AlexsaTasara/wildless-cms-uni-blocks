@@ -16,7 +16,7 @@ export const SwipeListControl = JSX<SwipeListControlProps>(
     const [activeIndex, setActiveIndex] = context.useState<number>(0);
     const [indexFraction, setIndexFraction] = context.useState<number>(0);
 
-    const scrollHandler = (e: UIEvent) => {
+    const handleScroll = (e: UIEvent) => {
       const container = e.currentTarget as HTMLElement;
 
       if (!scrollPoints) {
@@ -46,7 +46,7 @@ export const SwipeListControl = JSX<SwipeListControlProps>(
 
     return (
       <div className={className}>
-        <SwipeListControlChildren onScroll={scrollHandler}>{children}</SwipeListControlChildren>
+        <SwipeListControlChildren onScroll={handleScroll}>{children}</SwipeListControlChildren>
         <SwipeListControlDots
           activeIndex={activeIndex}
           indexFraction={indexFraction}

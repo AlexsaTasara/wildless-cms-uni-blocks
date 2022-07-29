@@ -1,3 +1,8 @@
+/*
+  Returns object containing whole index part, and it's decimal part for a given
+  scrollLeft value of a container and an array of tuple containing values of a
+  start and end boundaries of a scrollable child.
+ */
 export const getIndexParts = (
   scrollLeft: number,
   scrollPoints: [number, number][],

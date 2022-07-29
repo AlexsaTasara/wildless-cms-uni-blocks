@@ -1,3 +1,7 @@
+/*
+ Calculates array of breakpoints for each scrollable element in container.
+ Returns array of tuples consisting of [start, end] boundary scrollLeft values.
+*/
 export const getScrollPoints = ({
   gap,
   padding,

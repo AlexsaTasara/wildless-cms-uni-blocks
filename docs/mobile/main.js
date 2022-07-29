@@ -31585,6 +31585,10 @@ const TEXT_BLOCK = {
                                 ] })] })] }), jsxs("div", { children: [jsx("p", { children: "Business clients" }), jsxs("div", { className: "flex flex-col gap-[6px]", "data-theme": "bc", children: [jsx(TextBlock, { className: "flex flex-col", context: context, ...TEXT_BLOCK, blockVersion: "primary", iconVersion: "small" }), jsx(TextBlock, { context: context, ...TEXT_BLOCK, iconVersion: "small", blockVersion: "secondary" }), jsx(TextBlock, { context: context, ...TEXT_BLOCK, iconVersion: "small", blockVersion: "secondary-light" })] })] }), jsxs("div", { children: [jsx("p", { children: "Ecosystem own" }), jsxs("div", { className: "flex flex-col gap-[6px]", "data-theme": "eo", children: [jsx(TextBlock, { context: context, ...TEXT_BLOCK, iconVersion: "small", blockVersion: "primary" }), jsx(TextBlock, { context: context, ...TEXT_BLOCK, iconVersion: "small", blockVersion: "secondary" }), jsx(TextBlock, { context: context, ...TEXT_BLOCK, iconVersion: "small", blockVersion: "secondary-light" })] })] })] }) }));
 
 ;// CONCATENATED MODULE: ./src/ui-kit/SwipeListControl/utils/getScrollPoints.ts
+/*
+ Calculates array of breakpoints for each scrollable element in container.
+ Returns array of tuples consisting of [start, end] boundary scrollLeft values.
+*/
 const getScrollPoints = ({ gap, padding, clientWidth, scrollWidth, childElementCount, itemWidth, }) => {
     const scrollItemWidth = itemWidth + gap;
     const scrollableDistance = scrollWidth - clientWidth;
@@ -31605,6 +31609,11 @@ const getScrollPoints = ({ gap, padding, clientWidth, scrollWidth, childElementC
 };
 
 ;// CONCATENATED MODULE: ./src/ui-kit/SwipeListControl/utils/getIndexParts.ts
+/*
+  Returns object containing whole index part, and it's decimal part for a given
+  scrollLeft value of a container and an array of tuple containing values of a
+  start and end boundaries of a scrollable child.
+ */
 const getIndexParts = (scrollLeft, scrollPoints) => {
     const index = scrollPoints.findIndex(([start, end]) => start <= scrollLeft && scrollLeft <= end);
     const [start, end] = scrollPoints[index];
@@ -31667,7 +31676,7 @@ const SwipeListControl = JSX(({ className = '', context, children, showDots = tr
     const [scrollPoints, setScrollPoints] = context.useState(undefined);
     const [activeIndex, setActiveIndex] = context.useState(0);
     const [indexFraction, setIndexFraction] = context.useState(0);
-    const scrollHandler = (e) => {
+    const handleScroll = (e) => {
         const container = e.currentTarget;
         if (!scrollPoints) {
             const { clientWidth, childElementCount, scrollWidth, children } = container;
@@ -31688,7 +31697,7 @@ const SwipeListControl = JSX(({ className = '', context, children, showDots = tr
         setActiveIndex(index);
         setIndexFraction(fraction);
     };
-    return (jsxs("div", { className: className, children: [jsx(SwipeListControlChildren, { onScroll: scrollHandler, children: children }), jsx(SwipeListControlDots, { activeIndex: activeIndex, indexFraction: indexFraction, showDots: showDots, children: children })] }));
+    return (jsxs("div", { className: className, children: [jsx(SwipeListControlChildren, { onScroll: handleScroll, children: children }), jsx(SwipeListControlDots, { activeIndex: activeIndex, indexFraction: indexFraction, showDots: showDots, children: children })] }));
 });
 
 ;// CONCATENATED MODULE: ./src/components/LinkDocs/utils/formatSuffix.ts

@@ -1,5 +1,6 @@
 import { getIndexParts } from './getIndexParts';
 
+// pre-baked array containing [start, end] boundary scrollLeft values for scrollableElements
 const scrollPoints: [number, number][] = [
   [0, 345],
   [345, 694],

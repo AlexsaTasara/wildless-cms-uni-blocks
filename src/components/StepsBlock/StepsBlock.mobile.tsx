@@ -49,7 +49,10 @@ const renderStepTitle = (params: RenderStepTitleParams) => {
   return (
     <div key={String(i)}>
       <div key={String(i)} className="flex flex-row text-center relative">
-        {renderIconArea(step, size, i)}
+        <div>
+          {renderIconArea(step, size, i)}
+          {!isLastStep && <div className={`min-h-8 h-full w-[2px] bg-secondary-light ${margin}`} />}
+        </div>
         <div className="flex flex-col justify-center relative">
           {step.label && (
             <div className="font-medium text-m-title-xs m-0 text-left">{step.label}</div>
@@ -65,7 +68,6 @@ const renderStepTitle = (params: RenderStepTitleParams) => {
           )}
         </div>
       </div>
-      {!isLastStep && <div className={`h-8 w-[2px] bg-secondary-light ${margin}`} />}
     </div>
   );
 };

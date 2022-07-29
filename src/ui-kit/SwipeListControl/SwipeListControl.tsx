@@ -2,14 +2,19 @@ import { JSX } from '@redneckz/uni-jsx';
 import type { SwipeListControlProps } from './SwipeListControlProps';
 import { getScrollPoints } from './utils/getScrollPoints';
 import { getIndexParts } from './utils/getIndexParts';
-import { SwipeListControlChildren } from './SwipeListControlChildren';
+import { SwipeListControlList } from './SwipeListControlList';
 import { SwipeListControlDots } from './SwipeListControlDots';
-
-const GAP = 14;
-const PADDING = 16;
+import { DEFAULT_GAP, DEFAULT_PADDING } from './constants';
 
 export const SwipeListControl = JSX<SwipeListControlProps>(
-  ({ className = '', context, children, showDots = true }) => {
+  ({
+    className = '',
+    context,
+    children,
+    gap = DEFAULT_GAP,
+    padding = DEFAULT_PADDING,
+    showDots = true,
+  }) => {
     const [scrollPoints, setScrollPoints] = context.useState<[number, number][] | undefined>(
       undefined,
     );
@@ -22,18 +27,12 @@ export const SwipeListControl = JSX<SwipeListControlProps>(
       if (!scrollPoints) {
         const { clientWidth, childElementCount, scrollWidth, children } = container;
 
-        // 8px to compensate padding-margin combo of child container without CSS calc function
-        const itemWidth = (children[0] as HTMLElement).offsetWidth - 8;
+        // horizontal PADDING / 2 to compensate padding-margin combo of child container
+        // without CSS calc function, as wrapper element gets bigger in the DOM, remaining same visually
+        const itemWidth = (children[0] as HTMLElement).offsetWidth - padding / 2;
 
         setScrollPoints(
-          getScrollPoints({
-            gap: GAP,
-            padding: PADDING,
-            clientWidth,
-            scrollWidth,
-            childElementCount,
-            itemWidth,
-          }),
+          getScrollPoints({ gap, padding, clientWidth, scrollWidth, childElementCount, itemWidth }),
         );
         return;
       }
@@ -46,7 +45,9 @@ export const SwipeListControl = JSX<SwipeListControlProps>(
 
     return (
       <div className={className}>
-        <SwipeListControlChildren onScroll={handleScroll}>{children}</SwipeListControlChildren>
+        <SwipeListControlList gap={gap} padding={padding} onScroll={handleScroll}>
+          {children}
+        </SwipeListControlList>
         <SwipeListControlDots
           activeIndex={activeIndex}
           indexFraction={indexFraction}

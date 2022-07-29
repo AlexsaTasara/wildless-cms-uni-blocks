@@ -5,7 +5,7 @@ export const SwipeListControlItem = JSX<SwipeListControlItemProps>(
   ({ className = '', style, children }) => {
     return (
       <div
-        className={`snap-center snap-always min-w-full mx-[-4px] px-1 ${className}`}
+        className={`snap-center snap-always min-w-full ${className}`}
         style={style}
         role="listitem"
       >

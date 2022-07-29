@@ -31073,7 +31073,7 @@ if (false) { var webpackRendererConnect; }
 
 /***/ }),
 
-/***/ 4113:
+/***/ 5672:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -34226,12 +34226,18 @@ const building = {
             ] }) })),
 });
 
+;// CONCATENATED MODULE: ./src/utils/getCurrentDate.ts
+const getCurrentDate = () => {
+    return new Date().toJSON().slice(0, 10);
+};
+
 ;// CONCATENATED MODULE: ./src/components/PromoTile/PromoTile.fixture.tsx
 
 
 
+
 /* harmony default export */ const PromoTile_fixture = ({
-    default: (jsx("div", { className: "container grid grid-cols-12", children: jsx(PromoTile, { context: context, className: "col-span-4", title: "\u0410\u043A\u0446\u0438\u0438 \u0438 \u0441\u043F\u0435\u0446\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u044F", description: "\u041F\u0435\u043D\u0441\u0438\u043E\u043D\u043D\u044B\u0439 \u043A\u0440\u0435\u0434\u0438\u0442 \u043F\u043E \u0441\u043F\u0435\u0446\u0438\u0430\u043B\u044C\u043D\u043E\u0439 \u043F\u0440\u043E\u0446\u0435\u043D\u0442\u043D\u043E\u0439 \u0441\u0442\u0430\u0432\u043A\u0435", version: "secondary", date: "2022-04-16", buttons: [
+    default: (jsx("div", { className: "container grid grid-cols-12", children: jsx(PromoTile, { context: context, className: "col-span-4", title: "\u0410\u043A\u0446\u0438\u0438 \u0438 \u0441\u043F\u0435\u0446\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u044F", description: "\u041F\u0435\u043D\u0441\u0438\u043E\u043D\u043D\u044B\u0439 \u043A\u0440\u0435\u0434\u0438\u0442 \u043F\u043E \u0441\u043F\u0435\u0446\u0438\u0430\u043B\u044C\u043D\u043E\u0439 \u043F\u0440\u043E\u0446\u0435\u043D\u0442\u043D\u043E\u0439 \u0441\u0442\u0430\u0432\u043A\u0435", version: "secondary", date: getCurrentDate(), buttons: [
                 {
                     text: 'Все акции',
                     href: '/credits',
@@ -40724,7 +40730,7 @@ mount();
 
 function mount() {
   // Use dynamic import to load updated modules upon hot reloading
-  var _require = __webpack_require__(4113),
+  var _require = __webpack_require__(5672),
       rendererConfig = _require.rendererConfig,
       fixtures = _require.fixtures,
       decorators = _require.decorators;

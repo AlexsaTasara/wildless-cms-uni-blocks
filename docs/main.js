@@ -31073,7 +31073,7 @@ if (false) { var webpackRendererConnect; }
 
 /***/ }),
 
-/***/ 7625:
+/***/ 3598:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -33885,7 +33885,6 @@ const MiniGallery_fixture_onlyTitleProps = {
 
 
 
-
 const ProductBlock_fixture_image = {
     src: 'money-1.png',
     format: 'webp',
@@ -34002,7 +34001,6 @@ const ProductBlock_fixture_image = {
 });
 
 ;// CONCATENATED MODULE: ./src/components/ProductGallery/ProductGallery.fixture.tsx
-
 
 
 
@@ -34541,82 +34539,80 @@ const image4 = {
     all: (jsx("div", { className: "p-2 w-full h-full", children: jsxs("div", { className: "bg-slate-100 w-full h-full", children: [jsx("div", { className: "pb-3", children: jsx(Heading, { type: "h1", text: "\u00AB\u0421\u0432\u043E\u044F\u00BB \u0434\u0435\u0431\u0435\u0442\u043E\u0432\u0430\u044F \u043A\u0430\u0440\u0442\u0430" }) }), jsx("div", { className: "pb-3", children: jsx(Heading, { type: "h2", text: "\u0420\u0435\u0444\u0438\u043D\u0430\u043D\u0441\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435 \u043A\u0440\u0435\u0434\u0438\u0442\u043E\u0432" }) }), jsx("div", { className: "pb-3", children: jsx(Heading, { type: "h3", text: "\u041F\u043E\u0442\u0440\u0435\u0431\u0438\u0442\u0435\u043B\u044C\u0441\u043A\u0438\u0439 \u043A\u0440\u0435\u0434\u0438\u0442" }) }), jsx("div", { className: "pb-3", children: jsx(Heading, { type: "h4", text: "\u041A\u0443\u0440\u0441\u044B \u043E\u0431\u043C\u0435\u043D\u0430 \u0432\u0430\u043B\u044E\u0442" }) }), jsx("div", { className: "pb-3", children: jsx(Heading, { type: "h5", text: "\u0421\u0432\u043E\u0451 \u0420\u043E\u0434\u043D\u043E\u0435" }) }), jsx("div", { className: "pb-3", children: jsx(Heading, { type: "h6", text: "\u0421\u0432\u043E\u0451 \u0420\u043E\u0434\u043D\u043E\u0435" }) })] }) })),
 });
 
-;// CONCATENATED MODULE: ./src/ui-kit/Icon/IconProps.ts
-/**
- * Icons sorted by name
- */
+;// CONCATENATED MODULE: ./src/icons/IconName.ts
+// Generated. Do not touch
 var IconMap;
 (function (IconMap) {
-    IconMap[IconMap[""] = 0] = "";
-    IconMap[IconMap["ActualBalanceIcon"] = 1] = "ActualBalanceIcon";
-    IconMap[IconMap["AppleIcon"] = 2] = "AppleIcon";
-    IconMap[IconMap["AtmIcon"] = 3] = "AtmIcon";
-    IconMap[IconMap["BankIcon"] = 4] = "BankIcon";
-    IconMap[IconMap["BurgerIcon"] = 5] = "BurgerIcon";
-    IconMap[IconMap["BurgerIconWhite"] = 6] = "BurgerIconWhite";
-    IconMap[IconMap["Calendar2Icon"] = 7] = "Calendar2Icon";
-    IconMap[IconMap["CalendarCircleIcon"] = 8] = "CalendarCircleIcon";
-    IconMap[IconMap["CalendarIcon"] = 9] = "CalendarIcon";
-    IconMap[IconMap["CalendarTickIcon"] = 10] = "CalendarTickIcon";
-    IconMap[IconMap["CalendarWhiteIcon"] = 11] = "CalendarWhiteIcon";
-    IconMap[IconMap["CardIcon"] = 12] = "CardIcon";
-    IconMap[IconMap["CardPosIcon"] = 13] = "CardPosIcon";
-    IconMap[IconMap["CardTickIcon"] = 14] = "CardTickIcon";
-    IconMap[IconMap["CardWithGemIcon"] = 15] = "CardWithGemIcon";
-    IconMap[IconMap["ChartSquareIcon"] = 16] = "ChartSquareIcon";
-    IconMap[IconMap["ClockIcon"] = 17] = "ClockIcon";
-    IconMap[IconMap["CloseIcon"] = 18] = "CloseIcon";
-    IconMap[IconMap["ComfortableCompIcon"] = 19] = "ComfortableCompIcon";
-    IconMap[IconMap["CreditCardsIcon"] = 20] = "CreditCardsIcon";
-    IconMap[IconMap["DocIcon"] = 21] = "DocIcon";
-    IconMap[IconMap["DocumentTextIcon"] = 22] = "DocumentTextIcon";
-    IconMap[IconMap["DollarIcon"] = 23] = "DollarIcon";
-    IconMap[IconMap["EarthIcon"] = 24] = "EarthIcon";
-    IconMap[IconMap["EmptyWalletChangeIcon"] = 25] = "EmptyWalletChangeIcon";
-    IconMap[IconMap["EmptyWalletIcon"] = 26] = "EmptyWalletIcon";
-    IconMap[IconMap["EmptyWalletWhiteIcon"] = 27] = "EmptyWalletWhiteIcon";
-    IconMap[IconMap["EuroIcon"] = 28] = "EuroIcon";
-    IconMap[IconMap["GeolocationIcon"] = 29] = "GeolocationIcon";
-    IconMap[IconMap["GlassIcon"] = 30] = "GlassIcon";
-    IconMap[IconMap["GlobalIcon"] = 31] = "GlobalIcon";
-    IconMap[IconMap["GridIcon"] = 32] = "GridIcon";
-    IconMap[IconMap["GridIconWhite"] = 33] = "GridIconWhite";
-    IconMap[IconMap["InterestGrowthIcon"] = 34] = "InterestGrowthIcon";
-    IconMap[IconMap["InterestIcon"] = 35] = "InterestIcon";
-    IconMap[IconMap["JCBIcon"] = 36] = "JCBIcon";
-    IconMap[IconMap["LoupeIcon"] = 37] = "LoupeIcon";
-    IconMap[IconMap["MasterCardIcon"] = 38] = "MasterCardIcon";
-    IconMap[IconMap["MinusIcon"] = 39] = "MinusIcon";
-    IconMap[IconMap["MirIcon"] = 40] = "MirIcon";
-    IconMap[IconMap["MoneyIcon"] = 41] = "MoneyIcon";
-    IconMap[IconMap["MoneyInsuranceIcon"] = 42] = "MoneyInsuranceIcon";
-    IconMap[IconMap["MonitorMobileIcon"] = 43] = "MonitorMobileIcon";
-    IconMap[IconMap["NewDocIcon"] = 44] = "NewDocIcon";
-    IconMap[IconMap["OfficeIcon"] = 45] = "OfficeIcon";
-    IconMap[IconMap["OkIcon"] = 46] = "OkIcon";
-    IconMap[IconMap["PassSendIcon"] = 47] = "PassSendIcon";
-    IconMap[IconMap["PercentageRoundIcon"] = 48] = "PercentageRoundIcon";
-    IconMap[IconMap["PercentageSquareIcon"] = 49] = "PercentageSquareIcon";
-    IconMap[IconMap["PercentageSquareWhiteIcon"] = 50] = "PercentageSquareWhiteIcon";
-    IconMap[IconMap["PersonalCardIcon"] = 51] = "PersonalCardIcon";
-    IconMap[IconMap["PlayMarketIcon"] = 52] = "PlayMarketIcon";
-    IconMap[IconMap["PlusIcon"] = 53] = "PlusIcon";
-    IconMap[IconMap["Profile2UserIcon"] = 54] = "Profile2UserIcon";
-    IconMap[IconMap["ProfileIcon"] = 55] = "ProfileIcon";
-    IconMap[IconMap["RoundRubleIcon"] = 56] = "RoundRubleIcon";
-    IconMap[IconMap["SafeIcon"] = 57] = "SafeIcon";
-    IconMap[IconMap["ShieldTickIcon"] = 58] = "ShieldTickIcon";
-    IconMap[IconMap["SignDocsIcon"] = 59] = "SignDocsIcon";
-    IconMap[IconMap["SmallClockIcon"] = 60] = "SmallClockIcon";
-    IconMap[IconMap["TelegramIcon"] = 61] = "TelegramIcon";
-    IconMap[IconMap["UnionPayIcon"] = 62] = "UnionPayIcon";
-    IconMap[IconMap["UserTickIcon"] = 63] = "UserTickIcon";
-    IconMap[IconMap["VisaIcon"] = 64] = "VisaIcon";
-    IconMap[IconMap["VKIcon"] = 65] = "VKIcon";
-    IconMap[IconMap["WalletAddIcon"] = 66] = "WalletAddIcon";
-    IconMap[IconMap["WalletAdd2Icon"] = 67] = "WalletAdd2Icon";
-    IconMap[IconMap["WalletIcon"] = 68] = "WalletIcon";
-    IconMap[IconMap["WalletWithMoneyIcon"] = 69] = "WalletWithMoneyIcon";
+    IconMap["ActualBalanceIcon"] = "ActualBalanceIcon";
+    IconMap["AppleIcon"] = "AppleIcon";
+    IconMap["AtmIcon"] = "AtmIcon";
+    IconMap["BankIcon"] = "BankIcon";
+    IconMap["BurgerIcon"] = "BurgerIcon";
+    IconMap["BurgerIconWhite"] = "BurgerIconWhite";
+    IconMap["Calendar2Icon"] = "Calendar2Icon";
+    IconMap["CalendarCircleIcon"] = "CalendarCircleIcon";
+    IconMap["CalendarIcon"] = "CalendarIcon";
+    IconMap["CalendarTickIcon"] = "CalendarTickIcon";
+    IconMap["CalendarWhiteIcon"] = "CalendarWhiteIcon";
+    IconMap["CardIcon"] = "CardIcon";
+    IconMap["CardPosIcon"] = "CardPosIcon";
+    IconMap["CardTickIcon"] = "CardTickIcon";
+    IconMap["CardWithGemIcon"] = "CardWithGemIcon";
+    IconMap["ChartSquareIcon"] = "ChartSquareIcon";
+    IconMap["ClockIcon"] = "ClockIcon";
+    IconMap["CloseIcon"] = "CloseIcon";
+    IconMap["ComfortableCompIcon"] = "ComfortableCompIcon";
+    IconMap["CreditCardsIcon"] = "CreditCardsIcon";
+    IconMap["DiscountShapeIcon"] = "DiscountShapeIcon";
+    IconMap["DocIcon"] = "DocIcon";
+    IconMap["DocumentTextIcon"] = "DocumentTextIcon";
+    IconMap["DollarIcon"] = "DollarIcon";
+    IconMap["EarthIcon"] = "EarthIcon";
+    IconMap["EmptyWalletChangeIcon"] = "EmptyWalletChangeIcon";
+    IconMap["EmptyWalletIcon"] = "EmptyWalletIcon";
+    IconMap["EmptyWalletWhiteIcon"] = "EmptyWalletWhiteIcon";
+    IconMap["EuroIcon"] = "EuroIcon";
+    IconMap["GeolocationIcon"] = "GeolocationIcon";
+    IconMap["GlassIcon"] = "GlassIcon";
+    IconMap["GlobalIcon"] = "GlobalIcon";
+    IconMap["GridIcon"] = "GridIcon";
+    IconMap["GridIconWhite"] = "GridIconWhite";
+    IconMap["InterestGrowthIcon"] = "InterestGrowthIcon";
+    IconMap["InterestIcon"] = "InterestIcon";
+    IconMap["JCBIcon"] = "JCBIcon";
+    IconMap["LoupeIcon"] = "LoupeIcon";
+    IconMap["MasterCardIcon"] = "MasterCardIcon";
+    IconMap["MinusIcon"] = "MinusIcon";
+    IconMap["MirIcon"] = "MirIcon";
+    IconMap["MoneyIcon"] = "MoneyIcon";
+    IconMap["MoneyInsuranceIcon"] = "MoneyInsuranceIcon";
+    IconMap["MonitorMobileIcon"] = "MonitorMobileIcon";
+    IconMap["NewDocIcon"] = "NewDocIcon";
+    IconMap["OfficeIcon"] = "OfficeIcon";
+    IconMap["OkIcon"] = "OkIcon";
+    IconMap["PassSendIcon"] = "PassSendIcon";
+    IconMap["PercentageRoundIcon"] = "PercentageRoundIcon";
+    IconMap["PercentageSquareIcon"] = "PercentageSquareIcon";
+    IconMap["PercentageSquareWhiteIcon"] = "PercentageSquareWhiteIcon";
+    IconMap["PersonalCardIcon"] = "PersonalCardIcon";
+    IconMap["PlayMarketIcon"] = "PlayMarketIcon";
+    IconMap["PlusIcon"] = "PlusIcon";
+    IconMap["Profile2UserIcon"] = "Profile2UserIcon";
+    IconMap["ProfileIcon"] = "ProfileIcon";
+    IconMap["RoundRubleIcon"] = "RoundRubleIcon";
+    IconMap["SafeIcon"] = "SafeIcon";
+    IconMap["ShieldTickIcon"] = "ShieldTickIcon";
+    IconMap["SignDocsIcon"] = "SignDocsIcon";
+    IconMap["SmallClockIcon"] = "SmallClockIcon";
+    IconMap["TelegramIcon"] = "TelegramIcon";
+    IconMap["UnionPayIcon"] = "UnionPayIcon";
+    IconMap["UserTickIcon"] = "UserTickIcon";
+    IconMap["VisaIcon"] = "VisaIcon";
+    IconMap["VKIcon"] = "VKIcon";
+    IconMap["WalletAdd2Icon"] = "WalletAdd2Icon";
+    IconMap["WalletAddIcon"] = "WalletAddIcon";
+    IconMap["WalletIcon"] = "WalletIcon";
+    IconMap["WalletWithMoneyIcon"] = "WalletWithMoneyIcon";
 })(IconMap || (IconMap = {}));
 
 ;// CONCATENATED MODULE: ./src/ui-kit/Icon/Icon.fixture.tsx
@@ -34625,9 +34621,7 @@ var IconMap;
 
 
 /* harmony default export */ const Icon_fixture = ({
-    all: (jsx("div", { className: "w-[1280px]", children: jsx("div", { className: "grid grid-cols-6 gap-8", children: Object.keys(IconMap)
-                .filter((v) => isNaN(Number(v)))
-                .map((icon, i) => (jsxs("div", { className: "flex flex-col items-center gap-3", children: [jsx("div", { children: icon }), jsx(Icon, { name: icon, width: "64" })] }, String(i)))) }) })),
+    all: (jsx("div", { className: "w-[1280px]", children: jsx("div", { className: "grid grid-cols-6 gap-8", children: Object.values(IconMap).map((icon) => (jsxs("div", { className: "flex flex-col items-center gap-3", children: [jsx("div", { children: icon }), jsx(Icon, { name: icon, width: "64" })] }, icon))) }) })),
 });
 
 ;// CONCATENATED MODULE: ./src/ui-kit/Logo/Logo.fixture.tsx
@@ -40742,7 +40736,7 @@ mount();
 
 function mount() {
   // Use dynamic import to load updated modules upon hot reloading
-  var _require = __webpack_require__(7625),
+  var _require = __webpack_require__(3598),
       rendererConfig = _require.rendererConfig,
       fixtures = _require.fixtures,
       decorators = _require.decorators;

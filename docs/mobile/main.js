@@ -33142,7 +33142,6 @@ const Header_fixture_mobile_DEFAULT_ORIGIN = 'https://rshb.ru/';
 
 
 
-
 const ProductBlock_fixture_mobile_image = {
     src: 'money-1.png',
     format: 'webp',
@@ -33186,7 +33185,6 @@ const ProductBlock_fixture_mobile_image = {
 });
 
 ;// CONCATENATED MODULE: ./src/components/ProductGallery/ProductGallery.fixture.mobile.tsx
-
 
 
 

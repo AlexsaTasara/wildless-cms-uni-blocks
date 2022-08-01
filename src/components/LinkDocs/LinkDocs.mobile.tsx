@@ -23,9 +23,7 @@ export const LinkDocs = JSX<LinkDocsProps>(
         {title ? (
           <Heading type="h2" className={`text-center ${subtitle ? 'mb-2' : 'mb-5'}`} text={title} />
         ) : null}
-        {subtitle ? (
-          <Heading type="h3" className="mb-5 text-center text-m-base" text={subtitle} />
-        ) : null}
+        {subtitle ? <h3 className="mb-5 text-center text-m-base">{subtitle}</h3> : null}
         {listMode === 'vertical' ? (
           <LinkDocsVerticalList hasBorder={hasBorder} documents={documents} icon={icon} />
         ) : (

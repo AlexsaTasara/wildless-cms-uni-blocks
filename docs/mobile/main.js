@@ -31772,7 +31772,7 @@ const LinkDocsHorizontalList = JSX(({ context, hasBorder = true, documents, icon
 
 
 const LinkDocs = JSX(({ className = '', context, title, subtitle, icon = 'DocIcon', documents, listMode = 'vertical', hasBorder = true, }) => {
-    return (jsxs("section", { className: `py-6 px-4 bg-white ${className}`, children: [title ? (jsx(Heading, { type: "h2", className: `text-center ${subtitle ? 'mb-2' : 'mb-5'}`, text: title })) : null, subtitle ? (jsx(Heading, { type: "h3", className: "mb-5 text-center text-m-base", text: subtitle })) : null, listMode === 'vertical' ? (jsx(LinkDocsVerticalList, { hasBorder: hasBorder, documents: documents, icon: icon })) : (jsx(LinkDocsHorizontalList, { context: context, hasBorder: hasBorder, documents: documents, icon: icon }))] }));
+    return (jsxs("section", { className: `py-6 px-4 bg-white ${className}`, children: [title ? (jsx(Heading, { type: "h2", className: `text-center ${subtitle ? 'mb-2' : 'mb-5'}`, text: title })) : null, subtitle ? jsx("h3", { className: "mb-5 text-center text-m-base", children: subtitle }) : null, listMode === 'vertical' ? (jsx(LinkDocsVerticalList, { hasBorder: hasBorder, documents: documents, icon: icon })) : (jsx(LinkDocsHorizontalList, { context: context, hasBorder: hasBorder, documents: documents, icon: icon }))] }));
 });
 
 ;// CONCATENATED MODULE: ./src/components/Accordion/AccordionBlocks.tsx

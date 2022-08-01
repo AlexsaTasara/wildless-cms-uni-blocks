@@ -31607,7 +31607,7 @@ const linkColumnsModeStyleMap = {
     single: 'flex gap-3.5 flex-col',
 };
 const LinkDocs = JSX(({ className = '', title, subtitle, align, documents, icon = 'DocIcon', columnsMode = 'double', }) => {
-    return (jsxs("section", { className: `font-sans p-[50px] bg-white ${className}`, children: [title ? (jsx(Heading, { type: "h2", className: `${subtitle ? 'mb-2' : titleMarginsStyleMap[columnsMode]} ${titleAlignStyleMap[align ?? 'center']}`, text: title })) : null, subtitle ? (jsx(Heading, { type: "h3", className: `text-base ${title ? 'mt-2.5' : ''} ${titleMarginsStyleMap[columnsMode]} ${titleAlignStyleMap[align ?? 'center']}`, text: subtitle })) : null, jsx(LinkDocsList, { className: linkColumnsModeStyleMap[columnsMode], columnsMode: columnsMode, documents: documents, icon: icon }), ")"] }));
+    return (jsxs("section", { className: `font-sans p-[50px] bg-white ${className}`, children: [title ? (jsx(Heading, { type: "h2", className: `${subtitle ? 'mb-2.5' : titleMarginsStyleMap[columnsMode]} ${titleAlignStyleMap[align ?? 'center']}`, text: title })) : null, subtitle ? (jsx("h3", { className: `text-base ${titleMarginsStyleMap[columnsMode]} ${titleAlignStyleMap[align ?? 'center']}`, children: subtitle })) : null, jsx(LinkDocsList, { className: linkColumnsModeStyleMap[columnsMode], columnsMode: columnsMode, documents: documents, icon: icon }), ")"] }));
 });
 
 ;// CONCATENATED MODULE: ./src/components/Accordion/AccordionBlocks.tsx

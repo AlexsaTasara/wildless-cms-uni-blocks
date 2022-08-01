@@ -38,20 +38,20 @@ export const LinkDocs = JSX<LinkDocsProps>(
         {title ? (
           <Heading
             type="h2"
-            className={`${subtitle ? 'mb-2' : titleMarginsStyleMap[columnsMode]} ${
+            className={`${subtitle ? 'mb-2.5' : titleMarginsStyleMap[columnsMode]} ${
               titleAlignStyleMap[align ?? 'center']
             }`}
             text={title}
           />
         ) : null}
         {subtitle ? (
-          <Heading
-            type="h3"
-            className={`text-base ${title ? 'mt-2.5' : ''} ${titleMarginsStyleMap[columnsMode]} ${
+          <h3
+            className={`text-base ${titleMarginsStyleMap[columnsMode]} ${
               titleAlignStyleMap[align ?? 'center']
             }`}
-            text={subtitle}
-          />
+          >
+            {subtitle}
+          </h3>
         ) : null}
         <LinkDocsList
           className={linkColumnsModeStyleMap[columnsMode]}

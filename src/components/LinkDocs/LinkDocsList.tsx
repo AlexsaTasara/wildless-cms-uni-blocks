@@ -7,14 +7,14 @@ import type { LinkColumnsMode, LinkDocsItem } from './LinkDocsContent';
 
 export interface LinkDocsListProps {
   className?: string;
-  documents: LinkDocsItem[];
+  documents?: LinkDocsItem[];
   columnsMode: LinkColumnsMode;
   icon: IconName;
 }
 
 export const LinkDocsList = JSX<LinkDocsListProps>(
   ({ className, documents, columnsMode, icon }) => {
-    return (
+    return documents?.length ? (
       <div className={className} role="list">
         {documents.map(({ text, fileSize, ...linkProps }, i) => (
           <a
@@ -35,6 +35,6 @@ export const LinkDocsList = JSX<LinkDocsListProps>(
           </a>
         ))}
       </div>
-    );
+    ) : null;
   },
 );

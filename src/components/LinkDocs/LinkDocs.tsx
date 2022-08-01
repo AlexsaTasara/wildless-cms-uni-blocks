@@ -53,14 +53,13 @@ export const LinkDocs = JSX<LinkDocsProps>(
             text={subtitle}
           />
         ) : null}
-        {documents?.length ? (
-          <LinkDocsList
-            className={linkColumnsModeStyleMap[columnsMode]}
-            columnsMode={columnsMode}
-            documents={documents}
-            icon={icon}
-          />
-        ) : null}
+        <LinkDocsList
+          className={linkColumnsModeStyleMap[columnsMode]}
+          columnsMode={columnsMode}
+          documents={documents}
+          icon={icon}
+        />
+        )
       </section>
     );
   },

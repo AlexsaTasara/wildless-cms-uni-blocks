@@ -31585,7 +31585,7 @@ const getExtFromHref = (href) => {
 
 
 const LinkDocsList = JSX(({ className, documents, columnsMode, icon }) => {
-    return (jsx("div", { className: className, role: "list", children: documents.map(({ text, fileSize, ...linkProps }, i) => (jsxs("a", { className: `group flex text-sm align-middle h-fit text-primary-text no-underline hover:text-primary-main ${columnsMode === 'double' ? 'basis-[calc(50%-20px)]' : ''}`, role: "listitem", ...linkProps, children: [icon ? jsx(Icon, { className: "mr-2.5 h-fit", name: icon, width: "24px", height: "24px" }) : null, jsxs("span", { className: "self-center", children: [text, jsx("span", { className: "text-secondary-text group-hover:text-primary-main", children: linkProps?.href && formatSuffix(getExtFromHref(linkProps.href), fileSize) })] })] }, String(i)))) }));
+    return documents?.length ? (jsx("div", { className: className, role: "list", children: documents.map(({ text, fileSize, ...linkProps }, i) => (jsxs("a", { className: `group flex text-sm align-middle h-fit text-primary-text no-underline hover:text-primary-main ${columnsMode === 'double' ? 'basis-[calc(50%-20px)]' : ''}`, role: "listitem", ...linkProps, children: [icon ? jsx(Icon, { className: "mr-2.5 h-fit", name: icon, width: "24px", height: "24px" }) : null, jsxs("span", { className: "self-center", children: [text, jsx("span", { className: "text-secondary-text group-hover:text-primary-main", children: linkProps?.href && formatSuffix(getExtFromHref(linkProps.href), fileSize) })] })] }, String(i)))) })) : null;
 });
 
 ;// CONCATENATED MODULE: ./src/components/LinkDocs/LinkDocs.tsx
@@ -31607,7 +31607,7 @@ const linkColumnsModeStyleMap = {
     single: 'flex gap-3.5 flex-col',
 };
 const LinkDocs = JSX(({ className = '', title, subtitle, align, documents, icon = 'DocIcon', columnsMode = 'double', }) => {
-    return (jsxs("section", { className: `font-sans p-[50px] bg-white ${className}`, children: [title ? (jsx(Heading, { type: "h2", className: `${subtitle ? 'mb-2' : titleMarginsStyleMap[columnsMode]} ${titleAlignStyleMap[align ?? 'center']}`, text: title })) : null, subtitle ? (jsx(Heading, { type: "h3", className: `text-base ${title ? 'mt-2.5' : ''} ${titleMarginsStyleMap[columnsMode]} ${titleAlignStyleMap[align ?? 'center']}`, text: subtitle })) : null, documents?.length ? (jsx(LinkDocsList, { className: linkColumnsModeStyleMap[columnsMode], columnsMode: columnsMode, documents: documents, icon: icon })) : null] }));
+    return (jsxs("section", { className: `font-sans p-[50px] bg-white ${className}`, children: [title ? (jsx(Heading, { type: "h2", className: `${subtitle ? 'mb-2' : titleMarginsStyleMap[columnsMode]} ${titleAlignStyleMap[align ?? 'center']}`, text: title })) : null, subtitle ? (jsx(Heading, { type: "h3", className: `text-base ${title ? 'mt-2.5' : ''} ${titleMarginsStyleMap[columnsMode]} ${titleAlignStyleMap[align ?? 'center']}`, text: subtitle })) : null, jsx(LinkDocsList, { className: linkColumnsModeStyleMap[columnsMode], columnsMode: columnsMode, documents: documents, icon: icon }), ")"] }));
 });
 
 ;// CONCATENATED MODULE: ./src/components/Accordion/AccordionBlocks.tsx

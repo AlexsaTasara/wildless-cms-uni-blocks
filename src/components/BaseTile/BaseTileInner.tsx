@@ -13,11 +13,11 @@ export const BaseTileInner = JSX<BaseTileInnerProps>(
     const router = context.useRouter();
     const { handlerDecorator } = context;
     return (
-      <div className="flex grow w-full justify-between">
-        <div className="flex flex-col justify-start items-start">
+      <div className={`flex grow w-full justify-between`}>
+        <div className={`flex flex-col justify-between`}>
           <div>
             {description && (
-              <div className="font-normal text-base mt-4 max-w-[600px]">{description}</div>
+              <div className={`font-normal text-base mt-4 max-w-[600px]`}>{description}</div>
             )}
             {children}
             {items?.length && renderItems(items, version)}

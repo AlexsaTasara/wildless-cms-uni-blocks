@@ -1,9 +1,9 @@
 import { JSX } from '@redneckz/uni-jsx';
 import type { UniBlockProps } from '../../types';
 import type { LinkDocsContent } from './LinkDocsContent';
-import { Title } from '../../ui-kit/Title/Title';
-import { SwipeListControl } from '../../ui-kit/SwipeListControl/SwipeListControl';
-import { LinkDocsListItem } from './LinkDocsListItem';
+import { Heading } from '../../ui-kit/Heading/Heading';
+import { LinkDocsVerticalList } from './LinkDocsVerticalList';
+import { LinkDocsHorizontalList } from './LinkDocsHorizontalList';
 
 export interface LinkDocsProps extends LinkDocsContent, UniBlockProps {}
 
@@ -21,34 +21,20 @@ export const LinkDocs = JSX<LinkDocsProps>(
     return (
       <section className={`py-6 px-4 bg-white ${className}`}>
         {title ? (
-          <Title className={`text-center ${subtitle ? 'mb-2' : 'mb-5'}`} size="M">
-            {title}
-          </Title>
+          <Heading type="h2" className={`text-center ${subtitle ? 'mb-2' : 'mb-5'}`} text={title} />
         ) : null}
-        {subtitle ? <h3 className="mb-5 text-center text-m-base">{subtitle}</h3> : null}
+        {subtitle ? (
+          <Heading type="h3" className="mb-5 text-center text-m-base" text={subtitle} />
+        ) : null}
         {listMode === 'vertical' ? (
-          <div
-            className={`text-m-sm text-primary-main flex flex-col ${
-              hasBorder ? 'gap-3.5' : 'gap-2'
-            }`}
-            role="list"
-          >
-            {documents?.length
-              ? documents.map((doc, i) => (
-                  <div key={String(i)} role="listitem">
-                    <LinkDocsListItem hasBorder={hasBorder} doc={doc} icon={icon} />
-                  </div>
-                ))
-              : null}
-          </div>
+          <LinkDocsVerticalList hasBorder={hasBorder} documents={documents} icon={icon} />
         ) : (
-          <SwipeListControl context={context} className="text-m-sm text-primary-main">
-            {documents?.length
-              ? documents.map((doc, i) => (
-                  <LinkDocsListItem key={String(i)} hasBorder={hasBorder} doc={doc} icon={icon} />
-                ))
-              : null}
-          </SwipeListControl>
+          <LinkDocsHorizontalList
+            context={context}
+            hasBorder={hasBorder}
+            documents={documents}
+            icon={icon}
+          />
         )}
       </section>
     );

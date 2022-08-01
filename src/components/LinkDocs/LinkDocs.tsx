@@ -59,7 +59,6 @@ export const LinkDocs = JSX<LinkDocsProps>(
           documents={documents}
           icon={icon}
         />
-        )
       </section>
     );
   },

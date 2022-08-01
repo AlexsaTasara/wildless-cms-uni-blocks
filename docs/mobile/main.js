@@ -31933,7 +31933,7 @@ const tileStyleMap = {
 };
 const Tile = JSX((props) => {
     const { children, className = '', version = 'primary', role } = props;
-    return (jsx("section", { className: `font-sans p-9 box-border ${className || ''} ${tileStyleMap[version]} ${getContainerPaddingRight(className)} ${getContainerMinHeight(className)} `, role: role, children: jsx(BaseTile, { ...props, children: children }) }));
+    return (jsx("section", { className: `overflow-hidden font-sans p-9 box-border ${className || ''} ${tileStyleMap[version]} ${getContainerPaddingRight(className)} ${getContainerMinHeight(className)} `, role: role, children: jsx(BaseTile, { ...props, children: children }) }));
 });
 function getContainerPaddingRight(className = '') {
     const colSpan = getColSpan(className);

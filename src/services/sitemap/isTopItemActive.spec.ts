@@ -33,7 +33,7 @@ describe('isTopItemActive', () => {
     expect(isTopItemActive(router)(menuItem)).toEqual(true);
   });
 
-  it('should check is same origin', () => {
+  it('should check is top item has same origin', () => {
     const menuItem = {
       href: 'https://foo.ru/svoe',
       items: [
@@ -43,5 +43,17 @@ describe('isTopItemActive', () => {
       ],
     };
     expect(isTopItemActive(router)(menuItem)).toEqual(true);
+  });
+
+  it('should check is top item has not active', () => {
+    const menuItem = {
+      href: 'https://bar.ru/svoe',
+      items: [
+        {
+          href: 'https://bar.ru/svoe/credits',
+        },
+      ],
+    };
+    expect(isTopItemActive(router)(menuItem)).toEqual(false);
   });
 });

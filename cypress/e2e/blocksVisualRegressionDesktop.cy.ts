@@ -5,12 +5,12 @@ import * as blockFixtureURLDesktop from '../pages/blockFixtureURLDesktop';
 describe('Desktop. Регресс отображения блоков', () => {
   it(`Desktop. Регресс отображения блока "${blockFixture.BlockFixture.Accordion}"`, () => {
     cy.visit(blockFixtureURLDesktop.getBlockFixtureURL(blockFixture.BlockFixture.Accordion));
-    blockFixture.getBlock().matchImageSnapshot(blockFixture.BlockFixture.Accordion);
+    blockFixture.getBlock().compareSnapshot(blockFixture.BlockFixture.Accordion);
   });
 
   it(`Desktop. Регресс отображения блока "${blockFixture.BlockFixture.BenefitsBlock}"`, () => {
     cy.visit(blockFixtureURLDesktop.getBlockFixtureURL(blockFixture.BlockFixture.BenefitsBlock));
-    blockFixture.getBlock().matchImageSnapshot(blockFixture.BlockFixture.BenefitsBlock);
+    blockFixture.getBlock().compareSnapshot(blockFixture.BlockFixture.BenefitsBlock);
   });
 
   (
@@ -24,29 +24,29 @@ describe('Desktop. Регресс отображения блоков', () => {
   ).forEach(([BlockFixture]) => {
     it(`Desktop. Регресс отображения блока "${BlockFixture}"`, () => {
       cy.visit(blockFixtureURLDesktop.getBlockFixtureURL(BlockFixture));
-      blockFixture.getBlock().matchImageSnapshot(BlockFixture);
+      blockFixture.getBlock().compareSnapshot(BlockFixture);
     });
   });
 
   it(`Desktop. Регресс отображения блока "${blockFixture.BlockFixture.CreditCalculator}"`, () => {
     cy.visit(blockFixtureURLDesktop.getBlockFixtureURL(blockFixture.BlockFixture.CreditCalculator));
-    blockFixture.getBlock().matchImageSnapshot(blockFixture.BlockFixture.CreditCalculator);
+    blockFixture.getBlock().compareSnapshot(blockFixture.BlockFixture.CreditCalculator);
   });
 
   it(`Desktop. Регресс отображения блока "${blockFixture.BlockFixture.ExchangeRateTile_default}"`, () => {
     cy.visit(
       blockFixtureURLDesktop.getBlockFixtureURL(blockFixture.BlockFixture.ExchangeRateTile_default),
     );
-    blockFixture.getBlock().matchImageSnapshot(blockFixture.BlockFixture.ExchangeRateTile_default);
+    blockFixture.getBlock().compareSnapshot(blockFixture.BlockFixture.ExchangeRateTile_default);
   });
 
   it(`Desktop. Регресс отображения блока "${blockFixture.BlockFixture.Footer}"`, () => {
     cy.visit(blockFixtureURLDesktop.getBlockFixtureURL(blockFixture.BlockFixture.Footer));
-    blockFixture.getBlock().matchImageSnapshot(blockFixture.BlockFixture.Footer);
+    blockFixture.getBlock().compareSnapshot(blockFixture.BlockFixture.Footer);
 
     const secondStateName = `${blockFixture.BlockFixture.Footer}_activeSearchBar`;
     blockFixture.activeSearchBar();
-    blockFixture.getBlock().matchImageSnapshot(secondStateName);
+    blockFixture.getBlock().compareSnapshot(secondStateName);
   });
 
   (
@@ -60,11 +60,11 @@ describe('Desktop. Регресс отображения блоков', () => {
   ).forEach(([BlockFixture]) => {
     it(`Desktop. Регресс отображения блока "${BlockFixture}"`, () => {
       cy.visit(blockFixtureURLDesktop.getBlockFixtureURL(BlockFixture));
-      blockFixture.getBlock().matchImageSnapshot(BlockFixture);
+      blockFixture.getBlock().compareSnapshot(BlockFixture);
 
       const secondStateName = `${BlockFixture}_scrolledRight`;
       blockFixture.galleryScrollRight();
-      blockFixture.getBlock().matchImageSnapshot(secondStateName);
+      blockFixture.getBlock().compareSnapshot(secondStateName);
     });
   });
 
@@ -76,7 +76,7 @@ describe('Desktop. Регресс отображения блоков', () => {
   ).forEach(([BlockFixture]) => {
     it(`Desktop. Регресс отображения блока "${BlockFixture}"`, () => {
       cy.visit(blockFixtureURLDesktop.getBlockFixtureURL(BlockFixture));
-      blockFixture.getBlock().matchImageSnapshot(BlockFixture);
+      blockFixture.getBlock().compareSnapshot(BlockFixture);
     });
   });
 
@@ -89,13 +89,13 @@ describe('Desktop. Регресс отображения блоков', () => {
   ).forEach(([BlockFixture]) => {
     it(`Desktop. Регресс отображения блока "${BlockFixture}"`, () => {
       cy.visit(blockFixtureURLDesktop.getBlockFixtureURL(BlockFixture));
-      blockFixture.getBlock().matchImageSnapshot(BlockFixture);
+      blockFixture.getBlock().compareSnapshot(BlockFixture);
     });
   });
 
   it(`Desktop. Регресс отображения блока "${blockFixture.BlockFixture.LikeControl}"`, () => {
     cy.visit(blockFixtureURLDesktop.getBlockFixtureURL(blockFixture.BlockFixture.LikeControl));
-    blockFixture.getBlock().matchImageSnapshot(blockFixture.BlockFixture.LikeControl);
+    blockFixture.getBlock().compareSnapshot(blockFixture.BlockFixture.LikeControl);
   });
 
   (
@@ -108,7 +108,7 @@ describe('Desktop. Регресс отображения блоков', () => {
   ).forEach(([BlockFixture]) => {
     it(`Desktop. Регресс отображения блока "${BlockFixture}"`, () => {
       cy.visit(blockFixtureURLDesktop.getBlockFixtureURL(BlockFixture));
-      blockFixture.getBlock().matchImageSnapshot(BlockFixture);
+      blockFixture.getBlock().compareSnapshot(BlockFixture);
     });
   });
 
@@ -121,25 +121,25 @@ describe('Desktop. Регресс отображения блоков', () => {
   ).forEach(([BlockFixture]) => {
     it(`Desktop. Регресс отображения блока "${BlockFixture}"`, () => {
       cy.visit(blockFixtureURLDesktop.getBlockFixtureURL(BlockFixture));
-      blockFixture.getBlock().matchImageSnapshot(BlockFixture);
+      blockFixture.getBlock().compareSnapshot(BlockFixture);
     });
   });
 
   it(`Desktop. Регресс отображения блока "${blockFixture.BlockFixture.Navigation}"`, () => {
     cy.visit(blockFixtureURLDesktop.getBlockFixtureURL(blockFixture.BlockFixture.Navigation));
-    blockFixture.getBlock().matchImageSnapshot(blockFixture.BlockFixture.Navigation);
+    blockFixture.getBlock().compareSnapshot(blockFixture.BlockFixture.Navigation);
   });
 
   it(`Desktop. Регресс отображения блока "${blockFixture.BlockFixture.Placeholder}"`, () => {
     cy.visit(blockFixtureURLDesktop.getBlockFixtureURL(blockFixture.BlockFixture.Placeholder));
-    blockFixture.getBlock().matchImageSnapshot(blockFixture.BlockFixture.Placeholder);
+    blockFixture.getBlock().compareSnapshot(blockFixture.BlockFixture.Placeholder);
   });
 
   it(`Desktop. Регресс отображения блока "${blockFixture.BlockFixture.PictureText_default}"`, () => {
     cy.visit(
       blockFixtureURLDesktop.getBlockFixtureURL(blockFixture.BlockFixture.PictureText_default),
     );
-    blockFixture.getBlock().matchImageSnapshot(blockFixture.BlockFixture.PictureText_default);
+    blockFixture.getBlock().compareSnapshot(blockFixture.BlockFixture.PictureText_default);
   });
 
   (
@@ -151,13 +151,13 @@ describe('Desktop. Регресс отображения блоков', () => {
   ).forEach(([BlockFixture]) => {
     it(`Desktop. Регресс отображения блока "${BlockFixture}"`, () => {
       cy.visit(blockFixtureURLDesktop.getBlockFixtureURL(BlockFixture));
-      blockFixture.getBlock().matchImageSnapshot(BlockFixture);
+      blockFixture.getBlock().compareSnapshot(BlockFixture);
     });
   });
 
   it(`Desktop. Регресс отображения блока "${blockFixture.BlockFixture.ProductGallery}"`, () => {
     cy.visit(blockFixtureURLDesktop.getBlockFixtureURL(blockFixture.BlockFixture.ProductGallery));
-    blockFixture.getBlock().matchImageSnapshot(blockFixture.BlockFixture.ProductGallery);
+    blockFixture.getBlock().compareSnapshot(blockFixture.BlockFixture.ProductGallery);
   });
 
   (
@@ -170,7 +170,7 @@ describe('Desktop. Регресс отображения блоков', () => {
   ).forEach(([BlockFixture]) => {
     it(`Desktop. Регресс отображения блока "${BlockFixture}"`, () => {
       cy.visit(blockFixtureURLDesktop.getBlockFixtureURL(BlockFixture));
-      blockFixture.getBlock().matchImageSnapshot(BlockFixture);
+      blockFixture.getBlock().compareSnapshot(BlockFixture);
     });
   });
 
@@ -184,7 +184,7 @@ describe('Desktop. Регресс отображения блоков', () => {
   ).forEach(([BlockFixture]) => {
     it(`Desktop. Регресс отображения блока "${BlockFixture}"`, () => {
       cy.visit(blockFixtureURLDesktop.getBlockFixtureURL(BlockFixture));
-      blockFixture.getBlock().matchImageSnapshot(BlockFixture);
+      blockFixture.getBlock().compareSnapshot(BlockFixture);
     });
   });
 
@@ -192,12 +192,12 @@ describe('Desktop. Регресс отображения блоков', () => {
     cy.visit(
       blockFixtureURLDesktop.getBlockFixtureURL(blockFixture.BlockFixture.PromoTile_default),
     );
-    blockFixture.getBlock().matchImageSnapshot(blockFixture.BlockFixture.PromoTile_default);
+    blockFixture.getBlock().compareSnapshot(blockFixture.BlockFixture.PromoTile_default);
   });
 
   it(`Desktop. Регресс отображения блока "${blockFixture.BlockFixture.StepsBlock}"`, () => {
     cy.visit(blockFixtureURLDesktop.getBlockFixtureURL(blockFixture.BlockFixture.StepsBlock));
-    blockFixture.getBlock().matchImageSnapshot(blockFixture.BlockFixture.StepsBlock);
+    blockFixture.getBlock().compareSnapshot(blockFixture.BlockFixture.StepsBlock);
   });
 
   (
@@ -210,13 +210,13 @@ describe('Desktop. Регресс отображения блоков', () => {
   ).forEach(([BlockFixture]) => {
     it(`Desktop. Регресс отображения блока "${BlockFixture}"`, () => {
       cy.visit(blockFixtureURLDesktop.getBlockFixtureURL(BlockFixture));
-      blockFixture.getBlock().matchImageSnapshot(BlockFixture);
+      blockFixture.getBlock().compareSnapshot(BlockFixture);
     });
   });
 
   it(`Desktop. Регресс отображения блока "${blockFixture.BlockFixture.TextBlock}"`, () => {
     cy.visit(blockFixtureURLDesktop.getBlockFixtureURL(blockFixture.BlockFixture.TextBlock));
-    blockFixture.getBlock().matchImageSnapshot(blockFixture.BlockFixture.TextBlock);
+    blockFixture.getBlock().compareSnapshot(blockFixture.BlockFixture.TextBlock);
   });
 
   (
@@ -230,7 +230,7 @@ describe('Desktop. Регресс отображения блоков', () => {
   ).forEach(([BlockFixture]) => {
     it(`Desktop. Регресс отображения блока "${BlockFixture}"`, () => {
       cy.visit(blockFixtureURLDesktop.getBlockFixtureURL(BlockFixture));
-      blockFixture.getBlock().matchImageSnapshot(BlockFixture);
+      blockFixture.getBlock().compareSnapshot(BlockFixture);
     });
   });
 });

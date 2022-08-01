@@ -1,5 +1,5 @@
 import { defineConfig } from 'cypress';
-import { addMatchImageSnapshotPlugin } from 'cypress-image-snapshot/plugin';
+import getCompareSnapshotsPlugin from 'cypress-visual-regression/dist/plugin';
 
 export default defineConfig({
   e2e: {
@@ -10,10 +10,11 @@ export default defineConfig({
     viewportWidth: 1366,
     viewportHeight: 768,
     video: false,
+    screenshotsFolder: './cypress/snapshots/actual',
+    trashAssetsBeforeRuns: true,
 
     setupNodeEvents(on, config) {
-      // implement node event listeners here
-      addMatchImageSnapshotPlugin(on, config);
+      getCompareSnapshotsPlugin(on, config);
     },
   },
 });

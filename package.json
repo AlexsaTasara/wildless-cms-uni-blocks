@@ -79,10 +79,13 @@
     "cosmos:export": "cosmos-export",
     "prepare": "husky install && npm run --prefix ./eslint-rules build || exit 0",
     "e2e": "cypress open",
-    "e2e:run": "cypress run",
-    "e2e:test": "npm run e2e:pretest && npm run e2e:run",
-    "e2e:pretest": "rm -r cypress/snapshots/blocksVisualRegressionDesktop.cy.ts/__diff_output__ || true",
-    "e2e:update": "npm run e2e:pretest && npm run e2e:run -env updateSnapshots=true"
+    "e2e:run": "cypress run --env type=actual",
+    "e2e:test": "npm run clean:diff && npm run e2e:run",
+    "e2e:base": "npm run create:base && npm run clean:base && npm run clean:diff && npm run clean:actual",
+    "create:base": "cypress run --env type=base --config screenshotsFolder=cypress/snapshots/base",
+    "clean:base": "del ./cypress/snapshots/base/**/*-base-[0-9]*.png",
+    "clean:diff": "rm -r cypress/snapshots/diff || true",
+    "clean:actual": "rm -r cypress/snapshots/actual || true"
   },
   "peerDependencies": {
     "react": ">=16.8.0",
@@ -90,6 +93,7 @@
   },
   "dependencies": {
     "@redneckz/uni-jsx": "^0.1.6",
+    "cypress-visual-regression": "^1.7.0",
     "glob": "^8.0.3",
     "remark-html": "^15.0.1",
     "remark-parse": "^10.0.1",
@@ -109,7 +113,6 @@
     "css-loader": "^6.7.1",
     "cssnano": "^5.1.11",
     "cypress": "^10.3.1",
-    "cypress-image-snapshot": "^4.0.1",
     "eslint": "^8.19.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-local-eslint-rules": "./eslint-rules",

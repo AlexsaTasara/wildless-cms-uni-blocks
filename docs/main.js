@@ -31351,29 +31351,16 @@ const Headline = JSX(({ bgColor = 'transparent', align = 'left', className = '',
 
 
 
-
 const HEADLINE = {
     title: 'Своя кредитная карта',
     description: 'Карта работает в 180 странах мира. Бесплатное снятие наличных в любых банкоматах.',
     align: 'center',
     bgColor: 'transparent',
 };
-const Headline_fixture_image = {
-    src: 'globe-1.png',
-    format: 'webp',
-    size: {
-        width: 180,
-        height: 180,
-    },
-};
 /* harmony default export */ const Headline_fixture = ({
     default: (jsx("div", { className: "container grid grid-cols-12", children: jsx(Headline, { className: "col-span-12", context: context, ...HEADLINE }) })),
     'left white': (jsx("div", { className: "container grid grid-cols-12", children: jsx(Headline, { className: "col-span-12", context: context, ...HEADLINE, align: "left", bgColor: "bg-white" }) })),
     'right transparent': (jsx("div", { className: "container grid grid-cols-12", children: jsx(Headline, { className: "col-span-12", context: context, ...HEADLINE, align: "right", bgColor: "transparent" }) })),
-    mobile: (jsx("div", { className: "container grid grid-cols-12", children: jsx(Headline, { className: "col-span-12", context: context, title: "\u041A\u043E\u043F\u0438\u0442\u0435 \u0432 \u043D\u0435\u0441\u043A\u043E\u043B\u044C\u043A\u0438\u0445 \u0432\u0430\u043B\u044E\u0442\u0430\u0445", description: "\u041E\u0442\u043A\u0440\u043E\u0439\u0442\u0435 \u043C\u0443\u043B\u044C\u0442\u0438\u0432\u0430\u043B\u044E\u0442\u043D\u044B\u0439 \u0432\u043A\u043B\u0430\u0434, \u0447\u0442\u043E\u0431\u044B \u0440\u0430\u0441\u043F\u0440\u0435\u0434\u0435\u043B\u0438\u0442\u044C \u0441\u0432\u043E\u0438 \u0432\u043B\u043E\u0436\u0435\u043D\u0438\u044F. \u042D\u0442\u043E \u0434\u043E 4 \u0441\u0447\u0435\u0442\u043E\u0432 \u0432 \u0440\u0430\u0437\u043D\u044B\u0445 \u0432\u0430\u043B\u044E\u0442\u0430\u0445 \u0432\u043D\u0443\u0442\u0440\u0438 \u043E\u0434\u043D\u043E\u0433\u043E \u0432\u043A\u043B\u0430\u0434\u0430", image: Headline_fixture_image }) })),
-    'mobile title-img': (jsx("div", { className: "container grid grid-cols-12", children: jsx(Headline, { className: "col-span-12", context: context, title: "\u041A\u043E\u043F\u0438\u0442\u0435 \u0432 \u043D\u0435\u0441\u043A\u043E\u043B\u044C\u043A\u0438\u0445 \u0432\u0430\u043B\u044E\u0442\u0430\u0445", image: Headline_fixture_image }) })),
-    'mobile desc-img': (jsx("div", { className: "container grid grid-cols-12", children: jsx(Headline, { className: "col-span-12", context: context, description: "\u041E\u0442\u043A\u0440\u043E\u0439\u0442\u0435 \u043C\u0443\u043B\u044C\u0442\u0438\u0432\u0430\u043B\u044E\u0442\u043D\u044B\u0439 \u0432\u043A\u043B\u0430\u0434, \u0447\u0442\u043E\u0431\u044B \u0440\u0430\u0441\u043F\u0440\u0435\u0434\u0435\u043B\u0438\u0442\u044C \u0441\u0432\u043E\u0438 \u0432\u043B\u043E\u0436\u0435\u043D\u0438\u044F. \u042D\u0442\u043E \u0434\u043E 4 \u0441\u0447\u0435\u0442\u043E\u0432 \u0432 \u0440\u0430\u0437\u043D\u044B\u0445 \u0432\u0430\u043B\u044E\u0442\u0430\u0445 \u0432\u043D\u0443\u0442\u0440\u0438 \u043E\u0434\u043D\u043E\u0433\u043E \u0432\u043A\u043B\u0430\u0434\u0430", image: Headline_fixture_image }) })),
-    'mobile white': (jsx("div", { className: "container grid grid-cols-12", children: jsx(Headline, { className: "col-span-12", context: context, title: "\u041A\u043E\u043F\u0438\u0442\u0435 \u0432 \u043D\u0435\u0441\u043A\u043E\u043B\u044C\u043A\u0438\u0445 \u0432\u0430\u043B\u044E\u0442\u0430\u0445", description: "\u041E\u0442\u043A\u0440\u043E\u0439\u0442\u0435 \u043C\u0443\u043B\u044C\u0442\u0438\u0432\u0430\u043B\u044E\u0442\u043D\u044B\u0439 \u0432\u043A\u043B\u0430\u0434, \u0447\u0442\u043E\u0431\u044B \u0440\u0430\u0441\u043F\u0440\u0435\u0434\u0435\u043B\u0438\u0442\u044C \u0441\u0432\u043E\u0438 \u0432\u043B\u043E\u0436\u0435\u043D\u0438\u044F. \u042D\u0442\u043E \u0434\u043E 4 \u0441\u0447\u0435\u0442\u043E\u0432 \u0432 \u0440\u0430\u0437\u043D\u044B\u0445 \u0432\u0430\u043B\u044E\u0442\u0430\u0445 \u0432\u043D\u0443\u0442\u0440\u0438 \u043E\u0434\u043D\u043E\u0433\u043E \u0432\u043A\u043B\u0430\u0434\u0430", bgColor: "bg-white", image: Headline_fixture_image }) })),
 });
 
 ;// CONCATENATED MODULE: ./src/ProjectSettings.ts
@@ -32380,7 +32367,7 @@ const getColSpan = (className) => {
 function renderButton_renderButton({ icon, ...button }, i) {
     if (!button?.text)
         return;
-    return icon ? (jsx(Button, { appendLeft: jsx(Icon, { name: icon, width: "24", height: "24" }), ...button }, String(i))) : (jsx(Button, { ...button }, String(i)));
+    return icon ? (jsx(Button, { appendLeft: jsx(Icon, { name: icon, width: "24", height: "24", asSVG: true }), ...button }, String(i))) : (jsx(Button, { ...button }, String(i)));
 }
 
 ;// CONCATENATED MODULE: ./src/ui-kit/BlockItem/BlockItem.tsx
@@ -33118,7 +33105,7 @@ const TariffsTableCell = JSX(({ cell, isLastRow }) => {
     return (jsx("div", { className: cellWrapperClasses, role: "cell", children: jsx("div", { children: cell.map((item, i) => TariffsTableCell_renderCellInner(item, i)) }) }));
 });
 const TariffsTableCell_renderCellInner = ({ label, description, list, image, buttons }, i) => (jsxs("div", { className: "first:pt-5 last:pb-5", children: [i > 0 && (jsx("div", { className: "border-main-divider border border-solid border-t-0 border-x-0 my-4" })), label && jsx("div", { className: "text-xl font-medium m-0", children: label }), description && jsx("div", { className: "text-sm text-secondary-text", children: description }), list?.items?.length ? (jsx("div", { className: "flex flex-col justify-between items-start", children: jsx("div", { role: "list", children: list.items.map((text, idx) => (jsx(BlockItem, { text: text, version: list.version ?? 'secondary', isDotted: list.isDotted ?? true }, String(idx)))) }) })) : null, image && jsx(Img, { image: image }), buttons?.length
-            ? buttons.map(({ icon, ...buttonProps }, idx) => (jsx(Button, { className: `${idx > 0 ? 'ml-3' : ''} w-12 h-12`, appendLeft: icon && jsx(Icon, { name: icon, width: "24px", height: "24px" }), ...buttonProps }, String(idx))))
+            ? buttons.map(({ icon, ...buttonProps }, idx) => (jsx(Button, { className: `${idx > 0 ? 'ml-3' : ''} w-12 h-12`, appendLeft: icon && jsx(Icon, { name: icon, width: "24px", height: "24px", asSVG: true }), ...buttonProps }, String(idx))))
             : null] }, String(i)));
 
 ;// CONCATENATED MODULE: ./src/components/TariffsTable/TariffsTableRow.tsx
@@ -34492,7 +34479,7 @@ const image4 = {
 /* harmony default export */ const Button_fixture = ({
     all: (jsxs("div", { className: "font-sans overflow-hidden", children: [jsxs("div", { children: [jsx("p", { children: "Private clients" }), jsxs("div", { className: "flex gap-6", "data-theme": "pc", children: [jsx(Button, { href: "https://www.rshb.ru/", target: "_blank", text: "Primary", version: "primary" }), jsx(Button, { href: "https://www.rshb.ru/", target: "_blank", text: "Secondary", version: "secondary" })] })] }), jsxs("div", { children: [jsx("p", { children: "Business clients" }), jsxs("div", { className: "flex gap-6", "data-theme": "bc", children: [jsx(Button, { href: "https://www.rshb.ru/", target: "_blank", text: "Primary", version: "primary" }), jsx(Button, { href: "https://www.rshb.ru/", target: "_blank", text: "Secondary", version: "secondary" })] })] }), jsxs("div", { children: [jsx("p", { children: "Ecosystem own" }), jsxs("div", { className: "flex gap-6", "data-theme": "eo", children: [jsx(Button, { href: "https://www.rshb.ru/", target: "_blank", text: "Primary", version: "primary" }), jsx(Button, { href: "https://www.rshb.ru/", target: "_blank", text: "Secondary", version: "secondary" })] })] }), jsxs("div", { children: [jsx("p", { children: "Disabled" }), jsxs("div", { className: "flex gap-6", children: [jsx(Button, { href: "https://www.rshb.ru/", target: "_blank", text: "Primary", version: "primary", disabled: true }), jsx(Button, { href: "https://www.rshb.ru/", target: "_blank", text: "Secondary", version: "secondary", disabled: true })] })] }), jsxs("div", { children: [jsx("p", { children: "With Icon" }), jsxs("div", { className: "flex gap-6", "data-theme": "pc", children: [jsx(Button, { href: "https://www.rshb.ru/", target: "_blank", aboveText: "\u0414\u043E\u0441\u0442\u0443\u043F\u043D\u043E \u0432", appendLeft: 
                                 /** Div need for perfect pixel */
-                                jsx("div", { children: jsx(Icon, { name: "PlayMarketIcon", width: "24", height: "24" }) }), text: "Google Play", version: "secondary" }), jsx(Button, { href: "https://www.rshb.ru/", target: "_blank", aboveText: "\u0417\u0430\u0433\u0440\u0443\u0437\u0438\u0442\u0435 \u0432", appendLeft: jsx("div", { children: jsx(Icon, { name: "AppleIcon", width: "24", height: "24" }) }), text: "App Store", version: "secondary" })] })] }), jsxs("div", { children: [jsx("p", { children: "Rounded with only Icon" }), jsxs("div", { className: "flex gap-6", "data-theme": "pc", children: [jsx(Button, { rounded: true, href: "https://www.rshb.ru/", target: "_blank", version: "secondary", appendLeft: jsx(Icon, { name: "PlayMarketIcon", width: "20", height: "21" }) }), jsx(Button, { rounded: true, href: "https://www.rshb.ru/", target: "_blank", version: "secondary", appendLeft: jsx(Icon, { name: "AppleIcon", width: "18", height: "20" }) })] })] })] })),
+                                jsx("div", { children: jsx(Icon, { name: "PlayMarketIcon", width: "24", height: "24" }) }), text: "Google Play", version: "secondary" }), jsx(Button, { href: "https://www.rshb.ru/", target: "_blank", aboveText: "\u0417\u0430\u0433\u0440\u0443\u0437\u0438\u0442\u0435 \u0432", appendLeft: jsx("div", { children: jsx(Icon, { name: "AppleIcon", width: "24", height: "24" }) }), text: "App Store", version: "secondary" })] })] }), jsxs("div", { children: [jsx("p", { children: "Rounded with only Icon" }), jsxs("div", { className: "flex gap-6", "data-theme": "pc", children: [jsx(Button, { rounded: true, href: "https://www.rshb.ru/", target: "_blank", version: "secondary", appendLeft: jsx(Icon, { name: "PlayMarketIcon", width: "20", height: "21", asSVG: true }) }), jsx(Button, { rounded: true, href: "https://www.rshb.ru/", target: "_blank", version: "secondary", appendLeft: jsx(Icon, { name: "AppleIcon", width: "18", height: "20", asSVG: true }) })] })] })] })),
     'primary (Private clients)': (jsx("div", { "data-theme": "pc", children: jsx(Button, { href: "https://www.rshb.ru/", target: "_blank", text: "\u041E\u0444\u043E\u0440\u043C\u0438\u0442\u044C \u043A\u0440\u0435\u0434\u0438\u0442", version: "primary" }) })),
     'secondary (Private clients)': (jsx("div", { "data-theme": "pc", children: jsx(Button, { href: "https://www.rshb.ru/", target: "_blank", text: "\u041E\u0444\u043E\u0440\u043C\u0438\u0442\u044C \u043A\u0440\u0435\u0434\u0438\u0442", version: "secondary" }) })),
     'primary (Business clients)': (jsx("div", { "data-theme": "bc", children: jsx(Button, { href: "https://www.rshb.ru/", target: "_blank", text: "\u041E\u0444\u043E\u0440\u043C\u0438\u0442\u044C \u043A\u0440\u0435\u0434\u0438\u0442", version: "primary" }) })),

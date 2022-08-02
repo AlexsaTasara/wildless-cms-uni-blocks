@@ -1,8 +1,8 @@
 import type { BlockVersion } from '../../model/BlockVersion';
 import type { Picture } from '../../model/Picture';
 import type { ButtonWithIconProps } from '../../ui-kit/Button/ButtonProps';
+import type { HeadingType } from '../../ui-kit/Heading/HeadingProps';
 import type { IconName } from '../../ui-kit/Icon/IconProps';
-import type { TitleSize } from '../../ui-kit/Title/TitleProps';
 
 /**
  * @title Выравнивание
@@ -21,7 +21,7 @@ export interface BaseTileIconButton extends ButtonWithIconProps {
 /**
  * @title Общий компонент плиток
  */
-export interface BaseTileCommonProps extends BaseTileTitleProps, BaseTileMainProps {}
+export type BaseTileCommonProps = BaseTileTitleProps & BaseTileMainProps;
 
 /**
  * @title Заголовк плитки
@@ -30,11 +30,11 @@ export interface BaseTileTitleProps {
   /** @title Заголовок */
   title?: string;
   /**
-   * @title Размер заголовка
-   * @default M
+   * @title Тип заголовка
    */
-  titleSize?: TitleSize;
+  headingType?: HeadingType;
 }
+
 export interface BaseTileMainProps {
   description?: string;
   image?: Picture;

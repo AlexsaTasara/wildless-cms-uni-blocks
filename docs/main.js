@@ -31073,7 +31073,7 @@ if (false) { var webpackRendererConnect; }
 
 /***/ }),
 
-/***/ 4264:
+/***/ 6258:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -32801,10 +32801,17 @@ const findActiveSubItem = (router) => (items = []) => {
     return activeSubItem;
 };
 
+;// CONCATENATED MODULE: ./src/services/sitemap/checkIsHrefSameOrigin.ts
+
+const checkIsHrefSameOrigin = (href, router) => getOrigin(href) === getOrigin(router.href);
+
 ;// CONCATENATED MODULE: ./src/services/sitemap/isTopItemActive.ts
 
 
-const isTopItemActive = (router) => (topItem) => topItem.items?.some(isSubItemActive(router)) || isHrefActive(topItem.href, router);
+
+const isTopItemActive = (router) => (topItem) => topItem.items?.some(isSubItemActive(router)) ||
+    isHrefActive(topItem.href, router) ||
+    checkIsHrefSameOrigin(topItem.href, router);
 
 ;// CONCATENATED MODULE: ./src/ui-kit/HeaderItem/HeaderItem.tsx
 
@@ -40599,7 +40606,7 @@ mount();
 
 function mount() {
   // Use dynamic import to load updated modules upon hot reloading
-  var _require = __webpack_require__(4264),
+  var _require = __webpack_require__(6258),
       rendererConfig = _require.rendererConfig,
       fixtures = _require.fixtures,
       decorators = _require.decorators;

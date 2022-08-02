@@ -98,7 +98,15 @@
     "cosmos:mobile": "cosmos --config cosmos.config.mobile.json",
     "precosmos:export": "npm run build:icons",
     "cosmos:export": "rimraf ./build && cosmos-export && cosmos-export --config cosmos.config.mobile.json",
-    "prepare": "husky install && npm run --prefix ./eslint-rules build || exit 0"
+    "prepare": "husky install && npm run --prefix ./eslint-rules build || exit 0",
+    "e2e": "cypress open",
+    "e2e:run": "cypress run --env type=actual",
+    "e2e:test": "npm run clean:diff && npm run e2e:run",
+    "e2e:base": "npm run create:base && npm run clean:base && npm run clean:diff && npm run clean:actual",
+    "create:base": "cypress run --env type=base --config screenshotsFolder=cypress/snapshots/base",
+    "clean:base": "del ./cypress/snapshots/base/**/*-base-[0-9]*.png",
+    "clean:diff": "rm -r cypress/snapshots/diff || true",
+    "clean:actual": "rm -r cypress/snapshots/actual || true"
   },
   "peerDependencies": {
     "react": ">=16.8.0",
@@ -106,6 +114,7 @@
   },
   "dependencies": {
     "@redneckz/uni-jsx": "^0.1.6",
+    "cypress-visual-regression": "^1.7.0",
     "glob": "^8.0.3",
     "remark-html": "^15.0.1",
     "remark-parse": "^10.0.1",
@@ -125,6 +134,7 @@
     "css-loader": "^6.7.1",
     "cssnano": "^5.1.11",
     "eslint": "^8.21.0",
+    "cypress": "^10.3.1",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-local-eslint-rules": "./eslint-rules",
     "eslint-plugin-react": "^7.30.1",

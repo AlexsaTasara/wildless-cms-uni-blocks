@@ -31766,7 +31766,7 @@ function renderItems(items = [], version) {
 const BaseTileInner = JSX(({ context, description, children, buttons, image, items, version = 'primary' }) => {
     const router = context.useRouter();
     const { handlerDecorator } = context;
-    return (jsxs("div", { className: `flex grow w-full justify-between`, children: [jsxs("div", { className: `flex flex-col justify-between items-start}`, children: [jsxs("div", { children: [description && (jsx("div", { className: `font-normal text-base mt-4 max-w-[600px]`, children: description })), children, items?.length && renderItems(items, version)] }), buttons?.length && (jsx("div", { className: "flex mt-9 gap-3", children: buttons.map((button, index) => renderButton(useLink({ router, handlerDecorator }, button), index)) }))] }), image?.src && jsx(Img, { className: "mt-auto ml-7", image: image })] }));
+    return (jsxs("div", { className: "flex grow w-full justify-between", children: [jsxs("div", { className: "flex flex-col justify-between items-start", children: [jsxs("div", { children: [description && (jsx("div", { className: "font-normal text-base mt-4 max-w-[600px]", children: description })), children, items?.length && renderItems(items, version)] }), buttons?.length && (jsx("div", { className: "flex mt-9 gap-3", children: buttons.map((button, index) => renderButton(useLink({ router, handlerDecorator }, button), index)) }))] }), image?.src && jsx(Img, { className: "mt-auto ml-7", image: image })] }));
 });
 
 ;// CONCATENATED MODULE: ./src/components/BaseTile/getTitleSizeByClassName.ts

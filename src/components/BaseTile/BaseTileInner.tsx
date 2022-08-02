@@ -13,22 +13,22 @@ export const BaseTileInner = JSX<BaseTileInnerProps>(
     const router = context.useRouter();
     const { handlerDecorator } = context;
     return (
-      <div className={`flex grow w-full justify-between}`}>
-        <div className={`flex flex-col justify-between items-start}`}>
+      <div className={`flex grow w-full justify-between`}>
+        <div className={`flex flex-col justify-between`}>
           <div>
             {description && (
               <div className={`font-normal text-base mt-4 max-w-[600px]`}>{description}</div>
             )}
             {children}
-            {items?.length && renderItems(items, version)}
+            {items?.length ? renderItems(items, version) : null}
           </div>
-          {buttons?.length && (
+          {buttons?.length ? (
             <div className="flex mt-9 gap-3">
               {buttons.map((button, index) =>
                 renderButton(useLink({ router, handlerDecorator }, button), index),
               )}
             </div>
-          )}
+          ) : null}
         </div>
         {image?.src && <Img className="mt-auto ml-7" image={image} />}
       </div>

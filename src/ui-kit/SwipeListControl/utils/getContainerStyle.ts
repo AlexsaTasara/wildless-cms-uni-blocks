@@ -1,7 +1,5 @@
-import type { CSSProperties } from 'react';
-
 // styles used to compensate outer container padding to get rid of clipping effect
-export const getContainerStyle = (padding: number): CSSProperties => {
+export const getContainerStyle = (padding: number): Record<string, string> => {
   return {
     marginLeft: `${-padding}px`,
     marginRight: `${-padding}px`,

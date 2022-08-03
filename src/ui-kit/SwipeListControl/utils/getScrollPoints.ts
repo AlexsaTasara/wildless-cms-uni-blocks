@@ -21,11 +21,11 @@ export const getScrollPoints = ({
   const scrollableDistance = scrollWidth - clientWidth;
   const edgeScrollDistance = clientWidth - gap - padding;
 
-  const scrollableItemsCount = childElementCount - 1;
-  const scrollPoints: [number, number][] = new Array(scrollableItemsCount)
+  const lastScrollableIdx = childElementCount - 2;
+  const scrollPoints: [number, number][] = new Array(childElementCount)
     .fill(0)
     .map((_, idx) =>
-      idx === 0 || idx === scrollableItemsCount - 1
+      idx === 0 || idx === lastScrollableIdx
         ? [
             idx > 0 ? scrollableDistance - edgeScrollDistance : 0,
             idx > 0 ? scrollableDistance : edgeScrollDistance,
@@ -35,6 +35,7 @@ export const getScrollPoints = ({
             idx * scrollItemWidth + edgeScrollDistance,
           ],
     );
+  scrollPoints[childElementCount - 1] = [scrollableDistance, scrollWidth];
 
   return scrollPoints;
 };

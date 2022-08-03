@@ -1,11 +1,10 @@
 import { JSX } from '@redneckz/uni-jsx';
-import type { CSSProperties } from 'react';
 
 const DOT_STYLES = 'bg-primary-main opacity-30 w-1.5 h-1.5 min-w-1.5 min-h-1.5 rounded-full';
-const DOT_WIDTH = 6;
-const ACTIVE_DOT_WIDTH = 22;
-const DOT_OPACITY = 0.3;
-const ACTIVE_DOT_OPACITY = 1;
+const BASE_DOT_WIDTH = 6;
+const ACTIVE_DOT_WIDTH_CHANGE = 16;
+const BASE_DOT_OPACITY = 0.3;
+const ACTIVE_DOT_OPACITY_CHANGE = 0.7;
 
 export interface SwipeListControlDotsProps {
   activeIndex: number;
@@ -22,6 +21,7 @@ export const SwipeListControlDots = JSX<SwipeListControlDotsProps>(
             key={String(idx)}
             className={`${DOT_STYLES}`}
             style={getDotStyles(idx, activeIndex, indexFraction)}
+            aria-hidden
           />
         ))}
       </div>
@@ -33,20 +33,19 @@ const getDotStyles = (
   currentIdx: number,
   activeIndex: number,
   indexFraction: number,
-): CSSProperties | undefined => {
+): Record<string, string> | null => {
   if (currentIdx < activeIndex || currentIdx > activeIndex + 1) return null;
 
   const leftIndexMod = 1 - indexFraction;
   const rightIndexMod = indexFraction;
 
-  if (currentIdx === activeIndex)
-    return {
-      opacity: `${DOT_OPACITY + ACTIVE_DOT_OPACITY * leftIndexMod}`,
-      width: `${DOT_WIDTH + ACTIVE_DOT_WIDTH * leftIndexMod}px`,
-    };
-
-  return {
-    opacity: `${DOT_OPACITY + ACTIVE_DOT_OPACITY * rightIndexMod}`,
-    width: `${DOT_WIDTH + ACTIVE_DOT_WIDTH * rightIndexMod}px`,
-  };
+  return currentIdx === activeIndex
+    ? {
+        opacity: `${BASE_DOT_OPACITY + ACTIVE_DOT_OPACITY_CHANGE * leftIndexMod}`,
+        width: `${BASE_DOT_WIDTH + ACTIVE_DOT_WIDTH_CHANGE * leftIndexMod}px`,
+      }
+    : {
+        opacity: `${BASE_DOT_OPACITY + ACTIVE_DOT_OPACITY_CHANGE * rightIndexMod}`,
+        width: `${BASE_DOT_WIDTH + ACTIVE_DOT_WIDTH_CHANGE * rightIndexMod}px`,
+      };
 };

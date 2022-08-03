@@ -1,14 +1,18 @@
 import { JSX } from '@redneckz/uni-jsx';
-import type { SwipeListControlItemProps } from './SwipeListControlProps';
+
+/**
+ * @title Элемент списка
+ */
+export interface SwipeListControlItemProps {
+  className?: string;
+  style?: Record<string, string>;
+  'aria-current'?: boolean;
+}
 
 export const SwipeListControlItem = JSX<SwipeListControlItemProps>(
-  ({ className = '', style, children }) => {
+  ({ className = '', children, ...rest }) => {
     return (
-      <div
-        className={`snap-center snap-always min-w-full ${className}`}
-        style={style}
-        role="listitem"
-      >
+      <div className={`snap-center snap-always min-w-full ${className}`} role="listitem" {...rest}>
         {children}
       </div>
     );

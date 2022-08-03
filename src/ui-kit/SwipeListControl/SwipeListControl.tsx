@@ -8,36 +8,33 @@ import { DEFAULT_GAP, DEFAULT_PADDING } from './constants';
 
 export const SwipeListControl = JSX<SwipeListControlProps>(
   ({
-    className = '',
+    className,
     context,
     children,
     gap = DEFAULT_GAP,
     padding = DEFAULT_PADDING,
     showDots = true,
   }) => {
-    const [scrollPoints, setScrollPoints] = context.useState<[number, number][] | undefined>(
-      undefined,
-    );
     const [activeIndex, setActiveIndex] = context.useState<number>(0);
     const [indexFraction, setIndexFraction] = context.useState<number>(0);
 
     const handleScroll = (e: UIEvent) => {
-      const container = e.currentTarget as HTMLElement;
+      const { scrollLeft, clientWidth, childElementCount, scrollWidth, children } =
+        e.currentTarget as HTMLElement;
 
-      if (!scrollPoints) {
-        const { clientWidth, childElementCount, scrollWidth, children } = container;
+      // horizontal PADDING / 2 to compensate padding-margin combo of child container
+      // without CSS calc function, as wrapper element gets bigger in the DOM, remaining same visually
+      const itemWidth = (children[0] as HTMLElement).offsetWidth - padding / 2;
 
-        // horizontal PADDING / 2 to compensate padding-margin combo of child container
-        // without CSS calc function, as wrapper element gets bigger in the DOM, remaining same visually
-        const itemWidth = (children[0] as HTMLElement).offsetWidth - padding / 2;
+      const scrollPoints = getScrollPoints({
+        gap,
+        padding,
+        clientWidth,
+        scrollWidth,
+        childElementCount,
+        itemWidth,
+      });
 
-        setScrollPoints(
-          getScrollPoints({ gap, padding, clientWidth, scrollWidth, childElementCount, itemWidth }),
-        );
-        return;
-      }
-
-      const { scrollLeft } = container;
       const { index, fraction } = getIndexParts(scrollLeft, scrollPoints);
       setActiveIndex(index);
       setIndexFraction(fraction);
@@ -45,7 +42,12 @@ export const SwipeListControl = JSX<SwipeListControlProps>(
 
     return (
       <div className={className}>
-        <SwipeListControlList gap={gap} padding={padding} onScroll={handleScroll}>
+        <SwipeListControlList
+          gap={gap}
+          padding={padding}
+          activeIndex={activeIndex}
+          onScroll={handleScroll}
+        >
           {children}
         </SwipeListControlList>
         <SwipeListControlDots

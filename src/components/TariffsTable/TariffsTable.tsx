@@ -39,35 +39,17 @@ export const TariffsTable = JSX<TariffsTableProps>(
           title={title}
         />
         <div role="table">
-          {rowData?.length ? (
-            <div className="relative">
-              {rowData.map((row, i, { length }) => (
-                <TariffsTableRow
-                  key={String(i)}
-                  row={row}
-                  isLastRow={i + 1 === length}
-                  activeCardIndex={activeCardIndex}
-                />
-              ))}
-              {isScrollAvailable ? (
-                <div>
-                  <div className="absolute top-7 right-7 z-10">
-                    <ArrowButton
-                      onClick={nextClick}
-                      disabled={!showNextButton}
-                      ariaLabel="Пролистать вправо"
-                    />
-                    <ArrowButton
-                      className="mt-4 rotate-180"
-                      onClick={prevClick}
-                      disabled={!showPrevButton}
-                      ariaLabel="Пролистать влево"
-                    />
-                  </div>
-                </div>
-              ) : null}
-            </div>
-          ) : null}
+          {rowData?.length
+            ? rendrerTariffsTableRows({
+                rowData,
+                activeCardIndex,
+                isScrollAvailable,
+                showNextButton,
+                showPrevButton,
+                nextClick,
+                prevClick,
+              })
+            : null}
           {isScrollAvailable ? (
             <div className="absolute top-0 right-0 bottom-0 w-[84px] bg-opacity-to-white" />
           ) : null}
@@ -76,3 +58,60 @@ export const TariffsTable = JSX<TariffsTableProps>(
     );
   },
 );
+
+function rendrerTariffsTableArrowButtons({
+  showNextButton,
+  showPrevButton,
+  nextClick,
+  prevClick,
+}: {
+  showNextButton: boolean | 0;
+  showPrevButton: boolean | 0;
+  nextClick: () => void;
+  prevClick: () => void;
+}) {
+  return (
+    <div>
+      <div className="absolute top-7 right-7 z-10">
+        <ArrowButton onClick={nextClick} disabled={!showNextButton} ariaLabel="Пролистать вправо" />
+        <ArrowButton
+          className="mt-4 rotate-180"
+          onClick={prevClick}
+          disabled={!showPrevButton}
+          ariaLabel="Пролистать влево"
+        />
+      </div>
+    </div>
+  );
+}
+
+function rendrerTariffsTableRows({
+  rowData,
+  activeCardIndex,
+  isScrollAvailable,
+  showNextButton,
+  showPrevButton,
+  nextClick,
+  prevClick,
+}) {
+  return (
+    <div className="relative">
+      {rowData.map((row, i, { length }) => (
+        <TariffsTableRow
+          key={String(i)}
+          row={row}
+          isLastRow={i + 1 === length}
+          activeCardIndex={activeCardIndex}
+        />
+      ))}
+      {isScrollAvailable
+        ? rendrerTariffsTableArrowButtons({
+            showNextButton,
+            showPrevButton,
+            nextClick,
+            prevClick,
+          })
+        : null}
+    </div>
+  );
+}

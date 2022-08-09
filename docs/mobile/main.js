@@ -33671,6 +33671,7 @@ const steps = [
 
 ;// CONCATENATED MODULE: ./src/ui-kit/Heading/Heading.fixture.mobile.tsx
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 
 
 /* harmony default export */ const Heading_fixture_mobile = ({

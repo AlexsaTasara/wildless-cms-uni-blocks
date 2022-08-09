@@ -17,7 +17,6 @@ export const InputRange = JSX<InputRangeProps>(
 
     const handleBlur = () => {
       if (!onChange) return;
-
       if (value < min) onChange(min);
       if (value > max) onChange(max);
     };
@@ -32,9 +31,7 @@ export const InputRange = JSX<InputRangeProps>(
           ) : null}
           <input
             className={`m-0 font-sans text-sm w-full h-12 border border-solid border-main-stroke rounded-md
-                        outline-none p-0 pl-4 m-0 box-border text-primary-text ${
-                          title ? 'pt-4' : ''
-                        }`}
+                        outline-none p-0 pl-4 box-border text-primary-text ${title ? 'pt-4' : ''}`}
             value={addSpacesBetweenNumbers(value)}
             onChange={(e) => handleChange(e.target.value)}
             onBlur={handleBlur}
@@ -52,14 +49,20 @@ export const InputRange = JSX<InputRangeProps>(
             />
           </div>
         </label>
-        <div className="flex justify-between my-3">
-          {items.map((item, i) => (
-            <span key={String(i)} className="text-xs leading-[14px] text-secondary-text pl-4">
-              {item}
-            </span>
-          ))}
-        </div>
+        {renderInputRangeItems(items)}
       </div>
     );
   },
 );
+
+function renderInputRangeItems(items: string[]) {
+  return (
+    <div className="flex justify-between my-3">
+      {items.map((item, i) => (
+        <span key={String(i)} className="text-xs leading-[14px] text-secondary-text pl-4">
+          {item}
+        </span>
+      ))}
+    </div>
+  );
+}

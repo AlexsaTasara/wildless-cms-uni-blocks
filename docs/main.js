@@ -32780,6 +32780,7 @@ const ComparisonTable = JSX(({ className, context, title, rowHeaders, columns, v
 
 ;// CONCATENATED MODULE: ./src/components/ComparisonTable/ComparisonTable.fixture.tsx
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 
 
 
@@ -33031,8 +33032,11 @@ const InputRange = JSX(({ className, title, items = [], min = 1, max = 100, step
             onChange(max);
     };
     return (jsxs("div", { className: className, children: [jsxs("label", { className: "block relative", children: [title ? (jsx("span", { className: "absolute text-xs text-secondary-text top-1 mt-0.5 pl-4 ml-0.5", children: title })) : null, jsx("input", { className: `m-0 font-sans text-sm w-full h-12 border border-solid border-main-stroke rounded-md
-                        outline-none p-0 pl-4 m-0 box-border text-primary-text ${title ? 'pt-4' : ''}`, value: addSpacesBetweenNumbers(value), onChange: (e) => handleChange(e.target.value), onBlur: handleBlur }), jsx("div", { className: "absolute inset-x-0 top-8 px-4", children: jsx("input", { className: "box-border w-full m-0 cursor-pointer slider", type: "range", min: min, max: max, step: step, value: value, onChange: (e) => handleChange(e.target.value), style: inputStyle }) })] }), jsx("div", { className: "flex justify-between my-3", children: items.map((item, i) => (jsx("span", { className: "text-xs leading-[14px] text-secondary-text pl-4", children: item }, String(i)))) })] }));
+                        outline-none p-0 pl-4 box-border text-primary-text ${title ? 'pt-4' : ''}`, value: addSpacesBetweenNumbers(value), onChange: (e) => handleChange(e.target.value), onBlur: handleBlur }), jsx("div", { className: "absolute inset-x-0 top-8 px-4", children: jsx("input", { className: "box-border w-full m-0 cursor-pointer slider", type: "range", min: min, max: max, step: step, value: value, onChange: (e) => handleChange(e.target.value), style: inputStyle }) })] }), renderInputRangeItems(items)] }));
 });
+function renderInputRangeItems(items) {
+    return (jsx("div", { className: "flex justify-between my-3", children: items.map((item, i) => (jsx("span", { className: "text-xs leading-[14px] text-secondary-text pl-4", children: item }, String(i)))) }));
+}
 
 ;// CONCATENATED MODULE: ./src/utils/clamp.ts
 const clamp = (value, min, max) => Math.max(min, Math.min(value, max));
@@ -33749,8 +33753,31 @@ const TariffsTable = JSX(({ className, context, title, rowHeaders, columns }) =>
         activeCardIndex,
         setActiveCardIndex,
     });
-    return (jsxs("section", { className: `bg-white font-sans py-[50px] pl-[50px] overflow-hidden text-primary-text relative ${className || ''}`, children: [jsx(Heading, { headingType: "h2", className: "max-w-[47rem] text-center mb-9 mx-auto", title: title }), jsxs("div", { role: "table", children: [rowData?.length ? (jsxs("div", { className: "relative", children: [rowData.map((row, i, { length }) => (jsx(TariffsTableRow, { row: row, isLastRow: i + 1 === length, activeCardIndex: activeCardIndex }, String(i)))), isScrollAvailable ? (jsx("div", { children: jsxs("div", { className: "absolute top-7 right-7 z-10", children: [jsx(ArrowButton, { onClick: nextClick, disabled: !showNextButton, ariaLabel: "\u041F\u0440\u043E\u043B\u0438\u0441\u0442\u0430\u0442\u044C \u0432\u043F\u0440\u0430\u0432\u043E" }), jsx(ArrowButton, { className: "mt-4 rotate-180", onClick: prevClick, disabled: !showPrevButton, ariaLabel: "\u041F\u0440\u043E\u043B\u0438\u0441\u0442\u0430\u0442\u044C \u0432\u043B\u0435\u0432\u043E" })] }) })) : null] })) : null, isScrollAvailable ? (jsx("div", { className: "absolute top-0 right-0 bottom-0 w-[84px] bg-opacity-to-white" })) : null] })] }));
+    return (jsxs("section", { className: `bg-white font-sans py-[50px] pl-[50px] overflow-hidden text-primary-text relative ${className || ''}`, children: [jsx(Heading, { headingType: "h2", className: "max-w-[47rem] text-center mb-9 mx-auto", title: title }), jsxs("div", { role: "table", children: [rowData?.length
+                        ? rendrerTariffsTableRows({
+                            rowData,
+                            activeCardIndex,
+                            isScrollAvailable,
+                            showNextButton,
+                            showPrevButton,
+                            nextClick,
+                            prevClick,
+                        })
+                        : null, isScrollAvailable ? (jsx("div", { className: "absolute top-0 right-0 bottom-0 w-[84px] bg-opacity-to-white" })) : null] })] }));
 });
+function rendrerTariffsTableArrowButtons({ showNextButton, showPrevButton, nextClick, prevClick, }) {
+    return (jsx("div", { children: jsxs("div", { className: "absolute top-7 right-7 z-10", children: [jsx(ArrowButton, { onClick: nextClick, disabled: !showNextButton, ariaLabel: "\u041F\u0440\u043E\u043B\u0438\u0441\u0442\u0430\u0442\u044C \u0432\u043F\u0440\u0430\u0432\u043E" }), jsx(ArrowButton, { className: "mt-4 rotate-180", onClick: prevClick, disabled: !showPrevButton, ariaLabel: "\u041F\u0440\u043E\u043B\u0438\u0441\u0442\u0430\u0442\u044C \u0432\u043B\u0435\u0432\u043E" })] }) }));
+}
+function rendrerTariffsTableRows({ rowData, activeCardIndex, isScrollAvailable, showNextButton, showPrevButton, nextClick, prevClick, }) {
+    return (jsxs("div", { className: "relative", children: [rowData.map((row, i, { length }) => (jsx(TariffsTableRow, { row: row, isLastRow: i + 1 === length, activeCardIndex: activeCardIndex }, String(i)))), isScrollAvailable
+                ? rendrerTariffsTableArrowButtons({
+                    showNextButton,
+                    showPrevButton,
+                    nextClick,
+                    prevClick,
+                })
+                : null] }));
+}
 
 ;// CONCATENATED MODULE: ./src/components/Blocks.ts
 

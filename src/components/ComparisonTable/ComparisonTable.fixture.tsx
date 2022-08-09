@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import React from 'react';
 import type { Picture } from '../../model/Picture';
 import { context } from '../../setup-fixture';

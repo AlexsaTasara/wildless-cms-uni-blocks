@@ -4,7 +4,11 @@ import type { UniBlockProps } from '../../types';
 import { ArrowButton } from '../../ui-kit/Button/ArrowButton';
 import { Heading } from '../../ui-kit/Heading/Heading';
 import { COLS_LENGTH_FOR_SCROLL } from './constants';
-import type { TariffsTableContent } from './TariffsTableContent';
+import type {
+  TariffsTableCellData,
+  TariffsTableContent,
+  TariffsTableRowHeader,
+} from './TariffsTableContent';
 import { TariffsTableRow } from './TariffsTableRow';
 
 export interface TariffsTableProps extends TariffsTableContent, UniBlockProps {}
@@ -59,17 +63,15 @@ export const TariffsTable = JSX<TariffsTableProps>(
   },
 );
 
-function rendrerTariffsTableArrowButtons({
-  showNextButton,
-  showPrevButton,
-  nextClick,
-  prevClick,
-}: {
+interface rendrerTariffsTableArrowButtonsParams {
   showNextButton: boolean | 0;
   showPrevButton: boolean | 0;
   nextClick: () => void;
   prevClick: () => void;
-}) {
+}
+
+function rendrerTariffsTableArrowButtons(params: rendrerTariffsTableArrowButtonsParams) {
+  const { showNextButton, showPrevButton, nextClick, prevClick } = params;
   return (
     <div>
       <div className="absolute top-7 right-7 z-10">
@@ -85,15 +87,29 @@ function rendrerTariffsTableArrowButtons({
   );
 }
 
-function rendrerTariffsTableRows({
-  rowData,
-  activeCardIndex,
-  isScrollAvailable,
-  showNextButton,
-  showPrevButton,
-  nextClick,
-  prevClick,
-}) {
+interface rendrerTariffsTableRowsParams {
+  rowData: {
+    header: TariffsTableRowHeader;
+    data: TariffsTableCellData[][];
+  }[];
+  activeCardIndex: number;
+  isScrollAvailable: boolean | 0;
+  showNextButton: boolean | 0;
+  showPrevButton: boolean | 0;
+  nextClick: () => void;
+  prevClick: () => void;
+}
+
+function rendrerTariffsTableRows(params: rendrerTariffsTableRowsParams) {
+  const {
+    rowData,
+    activeCardIndex,
+    isScrollAvailable,
+    showNextButton,
+    showPrevButton,
+    nextClick,
+    prevClick,
+  } = params;
   return (
     <div className="relative">
       {rowData.map((row, i, { length }) => (

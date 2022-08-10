@@ -33765,10 +33765,12 @@ const TariffsTable = JSX(({ className, context, title, rowHeaders, columns }) =>
                         })
                         : null, isScrollAvailable ? (jsx("div", { className: "absolute top-0 right-0 bottom-0 w-[84px] bg-opacity-to-white" })) : null] })] }));
 });
-function rendrerTariffsTableArrowButtons({ showNextButton, showPrevButton, nextClick, prevClick, }) {
+function rendrerTariffsTableArrowButtons(params) {
+    const { showNextButton, showPrevButton, nextClick, prevClick } = params;
     return (jsx("div", { children: jsxs("div", { className: "absolute top-7 right-7 z-10", children: [jsx(ArrowButton, { onClick: nextClick, disabled: !showNextButton, ariaLabel: "\u041F\u0440\u043E\u043B\u0438\u0441\u0442\u0430\u0442\u044C \u0432\u043F\u0440\u0430\u0432\u043E" }), jsx(ArrowButton, { className: "mt-4 rotate-180", onClick: prevClick, disabled: !showPrevButton, ariaLabel: "\u041F\u0440\u043E\u043B\u0438\u0441\u0442\u0430\u0442\u044C \u0432\u043B\u0435\u0432\u043E" })] }) }));
 }
-function rendrerTariffsTableRows({ rowData, activeCardIndex, isScrollAvailable, showNextButton, showPrevButton, nextClick, prevClick, }) {
+function rendrerTariffsTableRows(params) {
+    const { rowData, activeCardIndex, isScrollAvailable, showNextButton, showPrevButton, nextClick, prevClick, } = params;
     return (jsxs("div", { className: "relative", children: [rowData.map((row, i, { length }) => (jsx(TariffsTableRow, { row: row, isLastRow: i + 1 === length, activeCardIndex: activeCardIndex }, String(i)))), isScrollAvailable
                 ? rendrerTariffsTableArrowButtons({
                     showNextButton,

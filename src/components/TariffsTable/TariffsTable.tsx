@@ -1,10 +1,15 @@
 import { JSX } from '@redneckz/uni-jsx';
 import { useComparisonTableScroll } from '../../hooks/useComparisonTableScroll';
 import type { UniBlockProps } from '../../types';
-import { ArrowButton } from '../../ui-kit/Button/ArrowButton';
+
 import { Heading } from '../../ui-kit/Heading/Heading';
 import { COLS_LENGTH_FOR_SCROLL } from './constants';
-import type { TariffsTableContent } from './TariffsTableContent';
+import { TariffsTableNavigation } from './renderTariffsTableNavigation';
+import type {
+  TariffsTableCellData,
+  TariffsTableContent,
+  TariffsTableRowHeader,
+} from './TariffsTableContent';
 import { TariffsTableRow } from './TariffsTableRow';
 
 export interface TariffsTableProps extends TariffsTableContent, UniBlockProps {}
@@ -39,35 +44,17 @@ export const TariffsTable = JSX<TariffsTableProps>(
           title={title}
         />
         <div role="table">
-          {rowData?.length ? (
-            <div className="relative">
-              {rowData.map((row, i, { length }) => (
-                <TariffsTableRow
-                  key={String(i)}
-                  row={row}
-                  isLastRow={i + 1 === length}
-                  activeCardIndex={activeCardIndex}
-                />
-              ))}
-              {isScrollAvailable ? (
-                <div>
-                  <div className="absolute top-7 right-7 z-10">
-                    <ArrowButton
-                      onClick={nextClick}
-                      disabled={!showNextButton}
-                      ariaLabel="Пролистать вправо"
-                    />
-                    <ArrowButton
-                      className="mt-4 rotate-180"
-                      onClick={prevClick}
-                      disabled={!showPrevButton}
-                      ariaLabel="Пролистать влево"
-                    />
-                  </div>
-                </div>
-              ) : null}
-            </div>
-          ) : null}
+          {rowData?.length
+            ? rendrerTariffsTableRows({
+                rowData,
+                activeCardIndex,
+                isScrollAvailable,
+                showNextButton,
+                showPrevButton,
+                nextClick,
+                prevClick,
+              })
+            : null}
           {isScrollAvailable ? (
             <div className="absolute top-0 right-0 bottom-0 w-[84px] bg-opacity-to-white" />
           ) : null}
@@ -76,3 +63,48 @@ export const TariffsTable = JSX<TariffsTableProps>(
     );
   },
 );
+
+interface rendrerTariffsTableRowsProps {
+  rowData: {
+    header: TariffsTableRowHeader;
+    data: TariffsTableCellData[][];
+  }[];
+  activeCardIndex: number;
+  isScrollAvailable: boolean | 0;
+  showNextButton: boolean | 0;
+  showPrevButton: boolean | 0;
+  nextClick: () => void;
+  prevClick: () => void;
+}
+
+function rendrerTariffsTableRows(params: rendrerTariffsTableRowsProps) {
+  const {
+    rowData,
+    activeCardIndex,
+    isScrollAvailable,
+    showNextButton,
+    showPrevButton,
+    nextClick,
+    prevClick,
+  } = params;
+  return (
+    <div className="relative">
+      {rowData.map((row, i, { length }) => (
+        <TariffsTableRow
+          key={String(i)}
+          row={row}
+          isLastRow={i + 1 === length}
+          activeCardIndex={activeCardIndex}
+        />
+      ))}
+      {isScrollAvailable
+        ? TariffsTableNavigation({
+            showNextButton,
+            showPrevButton,
+            nextClick,
+            prevClick,
+          })
+        : null}
+    </div>
+  );
+}

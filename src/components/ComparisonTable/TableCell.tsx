@@ -4,8 +4,9 @@ import { BORDER_CLASSES, DIVIDER_CLASSES, GRADIENT } from './constants';
 
 export interface TableCellProps {
   cell: CellData[];
-  isLastRow: boolean;
-  isFirstRow: boolean;
+  isLastRow?: boolean;
+  isFirstRow?: boolean;
+  rowHeader?: string;
   isFillGradient: boolean;
 }
 
@@ -16,7 +17,7 @@ export const TableCell = JSX<TableCellProps>(({ cell, isFirstRow, isLastRow, isF
 
   const cellClasses = `mx-7 h-full ${DIVIDER_CLASSES} ${
     isFillGradient && isFirstRow ? 'border-t' : ''
-  } ${!isLastRow ? 'border-solid' : ''}`;
+  } ${!isLastRow ? 'border-solid' : 'border-b-0'}`;
 
   return (
     <div className={cellWrapperClasses} role="cell">

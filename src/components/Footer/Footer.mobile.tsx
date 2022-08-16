@@ -35,7 +35,7 @@ export const Footer = JSX<FooterProps>(
     return (
       <footer className={`px-4 py-[26px] bg-white ${className}`}>
         <Contacts className="overflow-hidden" items={contacts} context={context} hasButton />
-        <Accordion className="p-0 pt-0 pb-0 mb-4" {...propsTextBlock} />
+        <Accordion className="!p-0 mb-4" {...propsTextBlock} />
         <div>{subMenu?.map(renderSubMenuItem)}</div>
         <MobileAppTile
           context={context}
@@ -58,9 +58,9 @@ export const Footer = JSX<FooterProps>(
 const renderSubMenuItem = (menu: SubMenuItem, i: number) => {
   const { icon, href, text } = menu;
   return (
-    <Button key={`footer-${i}`} href={href} className="flex text-sm mb-4">
+    <Button version="link" key={`footer-${i}`} href={href} className="flex text-sm mb-4">
       {icon ? <Icon className="pr-1" name={icon} width="24" height="24" asSVG /> : null}
-      <span className="pl-0.5 font-medium">{text}</span>
+      <span className="pl-2.5 font-medium text-primary-text">{text}</span>
     </Button>
   );
 };

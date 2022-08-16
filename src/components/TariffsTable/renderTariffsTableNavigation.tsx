@@ -1,7 +1,7 @@
 import { ArrowButton } from '../../ui-kit/Button/ArrowButton';
 export interface TariffsTableNavigationProps {
-  showNextButton: boolean | 0;
-  showPrevButton: boolean | 0;
+  showNextButton: boolean;
+  showPrevButton: boolean;
   nextClick: () => void;
   prevClick: () => void;
 }

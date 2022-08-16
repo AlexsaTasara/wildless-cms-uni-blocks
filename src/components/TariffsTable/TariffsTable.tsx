@@ -70,9 +70,9 @@ interface rendrerTariffsTableRowsProps {
     data: TariffsTableCellData[][];
   }[];
   activeCardIndex: number;
-  isScrollAvailable: boolean | 0;
-  showNextButton: boolean | 0;
-  showPrevButton: boolean | 0;
+  isScrollAvailable: boolean;
+  showNextButton: boolean;
+  showPrevButton: boolean;
   nextClick: () => void;
   prevClick: () => void;
 }

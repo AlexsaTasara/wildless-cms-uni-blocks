@@ -2,6 +2,7 @@ import { JSX } from '@redneckz/uni-jsx';
 import { BlockVersion } from '../../model/BlockVersion';
 import { Button } from '../../ui-kit/Button/Button';
 import { Heading } from '../../ui-kit/Heading/Heading';
+import { Icon } from '../../ui-kit/Icon/Icon';
 import { Img } from '../../ui-kit/Img/Img';
 import { SwipeListControl } from '../../ui-kit/SwipeListControl/SwipeListControl';
 import type { GalleryCard } from './GalleryContent';
@@ -44,7 +45,6 @@ function renderCard(card: GalleryCard, key: number) {
     <div
       className={`box-border horizontal-list-item border-solid border rounded-md border-main-stroke p-4 flex flex-col
       ${blockStyle[card.version ?? 'primary']}`}
-      role="listitem"
       key={key}
     >
       <div>
@@ -57,8 +57,18 @@ function renderCard(card: GalleryCard, key: number) {
         {card.description ? renderDescription(card) : null}
         {card.items?.length ? renderItems(card.items) : null}
       </div>
-      {card?.button?.href ? <Button className="mt-3" {...card.button} /> : null}
+      {card?.button?.text ? renderButton(card.button) : null}
     </div>
+  );
+}
+
+function renderButton(button) {
+  return (
+    <Button
+      className="mt-3"
+      appendLeft={button?.icon && <Icon name={button?.icon} width="24px" height="24px" asSVG />}
+      {...button}
+    />
   );
 }
 
@@ -77,8 +87,8 @@ function renderDescription(card: GalleryCard) {
 function renderItems(items: GalleryItem[]) {
   return (
     <section className="mt-3">
-      {items.map((item) => (
-        <div>
+      {items.map((item, i) => (
+        <div key={String(i)}>
           <span className="text-m-md font-medium">{item.title}</span>
           <span className="text-m-sm text-secondary-text pl-2">{item.text}</span>
         </div>

@@ -9,13 +9,13 @@ export const useComparisonTableScroll = <ColData>({
   activeCardIndex: number;
   setActiveCardIndex: (_: number) => void;
 }) => {
-  const nextClick = () => setActiveCardIndex(activeCardIndex + 1);
-  const prevClick = () => setActiveCardIndex(activeCardIndex - 1);
+  const onNextClick = () => setActiveCardIndex(activeCardIndex + 1);
+  const onPrevClick = () => setActiveCardIndex(activeCardIndex - 1);
 
   const isScrollAvailable = Boolean(colData?.length && colData.length > colsLengthForScroll);
   const showNextButton =
     isScrollAvailable && colData?.length - activeCardIndex > colsLengthForScroll;
   const showPrevButton = isScrollAvailable && activeCardIndex > 0;
 
-  return { nextClick, prevClick, isScrollAvailable, showNextButton, showPrevButton };
+  return { onNextClick, onPrevClick, isScrollAvailable, showNextButton, showPrevButton };
 };

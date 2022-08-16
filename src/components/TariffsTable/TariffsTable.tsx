@@ -4,7 +4,10 @@ import type { UniBlockProps } from '../../types';
 
 import { Heading } from '../../ui-kit/Heading/Heading';
 import { COLS_LENGTH_FOR_SCROLL } from './constants';
-import { TariffsTableNavigation } from './renderTariffsTableNavigation';
+import {
+  renderTariffsTableNavigation,
+  TariffsTableNavigationProps,
+} from './renderTariffsTableNavigation';
 import type {
   TariffsTableCellData,
   TariffsTableContent,
@@ -24,7 +27,7 @@ export const TariffsTable = JSX<TariffsTableProps>(
       data: colData.map((col) => col?.[i] || [{}]),
     }));
 
-    const { nextClick, prevClick, isScrollAvailable, showNextButton, showPrevButton } =
+    const { onNextClick, onPrevClick, isScrollAvailable, showNextButton, showPrevButton } =
       useComparisonTableScroll({
         colData,
         colsLengthForScroll: COLS_LENGTH_FOR_SCROLL,
@@ -51,8 +54,8 @@ export const TariffsTable = JSX<TariffsTableProps>(
                 isScrollAvailable,
                 showNextButton,
                 showPrevButton,
-                nextClick,
-                prevClick,
+                onNextClick,
+                onPrevClick,
               })
             : null}
           {isScrollAvailable ? (
@@ -64,29 +67,17 @@ export const TariffsTable = JSX<TariffsTableProps>(
   },
 );
 
-interface rendrerTariffsTableRowsProps {
+type TariffsTableRowsProps = {
   rowData: {
     header: TariffsTableRowHeader;
     data: TariffsTableCellData[][];
   }[];
   activeCardIndex: number;
   isScrollAvailable: boolean;
-  showNextButton: boolean;
-  showPrevButton: boolean;
-  nextClick: () => void;
-  prevClick: () => void;
-}
+} & TariffsTableNavigationProps;
 
-function rendrerTariffsTableRows(params: rendrerTariffsTableRowsProps) {
-  const {
-    rowData,
-    activeCardIndex,
-    isScrollAvailable,
-    showNextButton,
-    showPrevButton,
-    nextClick,
-    prevClick,
-  } = params;
+function rendrerTariffsTableRows(props: TariffsTableRowsProps) {
+  const { rowData, activeCardIndex, isScrollAvailable, ...navProps } = props;
   return (
     <div className="relative">
       {rowData.map((row, i, { length }) => (
@@ -97,14 +88,7 @@ function rendrerTariffsTableRows(params: rendrerTariffsTableRowsProps) {
           activeCardIndex={activeCardIndex}
         />
       ))}
-      {isScrollAvailable
-        ? TariffsTableNavigation({
-            showNextButton,
-            showPrevButton,
-            nextClick,
-            prevClick,
-          })
-        : null}
+      {isScrollAvailable ? renderTariffsTableNavigation(navProps) : null}
     </div>
   );
 }

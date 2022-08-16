@@ -2,19 +2,23 @@ import { ArrowButton } from '../../ui-kit/Button/ArrowButton';
 export interface TariffsTableNavigationProps {
   showNextButton: boolean;
   showPrevButton: boolean;
-  nextClick: () => void;
-  prevClick: () => void;
+  onNextClick: () => void;
+  onPrevClick: () => void;
 }
 
-export function TariffsTableNavigation(props: TariffsTableNavigationProps) {
-  const { showNextButton, showPrevButton, nextClick, prevClick } = props;
+export function renderTariffsTableNavigation(props: TariffsTableNavigationProps) {
+  const { showNextButton, showPrevButton, onNextClick, onPrevClick } = props;
   return (
     <div>
       <div className="absolute top-7 right-7 z-10">
-        <ArrowButton onClick={nextClick} disabled={!showNextButton} ariaLabel="Пролистать вправо" />
+        <ArrowButton
+          onClick={onNextClick}
+          disabled={!showNextButton}
+          ariaLabel="Пролистать вправо"
+        />
         <ArrowButton
           className="mt-4 rotate-180"
-          onClick={prevClick}
+          onClick={onPrevClick}
           disabled={!showPrevButton}
           ariaLabel="Пролистать влево"
         />

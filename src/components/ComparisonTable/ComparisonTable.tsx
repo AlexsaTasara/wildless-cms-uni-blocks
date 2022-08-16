@@ -38,7 +38,7 @@ export const ComparisonTable = JSX<ComparisonTableProps>(
       }))
       .slice(0, isShowAllRow ? rowHeaders.length : visibleRowLength);
 
-    const { nextClick, prevClick, isScrollAvailable, showNextButton, showPrevButton } =
+    const { onNextClick, onPrevClick, isScrollAvailable, showNextButton, showPrevButton } =
       useComparisonTableScroll({
         colData,
         colsLengthForScroll: COLS_LENGTH_FOR_SCROLL,
@@ -91,13 +91,13 @@ export const ComparisonTable = JSX<ComparisonTableProps>(
                 <div>
                   <div className="absolute top-7 right-7 z-10">
                     <ArrowButton
-                      onClick={nextClick}
+                      onClick={onNextClick}
                       disabled={!showNextButton}
                       ariaLabel="Пролистать вправо"
                     />
                     <ArrowButton
                       className="mt-4 rotate-180"
-                      onClick={prevClick}
+                      onClick={onPrevClick}
                       disabled={!showPrevButton}
                       ariaLabel="Пролистать влево"
                     />

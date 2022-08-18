@@ -38,7 +38,7 @@ function renderCardsLayout(isScroll: boolean, cards: GalleryCard[], context) {
   return isScroll ? (
     <SwipeListControl context={context}>{cards?.map(renderCard)}</SwipeListControl>
   ) : (
-    <div className="grid gap-[24px]">{cards?.map(renderCard)}</div>
+    <div className="grid gap-[14px]">{cards?.map(renderCard)}</div>
   );
 }
 
@@ -52,7 +52,7 @@ function renderCard(card: GalleryCard, key: number) {
       <div>
         {card.image?.src ? (
           <div className="flex justify-center">
-            <Img className="mb-6" image={card.image} />
+            <Img className="mb-3.5" image={card.image} />
           </div>
         ) : null}
         {card.title ? <h4 className={`font-medium text-m-title-xs m-0`}>{card.title}</h4> : null}

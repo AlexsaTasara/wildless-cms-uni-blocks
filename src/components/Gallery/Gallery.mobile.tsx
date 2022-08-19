@@ -21,9 +21,15 @@ export const Gallery = JSX<GalleryProps>(
         className={`relative font-sans text-primary-text bg-white px-4 py-6 overflow-hidden ${className}`}
       >
         <div className="flex flex-col items-center mb-5">
-          <Heading headingType="h5" className="text-center" title={title} />
+          {title ? (
+            <Heading
+              headingType="h3"
+              className={`text-center ${description ? 'mb-2' : 'mb-5'}`}
+              title={title}
+            />
+          ) : null}
           {description ? (
-            <div className="font-normal text-m-md max-w-[600px] mt-2 text-center">
+            <div className="font-normal text-m-md max-w-[600px] text-center mb-5">
               {description}
             </div>
           ) : null}
@@ -77,7 +83,7 @@ function renderButton(button) {
 function renderDescription(card: GalleryCard) {
   return (
     <div
-      className={`text-secondary-text mt-1 text-m-base ${
+      className={`text-secondary-text mt-1 text-m-sm ${
         card.version === 'secondary' ? 'text-white opacity-80' : ''
       }`}
     >
@@ -92,7 +98,7 @@ function renderItems(items: GalleryItem[]) {
       {items.map((item, i) => (
         <div key={String(i)}>
           <span className="text-m-md font-medium">{item.title}</span>
-          <span className="text-m-base text-secondary-text pl-2">{item.text}</span>
+          <span className="text-m-sm text-secondary-text pl-2">{item.text}</span>
         </div>
       ))}
     </section>

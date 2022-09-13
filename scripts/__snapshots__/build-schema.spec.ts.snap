@@ -94,6 +94,23 @@ Object {
       "title": "Преимущество",
       "type": "object",
     },
+    "BenefitItemProps": Object {
+      "properties": Object {
+        "benefit": Object {
+          "$ref": "#/definitions/Benefit",
+        },
+        "benefitsVersion": Object {
+          "$ref": "#/definitions/IconVersion",
+        },
+        "version": Object {
+          "$ref": "#/definitions/BlockVersion",
+        },
+      },
+      "required": Array [
+        "benefit",
+      ],
+      "type": "object",
+    },
     "BenefitsBlockContent": Object {
       "properties": Object {
         "benefits": Object {
@@ -194,13 +211,14 @@ Object {
                 "type": "string",
               },
               "name": Object {
-                "title": "Заголовок плитки",
+                "title": "Бонусы",
                 "type": "string",
               },
             },
-            "title": "Список плиток",
+            "title": "Плитка",
             "type": "object",
           },
+          "title": "Список плиток",
           "type": "array",
         },
         "description": Object {
@@ -212,7 +230,7 @@ Object {
           "type": "string",
         },
       },
-      "title": "Плитка",
+      "title": "Блок Бонусы",
       "type": "object",
     },
     "ButtonContent": Object {
@@ -781,6 +799,13 @@ Object {
                   "properties": Object {
                     "image": Object {
                       "$ref": "#/definitions/Picture",
+                      "default": Object {
+                        "format": "webp",
+                        "size": Object {
+                          "height": 190,
+                          "width": 210,
+                        },
+                      },
                       "title": "Изображение календарного месяца",
                     },
                     "name": Object {
@@ -1093,6 +1118,13 @@ Object {
         "Кошелёк с деньгами",
       ],
       "title": "Иконка",
+      "type": "string",
+    },
+    "IconVersion": Object {
+      "enum": Array [
+        "normal",
+        "white",
+      ],
       "type": "string",
     },
     "ImageContent": Object {
@@ -1627,6 +1659,9 @@ Object {
           "title": "Преимущества",
           "type": "array",
         },
+        "benefitsVersion": Object {
+          "$ref": "#/definitions/IconVersion",
+        },
         "blockListType": Object {
           "const": "ProductBlock",
           "type": "string",
@@ -1701,6 +1736,9 @@ Object {
           "title": "Преимущества",
           "type": "array",
         },
+        "benefitsVersion": Object {
+          "$ref": "#/definitions/IconVersion",
+        },
         "breadcrumbs": Object {
           "items": Object {
             "$ref": "#/definitions/LinkProps",
@@ -1763,6 +1801,9 @@ Object {
           "minItems": 2,
           "title": "Преимущества",
           "type": "array",
+        },
+        "benefitsVersion": Object {
+          "$ref": "#/definitions/IconVersion",
         },
         "buttons": Object {
           "items": Object {
@@ -2016,27 +2057,17 @@ Object {
           "title": "Список",
           "type": "array",
         },
-        "recommendations": Object {
-          "items": Object {
-            "$ref": "#/definitions/RecommendationCardTypes",
-          },
-          "title": "Карточки",
-          "type": "array",
-        },
         "socialMedia": Object {
           "items": Object {
             "$ref": "#/definitions/LinkProps",
           },
           "minItems": 3,
-          "title": "Ссылка",
+          "title": "Соц сети",
           "type": "array",
         },
         "title": Object {
           "title": "Заголовок",
           "type": "string",
-        },
-        "version": Object {
-          "$ref": "#/definitions/BlockVersion",
         },
       },
       "type": "object",
@@ -2048,14 +2079,6 @@ Object {
             "$ref": "#/definitions/RecommendationCardTypes",
           },
           "title": "Карточки",
-          "type": "array",
-        },
-        "socialMedia": Object {
-          "items": Object {
-            "$ref": "#/definitions/LinkProps",
-          },
-          "minItems": 3,
-          "title": "Ссылка",
           "type": "array",
         },
         "title": Object {

@@ -2,7 +2,7 @@ import { Picture } from '../../model/Picture';
 
 export interface ContactInformationContent {
   title?: string;
-  cards?: OneCard[];
+  contactCards?: OneCard[];
 }
 
 export interface OneCard {

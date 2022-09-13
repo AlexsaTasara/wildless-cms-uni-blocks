@@ -48,13 +48,13 @@ export const ONECARD3: OneCard = {
 
 export const ALLCARDS: ContactInformationContent = {
   title: 'Контактная информация',
-  cards: [ONECARD1, ONECARD2, ONECARD3],
+  contactCards: [ONECARD1, ONECARD2, ONECARD3],
 };
 
-// export default {
-//   default: (
-//     <div className="container grid grid-cols-12">
-//       <ContactInformation className="col-span-12" context={context} {...ALLCARDS} />
-//     </div>
-//   ),
-// };
+export default {
+  default: (
+    <div className="container grid grid-cols-12">
+      <ContactInformation className="col-span-12" context={context} {...ALLCARDS} />
+    </div>
+  ),
+};

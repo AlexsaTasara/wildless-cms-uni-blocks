@@ -7,7 +7,7 @@ import type { ContactData, ContactInformationContent, OneCard } from './ContactI
 export interface ContactInformationProps extends ContactInformationContent, UniBlockProps {}
 
 export const ContactInformation = JSX<ContactInformationProps>((props) => {
-  const { className = '', title, cards, anchor = null } = props;
+  const { className = '', title, contactCards, anchor = null } = props;
   return (
     <section id={anchor} className={`font-sans text-primary-text py-10 bg-white ${className}`}>
       <section>
@@ -19,7 +19,7 @@ export const ContactInformation = JSX<ContactInformationProps>((props) => {
           />
         ) : null}
       </section>
-      {cards ? <div className="flex flex-row">{cards.map(renderCard)}</div> : null}
+      {contactCards ? <div className="flex flex-row">{contactCards.map(renderCard)}</div> : null}
     </section>
   );
 });

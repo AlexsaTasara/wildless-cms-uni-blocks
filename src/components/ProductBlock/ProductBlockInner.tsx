@@ -2,9 +2,9 @@ import { JSX } from '@redneckz/uni-jsx';
 import type { UniBlockProps } from '../../types';
 import { ButtonSection } from '../../ui-kit/Button/ButtonSection';
 import { Description } from '../../ui-kit/Description/Description';
+import { Heading } from '../../ui-kit/Heading/Heading';
 import { Img } from '../../ui-kit/Img/Img';
 import { List } from '../../ui-kit/List/List';
-import { Heading } from '../../ui-kit/Heading/Heading';
 import { BaseTile } from '../BaseTile/BaseTile';
 import type { ProductBlockInnerContent } from './ProductBlockContent';
 import { renderBenefit } from './renderBenefit';
@@ -60,7 +60,7 @@ export const ProductBlockInner = JSX<ProductBlockInnerProps>(
             ) : null}
           </BaseTile>
         </div>
-        {image?.src && <Img className="mt-auto" image={image} />}
+        {image?.src && <Img className="mt-[-50px]" image={image} />}
       </div>
     );
   },

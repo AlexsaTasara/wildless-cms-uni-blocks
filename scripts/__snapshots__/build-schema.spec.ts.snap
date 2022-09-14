@@ -167,6 +167,32 @@ Object {
       ],
       "title": "Содержимое блока",
     },
+    "BlockItemCommonProps": Object {
+      "properties": Object {
+        "blocks": Object {
+          "items": Object {
+            "$ref": "#/definitions/BlockDef",
+          },
+          "maxItems": 10,
+          "title": "Блоки",
+          "type": "array",
+        },
+        "columns": Object {
+          "$ref": "#/definitions/ColumnsCount",
+        },
+        "isExpanded": Object {
+          "title": "Отображать в раскрытом виде",
+          "type": "boolean",
+        },
+        "label": Object {
+          "default": "Список",
+          "title": "Название",
+          "type": "string",
+        },
+      },
+      "title": "Элемент списка",
+      "type": "object",
+    },
     "BlockVersion": Object {
       "enum": Array [
         "primary",
@@ -753,6 +779,11 @@ Object {
               "width": 140,
             },
           },
+        },
+        "isDotted": Object {
+          "default": true,
+          "title": "Буллиты",
+          "type": "boolean",
         },
         "items": Object {
           "items": Object {
@@ -1547,9 +1578,8 @@ Object {
       "properties": Object {
         "blockItems": Object {
           "items": Object {
-            "$ref": "#/definitions/blockItemCommonProps",
+            "$ref": "#/definitions/BlockItemCommonProps",
           },
-          "maxItems": 10,
           "title": "Список",
           "type": "array",
         },
@@ -2717,31 +2747,6 @@ Object {
         "href",
       ],
       "title": "Ссылка",
-      "type": "object",
-    },
-    "blockItemCommonProps": Object {
-      "properties": Object {
-        "blocks": Object {
-          "items": Object {
-            "$ref": "#/definitions/BlockDef",
-          },
-          "title": "Блоки",
-          "type": "array",
-        },
-        "columns": Object {
-          "$ref": "#/definitions/ColumnsCount",
-        },
-        "isExpanded": Object {
-          "title": "Отображать в раскрытом виде",
-          "type": "boolean",
-        },
-        "label": Object {
-          "default": "Список",
-          "title": "Название",
-          "type": "string",
-        },
-      },
-      "title": "Элемент списка",
       "type": "object",
     },
   },

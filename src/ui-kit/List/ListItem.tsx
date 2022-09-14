@@ -31,14 +31,14 @@ export const ListItem = JSX<ListItemProps>(
   ({ className = '', isDotted = true, children, version = 'primary' }) => {
     return (
       <div className={`font-sans flex items-start ${className}`} role="listitem">
-        {isDotted && <div className={getListStyle(version)} />}
+        {isDotted ? <div className={getListStyle(version)} /> : null}
         <span>{children}</span>
       </div>
     );
   },
 );
 
-const getListStyle = (version: ListItemVersion) => {
+export const getListStyle = (version: ListItemVersion) => {
   const size = {
     primary: 'w-2 h-2 min-w-2 min-h-2',
     secondary: 'w-2 h-2 min-w-2 min-h-2',

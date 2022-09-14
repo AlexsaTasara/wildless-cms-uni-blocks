@@ -28,6 +28,7 @@ import { StepsBlock } from './StepsBlock/StepsBlock';
 import { TariffsTable } from './TariffsTable/TariffsTable';
 import { TextBlock } from './TextBlock/TextBlock';
 import { Tile } from './Tile/Tile';
+import { GroupBlock } from './GroupBlock/GroupBlock';
 
 export const Blocks = {
   Accordion,
@@ -60,4 +61,5 @@ export const Blocks = {
   Tile,
   Navigation,
   Placeholder,
+  GroupBlock,
 };

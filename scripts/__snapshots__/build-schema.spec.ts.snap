@@ -458,6 +458,23 @@ Object {
       "title": "Сравнительная таблица",
       "type": "object",
     },
+    "ContactData": Object {
+      "properties": Object {
+        "label": Object {
+          "type": "string",
+        },
+        "textColor": Object {
+          "$ref": "#/definitions/TextColorVersion",
+        },
+        "value": Object {
+          "items": Object {
+            "type": "string",
+          },
+          "type": "array",
+        },
+      },
+      "type": "object",
+    },
     "ContactInfo": Object {
       "properties": Object {
         "description": Object {
@@ -473,6 +490,20 @@ Object {
         },
       },
       "title": "Контакт",
+      "type": "object",
+    },
+    "ContactInformationContent": Object {
+      "properties": Object {
+        "contactCards": Object {
+          "items": Object {
+            "$ref": "#/definitions/OneCard",
+          },
+          "type": "array",
+        },
+        "title": Object {
+          "type": "string",
+        },
+      },
       "type": "object",
     },
     "ContactType": Object {
@@ -1493,6 +1524,23 @@ Object {
         },
       },
       "title": "Блок табов",
+      "type": "object",
+    },
+    "OneCard": Object {
+      "properties": Object {
+        "data": Object {
+          "items": Object {
+            "$ref": "#/definitions/ContactData",
+          },
+          "type": "array",
+        },
+        "icon": Object {
+          "$ref": "#/definitions/Picture",
+        },
+        "label": Object {
+          "type": "string",
+        },
+      },
       "type": "object",
     },
     "OtherProductsContent": Object {
@@ -2536,6 +2584,20 @@ Object {
         "Второстепенная прозрачная",
       ],
       "title": "Цвет блока",
+      "type": "string",
+    },
+    "TextColorVersion": Object {
+      "enum": Array [
+        "red",
+        "green",
+        "black",
+      ],
+      "enumNames": Array [
+        "Красный",
+        "Зеленый",
+        "Черный",
+      ],
+      "title": "Цвет текста",
       "type": "string",
     },
     "TileBlockListDef": Object {

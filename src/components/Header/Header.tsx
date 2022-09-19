@@ -22,10 +22,12 @@ export const Header = JSX<HeaderProps>(
   ({
     className = '',
     defaultLocation = 'Москва',
+    showSubMenu = true,
     bgColor = 'bg-white',
     context,
     topItems,
     anchor = null,
+    logo,
   }) => {
     const router = context.useRouter();
     const sitemap = useSitemap(context.useAsyncData);
@@ -48,7 +50,7 @@ export const Header = JSX<HeaderProps>(
       <header className={`pt-6 pb-8 px-20 ${bgColor} ${className}`} id={anchor}>
         <div className="container">
           <div className="flex items-center">
-            <Logo className="mr-8" bgColor={bgColor} />
+            <Logo className="mr-8" bgColor={bgColor} logo={logo} />
             {topMenu}
             <HeaderSecondaryMenu
               context={context}
@@ -58,7 +60,9 @@ export const Header = JSX<HeaderProps>(
             />
           </div>
           <div className={`mt-6 h-[1px] ${BORDER_COLORS[bgColor]}`} />
-          <HeaderSubMenu context={context} subItems={activeTopItem?.items} bgColor={bgColor} />
+          {showSubMenu && activeTopItem?.items?.length ? (
+            <HeaderSubMenu context={context} subItems={activeTopItem.items} bgColor={bgColor} />
+          ) : null}
         </div>
       </header>
     );

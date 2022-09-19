@@ -11,6 +11,7 @@ import { Gallery } from './Gallery/Gallery';
 import { GracePeriod } from './GracePeriod/GracePeriod';
 import { Header } from './Header/Header';
 import { Headline } from './Headline/Headline';
+import { Insurance } from './Insurance/Insurance';
 import { LinkDocs } from './LinkDocs/LinkDocs';
 import { MiniGallery } from './MiniGallery/MiniGallery';
 import { MobileAppTile } from './MobileAppTile/MobileAppTile';
@@ -21,7 +22,6 @@ import { PictureText } from './PictureText/PictureText';
 import { Placeholder } from './Placeholder/Placeholder';
 import { ProductBlock } from './ProductBlock/ProductBlock';
 import { ProductGallery } from './ProductGallery/ProductGallery';
-import { ProductGalleryGreen } from './ProductGalleryGreen/ProductGalleryGreen';
 import { ProductTile } from './ProductTile/ProductTile';
 import { PromoTile } from './PromoTile/PromoTile';
 import { Recommendation } from './Recommendation/Recommendation';
@@ -30,6 +30,7 @@ import { TariffsTable } from './TariffsTable/TariffsTable';
 import { TextBlock } from './TextBlock/TextBlock';
 import { Tile } from './Tile/Tile';
 import { GroupBlock } from './GroupBlock/GroupBlock';
+import { BonusBenefitsBlock } from './BonusBenefitsBlock/BonusBenefitsBlock';
 
 export const Blocks = {
   Accordion,
@@ -45,6 +46,7 @@ export const Blocks = {
   GracePeriod,
   Header,
   Headline,
+  Insurance,
   LinkDocs,
   MiniGallery,
   MobileAppTile,
@@ -52,7 +54,6 @@ export const Blocks = {
   PictureText,
   ProductBlock,
   ProductGallery,
-  ProductGalleryGreen,
   ProductTile,
   PromoTile,
   OtherProducts,
@@ -64,4 +65,5 @@ export const Blocks = {
   Navigation,
   Placeholder,
   GroupBlock,
+  BonusBenefitsBlock,
 };

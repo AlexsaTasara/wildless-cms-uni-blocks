@@ -20,6 +20,7 @@ export interface ContactInformationProps extends ContactInformationContent, UniB
 
 export const ContactInformation = JSX<ContactInformationProps>((props) => {
   const { className = '', title, contactCards, anchor = null } = props;
+
   return (
     <section id={anchor} className={`font-sans text-primary-text py-10 bg-white ${className}`}>
       <section>
@@ -67,6 +68,7 @@ function renderCard(card: OneCard, i: number) {
 function renderData(data: ContactData, i: number) {
   let textcol = TEXT_COLORS['green'];
   data.textColor ? (textcol = data.textColor) : null;
+
   return (
     <div key={String(i)} className="mb-8">
       <div className="gap-2">

@@ -30,6 +30,7 @@ export const Tile = JSX<TileProps>((props) => {
     children,
     buttons,
     image,
+    isDotted = true,
     className = '',
     version = 'primary',
     role,
@@ -47,7 +48,7 @@ export const Tile = JSX<TileProps>((props) => {
       <BaseTile
         context={context}
         title={
-          title && (
+          title ? (
             <Heading
               headingType={headingType}
               as="h3"
@@ -55,32 +56,37 @@ export const Tile = JSX<TileProps>((props) => {
               className={`whitespace-pre-wrap max-w-[600px] ${title ? 'mb-3' : ''}
               ${version === 'primary' ? 'text-primary-text' : ''}`}
             />
-          )
+          ) : null
         }
         buttons={
           buttons?.length ? (
-            <ButtonSection context={context} buttons={buttons} className="flex mt-9 gap-3" />
+            <ButtonSection
+              context={context}
+              buttons={buttons.map((button) => ({ ...button, className: 'w-[158px]' }))}
+              className="flex mt-9 gap-3"
+            />
           ) : null
         }
         image={image?.src && <Img className="mt-auto ml-7" image={image} />}
       >
-        {description && (
+        {description ? (
           <Description
             className="max-w-[600px] text-title-new-sm font-light"
             description={description}
           />
-        )}
+        ) : null}
         {children}
-        {renderList(items, version)}
+        {renderList(items, version, isDotted)}
       </BaseTile>
     </section>
   );
 });
 
-function renderList(items, version) {
+function renderList(items, version, isDotted: boolean) {
   return items?.length ? (
     <List
       items={items}
+      isDotted={isDotted}
       itemClassName="text-title-2xs font-light mt-2"
       version={version === 'primary' ? 'tile' : 'tile-white'}
     />

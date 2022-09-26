@@ -21,10 +21,16 @@ const buttonStyle = 'text-center font-sans select-none';
 export interface ButtonCommonProps extends ButtonProps, ButtonWithIconProps {}
 
 export const Button = JSX<ButtonCommonProps>((props) => {
-  const { text, aboveText, appendLeft, children, disabled, rounded, ...rest } = props;
+  const { text, aboveText, appendLeft, appendRight, children, disabled, rounded, ...rest } = props;
 
   const buttonInner = children ?? (
-    <ButtonInner text={text} aboveText={aboveText} appendLeft={appendLeft} rounded={rounded} />
+    <ButtonInner
+      text={text}
+      aboveText={aboveText}
+      appendLeft={appendLeft}
+      appendRight={appendRight}
+      rounded={rounded}
+    />
   );
 
   return disabled ? (
@@ -69,17 +75,19 @@ export const RegularButton = JSX<ButtonCommonProps>(
 );
 
 const DisabledButton = JSX<ButtonCommonProps>(
-  ({ className, children, ariaLabel, version = 'none', rounded }) => (
-    <div
-      role="button"
-      aria-disabled="true"
-      aria-label={ariaLabel}
-      tabIndex="-1"
-      className={`inline-block ${buttonStyle} ${buttonDisabledStyleMap[version] || ''} ${
-        rounded ? 'rounded-full' : 'rounded-md'
-      } ${className || ''}`}
-    >
-      {children}
-    </div>
-  ),
+  ({ className, children, ariaLabel, version = 'none', rounded }) => {
+    return (
+      <div
+        role="button"
+        aria-disabled="true"
+        aria-label={ariaLabel}
+        tabIndex="-1"
+        className={`inline-block ${buttonStyle} ${buttonDisabledStyleMap[version] || ''} ${
+          rounded ? 'rounded-full' : 'rounded-md'
+        } ${className || ''}`}
+      >
+        {children}
+      </div>
+    );
+  },
 );

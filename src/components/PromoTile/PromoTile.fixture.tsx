@@ -1,6 +1,6 @@
-import { context } from '../../setup-fixture';
+import { context } from '../../react/setup-fixture';
+import { getCurrentDate } from '../../utils/getCurrentDate';
 import { PromoTile } from './PromoTile';
-import { getCurrentDate } from '../../utils/getCurrentDate'
 
 export default {
   default: (

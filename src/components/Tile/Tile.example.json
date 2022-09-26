@@ -7,13 +7,21 @@
     "format": "webp",
     "size": {
       "width": 445
-    }
+    },
+    "alt": "",
+    "title": ""
   },
+  "isDotted": true,
   "items": ["Пункт 1", "Пункт 2", "Пункт 3"],
   "buttons": [
     {
       "text": "Кнопка",
-      "version": "primary"
+      "version": "primary",
+      "target": "",
+      "icon": {
+        "alt": "",
+        "title": ""
+      }
     }
   ],
   "version": "primary"

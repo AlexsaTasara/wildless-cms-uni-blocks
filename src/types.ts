@@ -45,8 +45,9 @@ export interface ContentPageMeta {
 }
 
 export interface ContentPageDef extends ContentPageMeta {
+  _customPageType?: string;
   style?: string[];
-  blocks?: BlockDef[]; //! for compatibility
+  blocks?: BlockDef[];
   slots?: SlotsMap;
   likeControl?: boolean;
   colorPalette?: ColorPalette;
@@ -71,3 +72,5 @@ export interface DaDataSuggestion<T> {
 export interface DaDataAddress {
   city?: string | null;
 }
+
+export type FuncReturnVoid<Input = unknown> = (value: Input) => void;

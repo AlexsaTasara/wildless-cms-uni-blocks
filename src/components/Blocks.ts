@@ -3,13 +3,15 @@ import { BenefitsBlock } from './BenefitsBlock/BenefitsBlock';
 import { Bonus } from './Bonus/Bonus';
 import { ComparisonTable } from './ComparisonTable/ComparisonTable';
 import { ContactInformation } from './ContactInformation/ContactInformation';
-import { CreditCalculator } from './CreditCalculator/CreditCalculator';
+import { Calculator } from './Calculator/Calculator';
 import { ExchangeRateTile } from './ExchangeRateTile/ExchangeRateTile';
 import { Footer } from './Footer/Footer';
 import { Gallery } from './Gallery/Gallery';
 import { GracePeriod } from './GracePeriod/GracePeriod';
 import { Header } from './Header/Header';
 import { Headline } from './Headline/Headline';
+import { Insurance } from './Insurance/Insurance';
+import { InsuranceAmountBlock } from './InsuranceAmountBlock/InsuranceAmountBlock';
 import { LinkDocs } from './LinkDocs/LinkDocs';
 import { MiniGallery } from './MiniGallery/MiniGallery';
 import { MobileAppTile } from './MobileAppTile/MobileAppTile';
@@ -20,7 +22,6 @@ import { PictureText } from './PictureText/PictureText';
 import { Placeholder } from './Placeholder/Placeholder';
 import { ProductBlock } from './ProductBlock/ProductBlock';
 import { ProductGallery } from './ProductGallery/ProductGallery';
-import { ProductGalleryGreen } from './ProductGalleryGreen/ProductGalleryGreen';
 import { ProductTile } from './ProductTile/ProductTile';
 import { PromoTile } from './PromoTile/PromoTile';
 import { Recommendation } from './Recommendation/Recommendation';
@@ -28,6 +29,8 @@ import { StepsBlock } from './StepsBlock/StepsBlock';
 import { TariffsTable } from './TariffsTable/TariffsTable';
 import { TextBlock } from './TextBlock/TextBlock';
 import { Tile } from './Tile/Tile';
+import { GroupBlock } from './GroupBlock/GroupBlock';
+import { BonusBenefitsBlock } from './BonusBenefitsBlock/BonusBenefitsBlock';
 
 export const Blocks = {
   Accordion,
@@ -35,13 +38,15 @@ export const Blocks = {
   Bonus,
   ComparisonTable,
   ContactInformation,
-  CreditCalculator,
+  Calculator,
   ExchangeRateTile,
   Footer,
   Gallery,
   GracePeriod,
   Header,
   Headline,
+  Insurance,
+  InsuranceAmountBlock,
   LinkDocs,
   MiniGallery,
   MobileAppTile,
@@ -49,7 +54,6 @@ export const Blocks = {
   PictureText,
   ProductBlock,
   ProductGallery,
-  ProductGalleryGreen,
   ProductTile,
   PromoTile,
   OtherProducts,
@@ -60,4 +64,6 @@ export const Blocks = {
   Tile,
   Navigation,
   Placeholder,
+  GroupBlock,
+  BonusBenefitsBlock,
 };

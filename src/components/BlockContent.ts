@@ -5,7 +5,9 @@ import type { ExchangeRateTileContent } from './ExchangeRateTile/ExchangeRateTil
 import type { FooterContent } from './Footer/FooterContent';
 import type { GalleryContent } from './Gallery/GalleryContent';
 import type { GracePeriodContent } from './GracePeriod/GracePeriodContent';
+import type { GroupBlockContent } from './GroupBlock/GroupBlockContent';
 import type { HeaderContent } from './Header/HeaderContent';
+import type { InsuranceAmountBlockContent } from './InsuranceAmountBlock/InsuranceAmountBlockContent';
 import type { LinkDocsContent } from './LinkDocs/LinkDocsContent';
 import type { LinkListContent } from './LinkList/LinkListContent';
 import type { MobileAppTileContent } from './MobileAppTile/MobileAppTileContent';
@@ -21,6 +23,8 @@ import type { StepsBlockContent } from './StepsBlock/StepsBlockContent';
 import type { TariffsTableContent } from './TariffsTable/TariffsTableContent';
 import type { TextBlockContent } from './TextBlock/TextBlockContent';
 import type { TileContent } from './Tile/TileContent';
+import type { BonusBenefitsBlockContent } from './BonusBenefitsBlock/BonusBenefitsBlockContent';
+import type { InsuranceContent } from './Insurance/InsuranceContent';
 
 /**
  * @hidden
@@ -34,6 +38,7 @@ export type BlockContent =
   | GalleryContent
   | GracePeriodContent
   | HeaderContent
+  | InsuranceAmountBlockContent
   | LinkDocsContent
   | MobileAppTileContent
   | NavigatorTabsContent
@@ -48,4 +53,7 @@ export type BlockContent =
   | TextBlockContent
   | TileContent
   | NavigationContent
-  | LinkListContent;
+  | LinkListContent
+  | GroupBlockContent
+  | BonusBenefitsBlockContent
+  | InsuranceContent;

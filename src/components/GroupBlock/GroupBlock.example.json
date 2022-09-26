@@ -1,0 +1,28 @@
+{
+  "tabs": [
+    { "title": "Таб 1", "index": 0 },
+    { "title": "Таб 2", "index": 1, "tag": "tag1" },
+    { "title": "Таб 3", "index": 2, "tag": "tag2" }
+  ],
+  "isShowCounter": true,
+  "blocks": [
+    {
+      "blockType": "ProductBlock",
+      "title": "Продуктовый блок",
+      "description": "Описание текстового блока",
+      "tags": ["tag2"]
+    },
+    {
+      "blockType": "ProductTile",
+      "title": "Продуктовая плитка",
+      "description": "Описание текстового блока",
+      "tags": ["tag1"]
+    },
+    {
+      "blockType": "ProductBlock",
+      "title": "Продуктовый блок",
+      "description": "Описание текстового блока",
+      "tags": ["tag2"]
+    }
+  ]
+}

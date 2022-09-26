@@ -2,9 +2,9 @@ import { JSX } from '@redneckz/uni-jsx';
 import type { UniBlockProps } from '../../types';
 import { ButtonSection } from '../../ui-kit/Button/ButtonSection';
 import { Description } from '../../ui-kit/Description/Description';
+import { Heading } from '../../ui-kit/Heading/Heading';
 import { Img } from '../../ui-kit/Img/Img';
 import { List } from '../../ui-kit/List/List';
-import { Heading } from '../../ui-kit/Heading/Heading';
 import { BaseTile } from '../BaseTile/BaseTile';
 import type { ProductBlockInnerContent } from './ProductBlockContent';
 import { renderBenefit } from './renderBenefit';
@@ -28,6 +28,7 @@ export const ProductBlockInner = JSX<ProductBlockInnerProps>(
     textBlockClassName = '',
   }) => {
     const textColor = version === 'secondary' ? 'text-white' : 'text-primary-text';
+
     return (
       <div className={`flex grow justify-between items-stretch ${className}`}>
         <div className={`flex flex-col ${textBlockClassName}`}>
@@ -36,13 +37,13 @@ export const ProductBlockInner = JSX<ProductBlockInnerProps>(
             title={getTitle(title, headingType)}
             buttons={getButtons(context, buttons)}
           >
-            {description && (
+            {description ? (
               <Description
                 className={`mt-4 max-w-[600px] text-md font-light ${textColor}`}
                 description={description}
               />
-            )}
-            {benefits?.filter((items) => items.label)?.length ? (
+            ) : null}
+            {benefits?.filter((_) => _.label)?.length ? (
               <div className="flex gap-6 mt-6">
                 {benefits.map((benefit, i) =>
                   renderBenefit({ benefit, version, benefitsVersion }, i),
@@ -60,22 +61,20 @@ export const ProductBlockInner = JSX<ProductBlockInnerProps>(
             ) : null}
           </BaseTile>
         </div>
-        {image?.src && <Img className="mt-auto" image={image} />}
+        {image?.src && <Img className="mt-[-50px]" image={image} />}
       </div>
     );
   },
 );
 
 const getTitle = (title, headingType) => {
-  return (
-    title && (
-      <Heading
-        headingType={headingType}
-        title={title}
-        className="whitespace-pre-wrap max-w-[600px]"
-      />
-    )
-  );
+  return title ? (
+    <Heading
+      headingType={headingType}
+      title={title}
+      className="whitespace-pre-wrap max-w-[600px]"
+    />
+  ) : null;
 };
 
 const getButtons = (context, buttons) => {

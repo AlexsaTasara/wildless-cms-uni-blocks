@@ -5,13 +5,14 @@ import { Img } from '../Img/Img';
 
 export const SearchBar = JSX<UniBlockProps>(({ className, context }) => {
   const { term, setTerm } = context.useSearch();
+
   return (
     <form className={`relative ${className || ''}`}>
       <div className="absolute rounded h-full flex items-center justify-center pl-4 max-w-[170px] gap-3.5 pointer-events-none">
         <div className="w-[24px] h-[24px]">
           <Img image="LoupeIcon" width="24" height="24" />
         </div>
-        {!term && (
+        {term ? null : (
           <label
             htmlFor="search-bar-input"
             className="font-sans font-light text-base text-secondary-text"

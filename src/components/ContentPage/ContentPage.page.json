@@ -61,11 +61,12 @@
       "type": "ProductGallery",
       "style": ["col-span-12"],
       "content": {
+        "version": "secondary",
         "slides": [
           {
             "nav": {
               "title": "Деньги на любые цели",
-              "desc": "Ставка от 12,5% годовых на срок до 5 лет"
+              "description": "Ставка от 12,5% годовых на срок до 5 лет"
             },
             "productBlock": {
               "title": "Ставка от 12,5% годовых на срок до 5 лет!»",
@@ -79,7 +80,7 @@
                   "href": "https://rshb.ru",
                   "text": "Подробнее",
                   "target": "_blank",
-                  "version": "primary"
+                  "version": "secondary"
                 }
               ],
               "image": {
@@ -103,7 +104,7 @@
           {
             "nav": {
               "title": "Для людей в возрасте",
-              "desc": "Ставка от 12,5% годовых на срок до 3 лет"
+              "description": "Ставка от 12,5% годовых на срок до 3 лет"
             },
             "productBlock": {
               "title": "Ставка от 12,5% годовых на срок до 3 лет!»",
@@ -117,7 +118,7 @@
                   "href": "https://rshb.ru",
                   "text": "Подробнее",
                   "target": "_blank",
-                  "version": "primary"
+                  "version": "secondary"
                 }
               ],
               "image": {
@@ -141,7 +142,7 @@
           {
             "nav": {
               "title": "Выгодно покупать",
-              "desc": "Дополнительные бонусные баллы за покупки"
+              "description": "Дополнительные бонусные баллы за покупки"
             },
             "productBlock": {
               "title": "Дополнительные бонусные баллы за покупки!»",
@@ -150,7 +151,7 @@
                   "href": "https://rshb.ru",
                   "text": "Подробнее",
                   "target": "_blank",
-                  "version": "primary"
+                  "version": "secondary"
                 }
               ],
               "image": {
@@ -168,7 +169,7 @@
           {
             "nav": {
               "title": "Карты Unionpay",
-              "desc": "Кэшбэк до 20% у партнеров"
+              "description": "Кэшбэк до 20% у партнеров"
             },
             "productBlock": {
               "title": "Карты Unionpay»",
@@ -182,7 +183,7 @@
                   "href": "https://rshb.ru",
                   "text": "Подробнее",
                   "target": "_blank",
-                  "version": "primary"
+                  "version": "secondary"
                 }
               ],
               "image": {
@@ -1456,7 +1457,7 @@
       "anchor": "documents",
       "content": {
         "title": "Дополнительные документы",
-        "subtitle": "Ответы на часто задаваемые вопросы",
+        "description": "Ответы на часто задаваемые вопросы",
         "icon": {
           "icon": "DocIcon"
         },
@@ -1953,11 +1954,6 @@
       }
     },
     {
-      "type": "CreditCalculator",
-      "anchor": "calculator",
-      "style": ["col-span-12"]
-    },
-    {
       "type": "Recommendation",
       "style": ["col-span-12"],
       "content": {
@@ -2148,6 +2144,94 @@
         ]
       }
     },
+    {
+      "type": "Insurance",
+      "style": ["col-span-12"],
+      "content": {
+        "title": "Страховые риски и продукты",
+        "description": "Описание",
+        "sum": 500000,
+        "image": {
+          "src": "insurance.png",
+          "title": "страхование",
+          "format": "webp",
+          "alt": "Страховые риски и продукты",
+          "size": {
+            "width": 400,
+            "height": 300
+          },
+          "sources": [
+            {
+              "src": "insurance.png 1x, insurance-2x.png 2x",
+              "format": "png"
+            }
+          ]
+        },
+        "benefits": [
+          {
+            "label": "Ликвидация организации",
+            "icon": {
+              "icon": "ShieldTickIcon"
+            }
+          },
+          {
+            "label": "Сокращение численности работников организации",
+            "icon": {
+              "icon": "ShieldTickIcon"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "InsuranceAmountBlock",
+      "style": ["col-span-12"],
+      "content": {
+        "title": "Выбор страховой суммы",
+        "button": {
+          "href": "https://rshb.ru",
+          "text": "Выбрать программу"
+        },
+        "insuranceTabs": [
+          {
+            "title": "Индивидуальный",
+            "cards": [
+              {
+                "sum": 200000,
+                "fee": 2100,
+                "icon": { "icon": "ActualBalanceIcon" }
+              },
+              {
+                "sum": 200000,
+                "fee": 2100,
+                "icon": { "icon": "ActualBalanceIcon" }
+              },
+              {
+                "sum": 200000,
+                "fee": 2100,
+                "icon": { "icon": "ActualBalanceIcon" }
+              }
+            ]
+          },
+          {
+            "title": "Семейный",
+            "cards": [
+              {
+                "sum": 400000,
+                "fee": 3600,
+                "icon": { "icon": "ActualBalanceIcon" }
+              },
+              {
+                "sum": 400000,
+                "fee": 3600,
+                "icon": { "icon": "ActualBalanceIcon" }
+              }
+            ]
+          }
+        ]
+      }
+    },
+
     {
       "type": "Footer",
       "style": ["col-span-12"],

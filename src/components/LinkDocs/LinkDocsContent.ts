@@ -1,5 +1,5 @@
 import type { LinkProps } from '../../model/LinkProps';
-import type { AlignType } from '../BaseTile/BaseTileProps';
+import type { AlignType } from '../../model/AlignType';
 import type { ListOrientation } from '../../model/ListOrientation';
 import type { Picture } from '../../model/Picture';
 
@@ -27,7 +27,7 @@ export interface LinkDocsContent {
   /** @title Заголовок */
   title?: string;
   /** @title Описание */
-  subtitle?: string;
+  description?: string;
   /** @title Название иконки */
   icon?: Picture;
   /** @title Список */

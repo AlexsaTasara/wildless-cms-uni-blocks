@@ -35,13 +35,13 @@ export const ProductBlockInner = JSX<ProductBlockInnerProps>(
           <BaseTile
             context={context}
             title={
-              title && (
+              title ? (
                 <Heading
                   headingType={headingType}
                   title={title}
                   className="whitespace-pre-wrap max-w-[600px]"
                 />
-              )
+              ) : null
             }
             buttons={
               buttons?.length ? (
@@ -56,7 +56,7 @@ export const ProductBlockInner = JSX<ProductBlockInnerProps>(
             {description ? (
               <Description className="mt-3 text-m-md" description={description} />
             ) : null}
-            {benefits?.filter((items) => items.label)?.length ? (
+            {benefits?.filter((_) => _.label)?.length ? (
               <div className="mt-3">
                 {benefits.map((benefit, i) =>
                   renderBenefit({ benefit, version, benefitsVersion }, i),

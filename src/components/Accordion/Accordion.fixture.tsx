@@ -1,14 +1,4 @@
-import { context } from '../../setup-fixture';
-import { defaultProps as GALLERY } from '../Gallery/Gallery.fixture';
-import { HEADLINE } from '../Headline/Headline.fixture';
-import { linkDocsContentExample } from '../LinkDocs/linkDocsContentExample';
-import { defaultProps as MINI_GALLERY } from '../MiniGallery/MiniGallery.fixture';
-import { PICTURE_TEXT } from '../PictureText/PictureText.fixture';
-import { PRODUCT_TILE } from '../ProductTile/ProductTile.fixture';
-import { TEXT_BLOCK } from '../TextBlock/TextBlock.fixture';
-import { TILE } from '../Tile/Tile.fixture';
-import type { AccordionProps } from './Accordion';
-import { Accordion } from './Accordion';
+import { context } from '../../react/setup-fixture';
 import type {
   GalleryBlockListDef,
   HeadlineBlockListDef,
@@ -19,6 +9,16 @@ import type {
   TextBlockBlockListDef,
   TileBlockListDef,
 } from '../../ui-kit/BlocksList/BlocksListProps';
+import { defaultProps as GALLERY } from '../Gallery/Gallery.fixture';
+import { HEADLINE } from '../Headline/Headline.fixture';
+import { linkDocsContentExample } from '../LinkDocs/linkDocsContentExample';
+import { defaultProps as MINI_GALLERY } from '../MiniGallery/MiniGallery.fixture';
+import { PICTURE_TEXT } from '../PictureText/PictureText.fixture';
+import { PRODUCT_TILE } from '../ProductTile/ProductTile.fixture';
+import { TEXT_BLOCK } from '../TextBlock/TextBlock.fixture';
+import { TILE } from '../Tile/Tile.fixture';
+import type { AccordionProps } from './Accordion';
+import { Accordion } from './Accordion';
 
 const TEXT_BLOCK_ACCORDION_BLOCK: TextBlockBlockListDef = {
   blockListType: 'TextBlock',
@@ -61,7 +61,7 @@ const MINI_GALLERY_ACCORDION_BLOCK: MiniGalleryBlockListDef = {
   ...MINI_GALLERY,
 };
 
-const propsBlock: AccordionProps = {
+const propsDefaultBlock: AccordionProps = {
   context,
   title: 'Accordion title',
   description: 'Accordion description',
@@ -101,10 +101,32 @@ const propsBlock: AccordionProps = {
   ],
 };
 
+const propsRightAlignTitleBlock: AccordionProps = {
+  context,
+  title: 'Accordion title',
+  accordionAlignTitle: 'right',
+  description: 'Accordion description',
+  accordionItems: [
+    {
+      label: 'Accordion label 1',
+      blocks: [TEXT_BLOCK_ACCORDION_BLOCK, TEXT_BLOCK_ACCORDION_BLOCK],
+    },
+    {
+      label: 'Accordion label 2',
+      blocks: [PICTURE_TEXT_ACCORDION_BLOCK],
+    },
+  ],
+};
+
 export default {
   default: (
     <div className="container grid grid-cols-12">
-      <Accordion className="col-span-12" {...propsBlock} />
+      <Accordion className="col-span-12" {...propsDefaultBlock} />
+    </div>
+  ),
+  'right-align-title': (
+    <div className="container grid grid-cols-12">
+      <Accordion className="col-span-12" {...propsRightAlignTitleBlock} />
     </div>
   ),
 };

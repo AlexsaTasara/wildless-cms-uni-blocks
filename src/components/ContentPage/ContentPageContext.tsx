@@ -1,3 +1,6 @@
+import { VNode } from '../../model/VNode';
+import type { FuncReturnVoid } from '../../types';
+
 export interface Router {
   pathname: string;
   query: Record<string, string | string[] | undefined>;
@@ -20,19 +23,36 @@ export interface Search {
   setTerm: (t: string) => void;
 }
 
-export type AsyncDataHook = <Data, Error = any>(
+export type AsyncDataHook = <Data, Err = any>(
   key: string,
-  fetcher: (key: string) => Promise<Data>,
-) => { data?: Data; error?: Error };
+  fetcher: (fetcherKey: string) => Promise<Data>,
+) => { data?: Data; error?: Err };
 
 export type GeolocationHook = (defaultLocation: string) => [string, () => void];
 
+export type SetStateAction<S> = S | ((prevState: S) => S);
+export type SetStateHook = <State>(
+  initialState: State | (() => State),
+) => [State, FuncReturnVoid<SetStateAction<State>>];
+
+export interface IntersectionObserverTagProps {
+  Tag: string;
+  children?: VNode;
+  observerCallback: IntersectionObserverCallback;
+  observerOptions?: IntersectionObserverInit;
+}
+
+export type IntersectionObserverComponent = (
+  props: IntersectionObserverTagProps & Record<string, any>,
+) => VNode;
+
 export interface ContentPageContext {
   useRouter: () => Router;
-  useState: <State>(initialState: State) => [State, (_: State) => void];
+  useState: SetStateHook;
   useAsyncData: AsyncDataHook;
   useGeolocation: GeolocationHook;
   useLikeService: () => LikeService;
   useSearch: () => Search;
   handlerDecorator?: HandlerDecorator;
+  IntersectionObserverTag: IntersectionObserverComponent;
 }

@@ -2,6 +2,7 @@ import { JSX, PropsWithChildren } from '@redneckz/uni-jsx';
 import type { BlockDef, ContentPageDef, UniBlockProps } from '../../types';
 import { changeHashOnScroll } from '../../utils/changeHashOnScroll';
 import { isSSR } from '../../utils/isSSR';
+import { style2className } from '../../utils/style2className';
 import type { BlockContent } from '../BlockContent';
 import { LikeControl } from '../LikeControl/LikeControl';
 import { Placeholder } from '../Placeholder/Placeholder';
@@ -18,8 +19,8 @@ export type BlockDecorator<VNode = any> = (
   index?: number | string,
 ) => any;
 
-export type JSXBlock = (
-  props: PropsWithChildren<UniBlockProps & BlockContent, any>,
+export type JSXBlock<BlockProps = BlockContent> = (
+  props: PropsWithChildren<UniBlockProps & BlockProps, any>,
   context?: any,
 ) => any;
 
@@ -84,7 +85,7 @@ export const ContentPage = JSX<ContentPageProps>(
           </div>
         ) : null}
 
-        {likeControl && (
+        {likeControl ? (
           <div className="flex items-end absolute bottom-0 right-0 h-full pointer-events-none">
             <LikeControl
               key="LikeControl"
@@ -92,7 +93,7 @@ export const ContentPage = JSX<ContentPageProps>(
               context={context}
             />
           </div>
-        )}
+        ) : null}
       </section>
     );
   },
@@ -107,12 +108,14 @@ function renderBlock(
     console.warn(`No block with "${type}" is registered`);
   }
   const BlockComponent = blocksRegistry[type || 'Placeholder'] || Placeholder;
+
   return blockDecorator(
     {
       blockClassName: `scroll-mt-12 ${style2className(block.style)}`,
       block,
       render: (props) => {
         const { version, content, anchor } = props.block;
+
         return (
           <BlockComponent
             key={`${type}-${i}`}
@@ -127,8 +130,4 @@ function renderBlock(
     },
     `block-${i}`,
   );
-}
-
-function style2className(style: string[] | undefined | null): string {
-  return style ? style.join(' ') : '';
 }

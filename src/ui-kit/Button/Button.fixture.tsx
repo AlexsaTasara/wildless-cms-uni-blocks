@@ -1,4 +1,4 @@
-import '../../setup-fixture';
+import '../../react/setup-fixture';
 import { Img } from '../Img/Img';
 import { Button } from './Button';
 
@@ -83,6 +83,18 @@ export default {
             }
             text="App Store"
             version="secondary"
+          />
+
+          <Button
+            href="https://www.rshb.ru/"
+            target="_blank"
+            appendRight={
+              <div>
+                <Img image={{ icon: 'TelegramIcon' }} width="20" height="16" asSVG />
+              </div>
+            }
+            text="Мы в Telegram"
+            version="primary"
           />
         </div>
       </div>

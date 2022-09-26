@@ -13,7 +13,7 @@ type EmbeddableBlocksProps = {
 export const renderBlocksList = ({ blocks, context, className, columns }: EmbeddableBlocksProps) =>
   blocks?.length ? blocks.map(renderBlock({ context, className, columns })) : null;
 
-export const renderBlock =
+const renderBlock =
   ({ context, columns, className }: EmbeddableBlocksProps) =>
   (block: BlockDef, i: number) => {
     const type = block?.blockListType;
@@ -22,6 +22,7 @@ export const renderBlock =
     }
     const columnsCountClass = columns === 2 ? 'w-1/2' : '';
     const EmbeddedBlock: JSXBlock = EmbeddableBlocks[type];
+
     return (
       <div className={`${className} ${columnsCountClass}`} key={`block_${i}`}>
         <EmbeddedBlock context={context} {...block} className="!p-0" />

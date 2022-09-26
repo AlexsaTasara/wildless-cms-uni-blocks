@@ -16,6 +16,7 @@ export function renderBenefit(
   i: number,
 ) {
   const isIconWhite = benefitsVersion === 'white' || version === 'secondary';
+
   return (
     <div key={String(i)} className="flex gap-4 items-center">
       {benefit.icon ? (
@@ -27,13 +28,13 @@ export function renderBenefit(
           asSVG
         />
       ) : null}
-      <div className="flex gap-0.5 flex-col h-full max-w-[149px]  min-w-[149px]">
+      <div className="flex gap-0.5 flex-col h-full max-w-[149px] min-w-[149px]">
         <div className={`text-xl m-0 ${benefitTitleStyleMap[version]}`}>{benefit.label}</div>
-        {benefit.description && (
+        {benefit.description ? (
           <div className={`font-light text-m-md ${benefitDescStyleMap[version]}`}>
             {benefit.description}
           </div>
-        )}
+        ) : null}
       </div>
     </div>
   );

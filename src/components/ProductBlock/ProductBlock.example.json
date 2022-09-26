@@ -12,18 +12,21 @@
     "size": {
       "width": 234,
       "height": 234
-    }
+    },
+    "alt": "",
+    "title": ""
   },
-  "items": [
-    "Элемент списка 1",
-    "Элемент списка 2",
-    "Элемент списка 3"
-  ],
+  "items": ["Элемент списка 1", "Элемент списка 2", "Элемент списка 3"],
   "isDotted": true,
   "buttons": [
     {
       "text": "Кнопка",
-      "version": "secondary"
+      "version": "secondary",
+      "target": "",
+      "icon": {
+        "alt": "",
+        "title": ""
+      }
     }
   ],
   "version": "primary",

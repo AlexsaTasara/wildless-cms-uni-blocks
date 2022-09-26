@@ -24,11 +24,26 @@ export interface DispositionItem extends LinkProps {
  * @required ["defaultLocation", "topItems"]
  */
 export interface HeaderContent extends SitemapProps {
+  /** @title Логотип */
+  logo?: {
+    /** @title Иконка логотипа */
+    image?: Picture;
+    /**
+     * @title Текст логотипа
+     */
+    title?: string;
+  };
   /**
    * @title Город по-умолчанию
    * @default Москва
    */
   defaultLocation?: string;
+  /**
+   * @title Показывать подменю
+   * @hidden
+   * @default true
+   */
+  showSubMenu?: boolean;
   /**
    * @title Фон элемента
    * @hidden

@@ -1,4 +1,4 @@
-import { context } from '../../setup-fixture';
+import { context } from '../../react/setup-fixture';
 import { ContactInformation } from './ContactInformation';
 import type { ContactData, ContactInformationContent, OneCard } from './ContactInformationContent';
 

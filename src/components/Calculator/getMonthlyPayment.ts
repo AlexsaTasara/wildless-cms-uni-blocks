@@ -15,7 +15,9 @@ interface GetMonthlyPaymentParams {
 export const getMonthlyPayment = (params: GetMonthlyPaymentParams) => {
   const { calculatorParams, paymentType, rate, sum, months } = params;
 
-  if (!calculatorParams) return 0;
+  if (!calculatorParams) {
+    return 0;
+  }
 
   const finalSum = clamp(
     sum,
@@ -25,6 +27,7 @@ export const getMonthlyPayment = (params: GetMonthlyPaymentParams) => {
 
   if (paymentType === 'annuity') {
     const annuityCoef = Number(rate) / (MONTHS_IN_YEAR * 100);
+
     return finalSum * (annuityCoef + annuityCoef / (Math.pow(1 + annuityCoef, months) - 1));
   } else {
     return finalSum / months + finalSum * (Number(rate) / 12);

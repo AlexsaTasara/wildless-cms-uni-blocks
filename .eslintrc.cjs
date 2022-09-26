@@ -23,11 +23,21 @@ module.exports = {
     jest: true,
   },
   rules: {
-    'no-nested-ternary': 'warn',
+    'padding-line-between-statements': [
+      'error',
+      { blankLine: 'always', prev: '*', next: 'return' },
+      { blankLine: 'always', prev: '*', next: 'function' },
+    ],
+    'no-nested-ternary': 'error',
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/ban-types': 'warn',
     camelcase: ['error', { allow: ['node_ids', 'node_id', 'user_name'] }],
     'import/no-unresolved': 'off',
+    curly: 'error',
+    'no-param-reassign': 'error',
+    'no-shadow': 'off',
+    '@typescript-eslint/no-shadow': 'error',
+    'default-param-last': 'error',
   },
   overrides: [
     {

@@ -8,8 +8,7 @@ import { Img } from '../../ui-kit/Img/Img';
 import { BaseTile } from '../BaseTile/BaseTile';
 import { getTileMinHeight } from '../BaseTile/getTileMinHeight';
 import { getTileRightPadding } from '../BaseTile/getTileRightPadding';
-import type { TextBenefit } from '../BenefitsBlock/BenefitsBlockContent';
-import type { ProductTileContent } from './ProductTileContent';
+import type { ProductTileContent, TextBenefit } from './ProductTileContent';
 
 export interface ProductTileProps extends ProductTileContent, UniBlockProps {}
 
@@ -61,7 +60,7 @@ export const ProductTile = JSX<ProductTileProps>(
           {description ? (
             <Description className="mt-4 max-w-[600px]" description={description} />
           ) : null}
-          {renderBenefits(benefits, version)}
+          {renderBenefits(benefits || [], version)}
 
           {additionalDescription
             ? renderAdditionalDescription(additionalDescription, version)
@@ -72,7 +71,7 @@ export const ProductTile = JSX<ProductTileProps>(
   },
 );
 
-function renderBenefits(benefits: TextBenefit[] = [], version: BlockVersion) {
+function renderBenefits(benefits: TextBenefit[], version: BlockVersion) {
   return (
     <div className="flex mt-5 mb-1">
       {benefits.length ? <div className="mr-8">{benefits.map(renderBenefitLabel)}</div> : null}
@@ -98,6 +97,7 @@ function renderBenefitDescription(benefit: TextBenefit, i: number, version = 'pr
     primary: 'text-secondary-text',
     secondary: 'text-white',
   };
+
   return (
     <div key={String(i)} className={`text-sm ${i ? 'mt-4' : ''} ${labelStyleMap[version]}`}>
       {benefit.description}
@@ -110,5 +110,6 @@ function renderAdditionalDescription(additionalDescription: string, version = 'p
     primary: 'text-secondary-text',
     secondary: 'text-white',
   };
+
   return <div className={`text-sm mt-2.5 ${descStyleMap[version]}`}>{additionalDescription}</div>;
 }

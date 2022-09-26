@@ -4,7 +4,6 @@ import { Bonus } from './Bonus/Bonus';
 import { ComparisonTable } from './ComparisonTable/ComparisonTable';
 import { ContactInformation } from './ContactInformation/ContactInformation';
 import { Calculator } from './Calculator/Calculator';
-import { CreditCalculator } from './CreditCalculator/CreditCalculator';
 import { ExchangeRateTile } from './ExchangeRateTile/ExchangeRateTile';
 import { Footer } from './Footer/Footer';
 import { Gallery } from './Gallery/Gallery';
@@ -12,6 +11,7 @@ import { GracePeriod } from './GracePeriod/GracePeriod';
 import { Header } from './Header/Header';
 import { Headline } from './Headline/Headline';
 import { Insurance } from './Insurance/Insurance';
+import { InsuranceAmountBlock } from './InsuranceAmountBlock/InsuranceAmountBlock';
 import { LinkDocs } from './LinkDocs/LinkDocs';
 import { MiniGallery } from './MiniGallery/MiniGallery';
 import { MobileAppTile } from './MobileAppTile/MobileAppTile';
@@ -39,7 +39,6 @@ export const Blocks = {
   ComparisonTable,
   ContactInformation,
   Calculator,
-  CreditCalculator,
   ExchangeRateTile,
   Footer,
   Gallery,
@@ -47,6 +46,7 @@ export const Blocks = {
   Header,
   Headline,
   Insurance,
+  InsuranceAmountBlock,
   LinkDocs,
   MiniGallery,
   MobileAppTile,

@@ -1,6 +1,6 @@
 import { JSX } from '@redneckz/uni-jsx';
+import type { ButtonProps } from './ButtonProps';
 import { Button } from './Button';
-import { ButtonProps } from './ButtonProps';
 import { Img } from '../Img/Img';
 
 export const ArrowButton = JSX<ButtonProps>(({ className, disabled, ...rest }) => (
@@ -16,7 +16,7 @@ export const ArrowButton = JSX<ButtonProps>(({ className, disabled, ...rest }) =
   >
     <Img
       className="w-4 h-4 min-w-4 min-h-4 rounded-full box-border"
-      image={{ icon: 'ArrowLeftIcon' }}
+      image={{ icon: 'ArrowLeftIcon', iconVersion: 'black' }}
       width="16"
       height="16"
       asSVG

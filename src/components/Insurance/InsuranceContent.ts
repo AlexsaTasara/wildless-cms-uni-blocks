@@ -1,14 +1,29 @@
 import type { Picture } from '../../model/Picture';
-import type { BenefitsBlockContent } from '../BenefitsBlock/BenefitsBlockContent';
+import type { InsuranceProps } from '../../model/Insurance';
 
-export type InsuranceContent = BenefitsBlockContent & {
+/**
+ * @title Преимущество
+ */
+export interface InsuranceBenefit {
+  /** @title Название */
+  label?: string;
+  /** @title Описание */
+  description?: string;
+  icon?: Picture;
+}
+
+/**
+ * @title Страховка
+ */
+export type InsuranceContent = InsuranceProps & {
   /** @title Заголовок */
   title?: string;
   /** @title Описание */
   description?: string;
-  /** @title Ежемесячный лимит */
-  monthLimit?: number;
-  /** @title Страховая сумма */
-  insuranceSum?: number;
   image?: Picture;
+  /**
+   * @title Список преимуществ
+   * @maxItems 6
+   */
+  benefits?: InsuranceBenefit[];
 };

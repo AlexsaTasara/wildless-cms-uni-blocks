@@ -1,11 +1,12 @@
-import { Insurance } from './Insurance';
-import { context } from '../../setup-fixture';
-import { Benefit } from '../BenefitsBlock/BenefitsBlockContent';
 import { Picture } from '../../model/Picture';
+import { context } from '../../react/setup-fixture';
+import type { InsuranceBenefit } from './InsuranceContent';
+import { Insurance } from './Insurance';
 
-const benefits: Benefit[] = [
+const benefits: InsuranceBenefit[] = [
   {
     label: 'Телесное повреждение',
+    description: 'Описание',
     icon: { icon: 'ShieldTickIcon' },
   },
   {
@@ -39,7 +40,7 @@ const image: Picture = {
 };
 
 export default {
-  default: (
+  'without monthly payment': (
     <div className="container grid grid-cols-12">
       <Insurance
         context={context}
@@ -48,8 +49,12 @@ export default {
         description="Покрываемые риски программы «Защита вас и ваших близких»"
         benefits={benefits}
         image={image}
-        insuranceSum={500000}
+        sum={500000}
       />
+    </div>
+  ),
+  'with monthly payment': (
+    <div className="container grid grid-cols-12">
       <Insurance
         context={context}
         className="col-span-12"
@@ -57,7 +62,7 @@ export default {
         description="Покрываемые риски программы «Защита вас и ваших близких»"
         benefits={benefits}
         image={image}
-        insuranceSum={500000}
+        sum={500000}
         monthLimit={25000}
       />
     </div>

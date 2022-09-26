@@ -1,6 +1,6 @@
 import { ListOrientation } from '../../model/ListOrientation';
 import type { Picture } from '../../model/Picture';
-import { context } from '../../setup-fixture';
+import { context } from '../../react/setup-fixture';
 import type { ButtonCommonProps } from '../../ui-kit/Button/Button';
 import { Gallery } from './Gallery';
 import { GalleryCard } from './GalleryContent';
@@ -17,13 +17,6 @@ const image: Picture = {
   title: 'money',
 };
 
-const buttonPrimary: ButtonCommonProps = {
-  href: '/credit-cards',
-  text: 'Подробнее',
-  target: '_blank',
-  version: 'secondary',
-  icon: { icon: 'BankIcon' },
-};
 const link: ButtonCommonProps = {
   href: '/credit-cards',
   text: 'Подробнее',
@@ -48,31 +41,6 @@ const cards: GalleryCard[] = [
     image,
     title: 'Вклады в любой валюте',
     description: 'О Вклады до 1,4 млн застрахованы в государственной системе страхования вкладов',
-  },
-  {
-    image,
-    title: 'Вклады в любой валюте',
-    isDotted,
-    items: defaultItems,
-  },
-  {
-    title: 'Вклады в любой валюте',
-    description: 'О Вклады до 1,4 млн застрахованы в государственной системе страхования вкладов',
-  },
-  {
-    image,
-    title: 'Вклады в любой валюте',
-  },
-  {
-    title: 'Вклады в любой валюте',
-    description: 'О Вклады до 1,4 млн застрахованы в государственной системе страхования вкладов',
-    button: buttonPrimary,
-  },
-  {
-    image,
-    title: 'Вклады в любой валюте',
-    description: 'О Вклады до 1,4 млн застрахованы в государственной системе страхования вкладов',
-    button: buttonPrimary,
     version: 'secondary',
   },
   {
@@ -80,7 +48,10 @@ const cards: GalleryCard[] = [
     title: 'Вклады в любой валюте',
     isDotted,
     items: defaultItems,
-    version: 'secondary',
+  },
+  {
+    title: 'Вклады в любой валюте',
+    description: 'О Вклады до 1,4 млн застрахованы в государственной системе страхования вкладов',
   },
 ];
 

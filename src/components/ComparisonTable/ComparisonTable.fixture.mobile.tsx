@@ -1,5 +1,5 @@
 import type { Picture } from '../../model/Picture';
-import { context } from '../../setup-fixture';
+import { context } from '../../react/setup-fixture';
 import { ComparisonTable } from './ComparisonTable';
 import type { Column } from './ComparisonTableContent';
 
@@ -14,15 +14,6 @@ const image1: Picture = {
 
 const image2: Picture = {
   src: 'card-2.png',
-  format: 'webp',
-  size: {
-    width: 100,
-    height: 63,
-  },
-};
-
-const image3: Picture = {
-  src: 'card-3.png',
   format: 'webp',
   size: {
     width: 100,
@@ -96,30 +87,6 @@ const columns: Column[] = [
       ],
     ],
   },
-  {
-    header: {
-      title: 'Профсоюзная',
-      image: image3,
-      link: {
-        text: 'Подробнее',
-        href: '/credits',
-      },
-    },
-    data: [
-      [{ label: 'Нет' }],
-      [{ label: 'Бесплатно' }],
-      [{ label: 'Есть' }],
-      [{ label: 'До 20%' }],
-      [
-        {
-          label: 'Бесплатно',
-          description: 'При обороте по карте от 10000 ₽ в месяц',
-        },
-      ],
-      [{ label: '69 рублей в месяц' }],
-      [{ description: 'Для членов профсоюзных организаций' }],
-    ],
-  },
 ];
 export default {
   default: (
@@ -131,7 +98,7 @@ export default {
         context={context}
         rowHeaders={rowHeaders}
         orientation="vertical"
-        columns={Array(2).fill(columns).flat()}
+        columns={columns}
         visibleRowLength={2}
       />
     </div>

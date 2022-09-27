@@ -19,6 +19,7 @@ import { MiniGallery } from './MiniGallery/MiniGallery';
 import { MobileAppTile } from './MobileAppTile/MobileAppTile';
 import { Navigation } from './Navigation/Navigation';
 import { NavigatorTabs } from './NavigatorTabs/NavigatorTabs';
+import { OfficeCard } from './OfficeCard/OfficeCard';
 import { OtherProducts } from './OtherProducts/OtherProducts';
 import { PictureText } from './PictureText/PictureText';
 import { Placeholder } from './Placeholder/Placeholder';
@@ -66,4 +67,5 @@ export const Blocks = {
   Placeholder,
   GroupBlock,
   BonusBenefitsBlock,
+  OfficeCard,
 };

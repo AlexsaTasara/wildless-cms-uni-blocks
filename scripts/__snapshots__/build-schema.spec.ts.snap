@@ -638,6 +638,17 @@ Object {
       "title": "Контакт",
       "type": "object",
     },
+    "ContactInformation": Object {
+      "properties": Object {
+        "info": Object {
+          "type": "string",
+        },
+        "title": Object {
+          "type": "string",
+        },
+      },
+      "type": "object",
+    },
     "ContactType": Object {
       "enum": Array [
         "tel",
@@ -1818,6 +1829,20 @@ Object {
       "title": "Направление списка",
       "type": "string",
     },
+    "Metro": Object {
+      "properties": Object {
+        "distance": Object {
+          "type": "string",
+        },
+        "name": Object {
+          "type": "string",
+        },
+        "time": Object {
+          "type": "string",
+        },
+      },
+      "type": "object",
+    },
     "MiniGalleryBlockListDef": Object {
       "default": Object {
         "blockListType": "MiniGallery",
@@ -1967,6 +1992,44 @@ Object {
         },
       },
       "title": "Блок табов",
+      "type": "object",
+    },
+    "OfficeCardContent": Object {
+      "properties": Object {
+        "contactsInfo": Object {
+          "items": Object {
+            "$ref": "#/definitions/ContactInformation",
+          },
+          "type": "array",
+        },
+        "currency": Object {
+          "items": Object {
+            "type": "string",
+          },
+          "type": "array",
+        },
+        "dates": Object {
+          "items": Object {
+            "$ref": "#/definitions/Weekday",
+          },
+          "type": "array",
+        },
+        "link": Object {
+          "type": "string",
+        },
+        "location": Object {
+          "type": "string",
+        },
+        "metros": Object {
+          "items": Object {
+            "$ref": "#/definitions/Metro",
+          },
+          "type": "array",
+        },
+        "title": Object {
+          "type": "string",
+        },
+      },
       "type": "object",
     },
     "OtherProductsContent": Object {
@@ -3254,6 +3317,18 @@ Object {
       "title": "Цвет блока",
       "type": "string",
     },
+    "TextColorVersion": Object {
+      "enum": Array [
+        "red",
+        "green",
+      ],
+      "enumNames": Array [
+        "Красный",
+        "Зеленый",
+      ],
+      "title": "Цвет текста",
+      "type": "string",
+    },
     "TileBlockListDef": Object {
       "default": Object {
         "blockListType": "Tile",
@@ -3391,6 +3466,23 @@ Object {
         "href",
       ],
       "title": "Ссылка",
+      "type": "object",
+    },
+    "Weekday": Object {
+      "properties": Object {
+        "dayOfWeek": Object {
+          "type": "string",
+        },
+        "status": Object {
+          "type": "string",
+        },
+        "textColor": Object {
+          "$ref": "#/definitions/TextColorVersion",
+        },
+        "time": Object {
+          "type": "string",
+        },
+      },
       "type": "object",
     },
   },

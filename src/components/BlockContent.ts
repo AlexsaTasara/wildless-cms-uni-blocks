@@ -1,5 +1,6 @@
 import type { BenefitsBlockContent } from './BenefitsBlock/BenefitsBlockContent';
 import type { BonusContent } from './Bonus/BonusContent';
+import type { BonusBenefitsBlockContent } from './BonusBenefitsBlock/BonusBenefitsBlockContent';
 import type { ComparisonTableContent } from './ComparisonTable/ComparisonTableContent';
 import type { ExchangeRateTileContent } from './ExchangeRateTile/ExchangeRateTileContent';
 import type { FooterContent } from './Footer/FooterContent';
@@ -7,12 +8,14 @@ import type { GalleryContent } from './Gallery/GalleryContent';
 import type { GracePeriodContent } from './GracePeriod/GracePeriodContent';
 import type { GroupBlockContent } from './GroupBlock/GroupBlockContent';
 import type { HeaderContent } from './Header/HeaderContent';
+import type { InsuranceContent } from './Insurance/InsuranceContent';
 import type { InsuranceAmountBlockContent } from './InsuranceAmountBlock/InsuranceAmountBlockContent';
 import type { LinkDocsContent } from './LinkDocs/LinkDocsContent';
 import type { LinkListContent } from './LinkList/LinkListContent';
 import type { MobileAppTileContent } from './MobileAppTile/MobileAppTileContent';
 import type { NavigationContent } from './Navigation/NavigationContent';
 import type { NavigatorTabsContent } from './NavigatorTabs/NavigatorTabsContent';
+import type { OfficeCardContent } from './OfficeCard/OfficeCardContent';
 import type { PictureTextContent } from './PictureText/PictureTextContent';
 import type { PlaceholderContent } from './Placeholder/PlaceholderContent';
 import type { ProductBlockContent } from './ProductBlock/ProductBlockContent';
@@ -23,8 +26,6 @@ import type { StepsBlockContent } from './StepsBlock/StepsBlockContent';
 import type { TariffsTableContent } from './TariffsTable/TariffsTableContent';
 import type { TextBlockContent } from './TextBlock/TextBlockContent';
 import type { TileContent } from './Tile/TileContent';
-import type { BonusBenefitsBlockContent } from './BonusBenefitsBlock/BonusBenefitsBlockContent';
-import type { InsuranceContent } from './Insurance/InsuranceContent';
 
 /**
  * @hidden
@@ -56,4 +57,5 @@ export type BlockContent =
   | LinkListContent
   | GroupBlockContent
   | BonusBenefitsBlockContent
+  | OfficeCardContent
   | InsuranceContent;

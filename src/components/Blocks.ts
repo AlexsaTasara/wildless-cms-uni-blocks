@@ -3,6 +3,7 @@ import { BenefitsBlock } from './BenefitsBlock/BenefitsBlock';
 import { Bonus } from './Bonus/Bonus';
 import { BonusBenefitsBlock } from './BonusBenefitsBlock/BonusBenefitsBlock';
 import { Calculator } from './Calculator/Calculator';
+import { Catalog } from './Catalog/Catalog';
 import { ComparisonTable } from './ComparisonTable/ComparisonTable';
 import { ExchangeRateTile } from './ExchangeRateTile/ExchangeRateTile';
 import { Footer } from './Footer/Footer';
@@ -38,6 +39,7 @@ export const Blocks = {
   Bonus,
   ComparisonTable,
   Calculator,
+  Catalog,
   ExchangeRateTile,
   Footer,
   Gallery,

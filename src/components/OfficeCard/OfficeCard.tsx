@@ -75,13 +75,14 @@ function renderMetro(metro: Metro, i: number) {
   return (
     <div key={String(i)} className="flex flex-col mb-8">
       <div className="flex gap-1 flex-row h-full ml-5 max-w-[490px]">
-        {metro.name ? (
+
+        {metro?.name ? (
           <div className="font-medium text-primary-text text-sm m-0">{metro.name}</div>
         ) : null}
-        {metro.distance ? (
+        {metro?.distance ? (
           <div className="font-normal text-sm text-secondary-text">{metro.distance}</div>
         ) : null}
-        {metro.time ? (
+        {metro?.time ? (
           <div className="font-normal text-sm text-secondary-text">{metro.time}</div>
         ) : null}
       </div>
@@ -93,10 +94,10 @@ function renderContacts(contact: ContactInformation, i: number) {
   return (
     <div key={String(i)} className="flex flex-row mb-8">
       <div className="flex gap-1 flex-col h-full ml-5 max-w-[490px]">
-        {contact.title ? (
+        {contact?.title ? (
           <div className="font-normal text-sm text-secondary-text">{contact.title}</div>
         ) : null}
-        {contact.info ? (
+        {contact?.info ? (
           <div className="font-medium text-primary-text text-xl m-0">{contact.info}</div>
         ) : null}
       </div>
@@ -106,18 +107,18 @@ function renderContacts(contact: ContactInformation, i: number) {
 
 function renderDates(curdate: Weekday, i: number) {
   let textcol = TEXT_COLORS['green'];
-  curdate.textColor ? (textcol = curdate.textColor) : null;
+  curdate?.textColor ? (textcol = curdate.textColor) : null;
 
   return (
     <div key={String(i)} className="flex flex-row mb-8">
       <div className="flex gap-1 flex-col h-full ml-5 max-w-[490px]">
-        {curdate.dayOfWeek ? (
+        {curdate?.dayOfWeek ? (
           <div className="font-normal text-sm text-secondary-text">{curdate.dayOfWeek}</div>
         ) : null}
-        {curdate.time ? (
+        {curdate?.time ? (
           <div className="font-medium text-primary-text text-xl m-0">{curdate.time}</div>
         ) : null}
-        {curdate.status ? (
+        {curdate?.status ? (
           <div className={`font-normal text-sm text-secondary-text ${TEXT_COLORS[textcol]}`}>
             {curdate.status}
           </div>

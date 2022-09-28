@@ -3,11 +3,15 @@ import { BenefitsBlock } from './BenefitsBlock/BenefitsBlock';
 import { Bonus } from './Bonus/Bonus';
 import { ComparisonTable } from './ComparisonTable/ComparisonTable';
 import { ContactInformation } from './ContactInformation/ContactInformation';
+import { BonusBenefitsBlock } from './BonusBenefitsBlock/BonusBenefitsBlock';
 import { Calculator } from './Calculator/Calculator';
+import { Catalog } from './Catalog/Catalog';
+import { ComparisonTable } from './ComparisonTable/ComparisonTable';
 import { ExchangeRateTile } from './ExchangeRateTile/ExchangeRateTile';
 import { Footer } from './Footer/Footer';
 import { Gallery } from './Gallery/Gallery';
 import { GracePeriod } from './GracePeriod/GracePeriod';
+import { GroupBlock } from './GroupBlock/GroupBlock';
 import { Header } from './Header/Header';
 import { Headline } from './Headline/Headline';
 import { Insurance } from './Insurance/Insurance';
@@ -29,8 +33,6 @@ import { StepsBlock } from './StepsBlock/StepsBlock';
 import { TariffsTable } from './TariffsTable/TariffsTable';
 import { TextBlock } from './TextBlock/TextBlock';
 import { Tile } from './Tile/Tile';
-import { GroupBlock } from './GroupBlock/GroupBlock';
-import { BonusBenefitsBlock } from './BonusBenefitsBlock/BonusBenefitsBlock';
 
 export const Blocks = {
   Accordion,
@@ -39,6 +41,7 @@ export const Blocks = {
   ComparisonTable,
   ContactInformation,
   Calculator,
+  Catalog,
   ExchangeRateTile,
   Footer,
   Gallery,

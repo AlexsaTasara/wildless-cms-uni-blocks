@@ -184,9 +184,6 @@ Object {
           "title": "Блоки",
           "type": "array",
         },
-        "columns": Object {
-          "$ref": "#/definitions/ColumnsCount",
-        },
         "isUnfolded": Object {
           "title": "Отображать в раскрытом виде",
           "type": "boolean",
@@ -225,6 +222,21 @@ Object {
       ],
       "title": "Цвет блока",
       "type": "string",
+    },
+    "BlocksCommonProps": Object {
+      "properties": Object {
+        "style": Object {
+          "default": Array [
+            "col-span-12",
+          ],
+          "items": Object {
+            "type": "string",
+          },
+          "title": "Стиль",
+          "type": "array",
+        },
+      },
+      "type": "object",
     },
     "BonusBenefit": Object {
       "properties": Object {
@@ -471,6 +483,87 @@ Object {
       "title": "Вкладка",
       "type": "object",
     },
+    "CardItem": Object {
+      "properties": Object {
+        "fee": Object {
+          "title": "Страховой взнос",
+          "type": "number",
+        },
+        "icon": Object {
+          "$ref": "#/definitions/Picture",
+          "title": "Иконка",
+        },
+        "sum": Object {
+          "title": "Страховая сумма",
+          "type": "number",
+        },
+      },
+      "title": "Кнопка выбора программы",
+      "type": "object",
+    },
+    "CatalogCardType": Object {
+      "properties": Object {
+        "button": Object {
+          "$ref": "#/definitions/ButtonWithIconProps",
+          "title": "Кнопка",
+        },
+        "colors": Object {
+          "items": Object {
+            "$ref": "#/definitions/CatalogProductColor",
+          },
+          "title": "Доступные цвета",
+          "type": "array",
+        },
+        "description": Object {
+          "title": "Описание",
+          "type": "string",
+        },
+        "image": Object {
+          "$ref": "#/definitions/Picture",
+        },
+        "price": Object {
+          "title": "Цена в рублях",
+          "type": "number",
+        },
+        "title": Object {
+          "title": "Заголовок",
+          "type": "string",
+        },
+      },
+      "type": "object",
+    },
+    "CatalogContent": Object {
+      "properties": Object {
+        "cards": Object {
+          "items": Object {
+            "$ref": "#/definitions/CatalogCardType",
+          },
+          "title": "Список карточек",
+          "type": "array",
+        },
+        "description": Object {
+          "title": "Описание",
+          "type": "string",
+        },
+        "title": Object {
+          "title": "Заголовок",
+          "type": "string",
+        },
+      },
+      "title": "Каталог",
+      "type": "object",
+    },
+    "CatalogProductColor": Object {
+      "enum": Array [
+        "black",
+        "white",
+      ],
+      "enumNames": Array [
+        "Черный",
+        "Белый",
+      ],
+      "type": "string",
+    },
     "CellData": Object {
       "properties": Object {
         "description": Object {
@@ -542,18 +635,6 @@ Object {
       },
       "title": "Шапка колонки",
       "type": "object",
-    },
-    "ColumnsCount": Object {
-      "enum": Array [
-        1,
-        2,
-      ],
-      "enumNames": Array [
-        "1 колонка",
-        "2 колонки",
-      ],
-      "title": "Количество колонок",
-      "type": "number",
     },
     "CommonCalculatorProps": Object {
       "properties": Object {
@@ -862,6 +943,16 @@ Object {
         "orientation": Object {
           "$ref": "#/definitions/ListOrientation",
           "title": "Отображать элементы в моб. версии (прокрутка shift+mouseScroll)",
+        },
+        "style": Object {
+          "default": Array [
+            "col-span-12",
+          ],
+          "items": Object {
+            "type": "string",
+          },
+          "title": "Стиль",
+          "type": "array",
         },
         "title": Object {
           "title": "Заголовок",
@@ -1191,6 +1282,16 @@ Object {
         "image": Object {
           "$ref": "#/definitions/Picture",
         },
+        "style": Object {
+          "default": Array [
+            "col-span-12",
+          ],
+          "items": Object {
+            "type": "string",
+          },
+          "title": "Стиль",
+          "type": "array",
+        },
         "title": Object {
           "title": "Заголовок",
           "type": "string",
@@ -1502,7 +1603,7 @@ Object {
       "properties": Object {
         "cards": Object {
           "items": Object {
-            "$ref": "#/definitions/cardItem",
+            "$ref": "#/definitions/CardItem",
           },
           "title": "Содержимое вкладки",
           "type": "array",
@@ -1565,19 +1666,6 @@ Object {
       "title": "Страховка",
       "type": "object",
     },
-    "InsuranceProps": Object {
-      "properties": Object {
-        "monthLimit": Object {
-          "title": "Ежемесячный лимит",
-          "type": "number",
-        },
-        "sum": Object {
-          "title": "Страховая сумма",
-          "type": "number",
-        },
-      },
-      "type": "object",
-    },
     "LinkColumnsMode": Object {
       "enum": Array [
         "single",
@@ -1627,6 +1715,16 @@ Object {
         "orientation": Object {
           "$ref": "#/definitions/ListOrientation",
           "title": "Отображать элементы в моб. версии (прокрутка shift+mouseScroll)",
+        },
+        "style": Object {
+          "default": Array [
+            "col-span-12",
+          ],
+          "items": Object {
+            "type": "string",
+          },
+          "title": "Стиль",
+          "type": "array",
         },
         "title": Object {
           "title": "Заголовок",
@@ -1713,6 +1811,16 @@ Object {
             "$ref": "#/definitions/LinkProps",
           },
           "title": "Список",
+          "type": "array",
+        },
+        "style": Object {
+          "default": Array [
+            "col-span-12",
+          ],
+          "items": Object {
+            "type": "string",
+          },
+          "title": "Стиль",
           "type": "array",
         },
       },
@@ -1829,6 +1937,16 @@ Object {
           "$ref": "#/definitions/ListOrientation",
           "title": "Отображать элементы в моб. версии (прокрутка shift+mouseScroll)",
         },
+        "style": Object {
+          "default": Array [
+            "col-span-12",
+          ],
+          "items": Object {
+            "type": "string",
+          },
+          "title": "Стиль",
+          "type": "array",
+        },
         "title": Object {
           "title": "Заголовок",
           "type": "string",
@@ -1863,12 +1981,25 @@ Object {
           "title": "Ссылка",
           "type": "string",
         },
+        "image": Object {
+          "$ref": "#/definitions/Picture",
+        },
+        "items": Object {
+          "items": Object {
+            "type": "string",
+          },
+          "title": "Список",
+          "type": "array",
+        },
         "qr": Object {
           "$ref": "#/definitions/QRCode",
         },
         "title": Object {
           "title": "Заголовок",
           "type": "string",
+        },
+        "version": Object {
+          "$ref": "#/definitions/BlockVersion",
         },
       },
       "title": "Мобильное приложение",
@@ -2071,6 +2202,16 @@ Object {
         "image": Object {
           "$ref": "#/definitions/Picture",
         },
+        "style": Object {
+          "default": Array [
+            "col-span-12",
+          ],
+          "items": Object {
+            "type": "string",
+          },
+          "title": "Стиль",
+          "type": "array",
+        },
         "title": Object {
           "title": "Заголовок",
           "type": "string",
@@ -2194,6 +2335,16 @@ Object {
         "label": Object {
           "title": "Лейбл (моб.)",
           "type": "string",
+        },
+        "style": Object {
+          "default": Array [
+            "col-span-12",
+          ],
+          "items": Object {
+            "type": "string",
+          },
+          "title": "Стиль",
+          "type": "array",
         },
         "title": Object {
           "title": "Заголовок",
@@ -2520,6 +2671,16 @@ Object {
         },
         "image": Object {
           "$ref": "#/definitions/Picture",
+        },
+        "style": Object {
+          "default": Array [
+            "col-span-12",
+          ],
+          "items": Object {
+            "type": "string",
+          },
+          "title": "Стиль",
+          "type": "array",
         },
         "title": Object {
           "title": "Заголовок",
@@ -3121,6 +3282,16 @@ Object {
           "title": "Список (моб.)",
           "type": "array",
         },
+        "style": Object {
+          "default": Array [
+            "col-span-12",
+          ],
+          "items": Object {
+            "type": "string",
+          },
+          "title": "Стиль",
+          "type": "array",
+        },
         "title": Object {
           "title": "Заголовок",
           "type": "string",
@@ -3247,6 +3418,16 @@ Object {
           "title": "Список",
           "type": "array",
         },
+        "style": Object {
+          "default": Array [
+            "col-span-12",
+          ],
+          "items": Object {
+            "type": "string",
+          },
+          "title": "Стиль",
+          "type": "array",
+        },
         "title": Object {
           "title": "Заголовок",
           "type": "string",
@@ -3335,27 +3516,6 @@ Object {
         "href",
       ],
       "title": "Ссылка",
-      "type": "object",
-    },
-    "cardItem": Object {
-      "properties": Object {
-        "fee": Object {
-          "title": "Страховой взнос",
-          "type": "number",
-        },
-        "icon": Object {
-          "$ref": "#/definitions/Picture",
-        },
-        "monthLimit": Object {
-          "title": "Ежемесячный лимит",
-          "type": "number",
-        },
-        "sum": Object {
-          "title": "Страховая сумма",
-          "type": "number",
-        },
-      },
-      "title": "Кнопка выбора программы",
       "type": "object",
     },
   },

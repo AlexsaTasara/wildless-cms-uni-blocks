@@ -1,7 +1,6 @@
 import { Accordion } from './Accordion/Accordion';
 import { BenefitsBlock } from './BenefitsBlock/BenefitsBlock';
 import { Bonus } from './Bonus/Bonus';
-import { ComparisonTable } from './ComparisonTable/ComparisonTable';
 import { ContactInformation } from './ContactInformation/ContactInformation';
 import { BonusBenefitsBlock } from './BonusBenefitsBlock/BonusBenefitsBlock';
 import { Calculator } from './Calculator/Calculator';

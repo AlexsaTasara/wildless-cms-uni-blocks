@@ -1471,6 +1471,7 @@ Object {
         "InterestGrowthIcon",
         "InterestIcon",
         "JCBIcon",
+        "Logo",
         "LoupeIcon",
         "MasterCardIcon",
         "MinusIcon",
@@ -1553,6 +1554,7 @@ Object {
         "Диаграмма роста",
         "Скидка",
         "JCB",
+        "Logo",
         "Лупа",
         "MasterCard",
         "Минус",
@@ -1632,20 +1634,23 @@ Object {
       },
       "type": "object",
     },
+    "ImgFormats": Object {
+      "enum": Array [
+        "jpeg",
+        "jpg",
+        "png",
+        "gif",
+        "webp",
+        "heif",
+        "avif",
+      ],
+      "type": "string",
+    },
     "ImgSource": Object {
       "properties": Object {
         "format": Object {
-          "enum": Array [
-            "jpeg",
-            "jpg",
-            "png",
-            "gif",
-            "webp",
-            "heif",
-            "avif",
-          ],
+          "$ref": "#/definitions/ImgFormats",
           "title": "Формат",
-          "type": "string",
         },
         "icon": Object {
           "$ref": "#/definitions/IconName",
@@ -2235,17 +2240,8 @@ Object {
           "type": "string",
         },
         "format": Object {
-          "enum": Array [
-            "jpeg",
-            "jpg",
-            "png",
-            "gif",
-            "webp",
-            "heif",
-            "avif",
-          ],
+          "$ref": "#/definitions/ImgFormats",
           "title": "Формат",
-          "type": "string",
         },
         "icon": Object {
           "$ref": "#/definitions/IconName",

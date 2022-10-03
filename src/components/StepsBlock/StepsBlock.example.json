@@ -8,20 +8,40 @@
       "label": "Шаг №1",
       "description": "Описание шага №1",
       "icon": {
-        "icon": "NewDocIcon"
+        "icon": "NewDocIcon",
+        "size": {
+          "width": 48,
+          "height": 48
+        },
+        "format": "webp"
       }
     },
     {
       "label": "Шаг №2",
       "icon": {
-        "icon": "PassSendIcon"
+        "icon": "PassSendIcon",
+        "size": {
+          "width": 48,
+          "height": 48
+        },
+        "format": "webp"
       }
     },
     {
       "description": "Шаг №3 без заголовка",
       "icon": {
-        "icon": "ActualBalanceIcon"
+        "icon": "ActualBalanceIcon",
+        "size": {
+          "width": 48,
+          "height": 48
+        },
+        "format": "webp"
       }
     }
-  ]
+  ],
+  "button": {
+    "text": "Кнопка",
+    "target": "_blank",
+    "version": "primary"
+  }
 }

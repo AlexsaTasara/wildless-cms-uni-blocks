@@ -38,19 +38,19 @@ module.exports = {
           'linear-gradient(270deg, rgba(var(--color-primary-main), 1) 34.89%, rgba(var(--color-primary-main), 0) 92.52%);',
         'opacity-from-main':
           'linear-gradient(90deg, rgba(var(--color-primary-main), 1) 0%, rgba(var(--color-primary-main), 0) 80%);',
-        'green-to-yellow':
-          'linear-gradient(180deg, #42AB44 0%, #F6DB7D 100%)',
+        'green-to-yellow': 'linear-gradient(180deg, #42AB44 0%, #F6DB7D 100%)',
       },
       fontFamily: {
         sans: ['Ubuntu', ...defaultTheme.fontFamily.sans],
         mohave: ['Mohave', ...defaultTheme.fontFamily.sans],
       },
       fontSize: {
+        highlighted: ['12.5rem', '15.625rem'],
         button: ['0.875rem', '1.25rem'], // 14px 20px
         'button-sm': ['1rem', '1.25rem'], // 16px 20px
 
-        'title-extra': ['15.625rem','14.687rem'], // 250px 235px
-        'title-huge': ['12.5rem','15.625rem'], // 200px 250px
+        'title-extra': ['15.625rem', '14.687rem'], // 250px 235px
+        'title-huge': ['12.5rem', '15.625rem'], // 200px 250px
         'title-xl': ['3.125rem', '3.25rem'], //50px 52px
         'title-lg': ['2.5rem', '3rem'], //40px 48px
         title: ['2rem', '2.5rem'], //32px 40px
@@ -109,11 +109,11 @@ module.exports = {
         }],
         xl: ['1.125rem', { // 18px 24px
           lineHeight: '1.5rem',
-          fontWeight: '300',
-        }],
-        'l-bold': ['1rem', { // 16px 24px
-          lineHeight: '1.5rem',
           fontWeight: '400',
+        }],
+        'xl-light': ['1.125rem', { // 18px 24px
+          lineHeight: '1.5rem',
+          fontWeight: '300',
         }],
         'l': ['1rem', { // 16px 24px
           lineHeight: '1.5rem',
@@ -126,6 +126,10 @@ module.exports = {
         m: ['0.9375rem', { // 15px 20px
           lineHeight: '1.25rem',
           fontWeight: '300',
+        }],
+        's-bold': ['0.875rem', { // 14px 20px
+          lineHeight: '1.25rem',
+          fontWeight: '400',
         }],
         s: ['0.875rem', { // 14px 20px
           lineHeight: '1.25rem',
@@ -162,7 +166,7 @@ module.exports = {
           // Text
           text: 'rgba(125, 126, 127, <alpha-value>)',
         },
-        gray:'rgba(201, 202, 204, <alpha-value>)',
+        gray: 'rgba(201, 202, 204, <alpha-value>)',
       },
       minHeight: (theme) => ({
         ...theme('spacing'),
@@ -186,7 +190,7 @@ module.exports = {
       border: {
         'white/50': 'rgba(255,255,255,.5);',
         'gray/100': 'rgba(235, 237, 240, 1);',
-      }
+      },
     },
   },
   plugins: [],

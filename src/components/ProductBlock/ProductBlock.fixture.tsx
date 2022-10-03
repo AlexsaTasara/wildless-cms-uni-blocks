@@ -1,8 +1,8 @@
 import type { Picture } from '../../model/Picture';
 import { context } from '../../react/setup-fixture';
-import type { ButtonWithIconProps } from '../../ui-kit/Button/ButtonProps';
+import type { BackwardButtonProps, ButtonWithIconProps } from '../../ui-kit/Button/ButtonProps';
 import { ProductBlock } from './ProductBlock';
-import type { ProductBlockContent, ProductBlockBenefit } from './ProductBlockContent';
+import type { ProductBlockBenefit, ProductBlockContent } from './ProductBlockContent';
 
 const image: Picture = {
   src: 'money-1.png',
@@ -18,7 +18,7 @@ const benefits: ProductBlockBenefit[] = [
   {
     label: 'До 5 млн ₽',
     description: 'Кредитный лимит',
-    icon: { icon: 'EmptyWalletIcon', iconVersion: 'white' },
+    icon: { icon: 'CalendarTickIcon', iconVersion: 'white' },
   },
   {
     label: 'От 16,9%',
@@ -62,7 +62,7 @@ const items = [
   'Расходы для бизнеса на УСН 15% позволят снизить налоговую базу',
 ];
 
-const backwardButton: ButtonWithIconProps = {
+const backwardButton: BackwardButtonProps = {
   href: 'https://rshb.ru',
   text: 'Все кредитные карты',
   icon: { icon: 'ArrowLeftIcon' },

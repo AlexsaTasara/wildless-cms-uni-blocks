@@ -1,6 +1,10 @@
-import type { HeadingContent } from '../../ui-kit/Heading/HeadingContent';
+import type { ButtonProps } from '../../ui-kit/Button/ButtonProps';
 
 /**
- * @title Курсы валют
+ * @title Курсы обмена валют
  */
-export type ExchangeRateTileContent = HeadingContent;
+export interface ExchangeRateTileContent {
+  /** @title Заголовок */
+  title?: string;
+  button?: ButtonProps;
+}

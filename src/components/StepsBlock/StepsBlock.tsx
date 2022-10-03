@@ -3,9 +3,13 @@ import type { UniBlockProps } from '../../types';
 import { Button } from '../../ui-kit/Button/Button';
 import { Heading } from '../../ui-kit/Heading/Heading';
 import { Img } from '../../ui-kit/Img/Img';
+import { checkIsIconRenderable } from '../../utils/checkIsIconRenderable';
 import { joinList } from '../../utils/joinList';
 import type { Step, StepsBlockContent } from './StepsBlockContent';
-import { getStyleMap, StyleType } from './StepsBlockStyleMaps';
+import type { StyleType } from './StepsBlockStyleMaps';
+import { getStyleMap } from './StepsBlockStyleMaps';
+
+import { BlockWrapper } from '../../ui-kit/BlockWrapper';
 
 export interface StepsBlockProps extends StepsBlockContent, UniBlockProps {}
 
@@ -16,14 +20,14 @@ export const StepsBlock = JSX<StepsBlockProps>(
     showLines = true,
     steps = [],
     button,
-    anchor = null,
     version = 'primary',
+    ...rest
   }) => {
     const styleMap = getStyleMap(version);
     const shortGaps = steps.length > 3;
 
     return (
-      <section
+      <BlockWrapper
         className={[
           'box-border font-sans text-primary-text bg-white',
           shortGaps ? 'px-20' : 'px-[70px]',
@@ -32,7 +36,7 @@ export const StepsBlock = JSX<StepsBlockProps>(
           styleMap.title,
           className,
         ].join(' ')}
-        id={anchor}
+        {...rest}
       >
         <Heading headingType="h2" className="max-w-[47rem] text-center" title={title} />
         {steps?.length ? (
@@ -50,32 +54,30 @@ export const StepsBlock = JSX<StepsBlockProps>(
           </div>
         ) : null}
         {button?.text ? (
-          <Button
-            className="box-border mt-8 py-3 h-12 w-full max-w-[240px]"
-            version="primary"
-            href="#"
-          >
-            {button.text}
-          </Button>
+          <Button className="mt-8 w-full max-w-[240px]" version="primary" {...button} />
         ) : null}
-      </section>
+      </BlockWrapper>
     );
   },
 );
 
-const renderStepIcon = (styleMap: StyleType) => (step: Step, i: number) => {
-  return (
-    <div key={String(i)} className="flex flex-col items-center text-center relative">
-      <div
-        className={`h-[100px] w-[100px] min-w-[100px] min-h-[100px] rounded-full p-[26px] box-border z-10 ${styleMap.iconBackground}`}
-      >
-        {(step.icon?.icon && <Img image={step.icon} width="48" height="48" />) || (
-          <span className={`font-normal text-title-sm ${styleMap.title}`}>{i + 1}</span>
-        )}
+const renderStepIcon =
+  (styleMap: StyleType) =>
+  ({ icon }: Step, i: number) => {
+    return (
+      <div key={String(i)} className="flex flex-col items-center text-center relative">
+        <div
+          className={`h-[100px] w-[100px] min-w-[100px] min-h-[100px] rounded-full p-[26px] box-border z-10 ${styleMap.iconBackground}`}
+        >
+          {checkIsIconRenderable(icon) ? (
+            <Img image={icon} width="48" height="48" asSVG />
+          ) : (
+            <span className={`font-normal text-title-sm ${styleMap.title}`}>{i + 1}</span>
+          )}
+        </div>
       </div>
-    </div>
-  );
-};
+    );
+  };
 
 const renderStepTitle = (styleMap: StyleType, isMainButton: boolean) => (step: Step, i: number) => {
   return (
@@ -84,7 +86,7 @@ const renderStepTitle = (styleMap: StyleType, isMainButton: boolean) => (step: S
       className="flex flex-col items-center justify-between text-center relative w-[276px] whitespace-pre-line overflow-hidden"
     >
       <div>
-        {step.label ? <div className="font-normal text-xl m-0 mt-4">{step.label}</div> : null}
+        {step.label ? <div className="font-normal text-xl-light m-0 mt-4">{step.label}</div> : null}
         {step.description ? (
           <div
             className={`font-light text-base ${styleMap.description} ${
@@ -99,7 +101,7 @@ const renderStepTitle = (styleMap: StyleType, isMainButton: boolean) => (step: S
         <Button
           className="box-border mt-8 py-3 h-12 w-full max-w-[240px]"
           version="primary"
-          href={step.button?.href}
+          href={step?.button?.href}
         >
           {step.button.text}
         </Button>

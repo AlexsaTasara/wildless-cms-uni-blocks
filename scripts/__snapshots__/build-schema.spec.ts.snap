@@ -2001,20 +2001,6 @@ Object {
       "title": "Направление списка",
       "type": "string",
     },
-    "Metro": Object {
-      "properties": Object {
-        "distance": Object {
-          "type": "string",
-        },
-        "name": Object {
-          "type": "string",
-        },
-        "time": Object {
-          "type": "string",
-        },
-      },
-      "type": "object",
-    },
     "MediaQuery": Object {
       "enum": Array [
         "(max-width: 1919px)",
@@ -2028,6 +2014,20 @@ Object {
       ],
       "title": "Брейкпоинт",
       "type": "string",
+    },
+    "Metro": Object {
+      "properties": Object {
+        "distance": Object {
+          "type": "string",
+        },
+        "name": Object {
+          "type": "string",
+        },
+        "time": Object {
+          "type": "string",
+        },
+      },
+      "type": "object",
     },
     "MiniGalleryBlockListDef": Object {
       "properties": Object {

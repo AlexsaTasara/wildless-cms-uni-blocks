@@ -82,6 +82,38 @@ Object {
       "title": "Выравнивание",
       "type": "string",
     },
+    "BackwardButtonProps": Object {
+      "properties": Object {
+        "aboveText": Object {
+          "title": "Верхний текст",
+          "type": "string",
+        },
+        "href": Object {
+          "title": "URL (href)",
+          "type": "string",
+        },
+        "icon": Object {
+          "$ref": "#/definitions/Picture",
+          "title": "Иконка",
+        },
+        "rounded": Object {
+          "title": "Закругленные углы",
+          "type": "boolean",
+        },
+        "target": Object {
+          "$ref": "#/definitions/Target",
+        },
+        "text": Object {
+          "default": "Кнопка",
+          "title": "Текст",
+          "type": "string",
+        },
+        "version": Object {
+          "$ref": "#/definitions/ButtonVersion",
+        },
+      },
+      "type": "object",
+    },
     "BenefitItem": Object {
       "properties": Object {
         "description": Object {
@@ -276,6 +308,26 @@ Object {
     },
     "BonusCalculatorParams": Object {
       "description": "TODO: данные из справочника",
+      "properties": Object {
+        "maxBonus": Object {
+          "type": "number",
+        },
+        "prefMonthsNum": Object {
+          "type": "number",
+        },
+        "prefRestBonusRate": Object {
+          "type": "number",
+        },
+        "prefTravelBonusRate": Object {
+          "type": "number",
+        },
+        "restBonusRate": Object {
+          "type": "number",
+        },
+        "travelBonusRate": Object {
+          "type": "number",
+        },
+      },
       "type": "object",
     },
     "BonusCalculatorParamsDef": Object {
@@ -293,6 +345,28 @@ Object {
         "calcType": Object {
           "const": "BonusCalculatorForm",
           "type": "string",
+        },
+        "maxBonus": Object {
+          "type": "number",
+        },
+        "prefMonthsNum": Object {
+          "type": "number",
+        },
+        "prefRestBonusRate": Object {
+          "type": "number",
+        },
+        "prefTravelBonusRate": Object {
+          "type": "number",
+        },
+        "restBonusRate": Object {
+          "type": "number",
+        },
+        "sourceBookDir": Object {
+          "title": "Адрес справочника",
+          "type": "string",
+        },
+        "travelBonusRate": Object {
+          "type": "number",
         },
       },
       "required": Array [
@@ -402,7 +476,7 @@ Object {
         },
         "icon": Object {
           "$ref": "#/definitions/Picture",
-          "title": "Иконка",
+          "title": "Иконка слева",
         },
         "iconRight": Object {
           "$ref": "#/definitions/Picture",
@@ -448,7 +522,7 @@ Object {
     },
     "CalculatorContent": Object {
       "properties": Object {
-        "calcTabs": Object {
+        "calculatorTabs": Object {
           "items": Object {
             "$ref": "#/definitions/CalculatorTab",
           },
@@ -650,6 +724,10 @@ Object {
           "title": "Кнопки",
           "type": "array",
         },
+        "sourceBookDir": Object {
+          "title": "Адрес справочника",
+          "type": "string",
+        },
       },
       "type": "object",
     },
@@ -749,6 +827,10 @@ Object {
           "const": "CreditCalculatorForm",
           "type": "string",
         },
+        "sourceBookDir": Object {
+          "title": "Адрес справочника",
+          "type": "string",
+        },
       },
       "required": Array [
         "calcType",
@@ -774,6 +856,10 @@ Object {
         },
         "calcType": Object {
           "const": "DepositCalculatorForm",
+          "type": "string",
+        },
+        "sourceBookDir": Object {
+          "title": "Адрес справочника",
           "type": "string",
         },
       },
@@ -833,6 +919,9 @@ Object {
     },
     "ExchangeRateTileContent": Object {
       "properties": Object {
+        "button": Object {
+          "$ref": "#/definitions/ButtonProps",
+        },
         "title": Object {
           "title": "Заголовок",
           "type": "string",
@@ -2051,6 +2140,10 @@ Object {
           "const": "MortgageCalculatorForm",
           "type": "string",
         },
+        "sourceBookDir": Object {
+          "title": "Адрес справочника",
+          "type": "string",
+        },
       },
       "required": Array [
         "calcType",
@@ -2322,7 +2415,7 @@ Object {
     "ProductBlockBlockListDef": Object {
       "properties": Object {
         "backwardButton": Object {
-          "$ref": "#/definitions/ButtonWithIconProps",
+          "$ref": "#/definitions/BackwardButtonProps",
           "title": "Кнопка возврата",
         },
         "benefits": Object {
@@ -2410,7 +2503,7 @@ Object {
     "ProductBlockContent": Object {
       "properties": Object {
         "backwardButton": Object {
-          "$ref": "#/definitions/ButtonWithIconProps",
+          "$ref": "#/definitions/BackwardButtonProps",
           "title": "Кнопка возврата",
         },
         "benefits": Object {
@@ -2483,7 +2576,7 @@ Object {
       },
       "properties": Object {
         "backwardButton": Object {
-          "$ref": "#/definitions/ButtonWithIconProps",
+          "$ref": "#/definitions/BackwardButtonProps",
           "title": "Кнопка возврата",
         },
         "benefits": Object {

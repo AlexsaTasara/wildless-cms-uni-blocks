@@ -12,10 +12,10 @@ export type TextColorVersion = 'red' | 'green' | 'black';
 
 export interface ContactInformationContent {
   title?: string;
-  contactCards?: OneCard[];
+  contactCards?: ContactCard[];
 }
 
-export interface OneCard {
+export interface ContactCard {
   icon?: Picture;
   label?: string;
   data?: ContactData[];
@@ -23,6 +23,6 @@ export interface OneCard {
 
 export interface ContactData {
   label?: string;
-  value?: string[];
+  values?: string[];
   textColor?: TextColorVersion;
 }

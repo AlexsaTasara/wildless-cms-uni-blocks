@@ -893,7 +893,7 @@ Object {
       "title": "Калькулятор вкладов",
       "type": "object",
     },
-    "DescriptionContent": Object {
+    "DescriptionProp": Object {
       "properties": Object {
         "description": Object {
           "title": "Описание",
@@ -1322,8 +1322,11 @@ Object {
       "title": "Шапка (для мобильных горизонтальная прокрутка shift+mouseScroll)",
       "type": "object",
     },
-    "HeadingContent": Object {
+    "HeadingCommonProps": Object {
       "properties": Object {
+        "headingType": Object {
+          "$ref": "#/definitions/HeadingType",
+        },
         "title": Object {
           "title": "Заголовок",
           "type": "string",
@@ -1333,6 +1336,7 @@ Object {
     },
     "HeadingType": Object {
       "enum": Array [
+        "h0",
         "h1",
         "h2",
         "h3",
@@ -1341,6 +1345,7 @@ Object {
         "h6",
       ],
       "enumNames": Array [
+        "h0",
         "h1",
         "h2",
         "h3",
@@ -1348,16 +1353,8 @@ Object {
         "h5",
         "h6",
       ],
-      "title": "Тип заголовка",
+      "title": "Размер заголовка",
       "type": "string",
-    },
-    "HeadingTypeContent": Object {
-      "properties": Object {
-        "headingType": Object {
-          "$ref": "#/definitions/HeadingType",
-        },
-      },
-      "type": "object",
     },
     "HeadlineBlockListDef": Object {
       "properties": Object {
@@ -1376,8 +1373,8 @@ Object {
           "title": "Описание",
           "type": "string",
         },
-        "headingType": Object {
-          "$ref": "#/definitions/HeadingType",
+        "headlineVersion": Object {
+          "$ref": "#/definitions/HeadlineVersion",
         },
         "image": Object {
           "$ref": "#/definitions/Picture",
@@ -1403,6 +1400,19 @@ Object {
       "title": "Заголовок",
       "type": "object",
     },
+    "HeadlineCommonProps": Object {
+      "properties": Object {
+        "description": Object {
+          "title": "Описание",
+          "type": "string",
+        },
+        "title": Object {
+          "title": "Заголовок",
+          "type": "string",
+        },
+      },
+      "type": "object",
+    },
     "HeadlineContent": Object {
       "properties": Object {
         "align": Object {
@@ -1415,8 +1425,8 @@ Object {
           "title": "Описание",
           "type": "string",
         },
-        "headingType": Object {
-          "$ref": "#/definitions/HeadingType",
+        "headlineVersion": Object {
+          "$ref": "#/definitions/HeadlineVersion",
         },
         "image": Object {
           "$ref": "#/definitions/Picture",
@@ -1428,6 +1438,40 @@ Object {
       },
       "title": "Заголовок",
       "type": "object",
+    },
+    "HeadlineProps": Object {
+      "properties": Object {
+        "description": Object {
+          "title": "Описание",
+          "type": "string",
+        },
+        "headlineVersion": Object {
+          "$ref": "#/definitions/HeadlineVersion",
+        },
+        "title": Object {
+          "title": "Заголовок",
+          "type": "string",
+        },
+      },
+      "type": "object",
+    },
+    "HeadlineVersion": Object {
+      "enum": Array [
+        "XXL",
+        "XL",
+        "L",
+        "M",
+        "S",
+      ],
+      "enumNames": Array [
+        "Самый большой",
+        "Очень большой",
+        "Большой",
+        "Средний",
+        "Маленький",
+      ],
+      "title": "Размер заголовка",
+      "type": "string",
     },
     "IconName": Object {
       "enum": Array [
@@ -1811,6 +1855,9 @@ Object {
           "title": "Рамка элементов (моб.)",
           "type": "boolean",
         },
+        "headlineVersion": Object {
+          "$ref": "#/definitions/HeadlineVersion",
+        },
         "icon": Object {
           "$ref": "#/definitions/Picture",
           "default": Object {
@@ -1869,6 +1916,9 @@ Object {
         "hasBorder": Object {
           "title": "Рамка элементов (моб.)",
           "type": "boolean",
+        },
+        "headlineVersion": Object {
+          "$ref": "#/definitions/HeadlineVersion",
         },
         "icon": Object {
           "$ref": "#/definitions/Picture",
@@ -2436,8 +2486,8 @@ Object {
           "title": "Описание",
           "type": "string",
         },
-        "headingType": Object {
-          "$ref": "#/definitions/HeadingType",
+        "headlineVersion": Object {
+          "$ref": "#/definitions/HeadlineVersion",
         },
         "image": Object {
           "$ref": "#/definitions/Picture",
@@ -2519,8 +2569,8 @@ Object {
           "title": "Описание",
           "type": "string",
         },
-        "headingType": Object {
-          "$ref": "#/definitions/HeadingType",
+        "headlineVersion": Object {
+          "$ref": "#/definitions/HeadlineVersion",
         },
         "image": Object {
           "$ref": "#/definitions/Picture",
@@ -2596,8 +2646,8 @@ Object {
           "title": "Описание",
           "type": "string",
         },
-        "headingType": Object {
-          "$ref": "#/definitions/HeadingType",
+        "headlineVersion": Object {
+          "$ref": "#/definitions/HeadlineVersion",
         },
         "image": Object {
           "$ref": "#/definitions/Picture",
@@ -2675,8 +2725,8 @@ Object {
           "title": "Описание",
           "type": "string",
         },
-        "headingType": Object {
-          "$ref": "#/definitions/HeadingType",
+        "headlineVersion": Object {
+          "$ref": "#/definitions/HeadlineVersion",
         },
         "image": Object {
           "$ref": "#/definitions/Picture",
@@ -2786,8 +2836,8 @@ Object {
           "title": "Описание",
           "type": "string",
         },
-        "headingType": Object {
-          "$ref": "#/definitions/HeadingType",
+        "headlineVersion": Object {
+          "$ref": "#/definitions/HeadlineVersion",
         },
         "image": Object {
           "$ref": "#/definitions/Picture",
@@ -2842,8 +2892,8 @@ Object {
           "title": "Описание",
           "type": "string",
         },
-        "headingType": Object {
-          "$ref": "#/definitions/HeadingType",
+        "headlineVersion": Object {
+          "$ref": "#/definitions/HeadlineVersion",
         },
         "image": Object {
           "$ref": "#/definitions/Picture",
@@ -2892,8 +2942,8 @@ Object {
           "title": "Описание",
           "type": "string",
         },
-        "headingType": Object {
-          "$ref": "#/definitions/HeadingType",
+        "headlineVersion": Object {
+          "$ref": "#/definitions/HeadlineVersion",
         },
         "image": Object {
           "$ref": "#/definitions/Picture",
@@ -2946,6 +2996,9 @@ Object {
         "description": Object {
           "title": "Описание",
           "type": "string",
+        },
+        "headingType": Object {
+          "$ref": "#/definitions/HeadingType",
         },
         "title": Object {
           "title": "Заголовок",
@@ -3005,6 +3058,9 @@ Object {
     },
     "RecommendationContent": Object {
       "properties": Object {
+        "headingType": Object {
+          "$ref": "#/definitions/HeadingType",
+        },
         "recommendations": Object {
           "items": Object {
             "$ref": "#/definitions/RecommendationCardTypes",
@@ -3607,6 +3663,15 @@ Object {
         },
       },
       "title": "Плитка",
+      "type": "object",
+    },
+    "TitleProp": Object {
+      "properties": Object {
+        "title": Object {
+          "title": "Заголовок",
+          "type": "string",
+        },
+      },
       "type": "object",
     },
     "TitleWithImageContent": Object {

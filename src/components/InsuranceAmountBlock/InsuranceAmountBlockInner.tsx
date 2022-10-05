@@ -1,8 +1,8 @@
 import { JSX } from '@redneckz/uni-jsx';
-import type { FuncReturnVoid, UniBlockProps } from '../../types';
+import type { UniBlockProps } from '../../types';
+import { Button } from '../../ui-kit/Button/Button';
 import { renderArrows } from '../../ui-kit/Button/renderArrows';
 import { Img } from '../../ui-kit/Img/Img';
-import { Button } from '../../ui-kit/Button/Button';
 import { addSpacesBetweenNumbers } from '../../utils/addSpacesBetweenNumbers';
 import type { CardItem, InsuranceAmountBlockTabs } from './InsuranceAmountBlockContent';
 
@@ -13,14 +13,14 @@ type InsuranceGalleryProps = {
   cards: CardItem[];
   activeSlideIndex: number;
   isLastShift: boolean;
-  setActiveSlideIndex: FuncReturnVoid<number>;
+  setActiveSlideIndex: (index: number) => void;
 };
 
 type InsuranceSlideProps = {
   slide: CardItem;
   i: number;
   activeSlideIndex: number;
-  onClick: FuncReturnVoid<MouseEvent>;
+  onClick: () => void;
 };
 
 export const InsuranceAmountBlockInner = JSX<InsuranceAmountBlockInnerProps>(
@@ -40,7 +40,7 @@ export const InsuranceAmountBlockInner = JSX<InsuranceAmountBlockInnerProps>(
     const activeHref = cards[activeSlideIndex]?.href;
 
     return (
-      <section className={`min-w-full text-center ${className}`}>
+      <section role="listitem" className={`min-w-full text-center ${className}`}>
         <div className="relative mt-7 overflow-hidden">
           {galleryLength
             ? renderGallery({

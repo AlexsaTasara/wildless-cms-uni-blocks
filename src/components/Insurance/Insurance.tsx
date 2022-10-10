@@ -1,24 +1,31 @@
 import { JSX } from '@redneckz/uni-jsx';
-import { BlockWrapper } from '../../ui-kit/BlockWrapper';
 import type { UniBlockProps } from '../../types';
-import { Heading } from '../../ui-kit/Heading/Heading';
+import { BlockWrapper } from '../../ui-kit/BlockWrapper';
 import { Img } from '../../ui-kit/Img/Img';
 import { addSpacesBetweenNumbers } from '../../utils/addSpacesBetweenNumbers';
+import { Headline } from '../Headline/Headline';
 import type { InsuranceBenefit, InsuranceContent } from './InsuranceContent';
 
 export interface InsuranceProps extends InsuranceContent, UniBlockProps {}
 
 export const Insurance = JSX<InsuranceProps>(
-  ({ className = '', title, description, image, benefits, sum, monthLimit, ...rest }) => {
+  ({ context, className = '', title, description, image, benefits, sum, monthLimit, ...rest }) => {
     return (
       <BlockWrapper
         className={`px-[100px] py-[50px] bg-white text-primary-text font-sans ${className}`}
+        context={context}
         {...rest}
       >
-        {title ? <Heading headingType="h3" title={title} className="text-center" /> : null}
-        {description ? <div className="text-center text-md mt-3">{description}</div> : null}
+        <Headline
+          context={context}
+          className="!p-0"
+          title={title}
+          description={description}
+          headlineVersion="M"
+          align="center"
+        />
         <div>
-          <div className="mt-5 mx-auto flex justify-center gap-[122px] mt-[30px]">
+          <div className="mx-auto flex justify-center gap-[122px] mt-[30px]">
             {image?.src ? <Img image={image} /> : null}
             <div className="w-[558px] m-auto">
               {benefits ? (
@@ -44,18 +51,16 @@ function renderBenefit(benefit: InsuranceBenefit, i: number) {
         />
       ) : null}
       <div>
-        {benefit?.label ? <div className="text-title-2xs font-normal">{benefit.label}</div> : null}
+        {benefit?.label ? <div className="text-h6">{benefit.label}</div> : null}
         {benefit?.description ? (
-          <div className="mt-0.5 font-light text-secondary-text font-light">
-            {benefit.description}
-          </div>
+          <div className="mt-0.5 text-secondary-text text-m">{benefit.description}</div>
         ) : null}
       </div>
     </div>
   );
 }
 
-function renderInsuranceSumMonth(sum, monthLimit) {
+function renderInsuranceSumMonth(sum?: number, monthLimit?: number) {
   return sum || monthLimit ? (
     <div className="bg-secondary-light h-15 flex mt-7 gap-6 px-5 py-4">
       {Number.isFinite(sum) ? renderValueBlock('Страховая сумма:', sum, Boolean(monthLimit)) : null}
@@ -66,13 +71,13 @@ function renderInsuranceSumMonth(sum, monthLimit) {
   ) : null;
 }
 
-function renderValueBlock(title, sum, isAnotherBlock) {
+function renderValueBlock(title: string, sum = 0, isAnotherBlock = false) {
   const widthStyle = isAnotherBlock ? 'w-fit' : 'w-full';
 
   return (
     <div className={`flex justify-between items-center gap-2 w-full ${widthStyle}`}>
-      <span className="text-secondary-text text-base">{title}</span>
-      <span className="text-primary-main text-title-2xs">{addSpacesBetweenNumbers(sum)} ₽</span>
+      <span className="text-secondary-text text-l-light">{title}</span>
+      <span className="text-primary-main text-h6">{addSpacesBetweenNumbers(sum)} ₽</span>
     </div>
   );
 }

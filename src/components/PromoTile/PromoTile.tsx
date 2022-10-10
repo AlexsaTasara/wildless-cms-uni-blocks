@@ -3,12 +3,12 @@ import type { BlockVersion } from '../../model/BlockVersion';
 import { BlockWrapper } from '../../ui-kit/BlockWrapper';
 import type { UniBlockProps } from '../../types';
 import { ButtonSection } from '../../ui-kit/Button/ButtonSection';
-import { Heading } from '../../ui-kit/Heading/Heading';
 import { BaseTile } from '../BaseTile/BaseTile';
 import { getTileHeadingType } from '../BaseTile/getTileHeadingType';
 import { getTileMinHeight } from '../BaseTile/getTileMinHeight';
 import { getTileRightPadding } from '../BaseTile/getTileRightPadding';
 import type { PromoTileContent } from './PromoTileContent';
+import { Headline } from '../Headline/Headline';
 
 export interface PromoTileProps extends PromoTileContent, UniBlockProps {}
 
@@ -40,11 +40,16 @@ export const PromoTile = JSX<PromoTileProps>(
           context={context}
           title={
             title ? (
-              <Heading
-                headingType={getTileHeadingType(className)}
-                title={title}
-                className={`whitespace-pre-wrap max-w-[600px]`}
-              />
+              <div>
+                <Headline
+                  context={context}
+                  title={title}
+                  className={`!p-0 max-w-[600px]`}
+                  headlineVersion={getTileHeadingType(className)}
+                  bgColorHeadline={version}
+                  align="left"
+                />
+              </div>
             ) : null
           }
           buttons={
@@ -55,7 +60,7 @@ export const PromoTile = JSX<PromoTileProps>(
         >
           <div className="mt-1.5">
             {date ? <div className="text-sm mb-2">{formatDate(date)}</div> : null}
-            <div className="text-base">{description}</div>
+            <div className="text-l">{description}</div>
           </div>
         </BaseTile>
       </BlockWrapper>

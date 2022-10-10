@@ -1,5 +1,4 @@
 import { VNode } from '../../model/VNode';
-import type { FuncReturnVoid } from '../../types';
 
 export interface Router {
   pathname: string;
@@ -34,10 +33,10 @@ export type SetStateAction<S> = S | ((prevState: S) => S);
 
 export type SetStateHook = <State>(
   initialState: State | (() => State),
-) => [State, FuncReturnVoid<SetStateAction<State>>];
+) => [State, (action: SetStateAction<State>) => void];
 
 export interface IntersectionObserverTagProps {
-  Tag: string;
+  tag: keyof HTMLElementTagNameMap;
   className?: string;
   anchor?: string;
   children?: VNode;
@@ -45,9 +44,7 @@ export interface IntersectionObserverTagProps {
   observerOptions?: IntersectionObserverInit;
 }
 
-export type IntersectionObserverComponent = (
-  props: IntersectionObserverTagProps & Record<string, any>,
-) => VNode;
+export type IntersectionObserverComponent = (props: IntersectionObserverTagProps) => VNode;
 
 export interface ContentPageContext {
   useRouter: () => Router;
@@ -56,6 +53,7 @@ export interface ContentPageContext {
   useGeolocation: GeolocationHook;
   useLikeService: () => LikeService;
   useSearch: () => Search;
+  useEffect: <Deps extends any[]>(effect: () => (() => void) | void, deps?: Deps) => void;
   handlerDecorator?: HandlerDecorator;
   IntersectionObserverTag: IntersectionObserverComponent;
 }

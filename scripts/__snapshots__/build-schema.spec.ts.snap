@@ -588,6 +588,22 @@ Object {
       "properties": Object {
         "button": Object {
           "$ref": "#/definitions/ButtonWithIconProps",
+          "default": Object {
+            "icon": Object {
+              "format": "webp",
+              "size": Object {
+                "height": 24,
+                "width": 24,
+              },
+            },
+            "iconRight": Object {
+              "format": "webp",
+              "size": Object {
+                "height": 24,
+                "width": 24,
+              },
+            },
+          },
           "title": "Кнопка",
         },
         "colors": Object {
@@ -873,7 +889,7 @@ Object {
       "title": "Калькулятор вкладов",
       "type": "object",
     },
-    "DescriptionContent": Object {
+    "DescriptionProp": Object {
       "properties": Object {
         "description": Object {
           "title": "Описание",
@@ -1302,8 +1318,11 @@ Object {
       "title": "Шапка (для мобильных горизонтальная прокрутка shift+mouseScroll)",
       "type": "object",
     },
-    "HeadingContent": Object {
+    "HeadingCommonProps": Object {
       "properties": Object {
+        "headingType": Object {
+          "$ref": "#/definitions/HeadingType",
+        },
         "title": Object {
           "title": "Заголовок",
           "type": "string",
@@ -1313,6 +1332,7 @@ Object {
     },
     "HeadingType": Object {
       "enum": Array [
+        "h0",
         "h1",
         "h2",
         "h3",
@@ -1321,6 +1341,7 @@ Object {
         "h6",
       ],
       "enumNames": Array [
+        "h0",
         "h1",
         "h2",
         "h3",
@@ -1328,16 +1349,8 @@ Object {
         "h5",
         "h6",
       ],
-      "title": "Тип заголовка",
+      "title": "Размер заголовка",
       "type": "string",
-    },
-    "HeadingTypeContent": Object {
-      "properties": Object {
-        "headingType": Object {
-          "$ref": "#/definitions/HeadingType",
-        },
-      },
-      "type": "object",
     },
     "HeadlineBlockListDef": Object {
       "properties": Object {
@@ -1356,8 +1369,8 @@ Object {
           "title": "Описание",
           "type": "string",
         },
-        "headingType": Object {
-          "$ref": "#/definitions/HeadingType",
+        "headlineVersion": Object {
+          "$ref": "#/definitions/HeadlineVersion",
         },
         "image": Object {
           "$ref": "#/definitions/Picture",
@@ -1383,6 +1396,19 @@ Object {
       "title": "Заголовок",
       "type": "object",
     },
+    "HeadlineCommonProps": Object {
+      "properties": Object {
+        "description": Object {
+          "title": "Описание",
+          "type": "string",
+        },
+        "title": Object {
+          "title": "Заголовок",
+          "type": "string",
+        },
+      },
+      "type": "object",
+    },
     "HeadlineContent": Object {
       "properties": Object {
         "align": Object {
@@ -1395,8 +1421,8 @@ Object {
           "title": "Описание",
           "type": "string",
         },
-        "headingType": Object {
-          "$ref": "#/definitions/HeadingType",
+        "headlineVersion": Object {
+          "$ref": "#/definitions/HeadlineVersion",
         },
         "image": Object {
           "$ref": "#/definitions/Picture",
@@ -1408,6 +1434,40 @@ Object {
       },
       "title": "Заголовок",
       "type": "object",
+    },
+    "HeadlineProps": Object {
+      "properties": Object {
+        "description": Object {
+          "title": "Описание",
+          "type": "string",
+        },
+        "headlineVersion": Object {
+          "$ref": "#/definitions/HeadlineVersion",
+        },
+        "title": Object {
+          "title": "Заголовок",
+          "type": "string",
+        },
+      },
+      "type": "object",
+    },
+    "HeadlineVersion": Object {
+      "enum": Array [
+        "XXL",
+        "XL",
+        "L",
+        "M",
+        "S",
+      ],
+      "enumNames": Array [
+        "Самый большой",
+        "Очень большой",
+        "Большой",
+        "Средний",
+        "Маленький",
+      ],
+      "title": "Размер заголовка",
+      "type": "string",
     },
     "IconName": Object {
       "enum": Array [
@@ -1466,6 +1526,7 @@ Object {
         "NewDocIcon",
         "OfficeIcon",
         "OkIcon",
+        "PackA4",
         "PassSendIcon",
         "PercentageRoundIcon",
         "PercentageSquareIcon",
@@ -1549,6 +1610,7 @@ Object {
         "Новый документ",
         "Офис",
         "Лого «Одноклассники»",
+        "PackA4",
         "Бизнес",
         "Проценты (круг.)",
         "Проценты",
@@ -2451,8 +2513,8 @@ Object {
           "title": "Описание",
           "type": "string",
         },
-        "headingType": Object {
-          "$ref": "#/definitions/HeadingType",
+        "headlineVersion": Object {
+          "$ref": "#/definitions/HeadlineVersion",
         },
         "image": Object {
           "$ref": "#/definitions/Picture",
@@ -2534,8 +2596,8 @@ Object {
           "title": "Описание",
           "type": "string",
         },
-        "headingType": Object {
-          "$ref": "#/definitions/HeadingType",
+        "headlineVersion": Object {
+          "$ref": "#/definitions/HeadlineVersion",
         },
         "image": Object {
           "$ref": "#/definitions/Picture",
@@ -2611,8 +2673,8 @@ Object {
           "title": "Описание",
           "type": "string",
         },
-        "headingType": Object {
-          "$ref": "#/definitions/HeadingType",
+        "headlineVersion": Object {
+          "$ref": "#/definitions/HeadlineVersion",
         },
         "image": Object {
           "$ref": "#/definitions/Picture",
@@ -2690,8 +2752,8 @@ Object {
           "title": "Описание",
           "type": "string",
         },
-        "headingType": Object {
-          "$ref": "#/definitions/HeadingType",
+        "headlineVersion": Object {
+          "$ref": "#/definitions/HeadlineVersion",
         },
         "image": Object {
           "$ref": "#/definitions/Picture",
@@ -2801,8 +2863,8 @@ Object {
           "title": "Описание",
           "type": "string",
         },
-        "headingType": Object {
-          "$ref": "#/definitions/HeadingType",
+        "headlineVersion": Object {
+          "$ref": "#/definitions/HeadlineVersion",
         },
         "image": Object {
           "$ref": "#/definitions/Picture",
@@ -2857,8 +2919,8 @@ Object {
           "title": "Описание",
           "type": "string",
         },
-        "headingType": Object {
-          "$ref": "#/definitions/HeadingType",
+        "headlineVersion": Object {
+          "$ref": "#/definitions/HeadlineVersion",
         },
         "image": Object {
           "$ref": "#/definitions/Picture",
@@ -2907,8 +2969,8 @@ Object {
           "title": "Описание",
           "type": "string",
         },
-        "headingType": Object {
-          "$ref": "#/definitions/HeadingType",
+        "headlineVersion": Object {
+          "$ref": "#/definitions/HeadlineVersion",
         },
         "image": Object {
           "$ref": "#/definitions/Picture",
@@ -2961,6 +3023,9 @@ Object {
         "description": Object {
           "title": "Описание",
           "type": "string",
+        },
+        "headingType": Object {
+          "$ref": "#/definitions/HeadingType",
         },
         "title": Object {
           "title": "Заголовок",
@@ -3048,6 +3113,16 @@ Object {
       "title": "Параметр",
       "type": "object",
     },
+    "SafeDepositRentalContent": Object {
+      "properties": Object {
+        "title": Object {
+          "title": "Заголовок",
+          "type": "string",
+        },
+      },
+      "title": "Аренда сейфовых ячеек",
+      "type": "object",
+    },
     "SitemapProps": Object {
       "properties": Object {
         "dispositions": Object {
@@ -3097,7 +3172,8 @@ Object {
     "Step": Object {
       "properties": Object {
         "button": Object {
-          "$ref": "#/definitions/ButtonProps",
+          "$ref": "#/definitions/ButtonWithIconProps",
+          "title": "Кнопка",
         },
         "description": Object {
           "title": "Описание",
@@ -3125,7 +3201,8 @@ Object {
     "StepsBlockContent": Object {
       "properties": Object {
         "button": Object {
-          "$ref": "#/definitions/ButtonProps",
+          "$ref": "#/definitions/ButtonWithIconProps",
+          "title": "Кнопка",
         },
         "description": Object {
           "title": "Описание",
@@ -3181,6 +3258,20 @@ Object {
       "title": "Пункт подменю",
       "type": "object",
     },
+    "Tab": Object {
+      "properties": Object {
+        "id": Object {
+          "title": "Tег",
+          "type": "string",
+        },
+        "title": Object {
+          "title": "Название",
+          "type": "string",
+        },
+      },
+      "title": "Таб",
+      "type": "object",
+    },
     "TableColumnData": Object {
       "properties": Object {
         "cell": Object {
@@ -3210,6 +3301,23 @@ Object {
         },
       },
       "title": "Параметр",
+      "type": "object",
+    },
+    "TabsContent": Object {
+      "properties": Object {
+        "showCounter": Object {
+          "title": "Показывать счетчик блоков во вкладках",
+          "type": "boolean",
+        },
+        "tabs": Object {
+          "items": Object {
+            "$ref": "#/definitions/Tab",
+          },
+          "title": "Табы",
+          "type": "array",
+        },
+      },
+      "title": "Вкладки",
       "type": "object",
     },
     "Target": Object {
@@ -3620,6 +3728,15 @@ Object {
         },
       },
       "title": "Плитка",
+      "type": "object",
+    },
+    "TitleProp": Object {
+      "properties": Object {
+        "title": Object {
+          "title": "Заголовок",
+          "type": "string",
+        },
+      },
       "type": "object",
     },
     "TitleWithImageContent": Object {

@@ -22,6 +22,7 @@ import type { ProductBlockContent } from './ProductBlock/ProductBlockContent';
 import type { ProductGalleryContent } from './ProductGallery/ProductGalleryContent';
 import type { ProductTileContent } from './ProductTile/ProductTileContent';
 import type { PromoTileContent } from './PromoTile/PromoTileContent';
+import type { SafeDepositRentalContent } from './SafeDepositRental/SafeDepositRentalContent';
 import type { StepsBlockContent } from './StepsBlock/StepsBlockContent';
 import type { TariffsTableContent } from './TariffsTable/TariffsTableContent';
 import type { TextBlockContent } from './TextBlock/TextBlockContent';
@@ -58,4 +59,6 @@ export type BlockContent =
   | GroupBlockContent
   | BonusBenefitsBlockContent
   | OfficeCardContent
-  | InsuranceContent;
+  | InsuranceContent
+  | SafeDepositRentalContent;
+

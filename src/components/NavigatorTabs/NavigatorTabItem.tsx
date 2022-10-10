@@ -4,10 +4,10 @@ import type { LinkProps } from '../../model/LinkProps';
 export interface NavigatorTabItemProps extends LinkProps {
   active?: boolean;
   className?: string;
-  onClick?: (ev: MouseEvent) => void;
+  onClick?: () => void;
 }
 
-const TEXT_CLASSES = 'font-sans font-normal text-m-md';
+const TEXT_CLASSES = 'font-sans text-m';
 const LINK_CLASSES = 'flex-1 flex items-center justify-center cursor-pointer';
 
 export const NavigatorTabItem = JSX<NavigatorTabItemProps>(

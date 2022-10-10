@@ -1,8 +1,7 @@
 import { JSX } from '@redneckz/uni-jsx';
 import type { UniBlockProps } from '../../types';
 import { ButtonSection } from '../../ui-kit/Button/ButtonSection';
-import { Description } from '../../ui-kit/Description/Description';
-import { Heading } from '../../ui-kit/Heading/Heading';
+import { Headline } from '../Headline/Headline';
 import { Img } from '../../ui-kit/Img/Img';
 import { List } from '../../ui-kit/List/List';
 import { BaseTile } from '../BaseTile/BaseTile';
@@ -17,7 +16,7 @@ export const ProductBlockInner = JSX<ProductBlockInnerProps>(
     className = '',
     context,
     title,
-    headingType = 'h2',
+    headlineVersion = 'L',
     description,
     benefits,
     benefitsVersion = 'normal',
@@ -32,17 +31,16 @@ export const ProductBlockInner = JSX<ProductBlockInnerProps>(
       <div className={`w-full ${className}`}>
         <div>
           {label ? renderLabel(label, version) : null}
+          <Headline
+            context={context}
+            className="!p-0 max-w-[600px]"
+            title={title}
+            description={description}
+            bgColorHeadline={version}
+            headlineVersion={headlineVersion}
+          />
           <BaseTile
             context={context}
-            title={
-              title ? (
-                <Heading
-                  headingType={headingType}
-                  title={title}
-                  className="whitespace-pre-wrap max-w-[600px]"
-                />
-              ) : null
-            }
             buttons={
               buttons?.length ? (
                 <ButtonSection
@@ -53,7 +51,6 @@ export const ProductBlockInner = JSX<ProductBlockInnerProps>(
               ) : null
             }
           >
-            {description ? <Description className="mt-3 text-m" description={description} /> : null}
             {benefits?.filter((_) => _.label)?.length ? (
               <div className="mt-3">
                 {benefits.map((benefit, i) =>
@@ -85,7 +82,7 @@ const labelStyleMap: Record<BlockVersion, string> = {
 
 const renderLabel = (label: string, version: BlockVersion) => (
   <div
-    className={`m-xs px-2.5 py-1.5 mb-5 rounded-md border-2 border-solid w-fit ${labelStyleMap[version]}`}
+    className={`px-2.5 py-1.5 mb-5 rounded-md border-2 border-solid w-fit ${labelStyleMap[version]}`}
   >
     {label}
   </div>

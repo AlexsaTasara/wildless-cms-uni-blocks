@@ -26,8 +26,8 @@ export const LinkDocs = JSX<LinkDocsProps>(
   }) => {
     return (
       <BlockWrapper
-        context={context}
         className={`font-sans text-primary-text p-[50px] bg-white ${className}`}
+        context={context}
         {...rest}
       >
         <Headline
@@ -36,7 +36,7 @@ export const LinkDocs = JSX<LinkDocsProps>(
           description={description}
           context={context}
           align={align}
-          headingType="h3"
+          headlineVersion="M"
         />
         <LinkDocsList
           className={`mt-8 ${linkColumnsModeStyleMap[columnsMode]}`}

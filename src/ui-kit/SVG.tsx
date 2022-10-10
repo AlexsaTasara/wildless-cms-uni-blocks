@@ -1,15 +1,15 @@
 import { JSX } from '@redneckz/uni-jsx';
 
-interface SVGPathOptions {
+export interface SVGPathOptions {
   fill?: string;
   stroke?: string;
-  strokeLinecap?: string;
-  strokeLinejoin?: string;
+  strokeLinecap?: 'inherit' | 'butt' | 'round' | 'square';
+  strokeLinejoin?: 'inherit' | 'round' | 'miter' | 'bevel';
   strokeWidth?: string;
   strokeMiterlimit?: string;
 }
 
-interface SVGPath extends SVGPathOptions {
+export interface SVGPath extends SVGPathOptions {
   d: string;
 }
 

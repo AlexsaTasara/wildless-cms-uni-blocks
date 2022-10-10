@@ -1,8 +1,8 @@
 import { JSX } from '@redneckz/uni-jsx';
-import type { FuncReturnVoid, UniBlockProps } from '../../types';
+import type { UniBlockProps } from '../../types';
+import { Button } from '../../ui-kit/Button/Button';
 import { renderArrows } from '../../ui-kit/Button/renderArrows';
 import { Img } from '../../ui-kit/Img/Img';
-import { Button } from '../../ui-kit/Button/Button';
 import { addSpacesBetweenNumbers } from '../../utils/addSpacesBetweenNumbers';
 import type { CardItem, InsuranceAmountBlockTabs } from './InsuranceAmountBlockContent';
 
@@ -13,14 +13,14 @@ type InsuranceGalleryProps = {
   cards: CardItem[];
   activeSlideIndex: number;
   isLastShift: boolean;
-  setActiveSlideIndex: FuncReturnVoid<number>;
+  setActiveSlideIndex: (index: number) => void;
 };
 
 type InsuranceSlideProps = {
   slide: CardItem;
   i: number;
   activeSlideIndex: number;
-  onClick: FuncReturnVoid<MouseEvent>;
+  onClick: () => void;
 };
 
 export const InsuranceAmountBlockInner = JSX<InsuranceAmountBlockInnerProps>(
@@ -40,7 +40,7 @@ export const InsuranceAmountBlockInner = JSX<InsuranceAmountBlockInnerProps>(
     const activeHref = cards[activeSlideIndex]?.href;
 
     return (
-      <section className={`min-w-full text-center ${className}`}>
+      <section role="listitem" className={`min-w-full text-center ${className}`}>
         <div className="relative mt-7 overflow-hidden">
           {galleryLength
             ? renderGallery({
@@ -132,7 +132,7 @@ function renderSlide({ slide, i, activeSlideIndex, onClick }: InsuranceSlideProp
   );
 }
 
-function renderValueBlock(title, sum) {
+function renderValueBlock(title: string, sum: number) {
   return (
     <div className="flex flex-col text-left whitespace-pre">
       <span className="text-h6">{addSpacesBetweenNumbers(sum)} ₽</span>
@@ -141,7 +141,7 @@ function renderValueBlock(title, sum) {
   );
 }
 
-function renderDoneIcon(isActive) {
+function renderDoneIcon(isActive: boolean) {
   return isActive ? (
     <Img
       className={`h-[24px] w-[24px] min-w-[24px] min-h-[24px] absolute right-4 top-4`}

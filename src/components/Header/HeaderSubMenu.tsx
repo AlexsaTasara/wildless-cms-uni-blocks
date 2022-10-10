@@ -39,11 +39,11 @@ export const HeaderSubMenu = JSX<HeaderSubMenuProps>(({ context, subItems = [], 
   };
 
   return (
-    <nav className="relative mt-5">
-      <div className="overflow-hidden whitespace-nowrap mr-52">
+    <nav className="relative mt-6">
+      <div className="overflow-hidden whitespace-nowrap mr-52 pb-3">
         {subItems.map((_, i) => (
           <IntersectionObserverTag
-            Tag="span"
+            tag="span"
             observerCallback={observerCallback(i)}
             observerOptions={{ threshold: 1 }}
             key={String(i)}
@@ -60,6 +60,7 @@ export const HeaderSubMenu = JSX<HeaderSubMenuProps>(({ context, subItems = [], 
       {dropDownMenuItems.length ? (
         <DropdownMenu
           context={context}
+          activeSubItem={activeSubItem}
           menuVisible={menuVisible}
           toggleMenu={toggleMenu}
           menuItems={dropDownMenuItems}

@@ -35,7 +35,7 @@ export type CreditCalculatorData = {
   rows: CreditCalculatorSourceBookParams[];
 };
 
-export const getCreditCalculatorParams = (
+export const useCreditCalculatorParams = (
   context: ContentPageContext,
   userInputParams: CreditCalculatorUserInputParams,
   sourceBookDir?: string,
@@ -47,7 +47,7 @@ export const getCreditCalculatorParams = (
     sourceBookDir || CREDIT_CALC_DEFAULT_DIR,
   );
   const creditCalculatorSourceBookParams =
-    data?.rows.find((_) => {
+    data?.rows?.find((_) => {
       return (
         isInsurance === _.isInsurance &&
         isSalaryClient === _.isSalaryClient &&

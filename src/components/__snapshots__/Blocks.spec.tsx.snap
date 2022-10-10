@@ -636,6 +636,15 @@ exports[`Blocks NavigatorTabs should render block "NavigatorTabs" without conten
 />
 `;
 
+exports[`Blocks OfficeCard should render block "OfficeCard" without content 1`] = `
+<section
+  class="font-sans text-primary-text py-10 bg-white "
+  id=""
+>
+  <section />
+</section>
+`;
+
 exports[`Blocks OtherProducts should render block "OtherProducts" without content 1`] = `
 <section
   class="font-sans text-primary-text "

@@ -18,7 +18,7 @@ const TEXT_COLORS: Record<TextColorVersion, string> = {
 export interface ContactInformationProps extends ContactInformationContent, UniBlockProps {}
 
 export const ContactInformation = JSX<ContactInformationProps>((props) => {
-  const { className = '', title, contactCards, anchor = null } = props;
+  const { className = '', title, contactCards, anchor = '' } = props;
 
   return (
     <section id={anchor} className={`font-sans text-primary-text py-10 bg-white ${className}`}>
@@ -39,7 +39,7 @@ function renderCard(card: ContactCard, i: number) {
         <div className="flex flex-row mb-4">
           {card?.icon ? (
             <Img
-              className="w-[48px] h-[48px] min-h-0 min-w-0 bg-main rounded-full box-border p-[12px]"
+              className="w-[48px] h-[48px] min-h-48 min-w-48 bg-main rounded-full box-border p-[12px]"
               image={card.icon}
               width="48"
               height="48"

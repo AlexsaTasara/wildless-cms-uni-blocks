@@ -81,6 +81,15 @@ exports[`Blocks ComparisonTable should render block "ComparisonTable" without co
 </section>
 `;
 
+exports[`Blocks ContactInformation should render block "ContactInformation" without content 1`] = `
+<section
+  class="font-sans text-primary-text py-10 bg-white "
+  id=""
+>
+  <section />
+</section>
+`;
+
 exports[`Blocks ExchangeRateTile should render block "ExchangeRateTile" without content 1`] = `
 <section
   class="bg-white text-primary-text font-sans p-9 box-border "

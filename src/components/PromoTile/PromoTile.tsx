@@ -47,6 +47,7 @@ export const PromoTile = JSX<PromoTileProps>(
                   className={`!p-0 max-w-[600px]`}
                   headlineVersion={getTileHeadingType(className)}
                   bgColorHeadline={version}
+                  align="left"
                 />
               </div>
             ) : null
@@ -59,7 +60,7 @@ export const PromoTile = JSX<PromoTileProps>(
         >
           <div className="mt-1.5">
             {date ? <div className="text-sm mb-2">{formatDate(date)}</div> : null}
-            <div className="text-base">{description}</div>
+            <div className="text-l">{description}</div>
           </div>
         </BaseTile>
       </BlockWrapper>

@@ -588,6 +588,22 @@ Object {
       "properties": Object {
         "button": Object {
           "$ref": "#/definitions/ButtonWithIconProps",
+          "default": Object {
+            "icon": Object {
+              "format": "webp",
+              "size": Object {
+                "height": 24,
+                "width": 24,
+              },
+            },
+            "iconRight": Object {
+              "format": "webp",
+              "size": Object {
+                "height": 24,
+                "width": 24,
+              },
+            },
+          },
           "title": "Кнопка",
         },
         "colors": Object {
@@ -1530,6 +1546,7 @@ Object {
         "NewDocIcon",
         "OfficeIcon",
         "OkIcon",
+        "PackA4",
         "PassSendIcon",
         "PercentageRoundIcon",
         "PercentageSquareIcon",
@@ -1613,6 +1630,7 @@ Object {
         "Новый документ",
         "Офис",
         "Лого «Одноклассники»",
+        "PackA4",
         "Бизнес",
         "Проценты (круг.)",
         "Проценты",
@@ -1855,9 +1873,6 @@ Object {
           "title": "Рамка элементов (моб.)",
           "type": "boolean",
         },
-        "headlineVersion": Object {
-          "$ref": "#/definitions/HeadlineVersion",
-        },
         "icon": Object {
           "$ref": "#/definitions/Picture",
           "default": Object {
@@ -1916,9 +1931,6 @@ Object {
         "hasBorder": Object {
           "title": "Рамка элементов (моб.)",
           "type": "boolean",
-        },
-        "headlineVersion": Object {
-          "$ref": "#/definitions/HeadlineVersion",
         },
         "icon": Object {
           "$ref": "#/definitions/Picture",
@@ -3058,9 +3070,6 @@ Object {
     },
     "RecommendationContent": Object {
       "properties": Object {
-        "headingType": Object {
-          "$ref": "#/definitions/HeadingType",
-        },
         "recommendations": Object {
           "items": Object {
             "$ref": "#/definitions/RecommendationCardTypes",
@@ -3087,6 +3096,16 @@ Object {
         },
       },
       "title": "Параметр",
+      "type": "object",
+    },
+    "SafeDepositRentalContent": Object {
+      "properties": Object {
+        "title": Object {
+          "title": "Заголовок",
+          "type": "string",
+        },
+      },
+      "title": "Аренда сейфовых ячеек",
       "type": "object",
     },
     "SitemapProps": Object {
@@ -3138,7 +3157,8 @@ Object {
     "Step": Object {
       "properties": Object {
         "button": Object {
-          "$ref": "#/definitions/ButtonProps",
+          "$ref": "#/definitions/ButtonWithIconProps",
+          "title": "Кнопка",
         },
         "description": Object {
           "title": "Описание",
@@ -3166,7 +3186,8 @@ Object {
     "StepsBlockContent": Object {
       "properties": Object {
         "button": Object {
-          "$ref": "#/definitions/ButtonProps",
+          "$ref": "#/definitions/ButtonWithIconProps",
+          "title": "Кнопка",
         },
         "description": Object {
           "title": "Описание",
@@ -3222,6 +3243,20 @@ Object {
       "title": "Пункт подменю",
       "type": "object",
     },
+    "Tab": Object {
+      "properties": Object {
+        "id": Object {
+          "title": "Tег",
+          "type": "string",
+        },
+        "title": Object {
+          "title": "Название",
+          "type": "string",
+        },
+      },
+      "title": "Таб",
+      "type": "object",
+    },
     "TableColumnData": Object {
       "properties": Object {
         "cell": Object {
@@ -3251,6 +3286,23 @@ Object {
         },
       },
       "title": "Параметр",
+      "type": "object",
+    },
+    "TabsContent": Object {
+      "properties": Object {
+        "showCounter": Object {
+          "title": "Показывать счетчик блоков во вкладках",
+          "type": "boolean",
+        },
+        "tabs": Object {
+          "items": Object {
+            "$ref": "#/definitions/Tab",
+          },
+          "title": "Табы",
+          "type": "array",
+        },
+      },
+      "title": "Вкладки",
       "type": "object",
     },
     "Target": Object {

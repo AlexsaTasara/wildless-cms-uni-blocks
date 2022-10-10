@@ -21,7 +21,7 @@ export const Checkbox = JSX<CheckboxProps>(({ className, text, checked, isRadio,
         checked:border-primary-main m-0`}
         type="checkbox"
         onChange={(e) => {
-          onChange(e.target.checked);
+          onChange(e.target.checked as boolean);
         }}
         checked={checked}
       />
@@ -37,7 +37,7 @@ export const Checkbox = JSX<CheckboxProps>(({ className, text, checked, isRadio,
           viewBox="0 0 11 9"
         />
       )}
-      {text ? <span className="font-sans ml-3 text-m-base cursor-pointer">{text}</span> : null}
+      {text ? <span className="font-sans ml-3 text-l cursor-pointer">{text}</span> : null}
     </label>
   </div>
 ));

@@ -27,7 +27,7 @@ export const ProductBlockInner = JSX<ProductBlockInnerProps>(
     textBlockClassName = '',
   }) => {
     return (
-      <div className={`flex grow justify-between items-stretch ${className}`}>
+      <div className={`flex grow justify-between items-stretch h-full ${className}`}>
         <div className={`flex flex-col ${textBlockClassName}`}>
           <Headline
             context={context}
@@ -36,6 +36,7 @@ export const ProductBlockInner = JSX<ProductBlockInnerProps>(
             className={`!p-0 max-w-[600px]`}
             bgColorHeadline={version}
             headlineVersion={headlineVersion}
+            align="left"
           />
           <BaseTile context={context} buttons={getButtons(context, buttons)}>
             {benefits?.filter((_) => _.label)?.length ? (
@@ -64,6 +65,6 @@ export const ProductBlockInner = JSX<ProductBlockInnerProps>(
 
 const getButtons = (context, buttons) => {
   return buttons?.length ? (
-    <ButtonSection context={context} buttons={buttons} className="flex mt-9 gap-4" />
+    <ButtonSection context={context} buttons={buttons} className="flex gap-4" />
   ) : null;
 };

@@ -1,0 +1,17 @@
+{
+  "showCounter": true,
+  "tabs": [
+    {
+      "id": "tab1",
+      "title": "Вкладка 1"
+    },
+    {
+      "id": "tab2",
+      "title": "Вкладка 2"
+    },
+    {
+      "id": "tab3",
+      "title": "Вкладка 3"
+    }
+  ]
+}

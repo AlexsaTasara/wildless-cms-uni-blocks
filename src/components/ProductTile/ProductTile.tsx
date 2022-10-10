@@ -45,6 +45,8 @@ export const ProductTile = JSX<ProductTileProps>(
             title={title}
             description={description}
             headlineVersion={headlineVersion}
+            bgColorHeadline={version}
+            align="left"
           />
           {renderBenefits(benefits || [], version)}
           {additionalDescription
@@ -55,7 +57,7 @@ export const ProductTile = JSX<ProductTileProps>(
           <ButtonSection
             context={context}
             buttons={buttons}
-            className="flex self-end mt-5 gap-4 z-[1]"
+            className="flex self-end mt-5 gap-4 z-[1] text-l"
           />
         ) : null}
         {image?.src ? <Img className="absolute right-0 bottom-0" image={image} /> : null}
@@ -94,7 +96,7 @@ function renderBenefitDescription(benefit: TextBenefit, i: number, version = 'pr
   };
 
   return (
-    <div key={String(i)} className={`${i ? 'mt-4' : ''} ${labelStyleMap[version]}`}>
+    <div key={String(i)} className={`text-m ${i ? 'mt-4' : ''} ${labelStyleMap[version]}`}>
       {benefit.description}
     </div>
   );

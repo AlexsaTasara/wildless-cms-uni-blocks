@@ -1,6 +1,6 @@
 import { JSX } from '@redneckz/uni-jsx';
-import { BlockWrapper } from '../../ui-kit/BlockWrapper';
 import type { UniBlockProps } from '../../types';
+import { BlockWrapper } from '../../ui-kit/BlockWrapper';
 import { Logo } from '../../ui-kit/Logo/Logo';
 import { SearchBar } from '../../ui-kit/SearchBar/SearchBar';
 import { Contacts } from './Contacts';
@@ -28,9 +28,9 @@ export const Footer = JSX<FooterProps>(
   }) => {
     return (
       <BlockWrapper
-        Tag="footer"
+        tag="footer"
         context={context}
-        className={`p-9 bg-white ${className || ''}`}
+        className={`p-9 bg-white font-sans ${className || ''}`}
         {...rest}
       >
         <div className="flex items-stretch gap-[54px] pb-[30px] xl:gap-8">

@@ -1,11 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Blocks Accordion should render block "Accordion" without content 1`] = `<section />`;
+exports[`Blocks Accordion should render block "Accordion" without content 1`] = `
+<section
+  class="p-[50px] font-sans bg-white text-primary-text "
+/>
+`;
 
-exports[`Blocks BenefitsBlock should render block "BenefitsBlock" without content 1`] = `<section />`;
+exports[`Blocks BenefitsBlock should render block "BenefitsBlock" without content 1`] = `
+<section
+  class="font-sans text-primary-text bg-white p-12 flex flex-col items-center "
+/>
+`;
 
 exports[`Blocks Bonus should render block "Bonus" without content 1`] = `
-<section>
+<section
+  class="font-sans bg-white p-[50px] pb-9 "
+>
   <div
     class="container"
   >
@@ -16,10 +26,16 @@ exports[`Blocks Bonus should render block "Bonus" without content 1`] = `
 </section>
 `;
 
-exports[`Blocks BonusBenefitsBlock should render block "BonusBenefitsBlock" without content 1`] = `<section />`;
+exports[`Blocks BonusBenefitsBlock should render block "BonusBenefitsBlock" without content 1`] = `
+<section
+  class="font-sans text-primary-text bg-white p-50 flex flex-col text-center "
+/>
+`;
 
 exports[`Blocks Calculator should render block "Calculator" without content 1`] = `
-<section>
+<section
+  class="box-border overflow-hidden relative font-sans w-100 bg-white text-primary-text "
+>
   <div>
     <div />
   </div>
@@ -32,7 +48,9 @@ exports[`Blocks Calculator should render block "Calculator" without content 1`] 
 `;
 
 exports[`Blocks Catalog should render block "Catalog" without content 1`] = `
-<section>
+<section
+  class="bg-white relative font-sans p-12 overflow-hidden text-center "
+>
   <div
     class="flex duration-1000 gap-3.5"
     role="list"
@@ -49,7 +67,9 @@ exports[`Blocks Catalog should render block "Catalog" without content 1`] = `
 `;
 
 exports[`Blocks ComparisonTable should render block "ComparisonTable" without content 1`] = `
-<section>
+<section
+  class="bg-white font-sans py-[50px] pl-[50px] overflow-hidden text-primary-text relative "
+>
   <h3
     class="font-sans m-0 text-h2 max-w-[47rem] text-center mb-9 mx-auto"
   />
@@ -62,7 +82,9 @@ exports[`Blocks ComparisonTable should render block "ComparisonTable" without co
 `;
 
 exports[`Blocks ExchangeRateTile should render block "ExchangeRateTile" without content 1`] = `
-<section>
+<section
+  class="bg-white text-primary-text font-sans p-9 box-border "
+>
   <div
     class="font-sans flex flex-col grow h-full items-start "
   >
@@ -155,7 +177,9 @@ exports[`Blocks ExchangeRateTile should render block "ExchangeRateTile" without 
 `;
 
 exports[`Blocks Footer should render block "Footer" without content 1`] = `
-<section>
+<footer
+  class="p-9 bg-white font-sans "
+>
   <div
     class="flex items-stretch gap-[54px] pb-[30px] xl:gap-8"
   >
@@ -209,14 +233,14 @@ exports[`Blocks Footer should render block "Footer" without content 1`] = `
           />
         </div>
         <label
-          class="text-secondary-text font-light text-base"
+          class="text-secondary-text text-l-light"
           for="search-bar-input"
         >
           Поиск по сайту
         </label>
       </div>
       <input
-        class="h-12 pl-12 w-full peer text-base text-black border border-solid rounded box-border
+        class="h-12 pl-12 w-full peer text-l text-black border border-solid rounded-md box-border
               outline-none pr-[6%] border-main-divider focus:border-primary-text font-light h-full"
         id="search-bar-input"
         name="search-bar-input"
@@ -224,7 +248,7 @@ exports[`Blocks Footer should render block "Footer" without content 1`] = `
         value=""
       />
       <a
-        class="text-center font-sans select-none inline-block cursor-pointer no-underline text-white bg-primary-main hover:bg-primary-hover active:bg-primary-active rounded-md invisible peer-focus:visible absolute top-1 right-1"
+        class="text-center font-sans select-none inline-block cursor-pointer no-underline focus:border-primary-focus focus:border text-white bg-primary-main hover:bg-primary-hover active:bg-primary-active rounded-md invisible peer-focus:visible absolute top-1 right-1"
         role="button"
       >
         <div
@@ -246,7 +270,7 @@ exports[`Blocks Footer should render block "Footer" without content 1`] = `
       >
         <a
           aria-label="Обратная связь"
-          class="text-center font-sans select-none inline-block cursor-pointer no-underline text-white bg-primary-main hover:bg-primary-hover active:bg-primary-active rounded-md mb-6 w-full"
+          class="text-center font-sans select-none inline-block cursor-pointer no-underline focus:border-primary-focus focus:border text-white bg-primary-main hover:bg-primary-hover active:bg-primary-active rounded-md mb-6 w-full"
           href="/"
           role="link"
           target="_blank"
@@ -259,7 +283,7 @@ exports[`Blocks Footer should render block "Footer" without content 1`] = `
                 class="text-xs text-left"
               />
               <div
-                class="text-left text-base"
+                class="text-left text-l"
               >
                 Обратная связь
               </div>
@@ -267,29 +291,33 @@ exports[`Blocks Footer should render block "Footer" without content 1`] = `
           </div>
         </a>
       </div>
-      <div>
+      <div
+        class="font-sans"
+      >
         <div
           class="flex gap-2.5 "
         />
         <span
-          class="font-light text-sm text-secondary-text"
+          class="text-s-light text-secondary-text"
         >
           Соцсети
         </span>
       </div>
-      <div>
+      <div
+        class="font-sans"
+      >
         <div
           class="flex gap-2.5 mt-6"
         />
         <span
-          class="font-light text-sm text-secondary-text"
+          class="text-s-light text-secondary-text"
         >
           Мобильное приложение
         </span>
       </div>
     </div>
     <div
-      class="flex items-start justify-between gap-11 xl:gap-5 pt-[3px]"
+      class="flex items-start justify-between gap-[54px] xl:gap-5 pt-[3px]"
     />
   </div>
   <div
@@ -302,17 +330,19 @@ exports[`Blocks Footer should render block "Footer" without content 1`] = `
       class="pt-5"
     >
       <span
-        class="font-sans font-light text-xs text-secondary-text"
+        class="font-light text-xs text-secondary-text"
       >
         © 2000-2022 АО «Россельхозбанк» Генеральная лицензия Банка России № 3349 от 12.08.2015 г.
       </span>
     </div>
   </div>
-</section>
+</footer>
 `;
 
 exports[`Blocks Gallery should render block "Gallery" without content 1`] = `
-<section>
+<section
+  class="relative font-sans text-primary-text bg-white p-[42px] overflow-hidden "
+>
   <div>
     <div
       class="absolute top-0 left-0 bottom-0 w-[84px] bg-gradient-to-r from-white to-transparent"
@@ -337,20 +367,28 @@ exports[`Blocks Gallery should render block "Gallery" without content 1`] = `
 `;
 
 exports[`Blocks GracePeriod should render block "GracePeriod" without content 1`] = `
-<section>
+<section
+  class="font-sans bg-white p-[50px] "
+>
   <h3
     class="font-sans m-0 text-h3 text-center"
   />
   <div
-    class="font-light text-base-md text-center mt-3"
+    class="text-l-light-md text-center mt-3"
   />
 </section>
 `;
 
-exports[`Blocks GroupBlock should render block "GroupBlock" without content 1`] = `<section />`;
+exports[`Blocks GroupBlock should render block "GroupBlock" without content 1`] = `
+<section
+  class="box-border "
+/>
+`;
 
 exports[`Blocks Header should render block "Header" without content 1`] = `
-<section>
+<header
+  class="pt-6 pb-5 px-20 bg-white "
+>
   <div
     class="container"
   >
@@ -416,13 +454,13 @@ exports[`Blocks Header should render block "Header" without content 1`] = `
         </a>
         <button
           aria-label="Поиск по сайту"
-          class="border-0 p-0 w-[24px] h-[24px] flex items-center bg-inherit cursor-pointer mr-5 text-primary-text hover:text-primary-main"
+          class="border-0 p-0 w-[24px] h-[24px] flex items-center bg-inherit cursor-pointer mr-5 group text-primary-text hover:text-primary-main"
           disabled=""
           type="button"
         >
           <svg
             aria-hidden="true"
-            class="h-full"
+            class="h-full pointer-events-none"
           >
             <title>
               Иконка Лупа
@@ -431,7 +469,7 @@ exports[`Blocks Header should render block "Header" without content 1`] = `
               Иконка Лупа
             </desc>
             <use
-              class="text-black "
+              class="text-black group-hover:text-primary-main pointer-events-none"
               href="icons/LoupeIcon.svg#icon"
               xlink:href="icons/LoupeIcon.svg#icon"
             />
@@ -439,13 +477,13 @@ exports[`Blocks Header should render block "Header" without content 1`] = `
         </button>
         <button
           aria-label="Дополнительные ссылки"
-          class="border-0 p-0 w-[24px] h-[24px] flex items-center bg-inherit cursor-pointer text-secondary-light hover:text-secondary-hover min-w-[32px] min-h-[32px]"
+          class="border-0 p-0 w-[24px] h-[24px] flex items-center bg-inherit cursor-pointer text-secondary-light hover:text-secondary-hover group min-w-[32px] min-h-[32px]"
           disabled=""
           type="button"
         >
           <svg
             aria-hidden="true"
-            class="h-full bg-secondary-light rounded-full"
+            class="h-full bg-main-divider rounded-full pointer-events-none"
           >
             <title>
               Иконка Сетка (белая)
@@ -454,7 +492,7 @@ exports[`Blocks Header should render block "Header" without content 1`] = `
               Иконка Сетка (белая)
             </desc>
             <use
-              class="text-black "
+              class="text-black group-hover:text-primary-main"
               href="icons/GridIcon.svg#icon"
               xlink:href="icons/GridIcon.svg#icon"
             />
@@ -466,17 +504,25 @@ exports[`Blocks Header should render block "Header" without content 1`] = `
       class="mt-6 h-[1px] bg-main-divider"
     />
   </div>
-</section>
+</header>
 `;
 
-exports[`Blocks Headline should render block "Headline" without content 1`] = `<section />`;
+exports[`Blocks Headline should render block "Headline" without content 1`] = `
+<section
+  class="font-sans flex flex-col p-[50px] gap-4 bg-transparent "
+/>
+`;
 
 exports[`Blocks Insurance should render block "Insurance" without content 1`] = `
-<section>
-  <section />
+<section
+  class="px-[100px] py-[50px] bg-white text-primary-text font-sans "
+>
+  <section
+    class="font-sans flex flex-col p-[50px] gap-3 bg-transparent !p-0"
+  />
   <div>
     <div
-      class="mt-5 mx-auto flex justify-center gap-[122px] mt-[30px]"
+      class="mx-auto flex justify-center gap-[122px] mt-[30px]"
     >
       <div
         class="w-[558px] m-auto"
@@ -487,7 +533,9 @@ exports[`Blocks Insurance should render block "Insurance" without content 1`] = 
 `;
 
 exports[`Blocks InsuranceAmountBlock should render block "InsuranceAmountBlock" without content 1`] = `
-<section>
+<section
+  class="box-border py-[50px] overflow-hidden relative font-sans w-100 bg-white "
+>
   <div
     class="flex"
     role="list"
@@ -497,13 +545,19 @@ exports[`Blocks InsuranceAmountBlock should render block "InsuranceAmountBlock" 
 `;
 
 exports[`Blocks LinkDocs should render block "LinkDocs" without content 1`] = `
-<section>
-  <section />
+<section
+  class="font-sans text-primary-text p-[50px] bg-white "
+>
+  <section
+    class="font-sans flex flex-col p-[50px] gap-3 bg-transparent !p-0"
+  />
 </section>
 `;
 
 exports[`Blocks MiniGallery should render block "MiniGallery" without content 1`] = `
-<section>
+<section
+  class="relative font-sans text-primary-text bg-white p-[42px] overflow-hidden "
+>
   <div>
     <div
       class="absolute top-0 left-0 bottom-0 w-[84px] bg-gradient-to-r from-white to-transparent"
@@ -528,7 +582,12 @@ exports[`Blocks MiniGallery should render block "MiniGallery" without content 1`
 `;
 
 exports[`Blocks MobileAppTile should render block "MobileAppTile" without content 1`] = `
-<section>
+<section
+  class="flex justify-between font-sans p-9 box-border relative
+        pr-[9.4rem] min-h-[360px]
+        bg-white text-primary-text
+        "
+>
   <div
     class="font-sans flex flex-col grow h-full items-start "
   >
@@ -562,19 +621,31 @@ exports[`Blocks MobileAppTile should render block "MobileAppTile" without conten
 `;
 
 exports[`Blocks Navigation should render block "Navigation" without content 1`] = `
-<section>
+<section
+  class="font-sans text-primary-text rounded-[40px] flex items-center justify-between "
+>
   <h2
     class="font-medium text-xl-light m-0"
   />
 </section>
 `;
 
-exports[`Blocks NavigatorTabs should render block "NavigatorTabs" without content 1`] = `<section />`;
+exports[`Blocks NavigatorTabs should render block "NavigatorTabs" without content 1`] = `
+<section
+  class="sticky top-0 z-20 box-border flex gap-x-1 h-14 "
+/>
+`;
 
-exports[`Blocks OtherProducts should render block "OtherProducts" without content 1`] = `<section />`;
+exports[`Blocks OtherProducts should render block "OtherProducts" without content 1`] = `
+<section
+  class="font-sans text-primary-text "
+/>
+`;
 
 exports[`Blocks PictureText should render block "PictureText" without content 1`] = `
-<section>
+<section
+  class="relative font-sans p-14 bg-white text-primary-text "
+>
   <h3
     class="font-sans m-0 text-h2 text-center"
   />
@@ -585,10 +656,14 @@ exports[`Blocks PictureText should render block "PictureText" without content 1`
 `;
 
 exports[`Blocks Placeholder should render block "Placeholder" without content 1`] = `
-<section>
-  <section>
+<section
+  class="bg-white text-primary-text font-sans p-9 box-border undefined pr-[9.4rem] min-h-[360px] "
+>
+  <section
+    class="font-sans flex flex-col p-[50px] gap-4 bg-transparent !p-0 max-w-[600px]"
+  >
     <div
-      class="text-xl-light text-primary-text text-left"
+      class="text-xl-light text-primary-text text-center"
     >
       Блок в разработке...
     </div>
@@ -617,14 +692,18 @@ exports[`Blocks Placeholder should render block "Placeholder" without content 1`
 `;
 
 exports[`Blocks ProductBlock should render block "ProductBlock" without content 1`] = `
-<section>
+<section
+  class="font-sans overflow-hidden p-[50px] flex flex-col box-border min-h-[528px] bg-white text-primary-text "
+>
   <div
-    class="flex grow justify-between items-stretch "
+    class="flex grow justify-between items-stretch h-full "
   >
     <div
       class="flex flex-col "
     >
-      <section />
+      <section
+        class="font-sans flex flex-col p-[50px] gap-4 bg-white !p-0 max-w-[600px]"
+      />
       <div
         class="font-sans flex flex-col grow h-full items-start "
       >
@@ -645,7 +724,10 @@ exports[`Blocks ProductBlock should render block "ProductBlock" without content 
 `;
 
 exports[`Blocks ProductGallery should render block "ProductGallery" without content 1`] = `
-<section>
+<section
+  class="box-border pt-[50px] overflow-hidden relative font-sans w-100 
+        bg-white text-primary-text"
+>
   <div
     class="flex duration-1000 pb-14"
     role="list"
@@ -658,11 +740,15 @@ exports[`Blocks ProductGallery should render block "ProductGallery" without cont
 `;
 
 exports[`Blocks ProductTile should render block "ProductTile" without content 1`] = `
-<section>
+<section
+  class="bg-white overflow-hidden text-primary-text font-sans p-9 box-border min-h-[364px] relative justify-between grid  bg-white text-primary-text pr-[9.4rem] min-h-[360px] "
+>
   <div
     class="z-[1]"
   >
-    <section />
+    <section
+      class="font-sans flex flex-col p-[50px] gap-2 bg-white !p-0"
+    />
     <div
       class="flex mt-4"
     />
@@ -671,12 +757,16 @@ exports[`Blocks ProductTile should render block "ProductTile" without content 1`
 `;
 
 exports[`Blocks PromoTile should render block "PromoTile" without content 1`] = `
-<section>
+<section
+  class="bg-white text-primary-text font-sans p-9 box-border  bg-white text-primary-text pr-[9.4rem] min-h-[360px] "
+>
   <div
     class="font-sans flex flex-col grow h-full items-start "
   >
     <div>
-      <section>
+      <section
+        class="font-sans flex flex-col p-[50px] gap-4 bg-white !p-0 max-w-[600px]"
+      >
         <h2
           class="font-sans m-0 text-h2 whitespace-pre-wrap text-primary-text text-left"
         >
@@ -695,7 +785,7 @@ exports[`Blocks PromoTile should render block "PromoTile" without content 1`] = 
             class="mt-1.5"
           >
             <div
-              class="text-base"
+              class="text-l"
             />
           </div>
         </div>
@@ -706,14 +796,18 @@ exports[`Blocks PromoTile should render block "PromoTile" without content 1`] = 
 `;
 
 exports[`Blocks Recommendation should render block "Recommendation" without content 1`] = `
-<section>
-  <div
-    class="flex duration-1000 gap-3.5"
-    role="list"
-    style="transform: translateX(-0px);"
-  />
+<section
+  class="relative font-sans p-9 overflow-hidden text-center bg-white text-primary-text "
+>
   <div>
-    <div />
+    <div
+      class="flex duration-1000 gap-3.5"
+      role="list"
+      style="transform: translateX(-0px);"
+    />
+    <div>
+      <div />
+    </div>
   </div>
   <div
     class="absolute top-0 bottom-0 w-[84px] left-0 bg-opacity-from-white"
@@ -724,12 +818,109 @@ exports[`Blocks Recommendation should render block "Recommendation" without cont
 </section>
 `;
 
-exports[`Blocks StepsBlock should render block "StepsBlock" without content 1`] = `<section />`;
+exports[`Blocks SafeDepositRental should render block "SafeDepositRental" without content 1`] = `
+<section
+  class="bg-white px-8 py-12 "
+>
+  <div
+    class="flex justify-between align-top mb-6"
+  >
+    <div
+      class="flex flex-col justify-between"
+    >
+      <div
+        class="flex"
+      >
+        <div
+          class="mr-11"
+        >
+          <span
+            class="block font-light text-m mb-1"
+          >
+            Аренда за
+          </span>
+          <span
+            class="text-h3"
+          >
+            26
+          </span>
+        </div>
+        <div
+          class=""
+        >
+          <span
+            class="block font-light text-m mb-1"
+          >
+            Цена
+          </span>
+          <span
+            class="text-h3"
+          >
+            26 ₽
+          </span>
+        </div>
+      </div>
+      <div
+        class="bg-primary-main px-10 pt-10 pb-4 text-center"
+      >
+        <svg
+          aria-hidden="true"
+          class=""
+          height="257"
+          width="290"
+        >
+          <title>
+            Иконка PackA4
+          </title>
+          <desc>
+            Иконка PackA4
+          </desc>
+          <use
+            class="text-primary-main "
+            href="icons/PackA4.svg#icon"
+            xlink:href="icons/PackA4.svg#icon"
+          />
+        </svg>
+        <span
+          class="font-light text-white opacity-80 mt-2 inline-block"
+        >
+          На рисунки изображена пачка
+          <br />
+           листов формата А4
+        </span>
+      </div>
+    </div>
+  </div>
+  <p
+    class="text-button font-light text-secondary-text"
+  >
+    Аренда СЯ, в случае проведения процедуры купли-продажи, с использованием наличных денег или процедуры ипотечной сделки
+  </p>
+</section>
+`;
 
-exports[`Blocks TariffsTable should render block "TariffsTable" without content 1`] = `<section />`;
+exports[`Blocks StepsBlock should render block "StepsBlock" without content 1`] = `
+<section
+  class="box-border font-sans text-primary-text bg-white px-[70px] py-[50px] flex flex-col items-center bg-white text-primary-text "
+/>
+`;
+
+exports[`Blocks Tabs should render block "Tabs" without content 1`] = `
+<section
+  class="mb-2 box-border flex gap-x-1 undefined"
+/>
+`;
+
+exports[`Blocks TariffsTable should render block "TariffsTable" without content 1`] = `
+<section
+  class="bg-white font-sans py-[50px] pl-[50px] overflow-hidden text-primary-text relative "
+/>
+`;
 
 exports[`Blocks TextBlock should render block "TextBlock" without content 1`] = `
-<section>
+<section
+  class="font-sans px-9 py-4 flex bg-white "
+>
   <div
     class="py-0.5"
   />
@@ -737,7 +928,9 @@ exports[`Blocks TextBlock should render block "TextBlock" without content 1`] = 
 `;
 
 exports[`Blocks Tile should render block "Tile" without content 1`] = `
-<section>
+<section
+  class="overflow-hidden font-sans p-9 pr-3 box-border  bg-white text-primary-text pr-[9.4rem] min-h-[360px] "
+>
   <div
     class="font-sans flex flex-col grow h-full items-start "
   >

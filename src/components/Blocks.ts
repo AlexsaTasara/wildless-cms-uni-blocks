@@ -72,5 +72,4 @@ export const Blocks = {
   OfficeCard,
   SafeDepositRental,
   Tabs,
-  OfficeCard,
 };

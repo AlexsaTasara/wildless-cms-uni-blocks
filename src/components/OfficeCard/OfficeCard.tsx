@@ -1,7 +1,6 @@
 import { JSX } from '@redneckz/uni-jsx';
 import type { UniBlockProps } from '../../types';
 import { Heading } from '../../ui-kit/Heading/Heading';
-
 import type {
   ContactInformation,
   Metro,
@@ -95,7 +94,6 @@ function renderContacts(contact: ContactInformation, i: number) {
 function renderDates(curdate: Weekday, i: number) {
   let textCol = TEXT_COLORS['green'];
   curdate?.textColor ? (textCol = curdate.textColor) : null;
-
   return (
     <div key={String(i)} className="flex flex-row mb-8">
       <div className="flex gap-1 flex-col h-full ml-5 max-w-[490px]">

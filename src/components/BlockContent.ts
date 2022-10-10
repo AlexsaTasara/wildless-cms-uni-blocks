@@ -61,3 +61,4 @@ export type BlockContent =
   | OfficeCardContent
   | InsuranceContent
   | SafeDepositRentalContent;
+

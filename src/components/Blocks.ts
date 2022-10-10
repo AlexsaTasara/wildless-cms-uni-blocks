@@ -69,6 +69,7 @@ export const Blocks = {
   Placeholder,
   GroupBlock,
   BonusBenefitsBlock,
+  OfficeCard,
   SafeDepositRental,
   Tabs,
   OfficeCard,

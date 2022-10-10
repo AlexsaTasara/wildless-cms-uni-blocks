@@ -1,4 +1,5 @@
 import { JSX } from '@redneckz/uni-jsx';
+import { BlockWrapper } from '../../ui-kit/BlockWrapper';
 import type { UniBlockProps } from '../../types';
 import { Heading } from '../../ui-kit/Heading/Heading';
 import type { BonusContent } from './BonusContent';
@@ -6,14 +7,14 @@ import type { BonusContent } from './BonusContent';
 export interface BonusProps extends BonusContent, UniBlockProps {}
 
 export const Bonus = JSX<BonusProps>((props) => {
-  const { className = '', title, description, bonusItems, anchor = null } = props;
+  const { className = '', title, description, bonusItems, ...rest } = props;
 
   return (
-    <section className={`font-sans bg-white p-[50px] pb-9 ${className}`} id={anchor}>
+    <BlockWrapper className={`font-sans bg-white p-[50px] pb-9 ${className}`} {...rest}>
       <div className="container">
         {title ? <Heading headingType="h3" className="text-center" title={title} /> : null}
         {description ? (
-          <div className="text-md font-light text-center mt-[10px]">{description}</div>
+          <div className="text-xl-light text-center mt-[10px]">{description}</div>
         ) : null}
         <div className="flex flex-wrap w-full mt-9">
           {bonusItems
@@ -25,10 +26,8 @@ export const Bonus = JSX<BonusProps>((props) => {
                   >
                     <div className="flex justify-between w-full">
                       <div className="mr-4">
-                        <div className="text-title-sm">{_.title}</div>
-                        <div className="text-md font-light mt-[14px] max-w-[488px]">
-                          {_.description}
-                        </div>
+                        <div className="text-h4">{_.title}</div>
+                        <div className="text-xl-light mt-[14px] max-w-[488px]">{_.description}</div>
                       </div>
                       {_.bonusCount ? (
                         <div className="relative -bottom-3 h-auto flex items-end mt-14 shrink-0">
@@ -47,6 +46,6 @@ export const Bonus = JSX<BonusProps>((props) => {
             : null}
         </div>
       </div>
-    </section>
+    </BlockWrapper>
   );
 });

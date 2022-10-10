@@ -1,5 +1,6 @@
 import { JSX } from '@redneckz/uni-jsx';
 import type { BlockVersion } from '../../model/BlockVersion';
+import { BlockWrapper } from '../../ui-kit/BlockWrapper';
 import type { UniBlockProps } from '../../types';
 import type { ProductBlockInnerContent } from '../ProductBlock/ProductBlockContent';
 import { ProductBlockInner } from '../ProductBlock/ProductBlockInner';
@@ -28,16 +29,17 @@ const productSlideStyleMap: Record<BlockVersion, string> = {
 };
 
 export const ProductGallery = JSX<ProductGalleryProps>(
-  ({ className = '', context, slides = [], version = 'primary', anchor = null }) => {
+  ({ className = '', context, slides = [], version = 'primary', ...rest }) => {
     const galleryNav = slides.map((s) => s.nav);
     const galleryBlocks = slides.map((s) => s.productBlock);
     const [activeSlideIndex, setActiveSlideIndex] = context.useState(0);
 
     return (
-      <section
-        id={anchor}
+      <BlockWrapper
+        context={context}
         className={`box-border pt-[50px] overflow-hidden relative font-sans w-100 ${className}
         ${productGalleryStyleMap[version]}`}
+        {...rest}
       >
         <div
           className="flex duration-1000 pb-14"
@@ -58,7 +60,7 @@ export const ProductGallery = JSX<ProductGalleryProps>(
             }),
           )}
         </div>
-      </section>
+      </BlockWrapper>
     );
   },
 );
@@ -93,8 +95,8 @@ function renderNavButton({ slide, i, activeSlideIndex, onClick, version }) {
     : `min-w-[277px] px-0 pt-4 pb-[23px] hover:py-[26px] hover:py-[26px] ease-in duration-300 bg-white/10
       ${productSlideStyleMap[version]}`;
   const btnTitleClassName = isActiveBtn
-    ? 'text-primary-text text-title-2xs'
-    : `text-base ${productBlockStyleMap[version].title}`;
+    ? 'text-primary-text text-h6'
+    : `text-l ${productBlockStyleMap[version].title}`;
   const btnDescClassName = isActiveBtn
     ? 'text-secondary-text text-m-title-xs mt-2.5'
     : `text-m-md mt-1.5 ${productBlockStyleMap[version].text}`;

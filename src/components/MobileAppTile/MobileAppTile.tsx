@@ -1,6 +1,7 @@
 import { JSX } from '@redneckz/uni-jsx';
 import type { BlockVersion } from '../../model/BlockVersion';
 import type { UniBlockProps } from '../../types';
+import { BlockWrapper } from '../../ui-kit/BlockWrapper';
 import { ButtonSection } from '../../ui-kit/Button/ButtonSection';
 import { Heading } from '../../ui-kit/Heading/Heading';
 import { Img } from '../../ui-kit/Img/Img';
@@ -24,27 +25,29 @@ export const MobileAppTile = JSX<MobileAppTileProps>(
     title = 'Мобильное приложение',
     qr,
     buttons,
-    anchor = null,
     version = 'primary',
     items,
     image,
+    ...rest
   }) => {
     const textColorClass = version === 'primary' ? 'text-primary-text' : '';
 
     return (
-      <section
+      <BlockWrapper
+        context={context}
         className={`flex justify-between font-sans p-9 box-border relative
         ${getTileRightPadding(className)} ${getTileMinHeight(className)}
         ${mobileAppStyleMap[version]}
         ${className}`}
-        id={anchor}
+        {...rest}
       >
         <BaseTile
           context={context}
           title={
             title ? (
               <Heading
-                headingType="h3"
+                headingType="h4"
+                as="h3"
                 title={title}
                 className={`whitespace-pre-wrap max-w-[509px] mb-6
                   ${textColorClass}`}
@@ -66,7 +69,7 @@ export const MobileAppTile = JSX<MobileAppTileProps>(
                   title={title}
                   width="122"
                   height="122"
-                  className="w-[122px] h-[122px] min-w-[122px] min-h-[122px] bg-secondary-light mr-[23px] rounded-md"
+                  className="w-[122px] h-[122px] min-w-[122px] min-h-[122px] bg-secondary-light mr-4 rounded-md"
                 />
               </a>
             )}
@@ -78,7 +81,7 @@ export const MobileAppTile = JSX<MobileAppTileProps>(
             <Img image={image} />
           </div>
         ) : null}
-      </section>
+      </BlockWrapper>
     );
   },
 );
@@ -91,7 +94,7 @@ const renderList = (version: string, items?: string[]) => {
       version={version === 'primary' ? 'tile' : 'tile-white'}
     />
   ) : (
-    <span className="font-light text-secondary-text ml-4">
+    <span className="text-m text-secondary-text">
       Наведите камеру телефона на QR-код и скачайте приложение
     </span>
   );

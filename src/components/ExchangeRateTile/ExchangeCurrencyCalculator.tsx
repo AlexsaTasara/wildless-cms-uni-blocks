@@ -1,11 +1,12 @@
 import { JSX } from '@redneckz/uni-jsx';
-import type { FuncReturnVoid, UniBlockProps } from '../../types';
+import { useLink } from '../../hooks/useLink';
+import type { UniBlockProps } from '../../types';
+import { Button } from '../../ui-kit/Button/Button';
+import { ButtonProps } from '../../ui-kit/Button/ButtonProps';
 import { calculateResult, formatValue } from './calculateResult';
 import { callbackCurrencySelect } from './callbackCurrencySelect';
 import { Currency } from './CurrencyProps';
-import { renderButton } from './renderButton';
 import { renderInput } from './renderInput';
-
 export interface ExchangeCurrencyItem {
   code?: Currency;
   buy?: number;
@@ -15,6 +16,7 @@ export interface ExchangeCurrencyCalculatorProps extends UniBlockProps {
   className?: string;
   currencyRatesBuy: ExchangeCurrencyItem[];
   currencyRatesSell: ExchangeCurrencyItem[];
+  button?: ButtonProps;
 }
 export interface CalcState {
   inputSell: string;
@@ -24,7 +26,10 @@ export interface CalcState {
 }
 
 export const ExchangeCurrencyCalculator = JSX<ExchangeCurrencyCalculatorProps>(
-  ({ context, className = '', currencyRatesBuy, currencyRatesSell }) => {
+  ({ context, className = '', currencyRatesBuy, currencyRatesSell, button }) => {
+    const { useRouter, handlerDecorator } = context;
+    const router = useRouter();
+
     const [calcState, setCalcState] = context.useState<CalcState>({
       inputSell: '',
       inputBuy: '',
@@ -37,7 +42,7 @@ export const ExchangeCurrencyCalculator = JSX<ExchangeCurrencyCalculatorProps>(
     };
 
     return (
-      <div className={`grid gap-3.5 ${className}`}>
+      <div className={`grid gap-[18px] pt-2 ${className}`}>
         {renderInput({
           placeholder: 'Хочу продать',
           rates: currencyRatesBuy,
@@ -64,7 +69,15 @@ export const ExchangeCurrencyCalculator = JSX<ExchangeCurrencyCalculatorProps>(
               calcState.selectSell,
             ),
         })}
-        {renderButton()}
+        {button?.text ? (
+          <Button
+            className="py-4 mr-1"
+            version={button?.version}
+            {...useLink({ router, handlerDecorator }, button)}
+          >
+            {button.text}
+          </Button>
+        ) : null}
       </div>
     );
   },
@@ -73,7 +86,7 @@ export const ExchangeCurrencyCalculator = JSX<ExchangeCurrencyCalculatorProps>(
 const handleSelectSell =
   (
     calcState: CalcState,
-    setCalcState: FuncReturnVoid<Partial<CalcState>>,
+    setCalcState: (state: Partial<CalcState>) => void,
     currencyRatesSell: ExchangeCurrencyItem[],
   ) =>
   (value: Currency) => {
@@ -90,7 +103,7 @@ const handleSelectSell =
 const handleSelectBuy =
   (
     calcState: CalcState,
-    setCalcState: FuncReturnVoid<Partial<CalcState>>,
+    setCalcState: (state: Partial<CalcState>) => void,
     currencyRatesBuy: ExchangeCurrencyItem[],
   ) =>
   (value: Currency) => {
@@ -104,7 +117,7 @@ const handleSelectBuy =
   };
 
 const handleInputSell =
-  (setCalcState: FuncReturnVoid<Partial<CalcState>>, currencyRatesSell: ExchangeCurrencyItem[]) =>
+  (setCalcState: (state: Partial<CalcState>) => void, currencyRatesSell: ExchangeCurrencyItem[]) =>
   (value: string, codeFrom: Currency, codeTo: Currency) => {
     setCalcState({ inputSell: formatValue(value), selectBuy: codeTo });
     const rate =
@@ -118,7 +131,7 @@ const handleInputSell =
   };
 
 const handleInputBuy =
-  (setCalcState: FuncReturnVoid<Partial<CalcState>>, currencyRatesBuy: ExchangeCurrencyItem[]) =>
+  (setCalcState: (state: Partial<CalcState>) => void, currencyRatesBuy: ExchangeCurrencyItem[]) =>
   (value: string, codeTo: Currency, codeFrom: Currency) => {
     setCalcState({ inputBuy: formatValue(value), selectSell: codeFrom });
     const rate =

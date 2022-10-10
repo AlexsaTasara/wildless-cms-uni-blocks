@@ -1,13 +1,13 @@
 import { JSX } from '@redneckz/uni-jsx';
 import type { BlockVersion } from '../../model/BlockVersion';
 import type { UniBlockProps } from '../../types';
+import { BlockWrapper } from '../../ui-kit/BlockWrapper';
 import { ButtonSection } from '../../ui-kit/Button/ButtonSection';
-import { Description } from '../../ui-kit/Description/Description';
-import { Heading } from '../../ui-kit/Heading/Heading';
 import { Img } from '../../ui-kit/Img/Img';
 import { getTileMinHeight } from '../BaseTile/getTileMinHeight';
 import { getTileRightPadding } from '../BaseTile/getTileRightPadding';
 import type { ProductTileContent, TextBenefit } from './ProductTileContent';
+import { Headline } from '../Headline/Headline';
 
 export interface ProductTileProps extends ProductTileContent, UniBlockProps {}
 
@@ -21,34 +21,33 @@ export const ProductTile = JSX<ProductTileProps>(
     context,
     className = '',
     title,
-    headingType = 'h3',
+    headlineVersion = 'S',
     description,
     additionalDescription,
     benefits,
     buttons,
     image,
     version = 'primary',
-    anchor = null,
+    ...rest
   }) => {
     return (
-      <section
+      <BlockWrapper
+        context={context}
         className={`bg-white overflow-hidden text-primary-text font-sans p-9 box-border min-h-[364px] relative justify-between grid ${className} ${
           productTileStyleMap[version]
         } ${getTileRightPadding(className)} ${getTileMinHeight(className)} `}
-        id={anchor}
+        {...rest}
       >
         <div className="z-[1]">
-          {title ? (
-            <Heading
-              headingType={headingType}
-              as="h3"
-              title={title}
-              className={`whitespace-pre-wrap text-h4`}
-            />
-          ) : null}
-          {description ? (
-            <Description className="mt-2 text-md font-light" description={description} />
-          ) : null}
+          <Headline
+            context={context}
+            className="!p-0"
+            title={title}
+            description={description}
+            headlineVersion={headlineVersion}
+            bgColorHeadline={version}
+            align="left"
+          />
           {renderBenefits(benefits || [], version)}
           {additionalDescription
             ? renderAdditionalDescription(additionalDescription, version)
@@ -58,11 +57,11 @@ export const ProductTile = JSX<ProductTileProps>(
           <ButtonSection
             context={context}
             buttons={buttons}
-            className="flex self-end mt-5 gap-4 z-[1]"
+            className="flex self-end mt-5 gap-4 z-[1] text-l"
           />
         ) : null}
         {image?.src ? <Img className="absolute right-0 bottom-0" image={image} /> : null}
-      </section>
+      </BlockWrapper>
     );
   },
 );
@@ -71,7 +70,7 @@ function renderBenefits(benefits: TextBenefit[], version: BlockVersion) {
   return (
     <div className="flex mt-4">
       {benefits.length ? (
-        <div className="mr-6 gap-2.5 text-title-2xs">{benefits.map(renderBenefitLabel)}</div>
+        <div className="mr-6 gap-2.5 text-h6">{benefits.map(renderBenefitLabel)}</div>
       ) : null}
       {benefits.length ? (
         <div className="pt-1 text-m">
@@ -97,7 +96,7 @@ function renderBenefitDescription(benefit: TextBenefit, i: number, version = 'pr
   };
 
   return (
-    <div key={String(i)} className={`${i ? 'mt-4' : ''} ${labelStyleMap[version]}`}>
+    <div key={String(i)} className={`text-m ${i ? 'mt-4' : ''} ${labelStyleMap[version]}`}>
       {benefit.description}
     </div>
   );

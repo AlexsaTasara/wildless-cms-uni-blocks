@@ -5,11 +5,10 @@ import { isSubItemActive } from './isSubItemActive';
 
 export const findActiveSubItem =
   (router: Router) =>
-  <T extends LinkProps>(items: T[] = []): T | null => {
+  <T extends LinkProps>(items: T[] = []): T | undefined => {
     const possibleActiveSubItems = items?.filter(isSubItemActive(router));
-    const activeSubItem = possibleActiveSubItems?.length
-      ? maxBy((_: T) => _.href?.length || 0)(possibleActiveSubItems) // More specific item with max length
-      : null;
 
-    return activeSubItem;
+    return possibleActiveSubItems?.length
+      ? maxBy((_: T) => _.href?.length || 0)(possibleActiveSubItems) // More specific item with max length
+      : undefined;
   };

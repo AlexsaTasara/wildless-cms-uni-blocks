@@ -82,6 +82,38 @@ Object {
       "title": "Выравнивание",
       "type": "string",
     },
+    "BackwardButtonProps": Object {
+      "properties": Object {
+        "aboveText": Object {
+          "title": "Верхний текст",
+          "type": "string",
+        },
+        "href": Object {
+          "title": "URL (href)",
+          "type": "string",
+        },
+        "icon": Object {
+          "$ref": "#/definitions/Picture",
+          "title": "Иконка",
+        },
+        "rounded": Object {
+          "title": "Закругленные углы",
+          "type": "boolean",
+        },
+        "target": Object {
+          "$ref": "#/definitions/Target",
+        },
+        "text": Object {
+          "default": "Кнопка",
+          "title": "Текст",
+          "type": "string",
+        },
+        "version": Object {
+          "$ref": "#/definitions/ButtonVersion",
+        },
+      },
+      "type": "object",
+    },
     "BenefitItem": Object {
       "properties": Object {
         "description": Object {
@@ -276,6 +308,26 @@ Object {
     },
     "BonusCalculatorParams": Object {
       "description": "TODO: данные из справочника",
+      "properties": Object {
+        "maxBonus": Object {
+          "type": "number",
+        },
+        "prefMonthsNum": Object {
+          "type": "number",
+        },
+        "prefRestBonusRate": Object {
+          "type": "number",
+        },
+        "prefTravelBonusRate": Object {
+          "type": "number",
+        },
+        "restBonusRate": Object {
+          "type": "number",
+        },
+        "travelBonusRate": Object {
+          "type": "number",
+        },
+      },
       "type": "object",
     },
     "BonusCalculatorParamsDef": Object {
@@ -293,6 +345,28 @@ Object {
         "calcType": Object {
           "const": "BonusCalculatorForm",
           "type": "string",
+        },
+        "maxBonus": Object {
+          "type": "number",
+        },
+        "prefMonthsNum": Object {
+          "type": "number",
+        },
+        "prefRestBonusRate": Object {
+          "type": "number",
+        },
+        "prefTravelBonusRate": Object {
+          "type": "number",
+        },
+        "restBonusRate": Object {
+          "type": "number",
+        },
+        "sourceBookDir": Object {
+          "title": "Адрес справочника",
+          "type": "string",
+        },
+        "travelBonusRate": Object {
+          "type": "number",
         },
       },
       "required": Array [
@@ -402,7 +476,7 @@ Object {
         },
         "icon": Object {
           "$ref": "#/definitions/Picture",
-          "title": "Иконка",
+          "title": "Иконка слева",
         },
         "iconRight": Object {
           "$ref": "#/definitions/Picture",
@@ -448,7 +522,7 @@ Object {
     },
     "CalculatorContent": Object {
       "properties": Object {
-        "calcTabs": Object {
+        "calculatorTabs": Object {
           "items": Object {
             "$ref": "#/definitions/CalculatorTab",
           },
@@ -494,6 +568,10 @@ Object {
           "title": "Страховой взнос",
           "type": "number",
         },
+        "href": Object {
+          "title": "Ссылка на программу",
+          "type": "string",
+        },
         "icon": Object {
           "$ref": "#/definitions/Picture",
           "title": "Иконка",
@@ -510,6 +588,22 @@ Object {
       "properties": Object {
         "button": Object {
           "$ref": "#/definitions/ButtonWithIconProps",
+          "default": Object {
+            "icon": Object {
+              "format": "webp",
+              "size": Object {
+                "height": 24,
+                "width": 24,
+              },
+            },
+            "iconRight": Object {
+              "format": "webp",
+              "size": Object {
+                "height": 24,
+                "width": 24,
+              },
+            },
+          },
           "title": "Кнопка",
         },
         "colors": Object {
@@ -650,6 +744,10 @@ Object {
           "title": "Кнопки",
           "type": "array",
         },
+        "sourceBookDir": Object {
+          "title": "Адрес справочника",
+          "type": "string",
+        },
       },
       "type": "object",
     },
@@ -749,6 +847,10 @@ Object {
           "const": "CreditCalculatorForm",
           "type": "string",
         },
+        "sourceBookDir": Object {
+          "title": "Адрес справочника",
+          "type": "string",
+        },
       },
       "required": Array [
         "calcType",
@@ -776,6 +878,10 @@ Object {
           "const": "DepositCalculatorForm",
           "type": "string",
         },
+        "sourceBookDir": Object {
+          "title": "Адрес справочника",
+          "type": "string",
+        },
       },
       "required": Array [
         "calcType",
@@ -783,7 +889,7 @@ Object {
       "title": "Калькулятор вкладов",
       "type": "object",
     },
-    "DescriptionContent": Object {
+    "DescriptionProp": Object {
       "properties": Object {
         "description": Object {
           "title": "Описание",
@@ -833,6 +939,9 @@ Object {
     },
     "ExchangeRateTileContent": Object {
       "properties": Object {
+        "button": Object {
+          "$ref": "#/definitions/ButtonProps",
+        },
         "title": Object {
           "title": "Заголовок",
           "type": "string",
@@ -1209,8 +1318,11 @@ Object {
       "title": "Шапка (для мобильных горизонтальная прокрутка shift+mouseScroll)",
       "type": "object",
     },
-    "HeadingContent": Object {
+    "HeadingCommonProps": Object {
       "properties": Object {
+        "headingType": Object {
+          "$ref": "#/definitions/HeadingType",
+        },
         "title": Object {
           "title": "Заголовок",
           "type": "string",
@@ -1220,6 +1332,7 @@ Object {
     },
     "HeadingType": Object {
       "enum": Array [
+        "h0",
         "h1",
         "h2",
         "h3",
@@ -1228,6 +1341,7 @@ Object {
         "h6",
       ],
       "enumNames": Array [
+        "h0",
         "h1",
         "h2",
         "h3",
@@ -1235,16 +1349,8 @@ Object {
         "h5",
         "h6",
       ],
-      "title": "Тип заголовка",
+      "title": "Размер заголовка",
       "type": "string",
-    },
-    "HeadingTypeContent": Object {
-      "properties": Object {
-        "headingType": Object {
-          "$ref": "#/definitions/HeadingType",
-        },
-      },
-      "type": "object",
     },
     "HeadlineBlockListDef": Object {
       "properties": Object {
@@ -1263,8 +1369,8 @@ Object {
           "title": "Описание",
           "type": "string",
         },
-        "headingType": Object {
-          "$ref": "#/definitions/HeadingType",
+        "headlineVersion": Object {
+          "$ref": "#/definitions/HeadlineVersion",
         },
         "image": Object {
           "$ref": "#/definitions/Picture",
@@ -1290,6 +1396,19 @@ Object {
       "title": "Заголовок",
       "type": "object",
     },
+    "HeadlineCommonProps": Object {
+      "properties": Object {
+        "description": Object {
+          "title": "Описание",
+          "type": "string",
+        },
+        "title": Object {
+          "title": "Заголовок",
+          "type": "string",
+        },
+      },
+      "type": "object",
+    },
     "HeadlineContent": Object {
       "properties": Object {
         "align": Object {
@@ -1302,8 +1421,8 @@ Object {
           "title": "Описание",
           "type": "string",
         },
-        "headingType": Object {
-          "$ref": "#/definitions/HeadingType",
+        "headlineVersion": Object {
+          "$ref": "#/definitions/HeadlineVersion",
         },
         "image": Object {
           "$ref": "#/definitions/Picture",
@@ -1315,6 +1434,40 @@ Object {
       },
       "title": "Заголовок",
       "type": "object",
+    },
+    "HeadlineProps": Object {
+      "properties": Object {
+        "description": Object {
+          "title": "Описание",
+          "type": "string",
+        },
+        "headlineVersion": Object {
+          "$ref": "#/definitions/HeadlineVersion",
+        },
+        "title": Object {
+          "title": "Заголовок",
+          "type": "string",
+        },
+      },
+      "type": "object",
+    },
+    "HeadlineVersion": Object {
+      "enum": Array [
+        "XXL",
+        "XL",
+        "L",
+        "M",
+        "S",
+      ],
+      "enumNames": Array [
+        "Самый большой",
+        "Очень большой",
+        "Большой",
+        "Средний",
+        "Маленький",
+      ],
+      "title": "Размер заголовка",
+      "type": "string",
     },
     "IconName": Object {
       "enum": Array [
@@ -1362,6 +1515,7 @@ Object {
         "InterestGrowthIcon",
         "InterestIcon",
         "JCBIcon",
+        "Logo",
         "LoupeIcon",
         "MasterCardIcon",
         "MinusIcon",
@@ -1372,6 +1526,7 @@ Object {
         "NewDocIcon",
         "OfficeIcon",
         "OkIcon",
+        "PackA4",
         "PassSendIcon",
         "PercentageRoundIcon",
         "PercentageSquareIcon",
@@ -1444,6 +1599,7 @@ Object {
         "Диаграмма роста",
         "Скидка",
         "JCB",
+        "Logo",
         "Лупа",
         "MasterCard",
         "Минус",
@@ -1454,6 +1610,7 @@ Object {
         "Новый документ",
         "Офис",
         "Лого «Одноклассники»",
+        "PackA4",
         "Бизнес",
         "Проценты (круг.)",
         "Проценты",
@@ -1523,20 +1680,23 @@ Object {
       },
       "type": "object",
     },
+    "ImgFormats": Object {
+      "enum": Array [
+        "jpeg",
+        "jpg",
+        "png",
+        "gif",
+        "webp",
+        "heif",
+        "avif",
+      ],
+      "type": "string",
+    },
     "ImgSource": Object {
       "properties": Object {
         "format": Object {
-          "enum": Array [
-            "jpeg",
-            "jpg",
-            "png",
-            "gif",
-            "webp",
-            "heif",
-            "avif",
-          ],
+          "$ref": "#/definitions/ImgFormats",
           "title": "Формат",
-          "type": "string",
         },
         "icon": Object {
           "$ref": "#/definitions/IconName",
@@ -1571,9 +1731,6 @@ Object {
     },
     "InsuranceAmountBlockContent": Object {
       "properties": Object {
-        "button": Object {
-          "$ref": "#/definitions/ButtonProps",
-        },
         "insuranceTabs": Object {
           "items": Object {
             "$ref": "#/definitions/InsuranceAmountBlockTabs",
@@ -1914,17 +2071,17 @@ Object {
     },
     "MediaQuery": Object {
       "enum": Array [
-        "(max-width: 1919px)",
-        "(max-width: 1439px)",
-        "(max-width: 1279px)",
+        1919,
+        1439,
+        1279,
       ],
       "enumNames": Array [
-        "1919px и меньше",
-        "1439px и меньше",
-        "1279px и меньше",
+        "Меньше 1920px",
+        "Меньше 1440px",
+        "Меньше 1280px",
       ],
       "title": "Брейкпоинт",
-      "type": "string",
+      "type": "number",
     },
     "Metro": Object {
       "properties": Object {
@@ -2051,6 +2208,10 @@ Object {
           "const": "MortgageCalculatorForm",
           "type": "string",
         },
+        "sourceBookDir": Object {
+          "title": "Адрес справочника",
+          "type": "string",
+        },
       },
       "required": Array [
         "calcType",
@@ -2157,17 +2318,8 @@ Object {
           "type": "string",
         },
         "format": Object {
-          "enum": Array [
-            "jpeg",
-            "jpg",
-            "png",
-            "gif",
-            "webp",
-            "heif",
-            "avif",
-          ],
+          "$ref": "#/definitions/ImgFormats",
           "title": "Формат",
-          "type": "string",
         },
         "icon": Object {
           "$ref": "#/definitions/IconName",
@@ -2322,7 +2474,7 @@ Object {
     "ProductBlockBlockListDef": Object {
       "properties": Object {
         "backwardButton": Object {
-          "$ref": "#/definitions/ButtonWithIconProps",
+          "$ref": "#/definitions/BackwardButtonProps",
           "title": "Кнопка возврата",
         },
         "benefits": Object {
@@ -2361,8 +2513,8 @@ Object {
           "title": "Описание",
           "type": "string",
         },
-        "headingType": Object {
-          "$ref": "#/definitions/HeadingType",
+        "headlineVersion": Object {
+          "$ref": "#/definitions/HeadlineVersion",
         },
         "image": Object {
           "$ref": "#/definitions/Picture",
@@ -2410,7 +2562,7 @@ Object {
     "ProductBlockContent": Object {
       "properties": Object {
         "backwardButton": Object {
-          "$ref": "#/definitions/ButtonWithIconProps",
+          "$ref": "#/definitions/BackwardButtonProps",
           "title": "Кнопка возврата",
         },
         "benefits": Object {
@@ -2444,8 +2596,8 @@ Object {
           "title": "Описание",
           "type": "string",
         },
-        "headingType": Object {
-          "$ref": "#/definitions/HeadingType",
+        "headlineVersion": Object {
+          "$ref": "#/definitions/HeadlineVersion",
         },
         "image": Object {
           "$ref": "#/definitions/Picture",
@@ -2483,7 +2635,7 @@ Object {
       },
       "properties": Object {
         "backwardButton": Object {
-          "$ref": "#/definitions/ButtonWithIconProps",
+          "$ref": "#/definitions/BackwardButtonProps",
           "title": "Кнопка возврата",
         },
         "benefits": Object {
@@ -2521,8 +2673,8 @@ Object {
           "title": "Описание",
           "type": "string",
         },
-        "headingType": Object {
-          "$ref": "#/definitions/HeadingType",
+        "headlineVersion": Object {
+          "$ref": "#/definitions/HeadlineVersion",
         },
         "image": Object {
           "$ref": "#/definitions/Picture",
@@ -2600,8 +2752,8 @@ Object {
           "title": "Описание",
           "type": "string",
         },
-        "headingType": Object {
-          "$ref": "#/definitions/HeadingType",
+        "headlineVersion": Object {
+          "$ref": "#/definitions/HeadlineVersion",
         },
         "image": Object {
           "$ref": "#/definitions/Picture",
@@ -2711,8 +2863,8 @@ Object {
           "title": "Описание",
           "type": "string",
         },
-        "headingType": Object {
-          "$ref": "#/definitions/HeadingType",
+        "headlineVersion": Object {
+          "$ref": "#/definitions/HeadlineVersion",
         },
         "image": Object {
           "$ref": "#/definitions/Picture",
@@ -2767,8 +2919,8 @@ Object {
           "title": "Описание",
           "type": "string",
         },
-        "headingType": Object {
-          "$ref": "#/definitions/HeadingType",
+        "headlineVersion": Object {
+          "$ref": "#/definitions/HeadlineVersion",
         },
         "image": Object {
           "$ref": "#/definitions/Picture",
@@ -2817,8 +2969,8 @@ Object {
           "title": "Описание",
           "type": "string",
         },
-        "headingType": Object {
-          "$ref": "#/definitions/HeadingType",
+        "headlineVersion": Object {
+          "$ref": "#/definitions/HeadlineVersion",
         },
         "image": Object {
           "$ref": "#/definitions/Picture",
@@ -2871,6 +3023,9 @@ Object {
         "description": Object {
           "title": "Описание",
           "type": "string",
+        },
+        "headingType": Object {
+          "$ref": "#/definitions/HeadingType",
         },
         "title": Object {
           "title": "Заголовок",
@@ -2958,6 +3113,16 @@ Object {
       "title": "Параметр",
       "type": "object",
     },
+    "SafeDepositRentalContent": Object {
+      "properties": Object {
+        "title": Object {
+          "title": "Заголовок",
+          "type": "string",
+        },
+      },
+      "title": "Аренда сейфовых ячеек",
+      "type": "object",
+    },
     "SitemapProps": Object {
       "properties": Object {
         "dispositions": Object {
@@ -3007,7 +3172,8 @@ Object {
     "Step": Object {
       "properties": Object {
         "button": Object {
-          "$ref": "#/definitions/ButtonProps",
+          "$ref": "#/definitions/ButtonWithIconProps",
+          "title": "Кнопка",
         },
         "description": Object {
           "title": "Описание",
@@ -3035,7 +3201,8 @@ Object {
     "StepsBlockContent": Object {
       "properties": Object {
         "button": Object {
-          "$ref": "#/definitions/ButtonProps",
+          "$ref": "#/definitions/ButtonWithIconProps",
+          "title": "Кнопка",
         },
         "description": Object {
           "title": "Описание",
@@ -3091,6 +3258,20 @@ Object {
       "title": "Пункт подменю",
       "type": "object",
     },
+    "Tab": Object {
+      "properties": Object {
+        "id": Object {
+          "title": "Tег",
+          "type": "string",
+        },
+        "title": Object {
+          "title": "Название",
+          "type": "string",
+        },
+      },
+      "title": "Таб",
+      "type": "object",
+    },
     "TableColumnData": Object {
       "properties": Object {
         "cell": Object {
@@ -3120,6 +3301,23 @@ Object {
         },
       },
       "title": "Параметр",
+      "type": "object",
+    },
+    "TabsContent": Object {
+      "properties": Object {
+        "showCounter": Object {
+          "title": "Показывать счетчик блоков во вкладках",
+          "type": "boolean",
+        },
+        "tabs": Object {
+          "items": Object {
+            "$ref": "#/definitions/Tab",
+          },
+          "title": "Табы",
+          "type": "array",
+        },
+      },
+      "title": "Вкладки",
       "type": "object",
     },
     "Target": Object {
@@ -3530,6 +3728,15 @@ Object {
         },
       },
       "title": "Плитка",
+      "type": "object",
+    },
+    "TitleProp": Object {
+      "properties": Object {
+        "title": Object {
+          "title": "Заголовок",
+          "type": "string",
+        },
+      },
       "type": "object",
     },
     "TitleWithImageContent": Object {

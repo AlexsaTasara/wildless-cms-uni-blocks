@@ -1,6 +1,8 @@
 import { JSX } from '@redneckz/uni-jsx';
 import type { BlockVersion } from '../../model/BlockVersion';
 import type { UniBlockProps } from '../../types';
+import type { TileContent } from './TileContent';
+import { BlockWrapper } from '../../ui-kit/BlockWrapper';
 import { ButtonSection } from '../../ui-kit/Button/ButtonSection';
 import { Description } from '../../ui-kit/Description/Description';
 import { Heading } from '../../ui-kit/Heading/Heading';
@@ -9,7 +11,6 @@ import { List } from '../../ui-kit/List/List';
 import { BaseTile } from '../BaseTile/BaseTile';
 import { getTileMinHeight } from '../BaseTile/getTileMinHeight';
 import { getTileRightPadding } from '../BaseTile/getTileRightPadding';
-import type { TileContent } from './TileContent';
 
 export interface TileProps extends TileContent, UniBlockProps {
   role?: string;
@@ -33,17 +34,16 @@ export const Tile = JSX<TileProps>((props) => {
     isDotted = true,
     className = '',
     version = 'primary',
-    role,
-    anchor = null,
+    ...rest
   } = props;
 
   return (
-    <section
+    <BlockWrapper
+      context={context}
       className={`overflow-hidden font-sans p-9 pr-3 box-border ${className} ${
         tileStyleMap[version]
       } ${getTileRightPadding(className)} ${getTileMinHeight(className)} `}
-      role={role}
-      id={anchor}
+      {...rest}
     >
       <BaseTile
         context={context}
@@ -53,7 +53,7 @@ export const Tile = JSX<TileProps>((props) => {
               headingType={headingType}
               as="h3"
               title={title}
-              className={`whitespace-pre-wrap max-w-[600px] ${title ? 'mb-3' : ''}
+              className={`whitespace-pre-wrap max-w-[600px] text-h4
               ${version === 'primary' ? 'text-primary-text' : ''}`}
             />
           ) : null
@@ -67,28 +67,27 @@ export const Tile = JSX<TileProps>((props) => {
             />
           ) : null
         }
-        image={image?.src && <Img className="mt-auto ml-7" image={image} />}
+        image={image?.src ? <Img className="mt-auto ml-7" image={image} /> : null}
       >
         {description ? (
-          <Description
-            className="max-w-[600px] text-title-new-sm font-light"
-            description={description}
-          />
+          <Description className="max-w-[600px] text-xl-light mt-2" description={description} />
         ) : null}
         {children}
         {renderList(items, version, isDotted)}
       </BaseTile>
-    </section>
+    </BlockWrapper>
   );
 });
 
 function renderList(items, version, isDotted: boolean) {
+  const listVersion = version === 'primary' ? 'tile' : 'tile-white';
+
   return items?.length ? (
     <List
       items={items}
       isDotted={isDotted}
-      itemClassName="text-title-2xs font-light mt-2"
-      version={version === 'primary' ? 'tile' : 'tile-white'}
+      itemClassName="text-h6 font-light mt-2"
+      version={listVersion}
     />
   ) : null;
 }

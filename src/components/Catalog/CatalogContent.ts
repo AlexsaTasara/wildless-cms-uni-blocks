@@ -1,6 +1,5 @@
+import type { HeadlineCommonProps } from '../../model/HeadlineType';
 import type { ButtonWithIconProps } from '../../ui-kit/Button/ButtonProps';
-import type { DescriptionContent } from '../../ui-kit/Description/DescriptionContent';
-import type { HeadingContent } from '../../ui-kit/Heading/HeadingContent';
 import type { ImageContent } from '../../ui-kit/Img/ImgProps';
 
 /**
@@ -8,20 +7,25 @@ import type { ImageContent } from '../../ui-kit/Img/ImgProps';
  */
 export type CatalogProductColor = 'black' | 'white';
 
-export interface CatalogCardType extends HeadingContent, DescriptionContent, ImageContent {
+export interface CatalogCardType extends HeadlineCommonProps, ImageContent {
   /** @title Цена в рублях */
   price?: number;
   /** @title Доступные цвета */
   colors?: CatalogProductColor[];
-  /** @title Кнопка */
+  /**
+   * @title Кнопка
+   * @default {
+   *  "icon": { "format": "webp", "size": { "width": 24, "height": 24 } },
+   *  "iconRight" : { "format": "webp", "size": { "width": 24, "height": 24 } }
+   * }
+   */
   button?: ButtonWithIconProps;
 }
 
 /**
  * @title Каталог
  */
-export type CatalogContent = HeadingContent &
-  DescriptionContent & {
-    /** @title Список карточек */
-    cards?: CatalogCardType[];
-  };
+export type CatalogContent = HeadlineCommonProps & {
+  /** @title Список карточек */
+  cards?: CatalogCardType[];
+};

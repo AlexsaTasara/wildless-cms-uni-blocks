@@ -38,46 +38,22 @@ module.exports = {
           'linear-gradient(270deg, rgba(var(--color-primary-main), 1) 34.89%, rgba(var(--color-primary-main), 0) 92.52%);',
         'opacity-from-main':
           'linear-gradient(90deg, rgba(var(--color-primary-main), 1) 0%, rgba(var(--color-primary-main), 0) 80%);',
-        'green-to-yellow':
-          'linear-gradient(180deg, #42AB44 0%, #F6DB7D 100%)',
+        'green-to-yellow': 'linear-gradient(180deg, #42AB44 0%, #F6DB7D 100%)',
       },
       fontFamily: {
         sans: ['Ubuntu', ...defaultTheme.fontFamily.sans],
         mohave: ['Mohave', ...defaultTheme.fontFamily.sans],
       },
       fontSize: {
-        button: ['0.875rem', '1.25rem'], // 14px 20px
-        'button-sm': ['1rem', '1.25rem'], // 16px 20px
-
         'title-extra': ['15.625rem', '14.687rem'], // 250px 235px
         'title-huge': ['12.5rem', '15.625rem'], // 200px 250px
-        'title-xl': ['3.125rem', '3.25rem'], //50px 52px
-        'title-lg': ['2.5rem', '3rem'], //40px 48px
-        title: ['2rem', '2.5rem'], //32px 40px
-        'title-sm': ['1.75rem', '2.5rem'], //28px 40px
-        'title-new-sm': ['1.625rem', '2.25rem'], //26px 36px в рамках задачи ProductGalleryGreen #293
-        'title-xs': ['1.5rem', '1.875rem'], //24px 30px
-        'title-2xs': ['1.25rem', '1.75rem'], //20px 28px
-        lg: ['2.188rem', '3rem'], // 35px 48px
-        md: ['1.125rem', '1.5rem'], // 18px 24px
-        'md-new': ['1.125rem', '1.25rem'], // 18px 20px
         base: ['1rem', '1.5rem'], // 16px 24px
         sm: ['0.875rem', '1.375rem'], // 14px 22px
 
-        '2xs': ['0.625rem', '0.625rem'], // 10px 10px
-
-        'm-button': ['0.875rem', '1.25rem'], // 14px 20px
-
         'm-title': ['1.375rem', '1.8125rem'], //22px 29px
-        'm-title-md': ['1.25rem', '1.625rem'], //20px 26px
         'm-title-xs': ['1.0625rem', '1.375rem'], // 17px 22px
-        'm-base': ['1rem', '1.5rem'], // 16px 24px
         'm-md': ['0.9375rem', '1.5rem'], // 15px 24px
-        'm-md-new': ['0.9375rem', '1.375rem'], // 15px 22px
         'm-sm': ['0.875rem', '1.375rem'], // 14px 22px
-        'm-xs': ['1.8125rem', '1.375rem'], // 13px 22px
-        'm-2xs': ['0.75rem', '1.125rem'], // 12px 18px
-        'm-3xs': ['0.625rem', '0.625rem'], // 10px 10px
 
         h0: ['3.5rem', { // 56px 56px
           lineHeight: '3.5rem',
@@ -99,6 +75,10 @@ module.exports = {
           lineHeight: '2.25rem',
           fontWeight: '400',
         }],
+        'h4-alt': ['1.625rem', { // 26px 36px // от Эльдара атом для главной страницы
+          lineHeight: '2.25rem',
+          fontWeight: '400',
+        }],
         h5: ['1.5rem', { // 24px 30px
           lineHeight: '1.875rem',
           fontWeight: '400',
@@ -109,11 +89,11 @@ module.exports = {
         }],
         xl: ['1.125rem', { // 18px 24px
           lineHeight: '1.5rem',
-          fontWeight: '300',
-        }],
-        'l-bold': ['1rem', { // 16px 24px
-          lineHeight: '1.5rem',
           fontWeight: '400',
+        }],
+        'xl-light': ['1.125rem', { // 18px 24px
+          lineHeight: '1.5rem',
+          fontWeight: '300',
         }],
         'l': ['1rem', { // 16px 24px
           lineHeight: '1.5rem',
@@ -127,11 +107,11 @@ module.exports = {
           lineHeight: '1.25rem',
           fontWeight: '300',
         }],
-        's-bold': ['0.875rem', { // 14px 20px
+        s: ['0.875rem', { // 14px 20px
           lineHeight: '1.25rem',
           fontWeight: '400',
         }],
-        s: ['0.875rem', { // 14px 20px
+        's-light': ['0.875rem', { // 14px 20px
           lineHeight: '1.25rem',
           fontWeight: '300',
         }],
@@ -187,10 +167,11 @@ module.exports = {
         'dark-blue/42': '0 18px 36px -4px rgba(24, 39, 75, 0.42);',
         'blue-gray/24': '0 14px 36px -4px rgba(21, 40, 90, 0.24);',
       },
-      border: {
+      borderColor: {
         'white/50': 'rgba(255,255,255,.5);',
         'gray/100': 'rgba(235, 237, 240, 1);',
-      }
+        'primary-focus': 'rgba(28, 28, 28, 1);',
+      },
     },
   },
   plugins: [],

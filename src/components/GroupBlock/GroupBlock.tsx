@@ -1,9 +1,10 @@
 import { JSX } from '@redneckz/uni-jsx';
 import type { UniBlockProps } from '../../types';
-import type { GroupBlockContent, GroupBlockTab } from './GroupBlockContent';
-import { GroupBlockTabs } from './GroupBlockTabs';
-import { GroupBlocksItem } from './GroupBlocksItem';
+import { BlockWrapper } from '../../ui-kit/BlockWrapper';
 import { filterBlocksByTag } from './filterBlocksByTag';
+import type { GroupBlockContent, GroupBlockTab } from './GroupBlockContent';
+import { GroupBlocksItem } from './GroupBlocksItem';
+import { GroupBlockTabs } from './GroupBlockTabs';
 
 export interface TabsItemProps extends GroupBlockTab {
   count?: number;
@@ -14,7 +15,7 @@ export interface GroupBlockProps extends GroupBlockContent, UniBlockProps {
 }
 
 export const GroupBlock = JSX<GroupBlockProps>(
-  ({ className = '', tabs, context, anchor = null, groupBlocks = [], isShowCounter }) => {
+  ({ className = '', tabs, context, groupBlocks = [], isShowCounter, ...rest }) => {
     const [currentTag, setCurrentTag] = context.useState(tabs?.[0]?.tag);
 
     const filteredBlocks = filterBlocksByTag(groupBlocks, currentTag);
@@ -28,7 +29,7 @@ export const GroupBlock = JSX<GroupBlockProps>(
     });
 
     return (
-      <section id={anchor} className={`box-border gap-1 ${className}`}>
+      <BlockWrapper context={context} className={`box-border ${className}`} {...rest}>
         {tabsNewMap?.length ? (
           <GroupBlockTabs
             currentTag={currentTag}
@@ -38,9 +39,11 @@ export const GroupBlock = JSX<GroupBlockProps>(
           />
         ) : null}
         {groupBlocks.length ? (
-          <GroupBlocksItem context={context} groupBlocks={filteredBlocks} />
+          <div className="mt-1">
+            <GroupBlocksItem context={context} groupBlocks={filteredBlocks} />
+          </div>
         ) : null}
-      </section>
+      </BlockWrapper>
     );
   },
 );

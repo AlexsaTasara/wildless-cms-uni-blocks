@@ -2183,6 +2183,9 @@ Object {
           "title": "Описание",
           "type": "string",
         },
+        "headingType": Object {
+          "$ref": "#/definitions/HeadingType",
+        },
         "href": Object {
           "title": "Ссылка",
           "type": "string",
@@ -2198,7 +2201,7 @@ Object {
           "type": "array",
         },
         "qr": Object {
-          "$ref": "#/definitions/QRCode",
+          "$ref": "#/definitions/Picture",
         },
         "title": Object {
           "title": "Заголовок",
@@ -3021,20 +3024,6 @@ Object {
         },
       },
       "title": "Акции",
-      "type": "object",
-    },
-    "QRCode": Object {
-      "properties": Object {
-        "href": Object {
-          "title": "Ссылка",
-          "type": "string",
-        },
-        "src": Object {
-          "title": "QR код",
-          "type": "string",
-        },
-      },
-      "title": "QR код",
       "type": "object",
     },
     "RecommendationCardTypes": Object {

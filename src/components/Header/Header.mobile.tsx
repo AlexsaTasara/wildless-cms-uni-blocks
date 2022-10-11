@@ -1,16 +1,16 @@
 import { JSX } from '@redneckz/uni-jsx';
+import type { UniBlockProps } from '../../types';
+import type { TopItemProps } from '../../ui-kit/TopItem/TopItem';
+import type { HeaderContent } from './HeaderContent';
 import { useLink } from '../../hooks/useLink';
 import { findActiveSubItem } from '../../services/sitemap/findActiveSubItem';
 import { isTopItemActive } from '../../services/sitemap/isTopItemActive';
 import { mergeTopItems } from '../../services/sitemap/mergeTopItems';
 import { useSitemap } from '../../services/sitemap/useSitemap';
-import type { UniBlockProps } from '../../types';
 import { HeaderItem } from '../../ui-kit/HeaderItem/HeaderItem';
-import type { TopItemProps } from '../../ui-kit/TopItem/TopItem';
 import { getAccordionItems } from '../../utils/getAccordionItems';
 import { Accordion } from '../Accordion/Accordion';
 import { HeaderBurger } from './HeaderBurger';
-import type { HeaderContent } from './HeaderContent';
 import { HeaderTop } from './HeaderTop';
 
 export interface HeaderProps extends HeaderContent, UniBlockProps {}
@@ -68,5 +68,5 @@ export const Header = JSX<HeaderProps>(
 );
 
 const renderSubItem = (item: TopItemProps, i: number) => (
-  <HeaderItem key={String(i)} className="mr-8 whitespace-nowrap text-sm" {...item} />
+  <HeaderItem key={String(i)} className="mr-8 whitespace-nowrap text-s" {...item} />
 );

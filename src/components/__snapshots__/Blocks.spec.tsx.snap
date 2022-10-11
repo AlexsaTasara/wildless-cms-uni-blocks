@@ -2,7 +2,7 @@
 
 exports[`Blocks Accordion should render block "Accordion" without content 1`] = `
 <section
-  class="p-[50px] font-sans bg-white text-primary-text "
+  class="p-[50px] mb-1 last:mb-0 font-sans bg-white text-primary-text "
 />
 `;
 
@@ -121,17 +121,17 @@ exports[`Blocks ExchangeRateTile should render block "ExchangeRateTile" without 
                 <thead>
                   <tr>
                     <th
-                      class="text-left text-m text-secondary-text"
+                      class="text-left text-m-light text-secondary-text"
                     >
                       Валюта
                     </th>
                     <th
-                      class="text-left text-m text-secondary-text pl-11"
+                      class="text-left text-m-light text-secondary-text pl-11"
                     >
                       Купить
                     </th>
                     <th
-                      class="text-left text-m text-secondary-text pl-11"
+                      class="text-left text-m-light text-secondary-text pl-11"
                     >
                       Продать
                     </th>
@@ -250,7 +250,7 @@ exports[`Blocks Footer should render block "Footer" without content 1`] = `
       </div>
       <input
         class="h-12 pl-12 w-full peer text-l text-black border border-solid rounded-md box-border
-              outline-none pr-[6%] border-main-divider focus:border-primary-text font-light h-full"
+              outline-none pr-[6%] border-main-divider focus:border-primary-text h-full"
         id="search-bar-input"
         name="search-bar-input"
         type="text"
@@ -261,7 +261,7 @@ exports[`Blocks Footer should render block "Footer" without content 1`] = `
         role="button"
       >
         <div
-          class="font-normal text-sm px-9 py-[9px]"
+          class="text-s px-9 py-2.5"
         >
           Найти
         </div>
@@ -289,7 +289,7 @@ exports[`Blocks Footer should render block "Footer" without content 1`] = `
           >
             <div>
               <div
-                class="text-xs text-left"
+                class="text-xs-light text-left"
               />
               <div
                 class="text-left text-l"
@@ -339,7 +339,7 @@ exports[`Blocks Footer should render block "Footer" without content 1`] = `
       class="pt-5"
     >
       <span
-        class="font-light text-xs text-secondary-text"
+        class="text-xs-light text-secondary-text"
       >
         © 2000-2022 АО «Россельхозбанк» Генеральная лицензия Банка России № 3349 от 12.08.2015 г.
       </span>
@@ -444,7 +444,7 @@ exports[`Blocks Header should render block "Header" without content 1`] = `
           rel="noopener noreferrer"
         >
           <span
-            class="text-primary-text hover:text-primary-main font-sans font-light text-sm"
+            class="text-primary-text hover:text-primary-main font-sans text-s-light"
           >
             Москва
           </span>
@@ -456,7 +456,7 @@ exports[`Blocks Header should render block "Header" without content 1`] = `
           rel="noopener noreferrer"
         >
           <span
-            class="text-primary-text hover:text-primary-main font-sans font-light text-sm"
+            class="text-primary-text hover:text-primary-main font-sans text-s-light"
           >
             Офисы и банкоматы
           </span>
@@ -617,7 +617,7 @@ exports[`Blocks MobileAppTile should render block "MobileAppTile" without conten
             class="flex flex-1 items-center"
           >
             <span
-              class="text-m text-secondary-text"
+              class="text-m-light text-secondary-text"
             >
               Наведите камеру телефона на QR-код и скачайте приложение
             </span>
@@ -634,7 +634,7 @@ exports[`Blocks Navigation should render block "Navigation" without content 1`] 
   class="font-sans text-primary-text rounded-[40px] flex items-center justify-between "
 >
   <h2
-    class="font-medium text-xl-light m-0"
+    class="text-xl font-medium m-0"
   />
 </section>
 `;
@@ -678,7 +678,7 @@ exports[`Blocks Placeholder should render block "Placeholder" without content 1`
     </div>
   </section>
   <figure
-    class="m-0 min-w-[600px]"
+    class="m-0 min-w-[80%]"
   >
     <div
       class="h-4 mt-2 bg-secondary-light"
@@ -835,6 +835,262 @@ exports[`Blocks SafeDepositRental should render block "SafeDepositRental" withou
     class="flex justify-between align-top mb-6"
   >
     <div
+      class="flex-1 mr-9"
+    >
+      <div
+        class="flex justify-between mb-6"
+      >
+        <div
+          class="w-full mr-4"
+        >
+          <div>
+            <span
+              class="block text-m-light mb-2"
+            >
+              Город
+            </span>
+            <select
+              class="appearance-none h-14 border border-gray p-4 rounded-md text-s w-full cursor-pointer"
+              style="background: url(/icons/ArrowDownIcon.svg) no-repeat 50%;"
+            >
+              <option
+                class=""
+                value="Москва"
+              >
+                Москва
+              </option>
+              <option
+                class=""
+                value="Краснодар"
+              >
+                Краснодар
+              </option>
+            </select>
+          </div>
+        </div>
+        <div
+          class="w-full"
+        >
+          <div>
+            <span
+              class="block text-m-light mb-2"
+            >
+              Отделение
+            </span>
+            <select
+              class="appearance-none h-14 border border-gray p-4 rounded-md text-s w-full cursor-pointer"
+              style="background: url(/icons/ArrowDownIcon.svg) no-repeat 50%;"
+            >
+              <option
+                class=""
+                value="МоскваОфис1"
+              >
+                МоскваОфис1
+              </option>
+              <option
+                class=""
+                value="МоскваОфис2"
+              >
+                МоскваОфис2
+              </option>
+              <option
+                class=""
+                value="МоскваОфис3"
+              >
+                МоскваОфис3
+              </option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div
+        class="mb-6"
+      >
+        <span
+          class="block text-m-light mb-[3px]"
+        >
+          Срок аренды
+        </span>
+        <div>
+          <label
+            class="block relative"
+          >
+            <input
+              class="m-0 mt-[5px] font-sans text-h3 w-full h-14 border border-solid border-main-stroke rounded-md
+                        outline-none p-0 pl-4 box-border text-primary-text"
+              value="26"
+            />
+            <div
+              class="absolute inset-x-0 bottom-[-4px] px-4 leading-[18px]"
+            >
+              <input
+                class="box-border w-full m-0 cursor-pointer slider"
+                max="365"
+                min="1"
+                step="1"
+                style="background-size: 6.87% 100%;"
+                type="range"
+                value="26"
+              />
+            </div>
+          </label>
+          <div
+            class="flex justify-between my-3"
+          >
+            <span
+              class="text-s leading-[14px] text-secondary-text pl-4"
+            >
+              От 1 дня
+            </span>
+            <span
+              class="text-s leading-[14px] text-secondary-text pl-4"
+            >
+              До 365 дней
+            </span>
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex justify-between mb-6"
+      >
+        <div
+          class="mr-4 w-full"
+        >
+          <div>
+            <span
+              class="block text-m-light mb-2"
+            >
+              Размер ячейки
+            </span>
+            <select
+              class="appearance-none h-14 border border-gray p-4 rounded-md text-s w-full cursor-pointer"
+              style="background: url(/icons/ArrowDownIcon.svg) no-repeat 50%;"
+            >
+              <option
+                class=""
+                value="маленькая"
+              >
+                маленькая
+              </option>
+              <option
+                class=""
+                value="средняя"
+              >
+                средняя
+              </option>
+              <option
+                class=""
+                value="большая"
+              >
+                большая
+              </option>
+            </select>
+          </div>
+        </div>
+        <div
+          class="w-full"
+        >
+          <div>
+            <span
+              class="block text-m-light mb-2"
+            >
+              Параметры ячейки, мм (ВхШхД)
+            </span>
+            <select
+              class="appearance-none h-14 border border-gray p-4 rounded-md text-s w-full cursor-pointer"
+              style="background: url(/icons/ArrowDownIcon.svg) no-repeat 50%;"
+            >
+              <option
+                class=""
+                value="125x225x375"
+              >
+                125x225x375
+              </option>
+              <option
+                class=""
+                value="200x300x400"
+              >
+                200x300x400
+              </option>
+              <option
+                class=""
+                value="300x400x500"
+              >
+                300x400x500
+              </option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <span
+        class="text-secondary-text text-l-light"
+      >
+        Тип договора
+      </span>
+      <div
+        class="flex justify-between items-center mt-5"
+      >
+        <div>
+          <div
+            class="mb-2"
+          >
+            <label
+              class="flex items-center relative cursor-pointer"
+            >
+              <input
+                checked=""
+                class="appearance-none flex justify-center items-center w-5 h-5 border-2 border-primary-main rounded-full cursor-pointer after:block after:w-2.5 after:h-2.5 after:rounded-full checked:after:bg-primary-main"
+                name="contractType"
+                type="radio"
+                value="option1"
+              />
+              <span
+                class="font-sans ml-3 cursor-pointer"
+              >
+                Простое хранение
+              </span>
+            </label>
+          </div>
+          <div>
+            <label
+              class="flex items-center relative cursor-pointer"
+            >
+              <input
+                class="appearance-none flex justify-center items-center w-5 h-5 border-2 border-primary-main rounded-full cursor-pointer after:block after:w-2.5 after:h-2.5 after:rounded-full checked:after:bg-primary-main"
+                name="contractType"
+                type="radio"
+                value="option2"
+              />
+              <span
+                class="font-sans ml-3 cursor-pointer"
+              >
+                Сделка с недвижимостью
+              </span>
+            </label>
+          </div>
+        </div>
+        <a
+          class="text-center font-sans select-none inline-block cursor-pointer no-underline focus:border-primary-focus focus:border text-white bg-primary-main hover:bg-primary-hover active:bg-primary-active rounded-md "
+          role="button"
+        >
+          <div
+            class="flex items-center justify-center gap-2 py-4 px-9 "
+          >
+            <div>
+              <div
+                class="text-xs-light text-left"
+              />
+              <div
+                class="text-left text-l"
+              >
+                Офисы на карте
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div
       class="flex flex-col justify-between"
     >
       <div
@@ -844,7 +1100,7 @@ exports[`Blocks SafeDepositRental should render block "SafeDepositRental" withou
           class="mr-11"
         >
           <span
-            class="block font-light text-m mb-1"
+            class="block text-m-light mb-1"
           >
             Аренда за
           </span>
@@ -858,7 +1114,7 @@ exports[`Blocks SafeDepositRental should render block "SafeDepositRental" withou
           class=""
         >
           <span
-            class="block font-light text-m mb-1"
+            class="block text-m-light mb-1"
           >
             Цена
           </span>
@@ -891,7 +1147,7 @@ exports[`Blocks SafeDepositRental should render block "SafeDepositRental" withou
           />
         </svg>
         <span
-          class="font-light text-white opacity-80 mt-2 inline-block"
+          class="text-s-light text-white opacity-80 mt-2 inline-block"
         >
           На рисунки изображена пачка
           <br />
@@ -901,7 +1157,7 @@ exports[`Blocks SafeDepositRental should render block "SafeDepositRental" withou
     </div>
   </div>
   <p
-    class="text-button font-light text-secondary-text"
+    class="text-s-light text-secondary-text"
   >
     Аренда СЯ, в случае проведения процедуры купли-продажи, с использованием наличных денег или процедуры ипотечной сделки
   </p>

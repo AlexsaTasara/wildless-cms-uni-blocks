@@ -3,17 +3,27 @@ import type { UniBlockProps } from '../../types';
 import type { GracePeriodContent } from './GracePeriodContent';
 
 import { BlockWrapper } from '../../ui-kit/BlockWrapper';
-import { Heading } from '../../ui-kit/Heading/Heading';
 import { Img } from '../../ui-kit/Img/Img';
+import { Headline } from '../Headline/Headline';
 
 export interface GracePeriodProps extends GracePeriodContent, UniBlockProps {}
 
 export const GracePeriod = JSX<GracePeriodProps>(
-  ({ className = '', title, description, calendar, ...rest }) => {
+  ({ context, className = '', title, description, calendar, ...rest }) => {
     return (
-      <BlockWrapper className={`font-sans bg-white p-[50px] ${className}`} {...rest}>
-        <Heading headingType="h3" className="text-center" title={title} />
-        <div className="text-l-light-md text-center mt-3">{description}</div>
+      <BlockWrapper
+        className={`font-sans bg-white p-[50px] ${className}`}
+        context={context}
+        {...rest}
+      >
+        <Headline
+          context={context}
+          className="!p-0"
+          title={title}
+          description={description}
+          headlineVersion="M"
+          align="center"
+        />
         {calendar ? renderCalendar(calendar) : null}
       </BlockWrapper>
     );
@@ -38,7 +48,7 @@ const renderCalendar = (calendar) => {
 
   return (
     <div className="w-full flex flex-col justify-center mt-[54px]">
-      <div className="flex w-full mb-3 font-light text-h6 text-center">
+      <div className="flex w-full mb-3 text-h6 text-center">
         {mappedCalendar.map((_) => renderMonthNames(_, colSize))}
       </div>
       <div className="flex w-full">
@@ -49,7 +59,7 @@ const renderCalendar = (calendar) => {
             style={{ flexBasis: _.flexBasis }}
           >
             <div className="flex">{renderMonthImages(_)}</div>
-            <div className="font-light text-sm text-primary-text mt-3">
+            <div className="text-s-light text-primary-text mt-3">
               <span>{_.text}</span>&thinsp;
               <span className="text-primary-main">{_.greenText}</span>
             </div>

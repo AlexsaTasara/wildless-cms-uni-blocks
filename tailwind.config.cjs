@@ -45,80 +45,139 @@ module.exports = {
         mohave: ['Mohave', ...defaultTheme.fontFamily.sans],
       },
       fontSize: {
+        'm-title': ['1.375rem', '1.8125rem'], // 22px 29px // Временно оставлен до готовности нового мобильного дизайна
+        'm-title-xs': ['1.0625rem', '1.375rem'], // 17px 22px // Временно оставлен до готовности нового мобильного дизайна
+
         'title-extra': ['15.625rem', '14.687rem'], // 250px 235px
         'title-huge': ['12.5rem', '15.625rem'], // 200px 250px
-        base: ['1rem', '1.5rem'], // 16px 24px
-        sm: ['0.875rem', '1.375rem'], // 14px 22px
-
-        'm-title': ['1.375rem', '1.8125rem'], //22px 29px
-        'm-title-xs': ['1.0625rem', '1.375rem'], // 17px 22px
-        'm-md': ['0.9375rem', '1.5rem'], // 15px 24px
-        'm-sm': ['0.875rem', '1.375rem'], // 14px 22px
-
-        h0: ['3.5rem', { // 56px 56px
-          lineHeight: '3.5rem',
-          fontWeight: '400',
-        }],
-        h1: ['3.125rem', { // 50px 52px
-          lineHeight: '3.25rem',
-          fontWeight: '400',
-        }],
-        h2: ['2.5rem', { // 40px 48px
-          lineHeight: '3rem',
-          fontWeight: '400',
-        }],
-        h3: ['2rem', { // 32px 40px
-          lineHeight: '2.5rem',
-          fontWeight: '400',
-        }],
-        h4: ['1.75rem', { // 28px 36px
-          lineHeight: '2.25rem',
-          fontWeight: '400',
-        }],
-        'h4-alt': ['1.625rem', { // 26px 36px // от Эльдара атом для главной страницы
-          lineHeight: '2.25rem',
-          fontWeight: '400',
-        }],
-        h5: ['1.5rem', { // 24px 30px
-          lineHeight: '1.875rem',
-          fontWeight: '400',
-        }],
-        h6: ['1.25rem', { // 20px 28px
-          lineHeight: '1.75rem',
-          fontWeight: '400',
-        }],
-        xl: ['1.125rem', { // 18px 24px
-          lineHeight: '1.5rem',
-          fontWeight: '400',
-        }],
-        'xl-light': ['1.125rem', { // 18px 24px
-          lineHeight: '1.5rem',
-          fontWeight: '300',
-        }],
-        'l': ['1rem', { // 16px 24px
-          lineHeight: '1.5rem',
-          fontWeight: '400',
-        }],
-        'l-light': ['1rem', { // 16px 24px
-          lineHeight: '1.5rem',
-          fontWeight: '300',
-        }],
-        m: ['0.9375rem', { // 15px 20px
-          lineHeight: '1.25rem',
-          fontWeight: '300',
-        }],
-        s: ['0.875rem', { // 14px 20px
-          lineHeight: '1.25rem',
-          fontWeight: '400',
-        }],
-        's-light': ['0.875rem', { // 14px 20px
-          lineHeight: '1.25rem',
-          fontWeight: '300',
-        }],
-        xs: ['0.75rem', { // 12px 18px
-          lineHeight: '1.125rem',
-          fontWeight: '300',
-        }],
+        h0: [
+          '3.5rem',
+          {
+            // 56px 56px
+            lineHeight: '3.5rem',
+            fontWeight: '400',
+          },
+        ],
+        h1: [
+          '3.125rem',
+          {
+            // 50px 52px
+            lineHeight: '3.25rem',
+            fontWeight: '400',
+          },
+        ],
+        h2: [
+          '2.5rem',
+          {
+            // 40px 48px
+            lineHeight: '3rem',
+            fontWeight: '400',
+          },
+        ],
+        h3: [
+          '2rem',
+          {
+            // 32px 40px
+            lineHeight: '2.5rem',
+            fontWeight: '400',
+          },
+        ],
+        h4: [
+          '1.75rem',
+          {
+            // 28px 36px
+            lineHeight: '2.25rem',
+            fontWeight: '400',
+          },
+        ],
+        h5: [
+          '1.5rem',
+          {
+            // 24px 30px
+            lineHeight: '1.875rem',
+            fontWeight: '400',
+          },
+        ],
+        h6: [
+          '1.25rem',
+          {
+            // 20px 28px
+            lineHeight: '1.75rem',
+            fontWeight: '400',
+          },
+        ],
+        xl: [
+          '1.125rem',
+          {
+            // 18px 24px
+            lineHeight: '1.5rem',
+            fontWeight: '400',
+          },
+        ],
+        'xl-light': [
+          '1.125rem',
+          {
+            // 18px 24px
+            lineHeight: '1.5rem',
+            fontWeight: '300',
+          },
+        ],
+        l: [
+          '1rem',
+          {
+            // 16px 24px
+            lineHeight: '1.5rem',
+            fontWeight: '400',
+          },
+        ],
+        'l-light': [
+          '1rem',
+          {
+            // 16px 24px
+            lineHeight: '1.5rem',
+            fontWeight: '300',
+          },
+        ],
+        m: [
+          '0.9375rem',
+          {
+            // 15px 20px
+            lineHeight: '1.25rem',
+            fontWeight: '400',
+          },
+        ],
+        'm-light': [
+          '0.9375rem',
+          {
+            // 15px 20px
+            lineHeight: '1.25rem',
+            fontWeight: '300',
+          },
+        ],
+        s: [
+          '0.875rem',
+          {
+            // 14px 20px
+            lineHeight: '1.25rem',
+            fontWeight: '400',
+          },
+        ],
+        's-light': [
+          '0.875rem',
+          {
+            // 14px 20px
+            lineHeight: '1.25rem',
+            fontWeight: '300',
+          },
+        ],
+        'xs-light': [
+          '0.75rem',
+          {
+            // 12px 18px
+            lineHeight: '1.125rem',
+            fontWeight: '300',
+          },
+        ],
       },
       colors: {
         main: {
@@ -170,6 +229,7 @@ module.exports = {
       borderColor: {
         'white/50': 'rgba(255,255,255,.5);',
         'gray/100': 'rgba(235, 237, 240, 1);',
+        'primary-hover': 'rgba(134, 134, 134, 1);',
         'primary-focus': 'rgba(28, 28, 28, 1);',
       },
     },

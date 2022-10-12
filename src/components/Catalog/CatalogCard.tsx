@@ -1,6 +1,6 @@
 import { JSX } from '@redneckz/uni-jsx';
 import type { BlockVersion } from '../../model/BlockVersion';
-import { Picture } from '../../model/Picture';
+import type { Picture } from '../../model/Picture';
 import type { UniBlockProps } from '../../types';
 import { Button } from '../../ui-kit/Button/Button';
 import type { ButtonWithIconProps } from '../../ui-kit/Button/ButtonProps';
@@ -28,11 +28,9 @@ export const CatalogCard = JSX<CatalogCardProps>(
         {title ? (
           <Heading headingType="h6" as="h4" className="text-left mb-1.5" title={title} />
         ) : null}
-        {description ? (
-          <div className="text-m-md text-left mb-4 font-light">{description}</div>
-        ) : null}
+        {description ? <div className="text-m-light text-left mb-4">{description}</div> : null}
         {colors?.length ? (
-          <div className="flex mb-4 text-m-md text-secondary-text font-light">
+          <div className="flex mb-4 text-m-light text-secondary-text">
             <div className="mr-1.5">Доступные цвета: </div>
             {colors.map(renderColorOption)}
           </div>

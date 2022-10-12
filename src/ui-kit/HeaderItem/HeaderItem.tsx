@@ -2,7 +2,7 @@ import { JSX } from '@redneckz/uni-jsx';
 import { BgColorVersion } from '../../model/BgColorVersion';
 import type { TopItemProps } from '../TopItem/TopItem';
 
-const TEXT_CLASSES = 'font-sans font-light text-base';
+const TEXT_CLASSES = 'font-sans text-l-light';
 const BORDER_CLASSES = 'absolute left-0 -bottom-3 w-full h-[2px]';
 
 export const HeaderItem = JSX<TopItemProps>(
@@ -30,7 +30,7 @@ export const HeaderItem = JSX<TopItemProps>(
   ),
 );
 
-const getTextClasses = (bgColor: BgColorVersion, active?: boolean) => {
+const getTextClasses = (bgColor: BgColorVersion, active = false) => {
   let classes = 'text-white';
   if (bgColor === 'bg-white') {
     classes = active ? 'text-primary-main' : 'text-primary-text hover:text-primary-main';
@@ -39,7 +39,7 @@ const getTextClasses = (bgColor: BgColorVersion, active?: boolean) => {
   return `${classes} ${TEXT_CLASSES}`;
 };
 
-const getBorderClasses = (bgColor: BgColorVersion, active?: boolean) => {
+const getBorderClasses = (bgColor: BgColorVersion, active = false) => {
   if (!active) {
     return BORDER_CLASSES;
   }

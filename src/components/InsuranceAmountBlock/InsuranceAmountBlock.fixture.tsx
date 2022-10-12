@@ -1,5 +1,13 @@
 import { context } from '../../react/setup-fixture';
+import type { ButtonCommonProps } from '../../ui-kit/Button/Button';
 import { InsuranceAmountBlock } from './InsuranceAmountBlock';
+
+const buttonPrimary: ButtonCommonProps = {
+  href: '/insurance',
+  text: 'Выбрать программу',
+  target: '_blank',
+  version: 'primary',
+};
 
 export default {
   default: (
@@ -8,7 +16,7 @@ export default {
         className="col-span-12"
         context={context}
         title="Выбор страховой суммы"
-        button={{ href: 'https://rshb.ru', text: 'Выбрать программу' }}
+        button={buttonPrimary}
         insuranceTabs={[
           {
             title: 'Индивидуальный',
@@ -16,17 +24,22 @@ export default {
               {
                 sum: 200000,
                 fee: 2100,
-                icon: { icon: 'ActualBalanceIcon' },
+                icon: {
+                  icon: 'ActualBalanceIcon',
+                },
+                href: '/insurance1',
               },
               {
                 sum: 200000,
                 fee: 2100,
                 icon: { icon: 'ActualBalanceIcon' },
+                href: '/insurance2',
               },
               {
                 sum: 200000,
                 fee: 2100,
                 icon: { icon: 'ActualBalanceIcon' },
+                href: '/insurance3',
               },
             ],
           },
@@ -37,6 +50,7 @@ export default {
                 sum: 400000,
                 fee: 3600,
                 icon: { icon: 'ActualBalanceIcon' },
+                href: '/insurance4',
               },
             ],
           },

@@ -1,30 +1,21 @@
 import type { BlockVersion } from '../../model/BlockVersion';
 import type { ButtonContent } from '../../ui-kit/Button/ButtonProps';
-import type { DescriptionContent } from '../../ui-kit/Description/DescriptionContent';
-import type { HeadingContent } from '../../ui-kit/Heading/HeadingContent';
 import type { ImageContent } from '../../ui-kit/Img/ImgProps';
 import type { ListContent } from '../../ui-kit/List/ListContent';
-
-/**
- * @title QR код
- */
-export interface QRCode {
-  /** @title QR код */
-  src?: string;
-  /** @title Ссылка */
-  href?: string;
-}
+import type { HeadlineCommonProps } from '../../model/HeadlineType';
+import type { HeadingCommonProps } from '../../ui-kit/Heading/HeadingProps';
+import type { Picture } from '../../model/Picture';
 
 /**
  * @title Мобильное приложение
  */
-export type MobileAppTileContent = HeadingContent &
-  DescriptionContent &
+export type MobileAppTileContent = HeadlineCommonProps &
+  HeadingCommonProps &
   ButtonContent &
   ListContent &
   ImageContent & {
     // TODO: description для мобильной версии
-    qr?: QRCode;
+    qr?: Picture;
     /** @title Ссылка */
     href?: string; // TODO: для мобильной версии
     version?: BlockVersion;

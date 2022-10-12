@@ -1,9 +1,9 @@
 import type { Picture } from '../../model/Picture';
-import type { HeadingContent } from '../../ui-kit/Heading/HeadingContent';
+import type { TitleProp } from '../../model/HeadlineType';
 
 interface Month {
   /** @title Название месяца */
-  name?: string;
+  text?: string;
   /**
    * @title Изображение календарного месяца
    * @default
@@ -22,7 +22,7 @@ interface CalendarItem {
   /** @title Месяц */
   month?: Month[];
   /** @title Основной текст */
-  blackText?: string;
+  text?: string;
   /** @title Вспомогательный текст */
   greenText?: string;
 }
@@ -30,7 +30,7 @@ interface CalendarItem {
 /**
  * @title Льготный период
  */
-export interface GracePeriodContent extends HeadingContent {
+export interface GracePeriodContent extends TitleProp {
   /** @title Описание */
   description?: string;
   /** @title Календарь */

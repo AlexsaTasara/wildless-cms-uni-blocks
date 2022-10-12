@@ -3,13 +3,13 @@
 
 import { JSX } from '@redneckz/uni-jsx';
 import type { ButtonVersion } from '../../model/ButtonVersion';
-import type { ButtonProps, ButtonWithIconProps } from './ButtonProps';
 import { ButtonInner } from './ButtonInner';
+import type { ButtonProps, ButtonWithIconProps } from './ButtonProps';
 
 const buttonStyleMap: Record<ButtonVersion, string> = {
   primary: 'text-white bg-primary-main hover:bg-primary-hover active:bg-primary-active',
   secondary:
-    'text-primary-main bg-secondary-light hover:bg-secondary-hover active:bg-secondary-active',
+    'text-primary-main bg-main-divider hover:text-white hover:bg-primary-hover active:bg-primary-active',
   link: 'text-primary-main',
 };
 
@@ -55,7 +55,7 @@ export const Button = JSX<ButtonCommonProps>(
           role="button"
           aria-disabled="true"
           aria-label={ariaLabel}
-          tabIndex="-1"
+          tabIndex={-1}
           className={`inline-block ${styleButton} ${buttonDisabledStyleMap[version] || ''} ${
             rounded ? 'rounded-full' : 'rounded-md'
           } ${className || ''}`}
@@ -67,7 +67,7 @@ export const Button = JSX<ButtonCommonProps>(
 
     return (
       <a
-        className={`${styleButton} inline-block cursor-pointer no-underline ${
+        className={`${styleButton} inline-block cursor-pointer no-underline focus:border focus:border-primary-focus ${
           buttonStyleMap[version] || ''
         } ${rounded ? 'rounded-full' : 'rounded-md'} ${className || ''}`}
         href={href}

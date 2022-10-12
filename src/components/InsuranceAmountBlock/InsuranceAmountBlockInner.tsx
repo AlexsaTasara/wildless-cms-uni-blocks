@@ -1,29 +1,33 @@
 import { JSX } from '@redneckz/uni-jsx';
-import type { UniBlockProps, FuncReturnVoid } from '../../types';
-import type { InsuranceAmountBlockTabs, CardItem } from './InsuranceAmountBlockContent';
+import type { UniBlockProps } from '../../types';
+import { Button } from '../../ui-kit/Button/Button';
+import type { ButtonProps } from '../../ui-kit/Button/ButtonProps';
+import { renderArrows } from '../../ui-kit/Button/renderArrows';
 import { Img } from '../../ui-kit/Img/Img';
 import { addSpacesBetweenNumbers } from '../../utils/addSpacesBetweenNumbers';
-import { renderArrows } from '../../ui-kit/Button/renderArrows';
+import type { CardItem, InsuranceAmountBlockTabs } from './InsuranceAmountBlockContent';
 
-export interface InsuranceAmountBlockInnerProps extends InsuranceAmountBlockTabs, UniBlockProps {}
+export interface InsuranceAmountBlockInnerProps extends InsuranceAmountBlockTabs, UniBlockProps {
+  button?: ButtonProps;
+}
 
 type InsuranceGalleryProps = {
   tabsShift: number;
   cards: CardItem[];
   activeSlideIndex: number;
   isLastShift: boolean;
-  setActiveSlideIndex: FuncReturnVoid<number>;
+  setActiveSlideIndex: (index: number) => void;
 };
 
 type InsuranceSlideProps = {
   slide: CardItem;
   i: number;
   activeSlideIndex: number;
-  onClick: FuncReturnVoid<MouseEvent>;
+  onClick: () => void;
 };
 
 export const InsuranceAmountBlockInner = JSX<InsuranceAmountBlockInnerProps>(
-  ({ className = '', context, cards = [], anchor = null }) => {
+  ({ className = '', context, cards = [], button }) => {
     const [activeSlideIndex, setActiveSlideIndex] = context.useState(0);
     const [tabsShift, setTabsShift] = context.useState(0);
 
@@ -36,9 +40,10 @@ export const InsuranceAmountBlockInner = JSX<InsuranceAmountBlockInnerProps>(
     const showNextButton = isGalleryScrollAvailable && galleryLength > tabsShift + 2;
     const isLastShift = galleryLength === tabsShift + 2;
     const showPrevButton = tabsShift > 0;
+    const activeHref = cards[activeSlideIndex]?.href;
 
     return (
-      <section id={anchor} className={`min-w-full ${className}`}>
+      <section role="listitem" className={`min-w-full text-center ${className}`}>
         <div className="relative mt-7 overflow-hidden">
           {galleryLength
             ? renderGallery({
@@ -62,6 +67,7 @@ export const InsuranceAmountBlockInner = JSX<InsuranceAmountBlockInnerProps>(
             <div className="absolute top-0 right-0 h-full w-[136px] bg-opacity-to-white" />
           ) : null}
         </div>
+        <Button className="w-[240px] text-center" version="primary" {...button} href={activeHref} />
       </section>
     );
   },
@@ -111,10 +117,10 @@ function renderSlide({ slide, i, activeSlideIndex, onClick }: InsuranceSlideProp
     >
       {slide?.icon ? (
         <Img
-          className={`h-[108px] w-[108px] p-3 rounded-full bg-secondary-light mr-[30px]`}
+          className="p-3 rounded-full bg-secondary-light mr-[30px]"
           image={slide.icon}
-          width="24"
-          height="24"
+          width="70"
+          height="70"
         />
       ) : null}
 
@@ -127,16 +133,16 @@ function renderSlide({ slide, i, activeSlideIndex, onClick }: InsuranceSlideProp
   );
 }
 
-function renderValueBlock(title, sum) {
+function renderValueBlock(title: string, sum: number) {
   return (
-    <div className="flex flex-col text-left">
-      <span className="whitespace-pre text-title-2xs">{addSpacesBetweenNumbers(sum)} ₽</span>
-      <span className="whitespace-pre text-secondary-text font-light text-base mt-1">{title}</span>
+    <div className="flex flex-col text-left whitespace-pre">
+      <span className="text-h6">{addSpacesBetweenNumbers(sum)} ₽</span>
+      <span className="text-secondary-text text-l mt-1">{title}</span>
     </div>
   );
 }
 
-function renderDoneIcon(isActive) {
+function renderDoneIcon(isActive: boolean) {
   return isActive ? (
     <Img
       className={`h-[24px] w-[24px] min-w-[24px] min-h-[24px] absolute right-4 top-4`}

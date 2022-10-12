@@ -1,7 +1,6 @@
 import { Accordion } from './Accordion/Accordion';
 import { BenefitsBlock } from './BenefitsBlock/BenefitsBlock';
 import { Bonus } from './Bonus/Bonus';
-import { ComparisonTable } from './ComparisonTable/ComparisonTable';
 import { ContactInformation } from './ContactInformation/ContactInformation';
 import { BonusBenefitsBlock } from './BonusBenefitsBlock/BonusBenefitsBlock';
 import { Calculator } from './Calculator/Calculator';
@@ -29,7 +28,9 @@ import { ProductGallery } from './ProductGallery/ProductGallery';
 import { ProductTile } from './ProductTile/ProductTile';
 import { PromoTile } from './PromoTile/PromoTile';
 import { Recommendation } from './Recommendation/Recommendation';
+import { SafeDepositRental } from './SafeDepositRental/SafeDepositRental';
 import { StepsBlock } from './StepsBlock/StepsBlock';
+import { Tabs } from './Tabs/Tabs';
 import { TariffsTable } from './TariffsTable/TariffsTable';
 import { TextBlock } from './TextBlock/TextBlock';
 import { Tile } from './Tile/Tile';
@@ -69,4 +70,6 @@ export const Blocks = {
   Placeholder,
   GroupBlock,
   BonusBenefitsBlock,
+  SafeDepositRental,
+  Tabs,
 };

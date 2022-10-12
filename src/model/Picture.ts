@@ -1,6 +1,8 @@
 import type { IconName } from '../icons/IconName';
 import type { IconVersion } from './IconVersion';
 
+export type ImgFormats = 'jpeg' | 'jpg' | 'png' | 'gif' | 'webp' | 'heif' | 'avif';
+
 export interface Img {
   /** @title Картинка */
   src?: string;
@@ -10,6 +12,12 @@ export interface Img {
   title?: string;
 }
 
+/**
+ * @title Брейкпоинт
+ * @enumNames ["Меньше 1920px", "Меньше 1440px", "Меньше 1280px"]
+ */
+export type MediaQuery = 1919 | 1439 | 1279;
+
 export interface ImgSource {
   /** @title Иконка */
   icon?: IconName;
@@ -17,9 +25,10 @@ export interface ImgSource {
   /** @title Картинка */
   src?: string;
   /** @title Формат */
-  format?: 'jpeg' | 'jpg' | 'png' | 'gif' | 'webp' | 'heif' | 'avif';
+  format?: ImgFormats;
   /** @hidden */
   options?: Record<string, any>;
+  media?: MediaQuery;
   /** @title Размер изображения */
   size?: {
     /** @title Ширина */

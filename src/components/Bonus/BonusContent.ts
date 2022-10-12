@@ -1,10 +1,9 @@
-import type { DescriptionContent } from '../../ui-kit/Description/DescriptionContent';
-import type { HeadingContent } from '../../ui-kit/Heading/HeadingContent';
+import type { HeadlineCommonProps } from '../../model/HeadlineType';
 
 /** @title Плитка */
 interface BonusItems {
   /** @title Бонусы */
-  name?: string;
+  title?: string;
   /** @title Описание плитки */
   description?: string;
   /** @title Количество баллов */
@@ -16,8 +15,7 @@ interface BonusItems {
 /**
  * @title Блок Бонусы
  */
-export type BonusContent = HeadingContent &
-  DescriptionContent & {
-    /** @title Список плиток */
-    bonusItems?: BonusItems[];
-  };
+export type BonusContent = HeadlineCommonProps & {
+  /** @title Список плиток */
+  bonusItems?: BonusItems[];
+};

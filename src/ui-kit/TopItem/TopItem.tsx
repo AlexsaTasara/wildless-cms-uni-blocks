@@ -10,12 +10,12 @@ export interface TopItemProps extends TopItemContent {
   className?: string;
   flat?: boolean;
   ariaLabel?: string;
-  onClick?: (ev: MouseEvent) => any;
+  onClick?: () => void;
   bgColor?: BgColorVersion;
   dataItemName?: string;
 }
 
-const TEXT_CLASSES = 'font-sans font-light text-sm';
+const TEXT_CLASSES = 'font-sans text-s-light';
 const LINK_CLASSES = 'inline-block border border-solid bg-transparent text-center no-underline';
 
 export const TopItem = JSX<TopItemProps>(

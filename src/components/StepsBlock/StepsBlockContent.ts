@@ -1,7 +1,7 @@
 import type { BlockVersion } from '../../model/BlockVersion';
 import type { Picture } from '../../model/Picture';
 import type { SizeVersion } from '../../model/SizeVersion';
-import type { ButtonProps } from '../../ui-kit/Button/ButtonProps';
+import type { ButtonWithIconProps } from '../../ui-kit/Button/ButtonProps';
 
 /**
  * @title Шаг
@@ -11,8 +11,20 @@ export interface Step {
   label?: string;
   /** @title Описание */
   description?: string;
+  /**
+   *  @title Иконка
+   *  @default
+   * {
+   *   "size": {
+   *     "width": 48,
+   *     "height": 48
+   *   },
+   *   "format": "webp"
+   * }
+   */
   icon?: Picture;
-  button?: ButtonProps;
+  /** @title Кнопка */
+  button?: ButtonWithIconProps;
 }
 
 /**
@@ -34,7 +46,8 @@ export interface StepsBlockContent {
    * @maxItems 4
    */
   steps?: Step[];
-  button?: ButtonProps;
+  /** @title Кнопка */
+  button?: ButtonWithIconProps;
   /**
    * @title Размер шагов (моб.)
    * @default normal

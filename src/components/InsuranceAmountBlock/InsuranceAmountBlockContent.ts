@@ -11,6 +11,8 @@ export type CardItem = {
   fee?: number;
   /** @title Страховая сумма */
   sum?: number;
+  /** @title Ссылка на программу*/
+  href?: string;
 };
 
 /**
@@ -31,5 +33,6 @@ export interface InsuranceAmountBlockContent {
   title?: string;
   /** @title Список вкладок */
   insuranceTabs?: InsuranceAmountBlockTabs[];
+  /** @title Кнопка */
   button?: ButtonProps;
 }

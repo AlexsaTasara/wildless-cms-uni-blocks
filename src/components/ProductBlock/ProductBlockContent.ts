@@ -1,12 +1,11 @@
 import type { BlockVersion } from '../../model/BlockVersion';
 import type { IconVersion } from '../../model/IconVersion';
 import type { LinkProps } from '../../model/LinkProps';
-import type { ButtonContent, ButtonWithIconProps } from '../../ui-kit/Button/ButtonProps';
-import type { DescriptionContent } from '../../ui-kit/Description/DescriptionContent';
-import type { HeadingContent, HeadingTypeContent } from '../../ui-kit/Heading/HeadingContent';
+import type { ButtonContent, BackwardButtonProps } from '../../ui-kit/Button/ButtonProps';
 import type { ImageContent } from '../../ui-kit/Img/ImgProps';
 import type { ListContent } from '../../ui-kit/List/ListContent';
-import { Picture } from '../../model/Picture';
+import type { Picture } from '../../model/Picture';
+import type { HeadlineProps } from '../../model/HeadlineType';
 
 export interface ProductBlockBenefit {
   icon?: Picture;
@@ -22,9 +21,7 @@ export type BenefitItemProps = {
   benefitsVersion?: IconVersion;
 };
 
-export type ProductBlockInnerContent = HeadingContent &
-  HeadingTypeContent &
-  DescriptionContent &
+export type ProductBlockInnerContent = HeadlineProps &
   ListContent &
   ButtonContent &
   ImageContent & {
@@ -57,5 +54,5 @@ export interface ProductBlockContent extends ProductBlockInnerContent {
   /** @title Хлебные крошки */
   breadcrumbs?: LinkProps[];
   /** @title Кнопка возврата */
-  backwardButton?: ButtonWithIconProps;
+  backwardButton?: BackwardButtonProps;
 }

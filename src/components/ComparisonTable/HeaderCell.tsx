@@ -18,7 +18,6 @@ export const HeaderCell = JSX<HeaderCellProps>(({ icon, image, title, link }) =>
   <div
     className={`w-80 box-border flex flex-col items-center rounded-t-md border-b-0 px-7 pt-7 pb-[46px] ${BORDER_CLASSES} ${GRADIENT}`}
     role="columnheader"
-    scope="col"
   >
     {icon && !image?.src && (
       <Img
@@ -39,7 +38,7 @@ export const HeaderCell = JSX<HeaderCellProps>(({ icon, image, title, link }) =>
           target={link.target}
           className="mt-4 w-full text-primary-main bg-white hover:bg-secondary-hover active:bg-secondary-active"
         >
-          <div className="font-medium text-xs py-[11px]">{link.text}</div>
+          <div className="text-xs-light font-medium py-[11px]">{link.text}</div>
         </Button>
       </div>
     )}

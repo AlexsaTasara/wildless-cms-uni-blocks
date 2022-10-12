@@ -16,7 +16,7 @@ export const SocialMedia = JSX<SocialMediaProps>(
     const { handlerDecorator } = context;
 
     return (
-      <div>
+      <div className="font-sans">
         <div className={`flex gap-2.5 ${className}`}>
           {media?.map((_, index) => (
             <MediaButton
@@ -26,7 +26,7 @@ export const SocialMedia = JSX<SocialMediaProps>(
             />
           ))}
         </div>
-        <span className="font-light text-sm text-secondary-text">{children}</span>
+        <span className="text-s-light text-secondary-text">{children}</span>
       </div>
     );
   },

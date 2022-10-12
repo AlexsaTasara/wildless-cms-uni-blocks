@@ -1,6 +1,7 @@
 import { JSX } from '@redneckz/uni-jsx';
 import type { Picture } from '../../model/Picture';
 import type { UniBlockProps } from '../../types';
+import { BlockWrapper } from '../../ui-kit/BlockWrapper';
 import { Img } from '../../ui-kit/Img/Img';
 import type { TextBlockContent, TextBlockVersion } from './TextBlockContent';
 
@@ -31,33 +32,25 @@ const textBlockStyleMaps: Record<
 };
 
 export const TextBlock = JSX<TextBlockProps>(
-  ({
-    title,
-    description,
-    blockVersion = 'primary',
-    iconVersion,
-    image,
-    className,
-    anchor = null,
-  }) => {
+  ({ title, description, blockVersion = 'primary', iconVersion, image, className, ...rest }) => {
     const textBlockStyleMap = textBlockStyleMaps[blockVersion];
 
     return (
-      <section
+      <BlockWrapper
         className={`font-sans px-9 py-4 flex ${textBlockStyleMap.background} ${className || ''}`}
-        id={anchor}
+        {...rest}
       >
         {iconVersion === 'small' ? renderIcon(textBlockStyleMap.icon) : null}
         {iconVersion === 'big' ? renderImage(image) : null}
         <div className="py-0.5">
           {title ? (
-            <div className={`font-medium text-base mb-1 ${textBlockStyleMap.title}`}>{title}</div>
+            <div className={`text-l font-medium mb-1 ${textBlockStyleMap.title}`}>{title}</div>
           ) : null}
           {description ? (
-            <div className={`text-sm ${textBlockStyleMap.description}`}>{description}</div>
+            <div className={`text-s ${textBlockStyleMap.description}`}>{description}</div>
           ) : null}
         </div>
-      </section>
+      </BlockWrapper>
     );
   },
 );
@@ -65,7 +58,7 @@ export const TextBlock = JSX<TextBlockProps>(
 function renderIcon(className: string) {
   return (
     <div className="pt-1.5 pl-1 pr-4">
-      <div className={`rounded-full h-4 w-4 text-center text-xs ${className}`}>i</div>
+      <div className={`rounded-full h-4 w-4 text-center text-xs-light ${className}`}>i</div>
     </div>
   );
 }

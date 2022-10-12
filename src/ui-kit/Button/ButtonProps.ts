@@ -1,6 +1,7 @@
 import type { ButtonVersion } from '../../model/ButtonVersion';
 import type { LinkProps } from '../../model/LinkProps';
 import type { Picture } from '../../model/Picture';
+import type { VNode } from '../../model/VNode';
 
 /**
  * @hidden
@@ -10,7 +11,7 @@ export interface ButtonAdditionalProps {
   disabled?: boolean;
   rel?: string;
   ariaLabel?: string;
-  onClick?: (ev: MouseEvent) => any;
+  onClick?: (ev?: { preventDefault: () => void }) => void;
 }
 
 /**
@@ -22,20 +23,22 @@ export interface ButtonProps extends ButtonAdditionalProps, LinkProps {
    * @default Кнопка
    */
   text?: string;
+  /** @title Закругленные углы */
+  rounded?: boolean;
   version?: ButtonVersion;
 }
 
 export interface ButtonWithIconProps extends ButtonProps {
-  /** @title Иконка */
+  /** @title Иконка слева */
   icon?: Picture;
+  /** @title Иконка справа */
+  iconRight?: Picture;
   /** @title Верхний текст */
   aboveText?: string;
   /** @hidden */
-  appendLeft?: any;
+  appendLeft?: VNode;
   /** @hidden */
-  appendRight?: any;
-  /** @title Закругленные углы */
-  rounded?: boolean;
+  appendRight?: VNode;
   /** @hidden */
   asSVG?: boolean;
 }
@@ -46,4 +49,17 @@ export interface ButtonContent {
    * @maxItems 4
    */
   buttons?: ButtonWithIconProps[];
+}
+
+export interface BackwardButtonProps extends ButtonProps {
+  /** @title Иконка */
+  icon?: Picture;
+  /** @title Верхний текст */
+  aboveText?: string;
+  /** @hidden */
+  appendLeft?: VNode;
+  /** @title Закругленные углы */
+  rounded?: boolean;
+  /** @hidden */
+  asSVG?: boolean;
 }

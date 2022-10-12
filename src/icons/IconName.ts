@@ -1,6 +1,5 @@
 // Generated. Do not touch
-/* eslint-disable max-lines */
-
+/* eslint-disable max-len, max-lines */
 export enum IconMap {
   ActualBalanceIcon = 'ActualBalanceIcon',
   AirPlane = 'AirPlane',
@@ -45,6 +44,7 @@ export enum IconMap {
   InterestGrowthIcon = 'InterestGrowthIcon',
   InterestIcon = 'InterestIcon',
   JCBIcon = 'JCBIcon',
+  Logo = 'Logo',
   LoupeIcon = 'LoupeIcon',
   MasterCardIcon = 'MasterCardIcon',
   MinusIcon = 'MinusIcon',
@@ -55,6 +55,7 @@ export enum IconMap {
   NewDocIcon = 'NewDocIcon',
   OfficeIcon = 'OfficeIcon',
   OkIcon = 'OkIcon',
+  PackA4 = 'PackA4',
   PassSendIcon = 'PassSendIcon',
   PercentageRoundIcon = 'PercentageRoundIcon',
   PercentageSquareIcon = 'PercentageSquareIcon',
@@ -71,6 +72,7 @@ export enum IconMap {
   SignDocsIcon = 'SignDocsIcon',
   SmallClockIcon = 'SmallClockIcon',
   SoundIcon = 'SoundIcon',
+  StateMortgageIcon = 'StateMortgageIcon',
   TelegramIcon = 'TelegramIcon',
   UnionPayIcon = 'UnionPayIcon',
   UserTickIcon = 'UserTickIcon',
@@ -127,6 +129,7 @@ export enum IconTitleMap {
   InterestGrowthIcon = 'Диаграмма роста',
   InterestIcon = 'Скидка',
   JCBIcon = 'JCB',
+  Logo = 'Logo',
   LoupeIcon = 'Лупа',
   MasterCardIcon = 'MasterCard',
   MinusIcon = 'Минус',
@@ -137,6 +140,7 @@ export enum IconTitleMap {
   NewDocIcon = 'Новый документ',
   OfficeIcon = 'Офис',
   OkIcon = 'Лого «Одноклассники»',
+  PackA4 = 'PackA4',
   PassSendIcon = 'Бизнес',
   PercentageRoundIcon = 'Проценты (круг.)',
   PercentageSquareIcon = 'Проценты',
@@ -153,6 +157,7 @@ export enum IconTitleMap {
   SignDocsIcon = 'Подписанные документы',
   SmallClockIcon = 'Маленькие часы',
   SoundIcon = 'Звук',
+  StateMortgageIcon = 'StateMortgageIcon',
   TelegramIcon = 'Лого «Telegram»',
   UnionPayIcon = 'UnionPay',
   UserTickIcon = 'Пользователь',
@@ -170,7 +175,7 @@ export enum IconTitleMap {
  * @title Иконка
  * @enumNames [
  *   "",
- *   'Деньги', 'Самолет', 'Лого «Apple»', 'Стрелка \'Вниз\'', 'Стрелка', 'Стрелка вверх', 'Банкомат', 'Банк', 'Бургер', 'Календарь 2', 'Скруглённый календарь', 'Календарь', 'Календарь с галочкой', 'Кред. карта', 'Кред. карта под наклоном', 'Кред. карта с галочкой', 'Карта с драгоценностями', 'Машина', 'Деньги внутри кошелька', 'Кино', 'Часы', 'Крестик', 'Кресло', 'Кредитные карты', 'Скидка', 'Документ', 'Документ (одноцветный)', 'Документы', 'Документ с текстом', 'Доллар', 'Зелёная \'галочка\'', 'Земля', 'Пустой кошелёк с возвратом', 'Пустой кошелёк', 'Евро', 'Геолокация', 'Зеркало', 'Глобус', 'Gps', 'Сетка (белая)', 'Диаграмма роста', 'Скидка', 'JCB', 'Лупа', 'MasterCard', 'Минус', 'МИР', 'Деньги', 'Денежное страхование', 'Монитор и мобильный', 'Новый документ', 'Офис', 'Лого «Одноклассники»', 'Бизнес', 'Проценты (круг.)', 'Проценты', 'Персональная карта', 'Лого «PlayMarket»', 'Плюс', 'Щит', 'Профиль, 2 персоны', 'Профиль', 'Тыква', 'Рубль (круг.)', 'Сейф', 'Безопасность', 'Подписанные документы', 'Маленькие часы', 'Звук', 'Лого «Telegram»', 'UnionPay', 'Пользователь', 'Visa', 'Лого «VK»', 'Пополнение карты', 'Кошелёк с плюсом', 'Кошелёк', 'Кошелёк с деньгами', 'Добавить продукт'
+ *   'Деньги', 'Самолет', 'Лого «Apple»', 'Стрелка \'Вниз\'', 'Стрелка', 'Стрелка вверх', 'Банкомат', 'Банк', 'Бургер', 'Календарь 2', 'Скруглённый календарь', 'Календарь', 'Календарь с галочкой', 'Кред. карта', 'Кред. карта под наклоном', 'Кред. карта с галочкой', 'Карта с драгоценностями', 'Машина', 'Деньги внутри кошелька', 'Кино', 'Часы', 'Крестик', 'Кресло', 'Кредитные карты', 'Скидка', 'Документ', 'Документ (одноцветный)', 'Документы', 'Документ с текстом', 'Доллар', 'Зелёная \'галочка\'', 'Земля', 'Пустой кошелёк с возвратом', 'Пустой кошелёк', 'Евро', 'Геолокация', 'Зеркало', 'Глобус', 'Gps', 'Сетка (белая)', 'Диаграмма роста', 'Скидка', 'JCB', 'Logo', 'Лупа', 'MasterCard', 'Минус', 'МИР', 'Деньги', 'Денежное страхование', 'Монитор и мобильный', 'Новый документ', 'Офис', 'Лого «Одноклассники»', 'PackA4', 'Бизнес', 'Проценты (круг.)', 'Проценты', 'Персональная карта', 'Лого «PlayMarket»', 'Плюс', 'Щит', 'Профиль, 2 персоны', 'Профиль', 'Тыква', 'Рубль (круг.)', 'Сейф', 'Безопасность', 'Подписанные документы', 'Маленькие часы', 'Звук', 'StateMortgageIcon', 'Лого «Telegram»', 'UnionPay', 'Пользователь', 'Visa', 'Лого «VK»', 'Пополнение карты', 'Кошелёк с плюсом', 'Кошелёк', 'Кошелёк с деньгами', 'Добавить продукт'
  * ]
  */
 export type IconName =
@@ -218,6 +223,7 @@ export type IconName =
   | 'InterestGrowthIcon'
   | 'InterestIcon'
   | 'JCBIcon'
+  | 'Logo'
   | 'LoupeIcon'
   | 'MasterCardIcon'
   | 'MinusIcon'
@@ -228,6 +234,7 @@ export type IconName =
   | 'NewDocIcon'
   | 'OfficeIcon'
   | 'OkIcon'
+  | 'PackA4'
   | 'PassSendIcon'
   | 'PercentageRoundIcon'
   | 'PercentageSquareIcon'
@@ -244,6 +251,7 @@ export type IconName =
   | 'SignDocsIcon'
   | 'SmallClockIcon'
   | 'SoundIcon'
+  | 'StateMortgageIcon'
   | 'TelegramIcon'
   | 'UnionPayIcon'
   | 'UserTickIcon'

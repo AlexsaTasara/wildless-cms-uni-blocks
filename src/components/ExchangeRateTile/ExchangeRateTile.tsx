@@ -1,9 +1,9 @@
 import { JSX } from '@redneckz/uni-jsx';
 import { useExchangeRates } from '../../hooks/useExchangeRates';
 import type { UniBlockProps } from '../../types';
+import { BlockWrapper } from '../../ui-kit/BlockWrapper';
 import { Heading } from '../../ui-kit/Heading/Heading';
 import { BaseTile } from '../BaseTile/BaseTile';
-import { getTileHeadingType } from '../BaseTile/getTileHeadingType';
 import { Currency } from './CurrencyProps';
 import { CurrencyTable } from './CurrencyTable';
 import { CurrentLocation } from './CurrentLocation';
@@ -18,7 +18,7 @@ const DEFAULT_LOCATION = {
 export interface ExchangeRateTileProps extends ExchangeRateTileContent, UniBlockProps {}
 
 export const ExchangeRateTile = JSX<ExchangeRateTileProps>(
-  ({ className = '', context, title = 'Курсы обмена валют', anchor = null }) => {
+  ({ className = '', context, title = 'Курсы обмена валют', button, ...rest }) => {
     const currencyRates = useExchangeRates(context.useAsyncData);
 
     const currencyRatesBuy = currencyRates.filter((_) => _.buy);
@@ -28,24 +28,19 @@ export const ExchangeRateTile = JSX<ExchangeRateTileProps>(
     currencyRatesSell.push({ code: Currency.RUB });
 
     return (
-      <section
+      <BlockWrapper
+        context={context}
         className={`bg-white text-primary-text font-sans p-9 box-border ${className}`}
-        id={anchor}
+        {...rest}
       >
         <BaseTile
           context={context}
-          title={
-            <Heading
-              headingType={getTileHeadingType(className)}
-              title={title}
-              className="whitespace-pre-wrap"
-            />
-          }
+          title={<Heading headingType="h4" title={title} className="whitespace-pre-wrap text-h4" />}
         >
           <div className="flex">
-            <div className="mr-[43px] pt-4">
+            <div className="mr-14 pt-4">
               {currencyRates ? (
-                <CurrencyTable className="mb-[31px]" exchangeCurrencyItems={currencyRates} />
+                <CurrencyTable className="mb-[30px]" exchangeCurrencyItems={currencyRates} />
               ) : null}
               <CurrentLocation {...DEFAULT_LOCATION} />
             </div>
@@ -55,11 +50,12 @@ export const ExchangeRateTile = JSX<ExchangeRateTileProps>(
                 context={context}
                 currencyRatesBuy={currencyRatesBuy}
                 currencyRatesSell={currencyRatesSell}
+                button={button}
               />
             ) : null}
           </div>
         </BaseTile>
-      </section>
+      </BlockWrapper>
     );
   },
 );

@@ -11,7 +11,7 @@ export const ButtonSection = JSX<ButtonSectionProps>(({ context, className = '',
   const { handlerDecorator } = context;
   const router = context.useRouter();
 
-  return buttons?.length ? (
+  return buttons && buttons?.length ? (
     <div className={className}>
       {buttons.map((button, index) =>
         renderButton(useLink({ router, handlerDecorator }, button), index),
@@ -20,15 +20,16 @@ export const ButtonSection = JSX<ButtonSectionProps>(({ context, className = '',
   ) : null;
 });
 
-function renderButton({ icon, ...button }: ButtonWithIconProps, i: number) {
+function renderButton({ icon, iconRight, ...button }: ButtonWithIconProps, i: number) {
   if (!button?.text) {
-    return;
+    return null;
   }
 
   return icon ? (
     <Button
       key={String(i)}
       appendLeft={<Img image={icon} width="24" height="24" asSVG />}
+      appendRight={<Img image={iconRight} width="24" height="24" asSVG />}
       {...button}
     />
   ) : (

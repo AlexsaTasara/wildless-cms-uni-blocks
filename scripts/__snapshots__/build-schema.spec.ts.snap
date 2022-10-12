@@ -114,7 +114,7 @@ Object {
       },
       "type": "object",
     },
-    "BenefitItem": Object {
+    "BenefitItemProps": Object {
       "properties": Object {
         "description": Object {
           "$ref": "#/definitions/DescriptionType",
@@ -131,35 +131,15 @@ Object {
       "title": "Преимущество",
       "type": "object",
     },
-    "BenefitItemProps": Object {
-      "properties": Object {
-        "benefit": Object {
-          "$ref": "#/definitions/ProductBlockBenefit",
-        },
-        "benefitsVersion": Object {
-          "$ref": "#/definitions/IconVersion",
-        },
-        "version": Object {
-          "$ref": "#/definitions/BlockVersion",
-        },
-      },
-      "required": Array [
-        "benefit",
-      ],
-      "type": "object",
-    },
     "BenefitsBlockContent": Object {
       "properties": Object {
         "benefitList": Object {
           "items": Object {
-            "$ref": "#/definitions/BenefitItem",
+            "$ref": "#/definitions/BenefitItemProps",
           },
           "maxItems": 6,
           "title": "Список преимуществ",
           "type": "array",
-        },
-        "headingType": Object {
-          "$ref": "#/definitions/HeadingType",
         },
         "title": Object {
           "title": "Заголовок",
@@ -433,6 +413,10 @@ Object {
         "href": Object {
           "title": "URL (href)",
           "type": "string",
+        },
+        "rounded": Object {
+          "title": "Закругленные углы",
+          "type": "boolean",
         },
         "target": Object {
           "$ref": "#/definitions/Target",
@@ -1580,6 +1564,7 @@ Object {
         "SignDocsIcon",
         "SmallClockIcon",
         "SoundIcon",
+        "StateMortgageIcon",
         "TelegramIcon",
         "UnionPayIcon",
         "UserTickIcon",
@@ -1664,6 +1649,7 @@ Object {
         "Подписанные документы",
         "Маленькие часы",
         "Звук",
+        "StateMortgageIcon",
         "Лого «Telegram»",
         "UnionPay",
         "Пользователь",
@@ -1768,6 +1754,10 @@ Object {
     },
     "InsuranceAmountBlockContent": Object {
       "properties": Object {
+        "button": Object {
+          "$ref": "#/definitions/ButtonProps",
+          "title": "Кнопка",
+        },
         "insuranceTabs": Object {
           "items": Object {
             "$ref": "#/definitions/InsuranceAmountBlockTabs",

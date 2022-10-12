@@ -19,6 +19,9 @@ exports[`Blocks Bonus should render block "Bonus" without content 1`] = `
   <div
     class="container"
   >
+    <section
+      class="font-sans flex flex-col p-[50px] gap-3 bg-transparent !p-0"
+    />
     <div
       class="flex flex-wrap w-full mt-9"
     />
@@ -29,7 +32,11 @@ exports[`Blocks Bonus should render block "Bonus" without content 1`] = `
 exports[`Blocks BonusBenefitsBlock should render block "BonusBenefitsBlock" without content 1`] = `
 <section
   class="font-sans text-primary-text bg-white p-50 flex flex-col text-center "
-/>
+>
+  <section
+    class="font-sans flex flex-col p-[50px] gap-3 bg-transparent !p-0"
+  />
+</section>
 `;
 
 exports[`Blocks Calculator should render block "Calculator" without content 1`] = `
@@ -51,8 +58,11 @@ exports[`Blocks Catalog should render block "Catalog" without content 1`] = `
 <section
   class="bg-white relative font-sans p-12 overflow-hidden text-center "
 >
+  <section
+    class="font-sans flex flex-col p-[50px] gap-3 bg-transparent !p-0"
+  />
   <div
-    class="flex duration-1000 gap-3.5"
+    class="flex duration-1000 gap-3.5 mt-8"
     role="list"
     style="transform: translateX(-0px);"
   />
@@ -317,7 +327,7 @@ exports[`Blocks Footer should render block "Footer" without content 1`] = `
       </div>
     </div>
     <div
-      class="flex items-start justify-between gap-[54px] xl:gap-5 pt-[3px]"
+      class="flex flex-grow items-start justify-between gap-[54px] xl:gap-5 pt-[3px]"
     />
   </div>
   <div
@@ -347,11 +357,11 @@ exports[`Blocks Gallery should render block "Gallery" without content 1`] = `
     <div
       class="absolute top-0 left-0 bottom-0 w-[84px] bg-gradient-to-r from-white to-transparent"
     />
-    <div
-      class="flex flex-col items-center mb-8"
+    <section
+      class="font-sans flex flex-col p-[50px] gap-4 bg-transparent !p-0"
     />
     <div
-      class="flex justify-center duration-1000"
+      class="flex mt-8 justify-center duration-1000"
       role="list"
       style="transform: translateX(-0px);"
     />
@@ -370,11 +380,8 @@ exports[`Blocks GracePeriod should render block "GracePeriod" without content 1`
 <section
   class="font-sans bg-white p-[50px] "
 >
-  <h3
-    class="font-sans m-0 text-h3 text-center"
-  />
-  <div
-    class="text-l-light-md text-center mt-3"
+  <section
+    class="font-sans flex flex-col p-[50px] gap-3 bg-transparent !p-0"
   />
 </section>
 `;
@@ -562,11 +569,11 @@ exports[`Blocks MiniGallery should render block "MiniGallery" without content 1`
     <div
       class="absolute top-0 left-0 bottom-0 w-[84px] bg-gradient-to-r from-white to-transparent"
     />
-    <div
-      class="flex flex-col items-center mb-8"
+    <section
+      class="font-sans flex flex-col p-[50px] gap-4 bg-transparent !p-0"
     />
     <div
-      class="flex justify-center duration-1000"
+      class="flex mt-8 justify-center duration-1000"
       role="list"
       style="transform: translateX(-0px);"
     />
@@ -907,12 +914,12 @@ exports[`Blocks SafeDepositRental should render block "SafeDepositRental" withou
             class="block relative"
           >
             <input
-              class="m-0 mt-[5px] font-sans text-h3 w-full h-14 border border-solid border-main-stroke rounded-md
-                        outline-none p-0 pl-4 box-border text-primary-text"
+              class="m-0 mt-2 font-sans text-h3 w-full h-14 border border-solid border-main-stroke rounded-md
+                        outline-none p-0 pl-4 box-border text-primary-text hover:border-primary-hover focus:border-primary-focus disabled:border-main-stroke disabled:bg-main-divider"
               value="26"
             />
             <div
-              class="absolute inset-x-0 bottom-[-4px] px-4 leading-[18px]"
+              class="absolute inset-x-0 -bottom-1 px-4 leading-[18px]"
             >
               <input
                 class="box-border w-full m-0 cursor-pointer slider"
@@ -926,15 +933,15 @@ exports[`Blocks SafeDepositRental should render block "SafeDepositRental" withou
             </div>
           </label>
           <div
-            class="flex justify-between my-3"
+            class="flex justify-between my-2"
           >
             <span
-              class="text-s leading-[14px] text-secondary-text pl-4"
+              class="text-s-light text-secondary-text"
             >
               От 1 дня
             </span>
             <span
-              class="text-s leading-[14px] text-secondary-text pl-4"
+              class="text-s-light text-secondary-text"
             >
               До 365 дней
             </span>

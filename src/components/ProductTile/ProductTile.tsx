@@ -1,20 +1,16 @@
 import { JSX } from '@redneckz/uni-jsx';
 import type { BlockVersion } from '../../model/BlockVersion';
 import type { UniBlockProps } from '../../types';
+import type { ProductTileContent, TextBenefit } from './ProductTileContent';
 import { BlockWrapper } from '../../ui-kit/BlockWrapper';
 import { ButtonSection } from '../../ui-kit/Button/ButtonSection';
 import { Img } from '../../ui-kit/Img/Img';
 import { getTileMinHeight } from '../BaseTile/getTileMinHeight';
 import { getTileRightPadding } from '../BaseTile/getTileRightPadding';
-import type { ProductTileContent, TextBenefit } from './ProductTileContent';
 import { Headline } from '../Headline/Headline';
+import { VersionStyleMap } from '../../model/BlockVersion';
 
 export interface ProductTileProps extends ProductTileContent, UniBlockProps {}
-
-const productTileStyleMap: Record<BlockVersion, string> = {
-  primary: 'bg-white text-primary-text',
-  secondary: 'bg-primary-main text-white',
-};
 
 export const ProductTile = JSX<ProductTileProps>(
   ({
@@ -34,7 +30,7 @@ export const ProductTile = JSX<ProductTileProps>(
       <BlockWrapper
         context={context}
         className={`bg-white overflow-hidden text-primary-text font-sans p-9 box-border min-h-[364px] relative justify-between grid ${className} ${
-          productTileStyleMap[version]
+          VersionStyleMap[version]
         } ${getTileRightPadding(className)} ${getTileMinHeight(className)} `}
         {...rest}
       >
@@ -42,6 +38,7 @@ export const ProductTile = JSX<ProductTileProps>(
           <Headline
             context={context}
             className="!p-0"
+            as="h2"
             title={title}
             description={description}
             headlineVersion={headlineVersion}
@@ -68,7 +65,7 @@ export const ProductTile = JSX<ProductTileProps>(
 
 function renderBenefits(benefits: TextBenefit[], version: BlockVersion) {
   return (
-    <div className="flex mt-4">
+    <div className="flex mt-3.5">
       {benefits.length ? (
         <div className="mr-6 gap-2.5 text-h6">{benefits.map(renderBenefitLabel)}</div>
       ) : null}

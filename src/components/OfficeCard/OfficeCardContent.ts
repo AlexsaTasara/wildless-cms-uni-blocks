@@ -13,11 +13,11 @@ export interface OfficeCardContent {
   location?: string;
   metros?: Metro[];
   contactsInfo?: ContactInformation[];
-  dates?: Weekday[];
-  currency?: string[];
+  dates?: DayOfWeek[];
+  currencies?: string[];
 }
 
-export interface Weekday {
+export interface DayOfWeek {
   dayOfWeek?: string;
   time?: string;
   status?: string;

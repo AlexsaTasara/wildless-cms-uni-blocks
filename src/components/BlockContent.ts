@@ -58,6 +58,5 @@ export type BlockContent =
   | GroupBlockContent
   | BonusBenefitsBlockContent
   | OfficeCardContent
-  | InsuranceContent
   | SafeDepositRentalContent;
 

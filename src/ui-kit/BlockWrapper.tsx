@@ -1,4 +1,5 @@
 import { JSX } from '@redneckz/uni-jsx';
+import { useEffect, useState } from '@redneckz/uni-jsx/lib/hooks';
 import type { ContentPageContext } from '../components/ContentPage/ContentPageContext';
 import { EventBus } from '../EventBus/EventBus';
 import type { UniBlockProps } from '../types';
@@ -16,12 +17,17 @@ export const BlockWrapper = JSX<BlockWrapperProps>(
     const Tag: any = tag;
 
     const { IntersectionObserverTag } = context;
-    const [shouldRenderBlock, setShouldRenderBlock] = context.useState(true);
+    const [shouldRenderBlock, setShouldRenderBlock] = useState(true);
 
-    context.useEffect(
+    useEffect(
       () =>
         EventBus.inst.subscribe('tab', (event) => {
-          setShouldRenderBlock(!labels?.length || !event.label || labels.includes(event.label));
+          if (event.type === 'group') {
+            setShouldRenderBlock(!labels?.length || !event.label || labels.includes(event.label));
+          } else {
+            setShouldRenderBlock(true);
+            scrollToBlock(event.label);
+          }
         }),
       [labels],
     );
@@ -45,3 +51,9 @@ export const BlockWrapper = JSX<BlockWrapperProps>(
     );
   },
 );
+
+function scrollToBlock(label?: string) {
+  setTimeout(() =>
+    globalThis.document.getElementById(`#${label}`)?.scrollIntoView({ behavior: 'smooth' }),
+  );
+}

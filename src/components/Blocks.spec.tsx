@@ -1,6 +1,7 @@
-import { setup } from '@redneckz/uni-jsx';
+import { setupHooks } from '@redneckz/uni-jsx/lib/hooks';
+import { setup } from '@redneckz/uni-jsx/lib/setup';
 import { render } from '@testing-library/react';
-import { useEffect, useState } from 'react';
+import * as React from 'react';
 import runtime from 'react/jsx-runtime';
 import { Blocks } from './Blocks';
 import type { ContentPageContext } from './ContentPage/ContentPageContext';
@@ -8,34 +9,27 @@ import type { ContentPageContext } from './ContentPage/ContentPageContext';
 const { jsx, jsxs } = runtime as any;
 
 setup(jsx, jsxs);
+setupHooks(React as any);
 
 const emptyFn = () => {
   /* For sure */
 };
 
 const context: ContentPageContext = {
-  useState,
-  useEffect,
   useRouter: () => ({
     pathname: '/credits',
     query: {},
     push: emptyFn,
     replace: emptyFn,
   }),
-  useAsyncData: () => ({}),
-  useGeolocation: (defaultLocation) => [defaultLocation, emptyFn],
-  useLikeService: () => ({
-    likeCount: 0,
-    like: emptyFn,
-    dislike: emptyFn,
-  }),
   handlerDecorator: (): any => emptyFn,
-  useSearch: () => ({
-    term: '',
-    setTerm: emptyFn,
-  }),
   IntersectionObserverTag: ({ children }) => children,
 };
+
+jest.mock('@redneckz/uni-jsx/lib/hooks/useAsyncData', () => ({
+  __esModule: true,
+  useAsyncData: () => ({}),
+}));
 
 describe('Blocks', () => {
   beforeEach(() => {

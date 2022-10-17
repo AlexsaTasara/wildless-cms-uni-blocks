@@ -842,6 +842,23 @@ Object {
       "title": "Кредитный калькулятор",
       "type": "object",
     },
+    "DayOfWeek": Object {
+      "properties": Object {
+        "dayOfWeek": Object {
+          "type": "string",
+        },
+        "status": Object {
+          "type": "string",
+        },
+        "textColor": Object {
+          "$ref": "#/definitions/TextColorVersion",
+        },
+        "time": Object {
+          "type": "string",
+        },
+      },
+      "type": "object",
+    },
     "DepositCalculatorParams": Object {
       "description": "TODO: данные из справочника",
       "type": "object",
@@ -2251,7 +2268,7 @@ Object {
           },
           "type": "array",
         },
-        "currency": Object {
+        "currencies": Object {
           "items": Object {
             "type": "string",
           },
@@ -2259,7 +2276,7 @@ Object {
         },
         "dates": Object {
           "items": Object {
-            "$ref": "#/definitions/Weekday",
+            "$ref": "#/definitions/DayOfWeek",
           },
           "type": "array",
         },
@@ -3749,23 +3766,6 @@ Object {
         "href",
       ],
       "title": "Ссылка",
-      "type": "object",
-    },
-    "Weekday": Object {
-      "properties": Object {
-        "dayOfWeek": Object {
-          "type": "string",
-        },
-        "status": Object {
-          "type": "string",
-        },
-        "textColor": Object {
-          "$ref": "#/definitions/TextColorVersion",
-        },
-        "time": Object {
-          "type": "string",
-        },
-      },
       "type": "object",
     },
   },

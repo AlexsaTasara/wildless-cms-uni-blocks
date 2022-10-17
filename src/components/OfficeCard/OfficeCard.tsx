@@ -3,10 +3,10 @@ import type { UniBlockProps } from '../../types';
 import { Heading } from '../../ui-kit/Heading/Heading';
 import type {
   ContactInformation,
+  DayOfWeek,
   Metro,
   OfficeCardContent,
   TextColorVersion,
-  Weekday,
 } from './OfficeCardContent';
 
 export interface OfficeCardProps extends OfficeCardContent, UniBlockProps {}
@@ -25,30 +25,26 @@ export const OfficeCard = JSX<OfficeCardProps>((props) => {
     metros,
     contactsInfo,
     dates,
-    currency,
+    currencies,
     anchor = '',
   } = props;
 
   return (
     <section id={anchor} className={`font-sans text-primary-text py-10 bg-white ${className}`}>
       {renderHead(title, link, location)}
-      {metros ? <div className="flex flex-row">{metros.map(renderMetro)}</div> : null}
-      {contactsInfo ? (
+      {metros?.length ? <div className="flex flex-row">{metros.map(renderMetro)}</div> : null}
+      {contactsInfo?.length ? (
         <div className="flex flex-row">{contactsInfo.map(renderContacts)}</div>
       ) : null}
-      {dates ? <div className="flex flex-row">{dates.map(renderDates)}</div> : null}
-      {currency?.length ? (
-        <div className="flex flex-row">{currency.map(renderCurrency)}</div>
+      {dates?.length ? <div className="flex flex-row">{dates.map(renderDates)}</div> : null}
+      {currencies?.length ? (
+        <div className="flex flex-row">{currencies.map(renderCurrency)}</div>
       ) : null}
     </section>
   );
 });
 
-function renderHead(
-  title: string | undefined,
-  link: string | undefined,
-  location: string | undefined,
-) {
+function renderHead(title?: string, link?: string, location?: string) {
   return (
     <section>
       {title ? <Heading className="w-full ml-5 mb-8" headingType="h2" title={title} /> : null}
@@ -91,22 +87,22 @@ function renderContacts(contact: ContactInformation, i: number) {
   );
 }
 
-function renderDates(curdate: Weekday, i: number) {
+function renderDates(currentDate: DayOfWeek, i: number) {
   let textCol = TEXT_COLORS['green'];
-  curdate?.textColor ? (textCol = curdate.textColor) : null;
+  currentDate?.textColor ? (textCol = currentDate.textColor) : null;
 
   return (
     <div key={String(i)} className="flex flex-row mb-8">
       <div className="flex gap-1 flex-col h-full ml-5 max-w-[490px]">
-        {curdate?.dayOfWeek ? (
-          <div className="font-normal text-sm text-secondary-text">{curdate.dayOfWeek}</div>
+        {currentDate?.dayOfWeek ? (
+          <div className="font-normal text-sm text-secondary-text">{currentDate.dayOfWeek}</div>
         ) : null}
-        {curdate?.time ? (
-          <div className="font-medium text-primary-text text-xl m-0">{curdate.time}</div>
+        {currentDate?.time ? (
+          <div className="font-medium text-primary-text text-xl m-0">{currentDate.time}</div>
         ) : null}
-        {curdate?.status ? (
+        {currentDate?.status ? (
           <div className={`font-normal text-sm text-secondary-text ${TEXT_COLORS[textCol]}`}>
-            {curdate.status}
+            {currentDate.status}
           </div>
         ) : null}
       </div>

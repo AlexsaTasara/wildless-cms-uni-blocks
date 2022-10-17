@@ -3789,6 +3789,23 @@ Object {
       "title": "Ссылка",
       "type": "object",
     },
+    "Weekday": Object {
+      "properties": Object {
+        "dayOfWeek": Object {
+          "type": "string",
+        },
+        "status": Object {
+          "type": "string",
+        },
+        "textColor": Object {
+          "$ref": "#/definitions/TextColorVersion",
+        },
+        "time": Object {
+          "type": "string",
+        },
+      },
+      "type": "object",
+    },
   },
 }
 `;

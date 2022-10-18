@@ -506,6 +506,28 @@ Object {
       },
       "type": "object",
     },
+    "ButtonsCellDef": Object {
+      "properties": Object {
+        "buttons": Object {
+          "items": Object {
+            "$ref": "#/definitions/ButtonWithIconProps",
+          },
+          "maxItems": 4,
+          "title": "Кнопки",
+          "type": "array",
+        },
+        "tableCellType": Object {
+          "const": "Buttons",
+          "default": "Buttons",
+          "type": "string",
+        },
+      },
+      "required": Array [
+        "tableCellType",
+      ],
+      "title": "Кнопки",
+      "type": "object",
+    },
     "CalculatorBlockDef": Object {
       "anyOf": Array [
         Object {
@@ -682,6 +704,29 @@ Object {
       },
       "title": "Ячейка",
       "type": "object",
+    },
+    "CellDef": Object {
+      "anyOf": Array [
+        Object {
+          "$ref": "#/definitions/EmptyOption",
+        },
+        Object {
+          "$ref": "#/definitions/ImageCellDef",
+        },
+        Object {
+          "$ref": "#/definitions/ButtonsCellDef",
+        },
+        Object {
+          "$ref": "#/definitions/LabelDescriptionCellDef",
+        },
+        Object {
+          "$ref": "#/definitions/ListBlockDef",
+        },
+        Object {
+          "$ref": "#/definitions/InnerTableBlockDef",
+        },
+      ],
+      "title": "Содержимое ячейки",
     },
     "ColorPalette": Object {
       "enum": Array [
@@ -881,6 +926,28 @@ Object {
       },
       "type": "object",
     },
+    "Data": Object {
+      "properties": Object {
+        "data": Object {
+          "items": Object {
+            "items": Object {
+              "$ref": "#/definitions/CellDef",
+            },
+            "type": "array",
+          },
+          "type": "array",
+        },
+        "header": Object {
+          "$ref": "#/definitions/TariffsTableRowHeader",
+        },
+      },
+      "required": Array [
+        "header",
+        "data",
+      ],
+      "title": "Ряд",
+      "type": "object",
+    },
     "DepositCalculatorParams": Object {
       "description": "TODO: данные из справочника",
       "type": "object",
@@ -926,7 +993,7 @@ Object {
       ],
       "title": "Вид контента",
     },
-    "DescriptionProp": Object {
+    "DescriptionProps": Object {
       "properties": Object {
         "description": Object {
           "title": "Описание",
@@ -1353,6 +1420,18 @@ Object {
       },
       "type": "object",
     },
+    "HeadingProps": Object {
+      "properties": Object {
+        "headingType": Object {
+          "$ref": "#/definitions/HeadingType",
+        },
+        "title": Object {
+          "title": "Заголовок",
+          "type": "string",
+        },
+      },
+      "type": "object",
+    },
     "HeadingType": Object {
       "enum": Array [
         "h0",
@@ -1520,6 +1599,7 @@ Object {
         "ComfortableCompIcon",
         "CreditCardsIcon",
         "DiscountShapeIcon",
+        "DocDownload",
         "DocIcon",
         "DocIconMonoColor",
         "DocsIcon",
@@ -1605,6 +1685,7 @@ Object {
         "Кресло",
         "Кредитные карты",
         "Скидка",
+        "Скачать документ",
         "Документ",
         "Документ (одноцветный)",
         "Документы",
@@ -1680,6 +1761,32 @@ Object {
       "title": "Цвет иконки",
       "type": "string",
     },
+    "ImageCellDef": Object {
+      "default": Object {
+        "image": Object {
+          "format": "webp",
+          "size": Object {
+            "height": 24,
+            "width": 24,
+          },
+        },
+      },
+      "properties": Object {
+        "image": Object {
+          "$ref": "#/definitions/Picture",
+        },
+        "tableCellType": Object {
+          "const": "Img",
+          "default": "Img",
+          "type": "string",
+        },
+      },
+      "required": Array [
+        "tableCellType",
+      ],
+      "title": "Изображение",
+      "type": "object",
+    },
     "ImageContent": Object {
       "properties": Object {
         "image": Object {
@@ -1754,6 +1861,28 @@ Object {
       },
       "type": "object",
     },
+    "InnerTableBlockDef": Object {
+      "properties": Object {
+        "dataUrl": Object {
+          "title": "Справочник",
+          "type": "string",
+        },
+        "pdfUrl": Object {
+          "title": "Ссылка PDF-файл",
+          "type": "string",
+        },
+        "tableCellType": Object {
+          "const": "Table",
+          "default": "Table",
+          "type": "string",
+        },
+      },
+      "required": Array [
+        "tableCellType",
+      ],
+      "title": "Таблица",
+      "type": "object",
+    },
     "InsuranceAmountBlockContent": Object {
       "properties": Object {
         "button": Object {
@@ -1790,6 +1919,42 @@ Object {
         },
       },
       "title": "Вкладка",
+      "type": "object",
+    },
+    "LabelDescriptionCell": Object {
+      "properties": Object {
+        "description": Object {
+          "title": "Описание",
+          "type": "string",
+        },
+        "label": Object {
+          "title": "Заголовок",
+          "type": "string",
+        },
+      },
+      "title": "Заголовок и описание",
+      "type": "object",
+    },
+    "LabelDescriptionCellDef": Object {
+      "properties": Object {
+        "description": Object {
+          "title": "Описание",
+          "type": "string",
+        },
+        "label": Object {
+          "title": "Заголовок",
+          "type": "string",
+        },
+        "tableCellType": Object {
+          "const": "LabelDescription",
+          "default": "LabelDescription",
+          "type": "string",
+        },
+      },
+      "required": Array [
+        "tableCellType",
+      ],
+      "title": "Заголовок и описание",
       "type": "object",
     },
     "LinkColumnsMode": Object {
@@ -2036,6 +2201,34 @@ Object {
       "title": "Список",
       "type": "object",
     },
+    "ListBlockDef": Object {
+      "properties": Object {
+        "isDotted": Object {
+          "title": "Буллиты",
+          "type": "boolean",
+        },
+        "items": Object {
+          "items": Object {
+            "type": "string",
+          },
+          "title": "Список",
+          "type": "array",
+        },
+        "tableCellType": Object {
+          "const": "List",
+          "default": "List",
+          "type": "string",
+        },
+        "version": Object {
+          "$ref": "#/definitions/ListItemVersion",
+        },
+      },
+      "required": Array [
+        "tableCellType",
+      ],
+      "title": "Список",
+      "type": "object",
+    },
     "ListContent": Object {
       "properties": Object {
         "items": Object {
@@ -2048,6 +2241,22 @@ Object {
       },
       "type": "object",
     },
+    "ListItemVersion": Object {
+      "enum": Array [
+        "primary",
+        "secondary",
+        "gray",
+        "tile",
+        "tile-white",
+      ],
+      "enumNames": Array [
+        "Основной",
+        "Второстепенный",
+        "Серый",
+      ],
+      "title": "Версия списка",
+      "type": "string",
+    },
     "ListOrientation": Object {
       "enum": Array [
         "vertical",
@@ -2059,6 +2268,26 @@ Object {
       ],
       "title": "Направление списка",
       "type": "string",
+    },
+    "ListProps": Object {
+      "properties": Object {
+        "isDotted": Object {
+          "title": "Буллиты",
+          "type": "boolean",
+        },
+        "items": Object {
+          "items": Object {
+            "type": "string",
+          },
+          "title": "Список",
+          "type": "array",
+        },
+        "version": Object {
+          "$ref": "#/definitions/ListItemVersion",
+        },
+      },
+      "title": "Содержимое списка",
+      "type": "object",
     },
     "MediaQuery": Object {
       "enum": Array [
@@ -3351,40 +3580,12 @@ Object {
       "title": "Таргет (target)",
       "type": "string",
     },
-    "TariffsTableCellData": Object {
-      "properties": Object {
-        "buttons": Object {
-          "items": Object {
-            "$ref": "#/definitions/ButtonWithIconProps",
-          },
-          "maxItems": 4,
-          "title": "Кнопки",
-          "type": "array",
-        },
-        "description": Object {
-          "title": "Описание",
-          "type": "string",
-        },
-        "image": Object {
-          "$ref": "#/definitions/Picture",
-        },
-        "label": Object {
-          "title": "Заголовок",
-          "type": "string",
-        },
-        "list": Object {
-          "$ref": "#/definitions/TariffsTableList",
-        },
-      },
-      "title": "Ячейка",
-      "type": "object",
-    },
     "TariffsTableColumn": Object {
       "properties": Object {
         "data": Object {
           "items": Object {
             "items": Object {
-              "$ref": "#/definitions/TariffsTableCellData",
+              "$ref": "#/definitions/CellDef",
             },
             "type": "array",
           },
@@ -3397,16 +3598,12 @@ Object {
     },
     "TariffsTableContent": Object {
       "properties": Object {
-        "columns": Object {
-          "items": Object {
-            "$ref": "#/definitions/TariffsTableColumn",
-          },
-          "title": "Колонки",
-          "type": "array",
-        },
         "description": Object {
           "title": "Описание",
           "type": "string",
+        },
+        "headingType": Object {
+          "$ref": "#/definitions/HeadingType",
         },
         "hiddenRowsNum": Object {
           "title": "Скрывать строк",
@@ -3423,6 +3620,13 @@ Object {
           "title": "Параметры",
           "type": "array",
         },
+        "tariffsColumns": Object {
+          "items": Object {
+            "$ref": "#/definitions/TariffsTableColumn",
+          },
+          "title": "Колонки",
+          "type": "array",
+        },
         "title": Object {
           "title": "Заголовок",
           "type": "string",
@@ -3431,49 +3635,33 @@ Object {
       "title": "Таблица тарифов",
       "type": "object",
     },
-    "TariffsTableList": Object {
+    "TariffsTableInnerContent": Object {
       "properties": Object {
-        "isDotted": Object {
-          "title": "Маркеры",
-          "type": "boolean",
+        "dataUrl": Object {
+          "title": "Справочник",
+          "type": "string",
         },
-        "items": Object {
-          "items": Object {
-            "type": "string",
-          },
-          "title": "Список",
-          "type": "array",
+        "pdfUrl": Object {
+          "title": "Ссылка PDF-файл",
+          "type": "string",
         },
       },
-      "title": "Список",
-      "type": "object",
-    },
-    "TariffsTableRowData": Object {
-      "properties": Object {
-        "data": Object {
-          "items": Object {
-            "items": Object {
-              "$ref": "#/definitions/TariffsTableCellData",
-            },
-            "type": "array",
-          },
-          "type": "array",
-        },
-        "header": Object {
-          "$ref": "#/definitions/TariffsTableRowHeader",
-        },
-      },
-      "required": Array [
-        "header",
-        "data",
-      ],
-      "title": "Ряд",
       "type": "object",
     },
     "TariffsTableRowHeader": Object {
       "properties": Object {
+        "headingType": Object {
+          "$ref": "#/definitions/HeadingType",
+        },
         "icon": Object {
           "$ref": "#/definitions/Picture",
+          "default": Object {
+            "format": "webp",
+            "size": Object {
+              "height": 24,
+              "width": 24,
+            },
+          },
         },
         "title": Object {
           "title": "Заголовок",
@@ -3743,7 +3931,7 @@ Object {
       "title": "Плитка",
       "type": "object",
     },
-    "TitleProp": Object {
+    "TitleProps": Object {
       "properties": Object {
         "title": Object {
           "title": "Заголовок",

@@ -9,7 +9,6 @@ import { ExchangeRateTile } from './ExchangeRateTile/ExchangeRateTile';
 import { Footer } from './Footer/Footer';
 import { Gallery } from './Gallery/Gallery';
 import { GracePeriod } from './GracePeriod/GracePeriod';
-import { GroupBlock } from './GroupBlock/GroupBlock';
 import { Header } from './Header/Header';
 import { Headline } from './Headline/Headline';
 import { InsuranceAmountBlock } from './InsuranceAmountBlock/InsuranceAmountBlock';
@@ -17,7 +16,6 @@ import { LinkDocs } from './LinkDocs/LinkDocs';
 import { MiniGallery } from './MiniGallery/MiniGallery';
 import { MobileAppTile } from './MobileAppTile/MobileAppTile';
 import { Navigation } from './Navigation/Navigation';
-import { NavigatorTabs } from './NavigatorTabs/NavigatorTabs';
 import { OfficeCard } from './OfficeCard/OfficeCard';
 import { OtherProducts } from './OtherProducts/OtherProducts';
 import { PictureText } from './PictureText/PictureText';
@@ -51,7 +49,6 @@ export const Blocks = {
   LinkDocs,
   MiniGallery,
   MobileAppTile,
-  NavigatorTabs,
   PictureText,
   ProductBlock,
   ProductGallery,
@@ -65,7 +62,6 @@ export const Blocks = {
   Tile,
   Navigation,
   Placeholder,
-  GroupBlock,
   BonusBenefitsBlock,
   OfficeCard,
   SafeDepositRental,

@@ -6,14 +6,12 @@ import type { ExchangeRateTileContent } from './ExchangeRateTile/ExchangeRateTil
 import type { FooterContent } from './Footer/FooterContent';
 import type { GalleryContent } from './Gallery/GalleryContent';
 import type { GracePeriodContent } from './GracePeriod/GracePeriodContent';
-import type { GroupBlockContent } from './GroupBlock/GroupBlockContent';
 import type { HeaderContent } from './Header/HeaderContent';
 import type { InsuranceAmountBlockContent } from './InsuranceAmountBlock/InsuranceAmountBlockContent';
 import type { LinkDocsContent } from './LinkDocs/LinkDocsContent';
 import type { LinkListContent } from './LinkList/LinkListContent';
 import type { MobileAppTileContent } from './MobileAppTile/MobileAppTileContent';
 import type { NavigationContent } from './Navigation/NavigationContent';
-import type { NavigatorTabsContent } from './NavigatorTabs/NavigatorTabsContent';
 import type { OfficeCardContent } from './OfficeCard/OfficeCardContent';
 import type { PictureTextContent } from './PictureText/PictureTextContent';
 import type { PlaceholderContent } from './Placeholder/PlaceholderContent';
@@ -23,6 +21,7 @@ import type { ProductTileContent } from './ProductTile/ProductTileContent';
 import type { PromoTileContent } from './PromoTile/PromoTileContent';
 import type { SafeDepositRentalContent } from './SafeDepositRental/SafeDepositRentalContent';
 import type { StepsBlockContent } from './StepsBlock/StepsBlockContent';
+import { TabsContent } from './Tabs/TabsContent';
 import type { TariffsTableContent } from './TariffsTable/TariffsTableContent';
 import type { TextBlockContent } from './TextBlock/TextBlockContent';
 import type { TileContent } from './Tile/TileContent';
@@ -42,7 +41,6 @@ export type BlockContent =
   | InsuranceAmountBlockContent
   | LinkDocsContent
   | MobileAppTileContent
-  | NavigatorTabsContent
   | PictureTextContent
   | PlaceholderContent
   | ProductBlockContent
@@ -55,8 +53,7 @@ export type BlockContent =
   | TileContent
   | NavigationContent
   | LinkListContent
-  | GroupBlockContent
   | BonusBenefitsBlockContent
   | OfficeCardContent
-  | SafeDepositRentalContent;
-
+  | SafeDepositRentalContent
+  | TabsContent;

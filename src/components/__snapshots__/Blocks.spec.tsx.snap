@@ -109,7 +109,7 @@ exports[`Blocks ExchangeRateTile should render block "ExchangeRateTile" without 
       class="flex grow w-full justify-between"
     >
       <div
-        class="flex flex-col w-full"
+        class="flex flex-col justify-between w-full"
       >
         <div>
           <div
@@ -220,7 +220,7 @@ exports[`Blocks Footer should render block "Footer" without content 1`] = `
         />
       </svg>
       <span
-        class="text-black font-medium ml-2.5"
+        class="text-black font-light ml-2.5"
       >
         Россельхозбанк
       </span>
@@ -388,12 +388,6 @@ exports[`Blocks GracePeriod should render block "GracePeriod" without content 1`
 </section>
 `;
 
-exports[`Blocks GroupBlock should render block "GroupBlock" without content 1`] = `
-<section
-  class="box-border "
-/>
-`;
-
 exports[`Blocks Header should render block "Header" without content 1`] = `
 <header
   class="pt-6 pb-5 px-20 bg-white "
@@ -429,7 +423,7 @@ exports[`Blocks Header should render block "Header" without content 1`] = `
           />
         </svg>
         <span
-          class="text-black font-medium ml-2.5"
+          class="text-black font-light ml-2.5"
         >
           Россельхозбанк
         </span>
@@ -478,7 +472,7 @@ exports[`Blocks Header should render block "Header" without content 1`] = `
               Иконка Лупа
             </desc>
             <use
-              class="text-black group-hover:text-primary-main pointer-events-none"
+              class="text-black group-hover:text-primary-hover group-hover:invert-0 pointer-events-none"
               href="icons/LoupeIcon.svg#icon"
               xlink:href="icons/LoupeIcon.svg#icon"
             />
@@ -492,7 +486,7 @@ exports[`Blocks Header should render block "Header" without content 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="h-full bg-main-divider rounded-full pointer-events-none"
+            class="h-full bg-main-divider/20 rounded-full pointer-events-none"
           >
             <title>
               Иконка Сетка (белая)
@@ -501,7 +495,7 @@ exports[`Blocks Header should render block "Header" without content 1`] = `
               Иконка Сетка (белая)
             </desc>
             <use
-              class="text-black group-hover:text-primary-main"
+              class="text-black group-hover:text-primary-hover group-hover:invert-0"
               href="icons/GridIcon.svg#icon"
               xlink:href="icons/GridIcon.svg#icon"
             />
@@ -591,7 +585,7 @@ exports[`Blocks MobileAppTile should render block "MobileAppTile" without conten
       class="flex grow w-full justify-between"
     >
       <div
-        class="flex flex-col w-full"
+        class="flex flex-col justify-between w-full"
       >
         <div>
           <div
@@ -618,12 +612,6 @@ exports[`Blocks Navigation should render block "Navigation" without content 1`] 
     class="text-xl font-medium m-0"
   />
 </section>
-`;
-
-exports[`Blocks NavigatorTabs should render block "NavigatorTabs" without content 1`] = `
-<section
-  class="sticky top-0 z-20 box-border flex gap-x-1 h-14 "
-/>
 `;
 
 exports[`Blocks OfficeCard should render block "OfficeCard" without content 1`] = `
@@ -696,7 +684,7 @@ exports[`Blocks Placeholder should render block "Placeholder" without content 1`
 
 exports[`Blocks ProductBlock should render block "ProductBlock" without content 1`] = `
 <section
-  class="font-sans overflow-hidden p-[50px] flex flex-col box-border min-h-[528px] bg-white text-primary-text "
+  class="font-sans overflow-hidden p-[50px] flex flex-col box-border min-h-[454px] bg-white text-primary-text "
 >
   <div
     class="flex grow justify-between items-stretch h-full "
@@ -715,7 +703,7 @@ exports[`Blocks ProductBlock should render block "ProductBlock" without content 
           class="flex grow w-full justify-between"
         >
           <div
-            class="flex flex-col w-full"
+            class="flex flex-col justify-between w-full"
           >
             <div />
           </div>
@@ -744,18 +732,14 @@ exports[`Blocks ProductGallery should render block "ProductGallery" without cont
 
 exports[`Blocks ProductTile should render block "ProductTile" without content 1`] = `
 <section
-  class="bg-white overflow-hidden text-primary-text font-sans p-9 box-border min-h-[364px] relative justify-between grid  bg-white text-primary-text pr-[9.4rem] min-h-[360px] "
+  class="overflow-hidden font-sans p-9 box-border relative justify-between grid  bg-white text-primary-text pr-[9.4rem] min-h-[360px]"
 >
+  <section
+    class="font-sans flex flex-col p-[50px] gap-2 bg-white !p-0 z-10 "
+  />
   <div
-    class="z-[1]"
-  >
-    <section
-      class="font-sans flex flex-col p-[50px] gap-2 bg-white !p-0"
-    />
-    <div
-      class="flex mt-3.5"
-    />
-  </div>
+    class="z-10 grid grid-cols-[max-content_1fr] auto-rows-auto gap-x-6 gap-y-2.5 items-baseline max-w-[calc(100%-186px)]"
+  />
 </section>
 `;
 
@@ -766,22 +750,20 @@ exports[`Blocks PromoTile should render block "PromoTile" without content 1`] = 
   <div
     class="font-sans flex flex-col grow h-full items-start "
   >
-    <div>
-      <section
-        class="font-sans flex flex-col p-[50px] gap-4 bg-white !p-0 max-w-[600px]"
+    <section
+      class="font-sans flex flex-col p-[50px] gap-4 bg-white !p-0 max-w-[600px]"
+    >
+      <h2
+        class="font-sans m-0 text-h2 whitespace-pre-wrap text-primary-text text-left"
       >
-        <h2
-          class="font-sans m-0 text-h2 whitespace-pre-wrap text-primary-text text-left"
-        >
-          Акции и спецпредложения
-        </h2>
-      </section>
-    </div>
+        Акции и спецпредложения
+      </h2>
+    </section>
     <div
       class="flex grow w-full justify-between"
     >
       <div
-        class="flex flex-col w-full"
+        class="flex flex-col justify-between w-full"
       >
         <div>
           <div
@@ -875,6 +857,12 @@ exports[`Blocks SafeDepositRental should render block "SafeDepositRental" withou
               class="appearance-none h-14 border border-gray p-4 rounded-md text-s w-full cursor-pointer"
               style="background: url(/icons/ArrowDownIcon.svg) no-repeat 50%;"
             >
+              <option
+                class=""
+                value="выберите отделение"
+              >
+                выберите отделение
+              </option>
               <option
                 class=""
                 value="МоскваОфис1"
@@ -1032,7 +1020,6 @@ exports[`Blocks SafeDepositRental should render block "SafeDepositRental" withou
               class="flex items-center relative cursor-pointer"
             >
               <input
-                checked=""
                 class="appearance-none flex justify-center items-center w-5 h-5 border-2 border-primary-main rounded-full cursor-pointer after:block after:w-2.5 after:h-2.5 after:rounded-full checked:after:bg-primary-main"
                 name="contractType"
                 type="radio"
@@ -1050,6 +1037,7 @@ exports[`Blocks SafeDepositRental should render block "SafeDepositRental" withou
               class="flex items-center relative cursor-pointer"
             >
               <input
+                checked=""
                 class="appearance-none flex justify-center items-center w-5 h-5 border-2 border-primary-main rounded-full cursor-pointer after:block after:w-2.5 after:h-2.5 after:rounded-full checked:after:bg-primary-main"
                 name="contractType"
                 type="radio"
@@ -1197,7 +1185,7 @@ exports[`Blocks Tile should render block "Tile" without content 1`] = `
       class="flex grow w-full justify-between"
     >
       <div
-        class="flex flex-col w-full"
+        class="flex flex-col justify-between w-full"
       >
         <div />
       </div>

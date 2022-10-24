@@ -114,6 +114,23 @@ Object {
       },
       "type": "object",
     },
+    "BenefitBlockItemProps": Object {
+      "properties": Object {
+        "description": Object {
+          "$ref": "#/definitions/DescriptionDef",
+          "title": "Описание",
+        },
+        "icon": Object {
+          "$ref": "#/definitions/Picture",
+        },
+        "label": Object {
+          "title": "Название",
+          "type": "string",
+        },
+      },
+      "title": "Преимущество",
+      "type": "object",
+    },
     "BenefitItemCommonProps": Object {
       "properties": Object {
         "benefitsVersion": Object {
@@ -142,11 +159,15 @@ Object {
       "properties": Object {
         "benefitList": Object {
           "items": Object {
-            "$ref": "#/definitions/BenefitItemProps",
+            "$ref": "#/definitions/BenefitBlockItemProps",
           },
           "maxItems": 6,
           "title": "Список преимуществ",
           "type": "array",
+        },
+        "benefitsBlockVersion": Object {
+          "$ref": "#/definitions/BenefitsBlockVersion",
+          "default": "primary",
         },
         "title": Object {
           "title": "Заголовок",
@@ -155,6 +176,18 @@ Object {
       },
       "title": "Блок преимущества",
       "type": "object",
+    },
+    "BenefitsBlockVersion": Object {
+      "enum": Array [
+        "primary",
+        "secondary",
+      ],
+      "enumNames": Array [
+        "Основная",
+        "Второстепенная",
+      ],
+      "title": "Цвет блока",
+      "type": "string",
     },
     "BenefitsProps": Object {
       "properties": Object {
@@ -367,6 +400,10 @@ Object {
           "title": "Адрес справочника",
           "type": "string",
         },
+        "title": Object {
+          "title": "Заголовок",
+          "type": "string",
+        },
         "travelBonusRate": Object {
           "type": "number",
         },
@@ -415,6 +452,23 @@ Object {
         },
       },
       "title": "Блок Бонусы",
+      "type": "object",
+    },
+    "Branch": Object {
+      "properties": Object {
+        "address": Object {
+          "type": "string",
+        },
+        "branchCode": Object {
+          "type": "string",
+        },
+        "safeBoxCaseVolumes": Object {
+          "items": Object {
+            "$ref": "#/definitions/SafeBoxCaseVolume",
+          },
+          "type": "array",
+        },
+      },
       "type": "object",
     },
     "ButtonContent": Object {
@@ -586,6 +640,10 @@ Object {
         "nav": Object {
           "$ref": "#/definitions/CalculatorNav",
         },
+        "title": Object {
+          "title": "Заголовок",
+          "type": "string",
+        },
       },
       "title": "Вкладка",
       "type": "object",
@@ -610,6 +668,10 @@ Object {
         },
       },
       "title": "Кнопка выбора программы",
+      "type": "object",
+    },
+    "CardTransferContent": Object {
+      "title": "Перевод с карты на карту",
       "type": "object",
     },
     "CatalogCardType": Object {
@@ -914,6 +976,10 @@ Object {
           "title": "Адрес справочника",
           "type": "string",
         },
+        "title": Object {
+          "title": "Заголовок",
+          "type": "string",
+        },
       },
       "required": Array [
         "calcType",
@@ -984,6 +1050,10 @@ Object {
           "title": "Адрес справочника",
           "type": "string",
         },
+        "title": Object {
+          "title": "Заголовок",
+          "type": "string",
+        },
       },
       "required": Array [
         "calcType",
@@ -1038,6 +1108,77 @@ Object {
     "EmptyOption": Object {
       "title": "Выберите блок",
       "type": "null",
+    },
+    "ErrorBlockContent": Object {
+      "properties": Object {
+        "button": Object {
+          "$ref": "#/definitions/ButtonProps",
+          "title": "Кнопка",
+        },
+        "error": Object {
+          "$ref": "#/definitions/ErrorContentDef",
+          "title": "Вид контента",
+        },
+        "subtitle": Object {
+          "title": "Описание",
+          "type": "string",
+        },
+        "title": Object {
+          "title": "Заголовок",
+          "type": "string",
+        },
+      },
+      "title": "Блок ошибки",
+      "type": "object",
+    },
+    "ErrorCodeDef": Object {
+      "properties": Object {
+        "code": Object {
+          "title": "Код ошибки",
+          "type": "number",
+        },
+        "errorContentType": Object {
+          "const": "Code",
+          "default": "Code",
+          "type": "string",
+        },
+      },
+      "required": Array [
+        "errorContentType",
+      ],
+      "title": "Код ошибки",
+      "type": "object",
+    },
+    "ErrorContentDef": Object {
+      "anyOf": Array [
+        Object {
+          "$ref": "#/definitions/EmptyOption",
+        },
+        Object {
+          "$ref": "#/definitions/ErrorImageDef",
+        },
+        Object {
+          "$ref": "#/definitions/ErrorCodeDef",
+        },
+      ],
+    },
+    "ErrorImageDef": Object {
+      "properties": Object {
+        "errorContentType": Object {
+          "const": "Image",
+          "default": "Image",
+          "type": "string",
+        },
+        "image": Object {
+          "$ref": "#/definitions/Picture",
+          "title": "Изображение",
+        },
+      },
+      "required": Array [
+        "errorContentType",
+      ],
+      "title": "Изображение",
+      "type": "object",
     },
     "ExchangeRateTileContent": Object {
       "properties": Object {
@@ -1534,7 +1675,7 @@ Object {
       "enum": Array [
         "",
         "ActualBalanceIcon",
-        "AirPlane",
+        "AirPlaneIcon",
         "AppleIcon",
         "ArrowDownIcon",
         "ArrowLeftIcon",
@@ -1558,7 +1699,7 @@ Object {
         "ComfortableCompIcon",
         "CreditCardsIcon",
         "DiscountShapeIcon",
-        "DocDownload",
+        "DocDownloadIcon",
         "DocIcon",
         "DocIconMonoColor",
         "DocsIcon",
@@ -1577,7 +1718,7 @@ Object {
         "InterestGrowthIcon",
         "InterestIcon",
         "JCBIcon",
-        "Logo",
+        "LogoIcon",
         "LoupeIcon",
         "MasterCardIcon",
         "MinusIcon",
@@ -1588,7 +1729,7 @@ Object {
         "NewDocIcon",
         "OfficeIcon",
         "OkIcon",
-        "PackA4",
+        "PackA4Icon",
         "PassSendIcon",
         "PercentageRoundIcon",
         "PercentageSquareIcon",
@@ -1615,7 +1756,7 @@ Object {
         "WalletAddIcon",
         "WalletIcon",
         "WalletWithMoneyIcon",
-        "WateringCan",
+        "WateringCanIcon",
       ],
       "enumNames": Array [
         "",
@@ -1674,7 +1815,7 @@ Object {
         "Новый документ",
         "Офис",
         "Лого «Одноклассники»",
-        "PackA4",
+        "PackA4Icon",
         "Бизнес",
         "Проценты (круг.)",
         "Проценты",
@@ -1771,6 +1912,33 @@ Object {
       },
       "type": "object",
     },
+    "ImgAlignment": Object {
+      "default": "center",
+      "enum": Array [
+        "northwest",
+        "north",
+        "northeast",
+        "west",
+        "center",
+        "east",
+        "southwest",
+        "south",
+        "southeast",
+      ],
+      "enumNames": Array [
+        "Сверху слева",
+        "Сверху по центру",
+        "Сверху справа",
+        "Посередине слева",
+        "Посередине по центру",
+        "Посередине справа",
+        "Снизу слева",
+        "Снизу по центру",
+        "Снизу справа",
+      ],
+      "title": "Позиционирование",
+      "type": "string",
+    },
     "ImgFormats": Object {
       "enum": Array [
         "jpeg",
@@ -1785,6 +1953,9 @@ Object {
     },
     "ImgSource": Object {
       "properties": Object {
+        "alignment": Object {
+          "$ref": "#/definitions/ImgAlignment",
+        },
         "format": Object {
           "$ref": "#/definitions/ImgFormats",
           "title": "Формат",
@@ -2437,6 +2608,10 @@ Object {
           "title": "Адрес справочника",
           "type": "string",
         },
+        "title": Object {
+          "title": "Заголовок",
+          "type": "string",
+        },
       },
       "required": Array [
         "calcType",
@@ -2499,6 +2674,42 @@ Object {
       },
       "type": "object",
     },
+    "OfficeServicesBlockContent": Object {
+      "properties": Object {
+        "servicesList": Object {
+          "items": Object {
+            "$ref": "#/definitions/OfficeServicesBlockList",
+          },
+          "title": "Список услуг",
+          "type": "array",
+        },
+        "title": Object {
+          "title": "Заголовок",
+          "type": "string",
+        },
+      },
+      "title": "Офисные услуги",
+      "type": "object",
+    },
+    "OfficeServicesBlockList": Object {
+      "properties": Object {
+        "icon": Object {
+          "$ref": "#/definitions/Picture",
+          "default": Object {
+            "format": "webp",
+            "size": Object {
+              "height": 24,
+              "width": 24,
+            },
+          },
+          "title": "Иконка",
+        },
+        "text": Object {
+          "type": "string",
+        },
+      },
+      "type": "object",
+    },
     "OtherProductsContent": Object {
       "properties": Object {
         "blockItems": Object {
@@ -2521,6 +2732,9 @@ Object {
     },
     "Picture": Object {
       "properties": Object {
+        "alignment": Object {
+          "$ref": "#/definitions/ImgAlignment",
+        },
         "alt": Object {
           "title": "Альтернативный текст (alt)",
           "type": "string",
@@ -3158,6 +3372,34 @@ Object {
       "title": "Параметр",
       "type": "object",
     },
+    "SafeBoxCase": Object {
+      "properties": Object {
+        "safeBoxCasesSize": Object {
+          "type": "string",
+        },
+        "tariffs": Object {
+          "items": Object {
+            "$ref": "#/definitions/Tariff",
+          },
+          "type": "array",
+        },
+      },
+      "type": "object",
+    },
+    "SafeBoxCaseVolume": Object {
+      "properties": Object {
+        "safeBoxCases": Object {
+          "items": Object {
+            "$ref": "#/definitions/SafeBoxCase",
+          },
+          "type": "array",
+        },
+        "volume": Object {
+          "type": "string",
+        },
+      },
+      "type": "object",
+    },
     "SafeDepositRentalContent": Object {
       "properties": Object {
         "title": Object {
@@ -3374,6 +3616,17 @@ Object {
       ],
       "title": "Таргет (target)",
       "type": "string",
+    },
+    "Tariff": Object {
+      "properties": Object {
+        "tariffType": Object {
+          "type": "string",
+        },
+        "tariffValue": Object {
+          "type": "number",
+        },
+      },
+      "type": "object",
     },
     "TariffsTableColumn": Object {
       "properties": Object {

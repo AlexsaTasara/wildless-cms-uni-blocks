@@ -22,6 +22,7 @@ export const Select = JSX<SelectProps>(
         name={name || id}
         value={value}
         onChange={(e) => onChange(e.target.value as string)}
+        placeholder=""
       >
         {children}
       </select>

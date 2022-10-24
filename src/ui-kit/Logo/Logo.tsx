@@ -25,7 +25,7 @@ const SVG_COLOR: Record<BgColorVersion, string> = {
   transparent: 'text-white',
 };
 const TEXT_COLOR: Record<BgColorVersion, string> = {
-  'bg-white': 'text-black',
+  'bg-white': 'text-primary-text',
   transparent: 'text-white',
 };
 
@@ -50,7 +50,7 @@ export const Logo = JSX<Partial<LogoProps>>(
           <Img image={logo.image} className={SVG_COLOR[bgColor]} width="40" height="45" asSVG />
         ) : (
           <Img
-            image={{ icon: 'Logo', iconVersion: ICON_VERSION_MAP[bgColor] }}
+            image={{ icon: 'LogoIcon', iconVersion: ICON_VERSION_MAP[bgColor] }}
             className={`${SVG_COLOR[bgColor]} w-10`}
             width="40"
             height="45"
@@ -66,5 +66,5 @@ export const Logo = JSX<Partial<LogoProps>>(
 const renderTitle = (children, bgColor, title) => {
   const text = children || title || 'Россельхозбанк';
 
-  return <span className={`${TEXT_COLOR[bgColor]} font-light ml-2.5`}>{text}</span>;
+  return <span className={`${TEXT_COLOR[bgColor]} font-medium ml-2.5`}>{text}</span>;
 };

@@ -21,7 +21,6 @@ export interface DayOfWeek {
   dayOfWeek?: string;
   time?: string;
   status?: string;
-  textColor?: TextColorVersion;
 }
 
 export interface ContactInformation {

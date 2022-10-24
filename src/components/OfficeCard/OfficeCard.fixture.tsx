@@ -1,6 +1,6 @@
 import { context } from '../../react/setup-fixture';
 import { OfficeCard } from './OfficeCard';
-import type { ContactInformation, Metro, OfficeCardContent, DayOfWeek } from './OfficeCardContent';
+import type { ContactInformation, DayOfWeek, Metro, OfficeCardContent } from './OfficeCardContent';
 
 export const CONTACTS: ContactInformation[] = [
   { title: 'Телефон офиса', info: '123456789' },
@@ -12,14 +12,13 @@ export const DATES: DayOfWeek[] = [
     dayOfWeek: 'Понедельник',
     time: '900 - 1700',
     status: 'Без перерыва',
-    textColor: 'green',
   },
   {
     dayOfWeek: 'Вторник',
     time: '900 - 1700',
     status: 'Без перерыва',
   },
-  { dayOfWeek: 'Суббота', status: 'Выходной', textColor: 'red' },
+  { dayOfWeek: 'Суббота', status: 'Выходной' },
 ];
 
 export const CURRENT_METRO: Metro[] = [

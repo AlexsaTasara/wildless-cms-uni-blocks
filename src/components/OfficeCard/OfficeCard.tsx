@@ -88,8 +88,7 @@ function renderContacts(contact: ContactInformation, i: number) {
 }
 
 function renderDates(currentDate: DayOfWeek, i: number) {
-  let textCol = TEXT_COLORS['green'];
-  currentDate?.textColor ? (textCol = currentDate.textColor) : null;
+  const textCol = currentDate.status === 'Без перерыва' ? 'green' : 'red';
 
   return (
     <div key={String(i)} className="flex flex-row mb-8">

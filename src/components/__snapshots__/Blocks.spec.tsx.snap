@@ -145,6 +145,15 @@ exports[`Blocks ComparisonTable should render block "ComparisonTable" without co
 </section>
 `;
 
+exports[`Blocks ContactInformation should render block "ContactInformation" without content 1`] = `
+<section
+  class="font-sans text-primary-text py-10 bg-white "
+  id=""
+>
+  <section />
+</section>
+`;
+
 exports[`Blocks ErrorBlock should render block "ErrorBlock" without content 1`] = `
 <section
   class="flex flex-col justify-center items-center "

@@ -974,6 +974,20 @@ Object {
       },
       "type": "object",
     },
+    "ContactInformationContent": Object {
+      "properties": Object {
+        "contactCards": Object {
+          "items": Object {
+            "$ref": "#/definitions/ContactCard",
+          },
+          "type": "array",
+        },
+        "title": Object {
+          "type": "string",
+        },
+      },
+      "type": "object",
+    },
     "ContactType": Object {
       "enum": Array [
         "tel",
@@ -1050,9 +1064,6 @@ Object {
         },
         "status": Object {
           "type": "string",
-        },
-        "textColor": Object {
-          "$ref": "#/definitions/TextColorVersion",
         },
         "time": Object {
           "type": "string",
@@ -3901,10 +3912,12 @@ Object {
       "enum": Array [
         "red",
         "green",
+        "black",
       ],
       "enumNames": Array [
         "Красный",
         "Зеленый",
+        "Черный",
       ],
       "title": "Цвет текста",
       "type": "string",

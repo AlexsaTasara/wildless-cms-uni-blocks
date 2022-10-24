@@ -1,164 +1,107 @@
-import { UniBlockProps } from '../../types';
+import { JSX } from '@redneckz/uni-jsx';
+import { useEffect, useState } from '@redneckz/uni-jsx/lib/hooks/core';
 import { Button } from '../../ui-kit/Button/Button';
-import { InputRange } from '../../ui-kit/InputRange/InputRange';
-import { Radio } from '../../ui-kit/Radio/Radio';
-import { Select } from '../../ui-kit/Select/Select';
-import { SelectOption } from '../../ui-kit/Select/SelectOption';
+import { fetchBranches } from './fetchBranches';
+import { RegionsAndBranches } from './RegionsAndBranches';
+import { RenderRadioButtons } from './RenderRadioButtons';
+import { RentalPeriod } from './RentalPeriod';
+import { SafeBoxCases } from './SafeBoxCases';
+import { Branch, SafeBoxCase, SafeBoxCaseVolume } from './SafeDepositRentalContent';
+import { SafeDepositRentalTotal } from './SafeDepositRentalTotal';
+import type { Region } from './useGetRegions';
 
-export type SafeDepositRentalFormProps = UniBlockProps;
-
-export const SafeDepositRentalForm = ({
-  cities,
-  cellDimensions,
-  cellOptions,
-  days,
-  setDays,
-  context,
-}) => {
-  return (
-    <div className="flex-1 mr-9">
-      {cities.length ? renderCitiesOffices(cities, context) : null}
-      {renderRentalPeriod(days, setDays)}
-      {cellDimensions.length && cellOptions.length
-        ? renderDimensionsOptions(cellDimensions, cellOptions, context)
-        : null}
-      <span className="text-secondary-text text-l-light">Тип договора</span>
-      <div className="flex justify-between items-center mt-5">
-        {renderRadioButtons(context)}
-        <Button text="Офисы на карте" version="primary" />
-      </div>
-    </div>
-  );
-};
-
-const renderCitiesOffices = (cities, context) => {
-  const [selectedCity, setSelectedCity] = context.useState(cities[0].city);
-
-  const setSelected = (_) => setSelectedCity(_);
-
-  const offices = cities.find((_) => _.city === selectedCity).offices;
-
-  return (
-    <div className="flex justify-between mb-6">
-      <div className="w-full mr-4">
-        {cities.length
-          ? renderSelect({
-              data: cities,
-              field: 'city',
-              selected: selectedCity,
-              setSelected,
-              label: 'Город',
-            })
-          : null}
-      </div>
-      <div className="w-full">
-        {offices.length
-          ? renderSelect({
-              data: offices,
-              field: 'office',
-              selected: offices[0],
-              setSelected,
-              label: 'Отделение',
-            })
-          : null}
-      </div>
-    </div>
-  );
-};
-
-const renderDimensionsOptions = (cellDimensions, cellOptions, context) => {
-  const [selectedDimension, setSelectedDimension] = context.useState(cellDimensions[0].dimension);
-  const [selectedOption, setSelectedOption] = context.useState(cellOptions[0].option);
-
-  return (
-    <div className="flex justify-between mb-6">
-      <div className="mr-4 w-full">
-        {cellDimensions.length
-          ? renderSelect({
-              data: cellDimensions,
-              field: 'dimension',
-              selected: selectedDimension,
-              setSelected: setSelectedDimension,
-              label: 'Размер ячейки',
-            })
-          : null}
-      </div>
-      <div className="w-full">
-        {cellOptions.length
-          ? renderSelect({
-              data: cellOptions,
-              field: 'option',
-              selected: selectedOption,
-              setSelected: setSelectedOption,
-              label: 'Параметры ячейки, мм (ВхШхД)',
-            })
-          : null}
-      </div>
-    </div>
-  );
-};
-
-interface SelectProps {
-  data: any[];
-  field: string;
-  selected: string;
-  setSelected: (value: string) => void;
-  label: string;
+export interface SafeDepositRentalFormProps {
+  regions?: Region[];
 }
 
-const renderSelect = (props: SelectProps) => {
-  const { data, field, selected, setSelected, label } = props;
+const DEFAULT_DAYS = 26;
+
+export const SafeDepositRentalForm = JSX<SafeDepositRentalFormProps>(({ regions }) => {
+  const [selectedRegion, setSelectedRegion] = useState<string>('');
+  const [branches, setBranches] = useState<Branch[]>([]);
+  const [selectedBranch, setSelectedBranch] = useState<string>('');
+  const [selectedCaseVolume, setSelectedCaseVolume] = useState<string>('');
+  const [selectedBoxSize, setSelectedBoxSize] = useState<string>('');
+  const [days, setDays] = useState<number>(DEFAULT_DAYS);
+
+  useEffect(() => {
+    setSelectedRegion(getInitialValueSelectedRegion(regions));
+  }, [regions]);
+
+  useEffect(() => {
+    if (selectedRegion) {
+      fetchBranches(selectedRegion).then((result) => {
+        setBranches(result);
+      });
+    } else {
+      setBranches([]);
+    }
+
+    setSelectedBranch('');
+    setSelectedCaseVolume('');
+    setSelectedBoxSize('');
+  }, [regions, selectedRegion]);
+
+  const onSelectedBranch = (value: string) => {
+    setSelectedBranch(value);
+    setSelectedCaseVolume('');
+    setSelectedBoxSize('');
+  };
+
+  const onSelectedCaseVolume = (value: string) => {
+    setSelectedCaseVolume(value);
+    setSelectedBoxSize('');
+  };
+
+  const branch = getBranch(branches, selectedBranch);
+  const caseVolumes = getCaseVolumes(branch?.safeBoxCaseVolumes);
+
+  const safeBoxCases = getCaseVolume(branch?.safeBoxCaseVolumes, selectedCaseVolume)?.safeBoxCases;
+
+  const tariffs = getTariffs(safeBoxCases, selectedBoxSize);
 
   return (
-    <div>
-      <span className="block text-m-light mb-2">{label}</span>
-      <Select
-        className="h-14 border border-gray p-4 rounded-md text-s w-full cursor-pointer"
-        value={selected}
-        onChange={(_) => setSelected(_)}
-      >
-        {data.map((_, i) => (
-          <SelectOption key={String(i)} value={_?.[field]}>
-            {_?.[field]}
-          </SelectOption>
-        ))}
-      </Select>
+    <div className="flex justify-between align-top mb-6">
+      <div className="flex-1 mr-9">
+        <RegionsAndBranches
+          regions={regions}
+          selectedRegion={selectedRegion}
+          onSelectedRegion={setSelectedRegion}
+          branches={branches}
+          selectedBranch={selectedBranch}
+          onSelectedBranch={onSelectedBranch}
+        />
+        <RentalPeriod days={days} setDays={setDays} />
+        <SafeBoxCases
+          caseVolumes={caseVolumes}
+          selectedCaseVolume={selectedCaseVolume}
+          onSelectedCaseVolume={onSelectedCaseVolume}
+          safeBoxCases={safeBoxCases}
+          selectedBoxSize={selectedBoxSize}
+          onSelectedBoxSize={setSelectedBoxSize}
+        />
+        <span className="text-secondary-text text-l-light">Тип договора</span>
+        <div className="flex justify-between items-center mt-5">
+          <RenderRadioButtons />
+          <Button text="Офисы на карте" version="primary" />
+        </div>
+      </div>
+      <SafeDepositRentalTotal days={days} tariffs={tariffs} />
     </div>
   );
-};
+});
 
-export const renderRentalPeriod = (days, setDays) => {
-  const items = ['От 1 дня', 'До 365 дней'];
+const getInitialValueSelectedRegion = (regions?: Region[]) =>
+  regions?.find((_) => _.name === 'Москва')?.code || '';
 
-  return (
-    <div className="mb-6">
-      <span className="block text-m-light mb-[3px]">Срок аренды</span>
-      <InputRange min={1} max={365} value={days} items={items} onChange={setDays} />
-    </div>
-  );
-};
+const getBranch = (branches: Branch[], selectedBranch: string) =>
+  branches.find((_) => _.branchCode === selectedBranch);
 
-const renderRadioButtons = (context) => {
-  const [selected, setSelected] = context.useState('option1');
-  const onChange = (_: React.ChangeEvent<HTMLInputElement>) => setSelected(_.target.value);
+const getCaseVolumes = (safeBoxCaseVolumes?: SafeBoxCaseVolume[]) =>
+  safeBoxCaseVolumes?.length ? safeBoxCaseVolumes?.filter((_) => _?.safeBoxCases?.length) : [];
 
-  return (
-    <div>
-      <Radio
-        className="mb-2"
-        name="contractType"
-        text="Простое хранение"
-        value="option1"
-        checked={selected === 'option1'}
-        onChange={onChange}
-      />
-      <Radio
-        name="contractType"
-        text="Сделка с недвижимостью"
-        value="option2"
-        checked={selected === 'option2'}
-        onChange={onChange}
-      />
-    </div>
-  );
-};
+const getCaseVolume = (caseVolumes?: SafeBoxCaseVolume[], selectedCaseVolume?: string) =>
+  caseVolumes?.find((_) => _.volume === selectedCaseVolume);
+
+const getTariffs = (safeBoxCases?: SafeBoxCase[], selectedBoxSize?: string) =>
+  safeBoxCases?.find((_) => _.safeBoxCasesSize === selectedBoxSize)?.tariffs;

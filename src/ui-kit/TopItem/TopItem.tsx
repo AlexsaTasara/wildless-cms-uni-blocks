@@ -1,5 +1,5 @@
 import { JSX } from '@redneckz/uni-jsx';
-import { BgColorVersion } from '../../model/BgColorVersion';
+import type { BgColorVersion } from '../../model/BgColorVersion';
 import type { LinkProps } from '../../model/LinkProps';
 
 export interface TopItemContent extends LinkProps {
@@ -54,8 +54,8 @@ const getLinkClasses = (bgColor: BgColorVersion, active = false, flat = false) =
 };
 
 const getTextClasses = (bgColor: BgColorVersion, active = false, flat = false) => {
-  if (bgColor !== 'bg-white') {
-    return `text-white ${TEXT_CLASSES}`;
+  if (bgColor === 'transparent') {
+    return `text-white hover:text-primary-hover ${TEXT_CLASSES}`;
   }
   const nonActiveAtoms = `${
     flat ? 'text-primary-text' : 'text-secondary-text'

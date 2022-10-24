@@ -16,7 +16,7 @@
   },
   "jsonLd": "json",
   "date": "2022-04-08",
-  "style": ["bg-secondary-light"],
+  "style": ["bg-main-divider"],
   "likeControl": true,
   "slots": {
     "header": {
@@ -552,39 +552,6 @@
             "height": 280
           }
         }
-      }
-    },
-    {
-      "type": "NavigatorTabs",
-      "style": ["col-span-12"],
-      "content": {
-        "navigatorTabs": [
-          {
-            "text": "Калькулятор",
-            "href": "#calculator"
-          },
-          {
-            "text": "Преимущества",
-            "href": "#advantages"
-          },
-          {
-            "text": "Как оформить",
-            "href": "#howToApply"
-          },
-          {
-            "text": "Тарифы",
-            "href": "#tariffs"
-          },
-          {
-            "text": "Документы",
-            "href": "#documents"
-          },
-          {
-            "text": "Урожай",
-            "href": "https://rshb.ru/",
-            "target": "_blank"
-          }
-        ]
       }
     },
     {
@@ -1947,10 +1914,48 @@
           "alt": "Варианты потребительского кредита",
           "format": "webp",
           "size": {
-            "width": 200,
-            "height": 200
+            "width": 300
           }
         }
+      }
+    },
+    {
+      "type": "PictureText",
+      "style": ["col-span-12"],
+      "content": {
+        "title": "Страховые риски и продукты",
+        "description": "Описание",
+        "sum": 500000,
+        "image": {
+          "src": "insurance.png",
+          "title": "страхование",
+          "format": "webp",
+          "alt": "Страховые риски и продукты",
+          "size": {
+            "width": 400,
+            "height": 300
+          },
+          "sources": [
+            {
+              "src": "insurance.png 1x, insurance-2x.png 2x",
+              "format": "png"
+            }
+          ]
+        },
+        "benefits": [
+          {
+            "label": "Ликвидация организации",
+            "icon": {
+              "icon": "ShieldTickIcon"
+            }
+          },
+          {
+            "label": "Сокращение численности работников организации",
+            "icon": {
+              "icon": "ShieldTickIcon"
+            }
+          }
+        ]
       }
     },
     {
@@ -2145,45 +2150,6 @@
       }
     },
     {
-      "type": "Insurance",
-      "style": ["col-span-12"],
-      "content": {
-        "title": "Страховые риски и продукты",
-        "description": "Описание",
-        "sum": 500000,
-        "image": {
-          "src": "insurance.png",
-          "title": "страхование",
-          "format": "webp",
-          "alt": "Страховые риски и продукты",
-          "size": {
-            "width": 400,
-            "height": 300
-          },
-          "sources": [
-            {
-              "src": "insurance.png 1x, insurance-2x.png 2x",
-              "format": "png"
-            }
-          ]
-        },
-        "benefits": [
-          {
-            "label": "Ликвидация организации",
-            "icon": {
-              "icon": "ShieldTickIcon"
-            }
-          },
-          {
-            "label": "Сокращение численности работников организации",
-            "icon": {
-              "icon": "ShieldTickIcon"
-            }
-          }
-        ]
-      }
-    },
-    {
       "type": "InsuranceAmountBlock",
       "style": ["col-span-12"],
       "content": {
@@ -2230,6 +2196,10 @@
           }
         ]
       }
+    },
+    {
+      "type": "CardTransfer",
+      "style": ["col-span-12"]
     },
     {
       "type": "SafeDepositRental",

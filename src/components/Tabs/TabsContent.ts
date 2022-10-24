@@ -1,12 +1,23 @@
-/**
- *  @title Таб
- */
-export interface Tab {
-  /** @title Tег */
-  id?: string;
+import type { LinkProps } from '../../model/LinkProps';
+
+export interface GroupTab {
+  /** @default group */
+  type: 'group';
+  /** @title Тег */
+  ref?: string;
   /** @title Название */
   title?: string;
 }
+
+export type LinkTab = LinkProps & {
+  /** @default link */
+  type: 'link';
+};
+
+/**
+ *  @title Таб
+ */
+export type Tab = GroupTab | LinkTab;
 
 /**
  * @title Вкладки

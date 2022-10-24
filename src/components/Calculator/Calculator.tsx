@@ -1,4 +1,5 @@
 import { JSX } from '@redneckz/uni-jsx';
+import { useState } from '@redneckz/uni-jsx/lib/hooks';
 import type { UniBlockProps } from '../../types';
 import { BlockWrapper } from '../../ui-kit/BlockWrapper';
 import { renderArrows } from '../../ui-kit/Button/renderArrows';
@@ -28,8 +29,8 @@ export const Calculator = JSX<CalculatorProps>(
     const calculatorBlocks = calculatorTabs.map(
       ({ calculatorBlock }) => calculatorBlock || ({} as CalculatorBlockDef),
     );
-    const [activeSlideIndex, setActiveSlideIndex] = context.useState(0);
-    const [tabsShift, setTabsShift] = context.useState(0);
+    const [activeSlideIndex, setActiveSlideIndex] = useState(0);
+    const [tabsShift, setTabsShift] = useState(0);
 
     const handleNextClick = () => setTabsShift(tabsShift + 1);
     const handlePrevClick = () => setTabsShift(tabsShift - 1);
@@ -41,10 +42,10 @@ export const Calculator = JSX<CalculatorProps>(
     return (
       <BlockWrapper
         context={context}
-        className={`box-border overflow-hidden relative font-sans w-100 bg-white text-primary-text ${className}`}
+        className={`box-border overflow-hidden relative font-sans w-100 text-primary-text ${className}`}
         {...rest}
       >
-        <div>
+        <div className="bg-white">
           {tabsNav.length > 1
             ? renderTabs({ tabsShift, tabsNav, activeSlideIndex, setActiveSlideIndex })
             : null}
@@ -74,9 +75,11 @@ function renderNavButton({ tab, i, activeSlideIndex, onClick }: NavButtonProps) 
 
   const btnClassName = isActiveBtn
     ? 'h-[88px] w-[387px] min-w-[387px] p-5 border-none bg-primary-main text-white'
-    : `h-[77px] w-[322px] min-w-[322px] px-5 py-4 ease-in duration-300 bg-white text-primary-text`;
+    : `h-[77px] w-[328px] min-w-[328px] px-5 py-4 ease-in duration-300 bg-white text-primary-text`;
   const btnTitleClassName = isActiveBtn ? 'text-xl mb-1.5' : `text-l mb-[3px]`;
-  const btnDescClassName = isActiveBtn ? 'text-l font-light text-white' : `text-m font-light`;
+  const btnDescClassName = isActiveBtn
+    ? 'text-l-light text-white'
+    : `text-m-light text-secondary-text`;
   const iconClassName = isActiveBtn ? '' : `text-primary-main`;
 
   return (
@@ -85,7 +88,7 @@ function renderNavButton({ tab, i, activeSlideIndex, onClick }: NavButtonProps) 
       key={String(i)}
       onClick={onClick}
       aria-label={tab?.title}
-      className={`box-border font-sans relative border border-main-stroke cursor-pointer text-left border-b-0 flex hover:h-[88px]
+      className={`box-border relative border border-main-stroke cursor-pointer text-left border-b-0 flex hover:h-[88px]
       ${btnClassName}`}
     >
       <Img
@@ -97,7 +100,7 @@ function renderNavButton({ tab, i, activeSlideIndex, onClick }: NavButtonProps) 
       />
       <div className="border-0">
         <div className={`${btnTitleClassName}`}>{tab?.title}</div>
-        <div className={`text-secondary-text ${btnDescClassName}`}>{tab.description}</div>
+        <div className={`${btnDescClassName}`}>{tab.description}</div>
       </div>
     </button>
   );
@@ -108,7 +111,7 @@ function renderTabs({ tabsShift, tabsNav, activeSlideIndex, setActiveSlideIndex 
     <div>
       <div
         style={{ transform: `translateX(-${tabsShift * 388}px)` }}
-        className="flex flex-col justify-end items-center h-[126px] pt-[38px] box-border duration-1000"
+        className="flex flex-col justify-end items-center h-[126px] pt-9 box-border duration-1000"
       >
         <div className="w-full flex flex-nowrap items-end gap-2">
           {tabsNav.map((tab, i) =>

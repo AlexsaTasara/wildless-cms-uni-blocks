@@ -1,32 +1,42 @@
 import { JSX } from '@redneckz/uni-jsx';
+import { useState } from '@redneckz/uni-jsx/lib/hooks';
 import { useTableArrowScrollControl } from '../../hooks/useTableArrowScrollControl';
 import type { VNode } from '../../model/VNode';
-import { BlockWrapper } from '../../ui-kit/BlockWrapper';
 import type { UniBlockProps } from '../../types';
+import { BlockWrapper } from '../../ui-kit/BlockWrapper';
 import { Foldable } from '../../ui-kit/Foldable/Foldable';
 import { Heading } from '../../ui-kit/Heading/Heading';
 import { TableArrowScrollControl } from '../../ui-kit/TableArrowScrollControl/TableArrowScrollControl';
-import { TableArrowScrollControlProps } from '../../ui-kit/TableArrowScrollControl/TableArrowScrollControlProps';
+import type { TableArrowScrollControlProps } from '../../ui-kit/TableArrowScrollControl/TableArrowScrollControlProps';
 import { COLS_LENGTH_FOR_SCROLL } from './constants';
-import type {
-  TariffsTableCellData,
-  TariffsTableColumn,
-  TariffsTableContent,
-  TariffsTableRowHeader,
-} from './TariffsTableContent';
+import type { TariffsTableContent } from './TariffsTableContent';
 import { TariffsTableRow } from './TariffsTableRow';
 
 export interface TariffsTableProps extends TariffsTableContent, UniBlockProps {}
 
 export const TariffsTable = JSX<TariffsTableProps>(
-  ({ className, context, title, description, rowHeaders, columns, hiddenRowsNum = 0, ...rest }) => {
-    const [activeCardIndex, setActiveCardIndex] = context.useState(0);
+  ({
+    className = '',
+    context,
+    title,
+    description,
+    rowHeaders,
+    tariffsColumns: columns,
+    hiddenRowsNum = 0,
+    ...rest
+  }) => {
+    const [activeCardIndex, setActiveCardIndex] = useState(0);
 
-    const colData = getColData(columns);
-    const rowData = getRowData(rowHeaders, colData);
+    const colData = columns?.map(({ data }) => data) || [];
+    const rowData = rowHeaders?.map((header, i) => ({
+      header,
+      data: colData.map((col) => col?.[i] || []),
+    }));
+
+    const columnsLength = colData.length;
 
     const tableArrowScrollControlProps = useTableArrowScrollControl({
-      columnsLength: colData.length,
+      columnsLength,
       colsLengthForScroll: COLS_LENGTH_FOR_SCROLL,
       activeCardIndex,
       setActiveCardIndex,
@@ -34,19 +44,21 @@ export const TariffsTable = JSX<TariffsTableProps>(
 
     const foldableBlocks = rowData?.map((row, i, { length }) => (
       <TariffsTableRow
+        context={context}
         key={String(i)}
         row={row}
         isLastRow={i + 1 === length}
         activeCardIndex={activeCardIndex}
+        rowIdx={i}
       />
     ));
 
     return (
       <BlockWrapper
+        className={`bg-white font-sans p-[50px] overflow-hidden text-primary-text relative ${
+          columnsLength > 1 ? 'pr-0' : ''
+        } ${className}`}
         context={context}
-        className={`bg-white font-sans py-[50px] pl-[50px] overflow-hidden text-primary-text relative ${
-          className || ''
-        }`}
         {...rest}
       >
         {title ? (
@@ -74,21 +86,6 @@ export const TariffsTable = JSX<TariffsTableProps>(
     );
   },
 );
-
-type ColDataType = (TariffsTableCellData[][] | undefined)[];
-type RowDataType = { header: TariffsTableRowHeader; data: any }[] | undefined;
-
-const getColData = (columns: TariffsTableColumn[] | undefined): ColDataType =>
-  columns?.map(({ data }) => data) || [];
-
-const getRowData = (
-  rowHeaders: TariffsTableRowHeader[] | undefined,
-  colData: ColDataType,
-): RowDataType =>
-  rowHeaders?.map((header, i) => ({
-    header,
-    data: colData.map((col) => col?.[i] || [{}]),
-  }));
 
 const Wrapper = JSX<
   {

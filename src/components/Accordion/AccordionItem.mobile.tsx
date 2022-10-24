@@ -9,10 +9,7 @@ export interface AccordionItemProps extends AccordionItemCommonProps, UniBlockPr
 
 export const AccordionItem = JSX<AccordionItemProps>(
   ({ label, labelIcon, blocks, bordered, context }) => {
-    const { hasContent, icon, handleToggle } = useActiveHandler({
-      context,
-      blocks,
-    });
+    const { hasContent, icon, handleToggle } = useActiveHandler({ blocks });
 
     return (
       <li className={`${borderedLiClass(bordered)} border-solid border-main-divider`}>
@@ -28,11 +25,13 @@ export const AccordionItem = JSX<AccordionItemProps>(
             }`}
           >
             {labelIcon ? (
-              <Img image={labelIcon} width="24" height="24" asSVG className="mr-3" />
+              <Img image={labelIcon} className="mr-3 flex-shrink-0" width="24" height="24" asSVG />
             ) : null}
             {label}
           </span>
-          {hasContent ? <Img className="w-6" image={icon} width="24" height="24" asSVG /> : null}
+          {hasContent ? (
+            <Img className="flex-shrink-0" image={icon} width="24" height="24" asSVG />
+          ) : null}
         </button>
         {hasContent ? <AccordionItemInner blocks={blocks} context={context} /> : null}
       </li>

@@ -1,4 +1,5 @@
 import { JSX } from '@redneckz/uni-jsx';
+import { useState } from '@redneckz/uni-jsx/lib/hooks';
 import type { UniBlockProps } from '../../types';
 import { BlockWrapper } from '../../ui-kit/BlockWrapper';
 import { Heading } from '../../ui-kit/Heading/Heading';
@@ -9,7 +10,7 @@ export interface InsuranceAmountBlockProps extends InsuranceAmountBlockContent, 
 
 export const InsuranceAmountBlock = JSX<InsuranceAmountBlockProps>(
   ({ className = '', context, title, insuranceTabs = [], button, ...rest }) => {
-    const [activeSlideIndex, setActiveSlideIndex] = context.useState(0);
+    const [activeSlideIndex, setActiveSlideIndex] = useState(0);
 
     return (
       <BlockWrapper
@@ -17,9 +18,9 @@ export const InsuranceAmountBlock = JSX<InsuranceAmountBlockProps>(
         className={`box-border py-[50px] overflow-hidden relative font-sans w-100 bg-white ${className}`}
         {...rest}
       >
-        {title ? <Heading className="text-center" title={title} headingType="h3" /> : null}
+        {title ? <Heading className="text-center mb-8" title={title} headingType="h3" /> : null}
         {insuranceTabs?.length > 1 ? (
-          <div className="p-1.5 bg-secondary-light w-fit m-auto rounded-md mt-[34px]">
+          <div className="p-1.5 bg-secondary-light w-fit mx-auto mb-7 rounded-md">
             {insuranceTabs.map((item, i) =>
               renderNavButton({
                 title: item?.title,

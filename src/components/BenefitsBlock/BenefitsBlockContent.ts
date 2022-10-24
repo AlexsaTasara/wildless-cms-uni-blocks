@@ -1,5 +1,5 @@
 import type { Picture } from '../../model/Picture';
-import type { TitleProp } from '../../model/HeadlineType';
+import type { TitleProps } from '../../model/HeadlineType';
 import type { EmptyOption } from '../../model/EmptyOptionType';
 
 /**
@@ -32,26 +32,34 @@ export type ListBenefitDef = {
 /**
  * @title Вид контента
  */
-export type DescriptionType = EmptyOption | TextBenefitDef | ListBenefitDef;
+export type DescriptionDef = EmptyOption | TextBenefitDef | ListBenefitDef;
 
 /**
  * @title Преимущество
  */
-export interface BenefitItemProps {
+export interface BenefitBlockItemProps {
   /** @title Название */
   label?: string;
   /** @title Описание */
-  description?: DescriptionType;
+  description?: DescriptionDef;
   icon?: Picture;
 }
 
 /**
+ * @title Цвет блока
+ * @enumNames ["Основная", "Второстепенная"]
+ */
+export type BenefitsBlockVersion = 'primary' | 'secondary';
+
+/**
  * @title Блок преимущества
  */
-export type BenefitsBlockContent = TitleProp & {
+export type BenefitsBlockContent = TitleProps & {
   /**
    * @title Список преимуществ
    * @maxItems 6
    */
-  benefitList?: BenefitItemProps[];
+  benefitList?: BenefitBlockItemProps[];
+  /** @default primary */
+  benefitsBlockVersion?: BenefitsBlockVersion;
 };

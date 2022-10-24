@@ -2,15 +2,18 @@
   "showCounter": true,
   "tabs": [
     {
-      "id": "tab1",
+      "type": "group",
+      "ref": "tab1",
       "title": "Вкладка 1"
     },
     {
-      "id": "tab2",
+      "type": "group",
+      "ref": "tab2",
       "title": "Вкладка 2"
     },
     {
-      "id": "tab3",
+      "type": "group",
+      "ref": "tab3",
       "title": "Вкладка 3"
     }
   ]

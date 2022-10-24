@@ -1,5 +1,6 @@
 // TEMP
 import { JSX } from '@redneckz/uni-jsx';
+import { useState } from '@redneckz/uni-jsx/lib/hooks';
 import type { UniBlockProps } from '../../types';
 import { Checkbox } from '../../ui-kit/Checkbox/Checkbox';
 import { CommonCalculatorProps, MortgageCalculatorParams } from './CalculatorContent';
@@ -20,10 +21,10 @@ export interface MortgageCalculatorProp
 
 export const MortgageCalculatorForm = JSX<MortgageCalculatorProp>(
   ({ context, className = '', buttons }) => {
-    const [moneyValue, setMoneyValue] = context.useState<number>(1000000);
-    const [monthsValue, setMonthsValue] = context.useState<number>(12);
-    const [isInsurance, toggleIsInsurance] = context.useState(false);
-    const [isFullInsurance, toggleIsFullInsurance] = context.useState(false);
+    const [moneyValue, setMoneyValue] = useState(1000000);
+    const [monthsValue, setMonthsValue] = useState(12);
+    const [isInsurance, toggleIsInsurance] = useState(false);
+    const [isFullInsurance, toggleIsFullInsurance] = useState(false);
 
     const calculatorParams = {}; // getCalculatorParams(context, { isAnnuity: isInsurance });
 
@@ -31,8 +32,6 @@ export const MortgageCalculatorForm = JSX<MortgageCalculatorProp>(
     const maxMonths = /* calculatorParams?.maxMonths || */ DEFAULT_MAX_MONTHS;
 
     const rate = getCreditRate({ calculatorParams, isInsurance: isInsurance });
-
-    const monthlyPayment = 777777; // TODO: hardcode
     const proposalMortgageValue = { credit: 3892000, period: 15, taxRefund: 650000 }; // TODO: hardcode
 
     return (
@@ -59,17 +58,13 @@ export const MortgageCalculatorForm = JSX<MortgageCalculatorProp>(
             <Checkbox text="Страхование жизни" checked={isInsurance} onChange={toggleIsInsurance} />
             <Checkbox
               className="mt-4"
-              text="Страхование жизни, злоровья и временной утраты трудоспособности"
+              text="Страхование жизни, здоровья и временной утраты трудоспособности"
               checked={isFullInsurance}
               onChange={toggleIsFullInsurance}
             />
           </div>
         </div>
-        <div>
-          <Rate rate={rate} rateBlockClassName="tracking-[-25px]" unit="%" />
-
-          <CalculatorValueBlock title="Ежемесячный платеж" value={monthlyPayment} postfix="₽" />
-        </div>
+        <Rate rate={rate} rateBlockClassName="tracking-[-25px]" unit="%" />
         <div>
           <div className="w-[351px]">{renderProposalMortgage(proposalMortgageValue)}</div>
           {renderButtonSection(context, buttons)}

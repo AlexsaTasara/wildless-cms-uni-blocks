@@ -31,13 +31,14 @@ export const Header = JSX<HeaderProps>(
     ...rest
   }) => {
     const router = context.useRouter();
-    const sitemap = useSitemap(context.useAsyncData);
+    const sitemap = useSitemap();
     const { handlerDecorator } = context;
 
     const mergedItems = mergeTopItems(sitemap.topItems, topItems);
     const [firstPortal] = mergedItems;
-    // Если по слагу невозможно понять к какому подпорталу этот слаг относиться, то выбираем первый подпортал.
-    const activeTopItem = mergedItems.find(isTopItemActive(router)) || firstPortal;
+    const activeTopItem = showSubMenu
+      ? mergedItems.find(isTopItemActive(router)) || firstPortal // Если по слагу невозможно понять к какому подпорталу этот слаг относиться, то выбираем первый подпортал.
+      : null;
     const topMenu = mergedItems.map((_, i) => (
       <TopItem
         key={String(i)}
@@ -60,7 +61,6 @@ export const Header = JSX<HeaderProps>(
             <Logo className="mr-8" bgColor={bgColor} logo={logo} />
             {topMenu}
             <HeaderSecondaryMenu
-              context={context}
               className="ml-auto"
               defaultLocation={defaultLocation}
               bgColor={bgColor}

@@ -6,6 +6,9 @@
   "author": "ЦК",
   "description": "Инструмент для просмотра UI Kit",
   "type": "module",
+  "bin": {
+    "wcms-migrate": "./bin/migrate.js"
+  },
   "main": "./dist/index.js",
   "types": "./lib/index.d.ts",
   "engines": {
@@ -110,7 +113,7 @@
     "react-dom": ">=16.8.0"
   },
   "dependencies": {
-    "@redneckz/uni-jsx": "^0.1.6",
+    "@redneckz/uni-jsx": "^2.1.3",
     "glob": "^8.0.3",
     "remark-html": "^15.0.1",
     "remark-parse": "^10.0.1",
@@ -124,6 +127,7 @@
     "@testing-library/react": "^12.1.5",
     "@types/glob": "^8.0.0",
     "@types/jest": "^28.1.5",
+    "@types/sharp": "^0.31.0",
     "@typescript-eslint/eslint-plugin": "^5.30.6",
     "@typescript-eslint/experimental-utils": "^5.30.6",
     "@typescript-eslint/parser": "^5.30.6",
@@ -164,7 +168,7 @@
   },
   "size-limit": [
     {
-      "limit": "7 kB",
+      "limit": "8 kB",
       "path": "lib/common.css"
     },
     {

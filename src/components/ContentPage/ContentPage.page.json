@@ -1914,8 +1914,7 @@
           "alt": "Варианты потребительского кредита",
           "format": "webp",
           "size": {
-            "width": 400,
-            "height": 300
+            "width": 300
           }
         }
       }
@@ -2197,6 +2196,10 @@
           }
         ]
       }
+    },
+    {
+      "type": "CardTransfer",
+      "style": ["col-span-12"]
     },
     {
       "type": "SafeDepositRental",

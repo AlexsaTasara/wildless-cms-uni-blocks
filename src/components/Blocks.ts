@@ -3,8 +3,10 @@ import { BenefitsBlock } from './BenefitsBlock/BenefitsBlock';
 import { Bonus } from './Bonus/Bonus';
 import { BonusBenefitsBlock } from './BonusBenefitsBlock/BonusBenefitsBlock';
 import { Calculator } from './Calculator/Calculator';
+import { CardTransfer } from './CardTransfer/CardTransfer';
 import { Catalog } from './Catalog/Catalog';
 import { ComparisonTable } from './ComparisonTable/ComparisonTable';
+import { ErrorBlock } from './ErrorBlock/ErrorBlock';
 import { ExchangeRateTile } from './ExchangeRateTile/ExchangeRateTile';
 import { Footer } from './Footer/Footer';
 import { Gallery } from './Gallery/Gallery';
@@ -17,6 +19,7 @@ import { MiniGallery } from './MiniGallery/MiniGallery';
 import { MobileAppTile } from './MobileAppTile/MobileAppTile';
 import { Navigation } from './Navigation/Navigation';
 import { OfficeCard } from './OfficeCard/OfficeCard';
+import { OfficeServicesBlock } from './OfficeServicesBlock/OfficeServicesBlock';
 import { OtherProducts } from './OtherProducts/OtherProducts';
 import { PictureText } from './PictureText/PictureText';
 import { Placeholder } from './Placeholder/Placeholder';
@@ -36,6 +39,7 @@ export const Blocks = {
   Accordion,
   BenefitsBlock,
   Bonus,
+  CardTransfer,
   ComparisonTable,
   Calculator,
   Catalog,
@@ -66,4 +70,6 @@ export const Blocks = {
   OfficeCard,
   SafeDepositRental,
   Tabs,
+  ErrorBlock,
+  OfficeServicesBlock,
 };

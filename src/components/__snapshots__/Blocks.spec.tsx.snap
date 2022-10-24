@@ -8,7 +8,7 @@ exports[`Blocks Accordion should render block "Accordion" without content 1`] = 
 
 exports[`Blocks BenefitsBlock should render block "BenefitsBlock" without content 1`] = `
 <section
-  class="font-sans text-primary-text bg-white p-12 flex flex-col items-center "
+  class="font-sans text-primary-text p-12 flex flex-col items-center  bg-white"
 />
 `;
 
@@ -56,6 +56,58 @@ exports[`Blocks Calculator should render block "Calculator" without content 1`] 
 </section>
 `;
 
+exports[`Blocks CardTransfer should render block "CardTransfer" without content 1`] = `
+<section
+  class="p-[50px] flex flex-col items-center font-sans bg-white "
+>
+  <h3
+    class="font-sans m-0 text-h2 max-w-[684px] pb-9"
+  >
+    Укажите сумму перевода
+  </h3>
+  <form
+    action="https://www.rshb.ru/p2p/"
+    class="w-[468px]"
+    method="POST"
+  >
+    <div
+      class=""
+    >
+      <label
+        class="block text-m-light mb-2"
+      >
+        Сумма перевода
+      </label>
+      <div
+        class="h-[56px] relative flex items-center"
+      >
+        <input
+          class="text-l pl-4 pr-8 w-full h-full rounded-md border border-solid border-main-stroke"
+          max="300000"
+          min="0"
+          name="amount"
+          placeholder="1500"
+          type="number"
+          value=""
+        />
+        <span
+          class="text-xl-light absolute right-4"
+        >
+          ₽
+        </span>
+      </div>
+    </div>
+    <button
+      class="inline-block text-center font-sans select-none bg-secondary-dark text-secondary-text rounded-md w-full h-[56px] px-9 mt-6"
+      disabled=""
+      type="submit"
+    >
+      Далее
+    </button>
+  </form>
+</section>
+`;
+
 exports[`Blocks Catalog should render block "Catalog" without content 1`] = `
 <section
   class="bg-white relative font-sans p-12 overflow-hidden text-center "
@@ -90,6 +142,17 @@ exports[`Blocks ComparisonTable should render block "ComparisonTable" without co
       role="table"
     />
   </div>
+</section>
+`;
+
+exports[`Blocks ErrorBlock should render block "ErrorBlock" without content 1`] = `
+<section
+  class="flex flex-col justify-center items-center "
+  role="listitem"
+>
+  <div
+    class="flex justify-center mb-7"
+  />
 </section>
 `;
 
@@ -215,8 +278,8 @@ exports[`Blocks Footer should render block "Footer" without content 1`] = `
         </desc>
         <use
           class="text-primary-main "
-          href="icons/Logo.svg#icon"
-          xlink:href="icons/Logo.svg#icon"
+          href="icons/LogoIcon.svg#icon"
+          xlink:href="icons/LogoIcon.svg#icon"
         />
       </svg>
       <span
@@ -418,8 +481,8 @@ exports[`Blocks Header should render block "Header" without content 1`] = `
           </desc>
           <use
             class="text-primary-main "
-            href="icons/Logo.svg#icon"
-            xlink:href="icons/Logo.svg#icon"
+            href="icons/LogoIcon.svg#icon"
+            xlink:href="icons/LogoIcon.svg#icon"
           />
         </svg>
         <span
@@ -621,6 +684,12 @@ exports[`Blocks OfficeCard should render block "OfficeCard" without content 1`] 
 >
   <section />
 </section>
+`;
+
+exports[`Blocks OfficeServicesBlock should render block "OfficeServicesBlock" without content 1`] = `
+<section
+  class="font-sans bg-white p-12 flex flex-col "
+/>
 `;
 
 exports[`Blocks OtherProducts should render block "OtherProducts" without content 1`] = `
@@ -826,20 +895,15 @@ exports[`Blocks SafeDepositRental should render block "SafeDepositRental" withou
               Город
             </span>
             <select
-              class="appearance-none h-14 border border-gray p-4 rounded-md text-s w-full cursor-pointer"
+              class="appearance-none h-14 border border-gray p-4 rounded-md text-s w-full cursor-pointer text-secondary-text"
+              placeholder="12321321312"
               style="background: url(/icons/ArrowDownIcon.svg) no-repeat 50%;"
             >
               <option
                 class=""
-                value="Москва"
+                value=""
               >
-                Москва
-              </option>
-              <option
-                class=""
-                value="Краснодар"
-              >
-                Краснодар
+                Выберите значение
               </option>
             </select>
           </div>
@@ -854,32 +918,15 @@ exports[`Blocks SafeDepositRental should render block "SafeDepositRental" withou
               Отделение
             </span>
             <select
-              class="appearance-none h-14 border border-gray p-4 rounded-md text-s w-full cursor-pointer"
+              class="appearance-none h-14 border border-gray p-4 rounded-md text-s w-full cursor-pointer text-secondary-text"
+              placeholder="12321321312"
               style="background: url(/icons/ArrowDownIcon.svg) no-repeat 50%;"
             >
               <option
                 class=""
-                value="выберите отделение"
+                value=""
               >
-                выберите отделение
-              </option>
-              <option
-                class=""
-                value="МоскваОфис1"
-              >
-                МоскваОфис1
-              </option>
-              <option
-                class=""
-                value="МоскваОфис2"
-              >
-                МоскваОфис2
-              </option>
-              <option
-                class=""
-                value="МоскваОфис3"
-              >
-                МоскваОфис3
+                Выберите отделение
               </option>
             </select>
           </div>
@@ -942,29 +989,18 @@ exports[`Blocks SafeDepositRental should render block "SafeDepositRental" withou
             <span
               class="block text-m-light mb-2"
             >
-              Размер ячейки
+              Размер
             </span>
             <select
-              class="appearance-none h-14 border border-gray p-4 rounded-md text-s w-full cursor-pointer"
+              class="appearance-none h-14 border border-gray p-4 rounded-md text-s w-full cursor-pointer text-secondary-text"
+              placeholder="12321321312"
               style="background: url(/icons/ArrowDownIcon.svg) no-repeat 50%;"
             >
               <option
                 class=""
-                value="маленькая"
+                value=""
               >
-                маленькая
-              </option>
-              <option
-                class=""
-                value="средняя"
-              >
-                средняя
-              </option>
-              <option
-                class=""
-                value="большая"
-              >
-                большая
+                Выберите размер
               </option>
             </select>
           </div>
@@ -979,26 +1015,15 @@ exports[`Blocks SafeDepositRental should render block "SafeDepositRental" withou
               Параметры ячейки, мм (ВхШхД)
             </span>
             <select
-              class="appearance-none h-14 border border-gray p-4 rounded-md text-s w-full cursor-pointer"
+              class="appearance-none h-14 border border-gray p-4 rounded-md text-s w-full cursor-pointer text-secondary-text"
+              placeholder="12321321312"
               style="background: url(/icons/ArrowDownIcon.svg) no-repeat 50%;"
             >
               <option
                 class=""
-                value="125x225x375"
+                value=""
               >
-                125x225x375
-              </option>
-              <option
-                class=""
-                value="200x300x400"
-              >
-                200x300x400
-              </option>
-              <option
-                class=""
-                value="300x400x500"
-              >
-                300x400x500
+                Выберите параметр ячейки
               </option>
             </select>
           </div>
@@ -1020,7 +1045,8 @@ exports[`Blocks SafeDepositRental should render block "SafeDepositRental" withou
               class="flex items-center relative cursor-pointer"
             >
               <input
-                class="appearance-none flex justify-center items-center w-5 h-5 border-2 border-primary-main rounded-full cursor-pointer after:block after:w-2.5 after:h-2.5 after:rounded-full checked:after:bg-primary-main"
+                checked=""
+                class="appearance-none flex justify-center items-center shrink-0 w-5 h-5 border-2 border-primary-main rounded-full cursor-pointer after:block after:w-2.5 after:h-2.5 after:rounded-full checked:after:bg-primary-main"
                 name="contractType"
                 type="radio"
                 value="option1"
@@ -1037,8 +1063,7 @@ exports[`Blocks SafeDepositRental should render block "SafeDepositRental" withou
               class="flex items-center relative cursor-pointer"
             >
               <input
-                checked=""
-                class="appearance-none flex justify-center items-center w-5 h-5 border-2 border-primary-main rounded-full cursor-pointer after:block after:w-2.5 after:h-2.5 after:rounded-full checked:after:bg-primary-main"
+                class="appearance-none flex justify-center items-center shrink-0 w-5 h-5 border-2 border-primary-main rounded-full cursor-pointer after:block after:w-2.5 after:h-2.5 after:rounded-full checked:after:bg-primary-main"
                 name="contractType"
                 type="radio"
                 value="option2"
@@ -1103,7 +1128,7 @@ exports[`Blocks SafeDepositRental should render block "SafeDepositRental" withou
           <span
             class="text-h3"
           >
-            26 ₽
+            0 ₽
           </span>
         </div>
       </div>
@@ -1117,15 +1142,15 @@ exports[`Blocks SafeDepositRental should render block "SafeDepositRental" withou
           width="290"
         >
           <title>
-            Иконка PackA4
+            Иконка PackA4Icon
           </title>
           <desc>
-            Иконка PackA4
+            Иконка PackA4Icon
           </desc>
           <use
             class="text-primary-main "
-            href="icons/PackA4.svg#icon"
-            xlink:href="icons/PackA4.svg#icon"
+            href="icons/PackA4Icon.svg#icon"
+            xlink:href="icons/PackA4Icon.svg#icon"
           />
         </svg>
         <span

@@ -1,14 +1,14 @@
 import { JSX } from '@redneckz/uni-jsx';
-import type { UniBlockProps } from '../../types';
-import type { PictureTextContent } from './PictureTextContent';
 import type { BlockVersion } from '../../model/BlockVersion';
+import { VersionStyleMap } from '../../model/BlockVersion';
+import type { UniBlockProps } from '../../types';
+import { BenefitItem } from '../../ui-kit/BenefitItem/BenefitItem';
 import type { BenefitItemProps } from '../../ui-kit/BenefitItem/BenefitItemProps';
 import { BlockWrapper } from '../../ui-kit/BlockWrapper';
 import { Img } from '../../ui-kit/Img/Img';
-import { BenefitItem } from '../../ui-kit/BenefitItem/BenefitItem';
-import { Headline } from '../Headline/Headline';
 import { addSpacesBetweenNumbers } from '../../utils/addSpacesBetweenNumbers';
-import { VersionStyleMap } from '../../model/BlockVersion';
+import { Headline } from '../Headline/Headline';
+import type { PictureTextContent } from './PictureTextContent';
 
 export interface PictureTextProps extends PictureTextContent, UniBlockProps {}
 
@@ -42,7 +42,7 @@ export const PictureText = JSX<PictureTextProps>(
           align="center"
         />
         <div className={'flex justify-center gap-[122px] mt-[30px]'}>
-          {image?.src && <Img className={directionRight ? 'order-2 ml-6' : 'mr-6'} image={image} />}
+          {image?.src ? <Img className={directionRight ? 'order-2' : ''} image={image} /> : null}
           <div className="w-[558px] m-auto">
             {benefits?.length ? (
               <div className="flex flex-col gap-4">{benefits.map(renderBenefit(version))}</div>

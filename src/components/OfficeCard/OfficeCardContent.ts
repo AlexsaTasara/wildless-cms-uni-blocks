@@ -1,4 +1,5 @@
 import type { Picture } from '../../model/Picture';
+
 /**
  * @title Цвет текста
  * @enumNames [

@@ -1,3 +1,4 @@
+import type { Picture } from '../../model/Picture';
 /**
  * @title Цвет текста
  * @enumNames [
@@ -10,11 +11,23 @@ export type TextColorVersion = 'red' | 'green';
 export interface OfficeCardContent {
   title?: string;
   link?: string;
-  location?: string;
+  location?: Location;
+  openTime?: string;
   metros?: Metro[];
   contactsInfo?: ContactInformation[];
   dates?: DayOfWeek[];
-  currencies?: string[];
+  currencies?: Currency[];
+}
+
+export interface Currency {
+  name?: string;
+  buy?: string;
+  sell?: string;
+}
+
+export interface Location {
+  icon?: Picture;
+  adress: string;
 }
 
 export interface DayOfWeek {
@@ -29,6 +42,7 @@ export interface ContactInformation {
 }
 
 export interface Metro {
+  icon?: Picture;
   name?: string;
   distance?: string;
   time?: string;

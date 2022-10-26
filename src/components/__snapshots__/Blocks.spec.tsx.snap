@@ -692,10 +692,33 @@ exports[`Blocks Navigation should render block "Navigation" without content 1`] 
 
 exports[`Blocks OfficeCard should render block "OfficeCard" without content 1`] = `
 <section
-  class="font-sans text-primary-text py-10 bg-white "
+  class="flex flex-col font-sans text-primary-text py-10 bg-white divide-solid divide-black divide-y pr-8 pl-8 pt-8 pb-8 divide "
   id=""
 >
-  <section />
+  <div
+    class="flex flex-row flex-grow-0 justify-between"
+  >
+    <div
+      class="mb-2 flex flex-col"
+    >
+      <div
+        class=" mb-2 flex gap-10 flex-row h-full font-medium text-2xl justify-start text-primary-text"
+      >
+        <div
+          class=""
+        />
+        <div
+          class="text-green-500 text-base"
+        />
+      </div>
+      <div
+        class=" mb-1 flex gap-1 flex-row h-full font-medium text-xl text-base"
+      />
+    </div>
+    <div
+      class="text-green-500 mr-7"
+    />
+  </div>
 </section>
 `;
 

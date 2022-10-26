@@ -1035,6 +1035,20 @@ Object {
       "title": "Кредитный калькулятор",
       "type": "object",
     },
+    "Currency": Object {
+      "properties": Object {
+        "buy": Object {
+          "type": "string",
+        },
+        "name": Object {
+          "type": "string",
+        },
+        "sell": Object {
+          "type": "string",
+        },
+      },
+      "type": "object",
+    },
     "Data": Object {
       "properties": Object {
         "data": Object {
@@ -2506,6 +2520,20 @@ Object {
       "title": "Содержимое списка",
       "type": "object",
     },
+    "Location": Object {
+      "properties": Object {
+        "adress": Object {
+          "type": "string",
+        },
+        "icon": Object {
+          "$ref": "#/definitions/Picture",
+        },
+      },
+      "required": Array [
+        "adress",
+      ],
+      "type": "object",
+    },
     "MediaQuery": Object {
       "enum": Array [
         1919,
@@ -2524,6 +2552,9 @@ Object {
       "properties": Object {
         "distance": Object {
           "type": "string",
+        },
+        "icon": Object {
+          "$ref": "#/definitions/Picture",
         },
         "name": Object {
           "type": "string",
@@ -2691,7 +2722,7 @@ Object {
         },
         "currencies": Object {
           "items": Object {
-            "type": "string",
+            "$ref": "#/definitions/Currency",
           },
           "type": "array",
         },
@@ -2705,13 +2736,16 @@ Object {
           "type": "string",
         },
         "location": Object {
-          "type": "string",
+          "$ref": "#/definitions/Location",
         },
         "metros": Object {
           "items": Object {
             "$ref": "#/definitions/Metro",
           },
           "type": "array",
+        },
+        "openTime": Object {
+          "type": "string",
         },
         "title": Object {
           "type": "string",

@@ -514,11 +514,13 @@ Object {
       "enum": Array [
         "primary",
         "secondary",
+        "white",
         "link",
       ],
       "enumNames": Array [
         "Основная",
         "Второстепенная",
+        "Белая",
         "Ссылка",
       ],
       "title": "Цвет кнопки",
@@ -671,6 +673,24 @@ Object {
       "type": "object",
     },
     "CardTransferContent": Object {
+      "properties": Object {
+        "buttonText": Object {
+          "title": "Текст кнопки",
+          "type": "string",
+        },
+        "label": Object {
+          "title": "Название поля",
+          "type": "string",
+        },
+        "placeholder": Object {
+          "title": "Плейсхолдер поля",
+          "type": "string",
+        },
+        "title": Object {
+          "title": "Заголовок",
+          "type": "string",
+        },
+      },
       "title": "Перевод с карты на карту",
       "type": "object",
     },
@@ -1176,7 +1196,6 @@ Object {
         },
         "error": Object {
           "$ref": "#/definitions/ErrorContentDef",
-          "title": "Вид контента",
         },
         "subtitle": Object {
           "title": "Описание",
@@ -1193,8 +1212,8 @@ Object {
     "ErrorCodeDef": Object {
       "properties": Object {
         "code": Object {
-          "title": "Код ошибки",
-          "type": "number",
+          "$ref": "#/definitions/ErrorType",
+          "default": 404,
         },
         "errorContentType": Object {
           "const": "Code",
@@ -1211,15 +1230,13 @@ Object {
     "ErrorContentDef": Object {
       "anyOf": Array [
         Object {
-          "$ref": "#/definitions/EmptyOption",
+          "$ref": "#/definitions/ErrorCodeDef",
         },
         Object {
           "$ref": "#/definitions/ErrorImageDef",
         },
-        Object {
-          "$ref": "#/definitions/ErrorCodeDef",
-        },
       ],
+      "title": "Вид контента",
     },
     "ErrorImageDef": Object {
       "properties": Object {
@@ -1230,7 +1247,6 @@ Object {
         },
         "image": Object {
           "$ref": "#/definitions/Picture",
-          "title": "Изображение",
         },
       },
       "required": Array [
@@ -1238,6 +1254,24 @@ Object {
       ],
       "title": "Изображение",
       "type": "object",
+    },
+    "ErrorType": Object {
+      "enum": Array [
+        "",
+        "400",
+        "401",
+        "402",
+        "403",
+        "404",
+        "500",
+        "501",
+        "502",
+        "503",
+        "504",
+        "505",
+      ],
+      "title": "Код",
+      "type": "string",
     },
     "ExchangeRateTileContent": Object {
       "properties": Object {
@@ -1515,13 +1549,13 @@ Object {
         },
         "type": Object {
           "const": "group",
-          "default": "group",
           "type": "string",
         },
       },
       "required": Array [
         "type",
       ],
+      "title": "Группа",
       "type": "object",
     },
     "HeaderContent": Object {
@@ -2381,13 +2415,13 @@ Object {
         },
         "type": Object {
           "const": "link",
-          "default": "link",
           "type": "string",
         },
       },
       "required": Array [
         "type",
       ],
+      "title": "Ссылка",
       "type": "object",
     },
     "ListBenefitDef": Object {
@@ -3628,6 +3662,9 @@ Object {
           "$ref": "#/definitions/LinkTab",
         },
       ],
+      "default": Object {
+        "type": "group",
+      },
       "title": "Таб",
     },
     "TableColumnData": Object {

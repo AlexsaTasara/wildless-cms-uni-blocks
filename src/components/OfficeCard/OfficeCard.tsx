@@ -14,7 +14,7 @@ export interface OfficeCardProps extends OfficeCardContent, UniBlockProps {}
 
 const TEXT_COLORS: Record<TextColorVersion, string> = {
   red: 'text-red-500',
-  green: 'text-green-500',
+  green: 'text-green-600',
   yellow: 'text-yellow-500',
 };
 

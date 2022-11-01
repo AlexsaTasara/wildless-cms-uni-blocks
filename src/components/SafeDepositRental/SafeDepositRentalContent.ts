@@ -1,28 +1,11 @@
-export interface Tariff {
-  tariffType?: string;
-  tariffValue?: number;
-}
-
-export interface SafeBoxCase {
-  safeBoxCasesSize?: string;
-  tariffs?: Tariff[];
-}
-
-export interface SafeBoxCaseVolume {
-  volume?: string;
-  safeBoxCases?: SafeBoxCase[];
-}
-
-export interface Branch {
-  branchCode?: string;
-  address?: string;
-  safeBoxCaseVolumes?: SafeBoxCaseVolume[];
-}
+import type { Footnote } from '../../model/Footnote';
 
 /**
  * @title Аренда сейфовых ячеек
  */
-export interface SafeDepositRentalContent {
+export type SafeDepositRentalContent = Footnote & {
   /** @title Заголовок */
   title?: string;
-}
+  /** @title Сноска */
+  footnote?: string;
+};

@@ -2,13 +2,14 @@ import type { EmptyOption } from '../../model/EmptyOptionType';
 import type { Picture } from '../../model/Picture';
 import type { ButtonWithIconProps } from '../../ui-kit/Button/ButtonProps';
 import type { TitleProps } from '../../model/HeadlineType';
+import type { Footnote } from '../../model/Footnote';
 
-export interface CommonCalculatorProps {
+export type CommonCalculatorProps = Footnote & {
   /** @title Кнопки */
   buttons?: ButtonWithIconProps[];
   /** @title Адрес справочника */
   sourceBookDir?: string;
-}
+};
 
 /**
  * TODO: данные из справочника
@@ -22,28 +23,6 @@ export interface CreditCalculatorParams {
   isInsurance?: boolean;
   /** @hidden */
   isAnnuity?: boolean;
-  /** @hidden */
-  minSum?: number;
-  /** @hidden */
-  maxSum?: number;
-  /** @hidden */
-  minMonths?: number;
-  /** @hidden */
-  maxMonths?: number;
-  /** @hidden */
-  rateWithInsurance?: number;
-  /** @hidden */
-  rateWithoutInsurance?: number;
-}
-
-/**
- * TODO: данные из справочника
- **/
-export interface MortgageCalculatorParams {
-  /** @hidden */
-  isAnnuity?: boolean;
-  /** @hidden */
-  minInitialContribution?: number;
   /** @hidden */
   minSum?: number;
   /** @hidden */
@@ -123,16 +102,6 @@ export type CreditCalculatorParamsDef = TitleProps &
   };
 
 /**
- * @title Ипотечный калькулятор
- * @default {"calcType": "MortgageCalculatorForm"}
- */
-export type MortgageCalculatorParamsDef = TitleProps &
-  MortgageCalculatorParams &
-  CommonCalculatorProps & {
-    calcType: 'MortgageCalculatorForm';
-  };
-
-/**
  * @title Калькулятор вкладов
  * @default {"calcType": "DepositCalculatorForm"}
  */
@@ -158,7 +127,6 @@ export type BonusCalculatorParamsDef = TitleProps &
 export type CalculatorBlockDef =
   | EmptyOption
   | CreditCalculatorParamsDef
-  | MortgageCalculatorParamsDef
   | DepositCalculatorParamsDef
   | BonusCalculatorParamsDef;
 

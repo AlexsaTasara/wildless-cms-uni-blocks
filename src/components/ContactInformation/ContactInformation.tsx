@@ -58,17 +58,19 @@ function renderCard(card: ContactCard, i: number) {
   );
 }
 
-function renderContactData(data: ContactData, i: number) {
-  const textCol = data.label === 'E-mail' ? 'green' : 'black';
+function renderContactData(contactInformation: ContactData, i: number) {
+  const textCol = contactInformation.label === 'E-mail' ? 'green' : 'black';
 
   return (
     <div key={String(i)} className="mb-8 gap-2">
-      {data?.label ? (
-        <div className="font-normal text-secondary-text text-sm mb-2 w-[180px]">{data.label}</div>
+      {contactInformation?.label ? (
+        <div className="font-normal text-secondary-text text-sm mb-2 w-[180px]">
+          {contactInformation.label}
+        </div>
       ) : null}
-      {data?.values?.length ? (
+      {contactInformation?.values?.length ? (
         <div className={`font-medium text-primary-text text-md m-0 ${TEXT_COLORS[textCol]}`}>
-          {data.values.map((val) => (
+          {contactInformation.values.map((val) => (
             <div>{val}</div>
           ))}
         </div>

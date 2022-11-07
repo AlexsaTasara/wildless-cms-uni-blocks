@@ -71,7 +71,7 @@ function renderPageName({ title, linkAndArrow, location, metros }: renderPageNam
   return (
     <div className="mb-2 flex flex-col content-center ">
       <div className="mb-2 flex flex-row gap-2.5 h-full font-medium text-center text-h6 justify-start content-center">
-        <div className="">{title}</div>
+        <div>{title}</div>
         {linkAndArrow?.link ? (
           <div className={`${TEXT_COLORS['green']} text-base text-center`}>{linkAndArrow.link}</div>
         ) : null}
@@ -96,7 +96,7 @@ function renderPageName({ title, linkAndArrow, location, metros }: renderPageNam
             image={location.icon}
           />
         ) : null}
-        <span className="">{location?.adress}</span>
+        {location?.adress ? <span className="">{location.adress}</span> : null}
       </div>
       {metros?.length ? <div className="flex flex-row gap-3">{metros.map(renderMetro)}</div> : null}
     </div>

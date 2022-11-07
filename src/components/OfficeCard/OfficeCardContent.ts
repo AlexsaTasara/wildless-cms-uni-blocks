@@ -4,7 +4,8 @@ import type { Picture } from '../../model/Picture';
  * @title Цвет текста
  * @enumNames [
  *    "Красный",
- *    "Зеленый"
+ *    "Зеленый",
+ *    "Желтый"
  * ]
  */
 export type TextColorVersion = 'red' | 'green' | 'yellow';

@@ -38,7 +38,18 @@ export const DATES: DayOfWeek[] = [
     time: '9:00 - 17:00',
     status: 'Перерыв 13:10 - 13:30',
   },
+  {
+    dayOfWeek: 'Четверг',
+    time: '9:00 - 17:00',
+    status: 'Перерыв 13:10 - 13:30',
+  },
+  {
+    dayOfWeek: 'Пятница',
+    time: '9:00 - 17:00',
+    status: 'Без перерыва',
+  },
   { dayOfWeek: 'Суббота', status: 'Выходной' },
+  { dayOfWeek: 'Воскресенье', status: 'Выходной' },
 ];
 
 export const CURRENT_METRO: Metro[] = [

@@ -2,11 +2,13 @@ import { context } from '../../react/setup-fixture';
 import { OfficeCard } from './OfficeCard';
 import type {
   ContactInformation,
+  Currency,
   DayOfWeek,
+  DayStatus,
+  LinkAndArrow,
+  Location,
   Metro,
   OfficeCardContent,
-  Location,
-  Currency,
 } from './OfficeCardContent';
 
 export const MONEY: Currency[] = [
@@ -59,11 +61,20 @@ export const ADDRESS: Location = {
   adress: 'Калиниский проезд 2, дом 5',
 };
 
+export const CURRENT_DAY: DayStatus = {
+  open: 'Открыто до 20:00',
+};
+
+export const LINK_AND_ARROW: LinkAndArrow = {
+  link: 'Подробнее',
+  iconbutton: { icon: 'ArrowUpIcon' },
+};
+
 export const OFFICE_CARD: OfficeCardContent = {
   title: 'Центральный офис нижегородского филиала',
-  link: 'Подробнее',
+  linkAndArrow: LINK_AND_ARROW,
   location: ADDRESS,
-  openTime: 'Открыто до 20:00',
+  openTime: CURRENT_DAY,
   metros: CURRENT_METRO,
   contactsInfo: CONTACTS,
   dates: DATES,

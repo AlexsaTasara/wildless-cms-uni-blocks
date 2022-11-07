@@ -1,6 +1,7 @@
 import type { BenefitsBlockContent } from './BenefitsBlock/BenefitsBlockContent';
 import type { BonusContent } from './Bonus/BonusContent';
 import type { BonusBenefitsBlockContent } from './BonusBenefitsBlock/BonusBenefitsBlockContent';
+import type { ContactInformationContent } from './ContactInformation/ContactInformationContent';
 import type { CardTransferContent } from './CardTransfer/CardTransferContent';
 import type { ComparisonTableContent } from './ComparisonTable/ComparisonTableContent';
 import type { ErrorBlockContent } from './ErrorBlock/ErrorBlockContent';
@@ -36,6 +37,7 @@ export type BlockContent =
   | BonusContent
   | CardTransferContent
   | ComparisonTableContent
+  | ContactInformationContent
   | ExchangeRateTileContent
   | FooterContent
   | GalleryContent

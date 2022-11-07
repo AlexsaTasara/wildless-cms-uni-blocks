@@ -7,17 +7,28 @@ import type { Picture } from '../../model/Picture';
  *    "Зеленый"
  * ]
  */
-export type TextColorVersion = 'red' | 'green';
+export type TextColorVersion = 'red' | 'green' | 'yellow';
 
 export interface OfficeCardContent {
   title?: string;
-  link?: string;
+  linkAndArrow?: LinkAndArrow;
   location?: Location;
-  openTime?: string;
+  openTime?: DayStatus;
   metros?: Metro[];
   contactsInfo?: ContactInformation[];
   dates?: DayOfWeek[];
   currencies?: Currency[];
+}
+
+export interface LinkAndArrow {
+  link?: string;
+  iconbutton?: Picture;
+}
+
+export interface DayStatus {
+  open?: string;
+  break?: string;
+  close?: string;
 }
 
 export interface Currency {

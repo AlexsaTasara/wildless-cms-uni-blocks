@@ -24,5 +24,4 @@ export interface ContactCard {
 export interface ContactData {
   label?: string;
   values?: string[];
-  textColor?: TextColorVersion;
 }

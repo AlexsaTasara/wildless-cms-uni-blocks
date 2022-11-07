@@ -29,7 +29,6 @@ export const DATA4: ContactData = {
 export const DATA5: ContactData = {
   label: 'E-mail',
   values: ['newname@mail.ru'],
-  textColor: 'green',
 };
 
 export const ONECARD1: ContactCard = {

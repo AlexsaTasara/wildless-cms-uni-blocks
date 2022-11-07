@@ -9,14 +9,14 @@ export interface SelectProps {
 }
 
 const selectStyle = {
-  background: `url('/icons/ArrowDownIcon.svg') no-repeat right 16px top 50%`,
+  background: `url('/icons/ArrowDownIcon.svg') right 16px top 50% / 21px no-repeat`,
 };
 
 export const Select = JSX<SelectProps>(
   ({ className = '', id, name, children, value, onChange }) => {
     return (
       <select
-        className={`appearance-none ${className}`}
+        className={`appearance-none pl-0.5 ${className}`}
         style={selectStyle}
         id={id}
         name={name || id}

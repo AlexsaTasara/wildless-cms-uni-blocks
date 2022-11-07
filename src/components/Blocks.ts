@@ -18,7 +18,6 @@ import { InsuranceAmountBlock } from './InsuranceAmountBlock/InsuranceAmountBloc
 import { LinkDocs } from './LinkDocs/LinkDocs';
 import { MiniGallery } from './MiniGallery/MiniGallery';
 import { MobileAppTile } from './MobileAppTile/MobileAppTile';
-import { Navigation } from './Navigation/Navigation';
 import { OfficeCard } from './OfficeCard/OfficeCard';
 import { OfficeServicesBlock } from './OfficeServicesBlock/OfficeServicesBlock';
 import { OtherProducts } from './OtherProducts/OtherProducts';
@@ -66,7 +65,6 @@ export const Blocks = {
   TariffsTable,
   TextBlock,
   Tile,
-  Navigation,
   Placeholder,
   BonusBenefitsBlock,
   OfficeCard,

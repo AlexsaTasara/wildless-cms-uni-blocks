@@ -2,6 +2,8 @@ import type { AlignType } from '../../model/AlignType';
 import type { BlockVersion } from '../../model/BlockVersion';
 import type { Picture } from '../../model/Picture';
 import type { BlockDef } from '../../ui-kit/BlocksList/BlocksListProps';
+import type { HeadlineCommonProps } from '../../model/HeadlineType';
+
 /**
  * @title Элемент списка
  */
@@ -11,9 +13,7 @@ export interface AccordionItemCommonProps {
    * @default Список
    */
   label?: string;
-  /**
-   * @title Отображать в раскрытом виде
-   */
+  /** @title Отображать в раскрытом виде */
   isExpanded?: boolean;
   /** @title Блоки */
   blocks?: BlockDef[];
@@ -28,9 +28,7 @@ export interface AccordionItemCommonProps {
 /**
  * @title Аккордеон
  */
-export interface AccordionContent {
-  /** @title Заголовок */
-  title?: string;
+export type AccordionContent = HeadlineCommonProps & {
   /**
    * @title Выравнивание заголовка
    * @default center
@@ -39,11 +37,9 @@ export interface AccordionContent {
   version?: BlockVersion;
   /** @title Список */
   accordionItems?: AccordionItemCommonProps[];
-  /** @title Описание */
-  description?: string;
   /**
    * @title Отображать/скрывать обводку у элемента списка
    * @default false
    */
   bordered?: boolean; // TODO: только для мобильной версии
-}
+};

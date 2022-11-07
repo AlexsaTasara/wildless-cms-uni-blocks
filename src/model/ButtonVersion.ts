@@ -1,6 +1,6 @@
 /**
  * @title Цвет кнопки
+ * @enumNames ["Основная", "Второстепенная", "Белая", "Ссылка"]
  * @default primary
- * @enumNames ["Основная", "Второстепенная", "Ссылка"]
  */
-export type ButtonVersion = 'primary' | 'secondary' | 'link';
+export type ButtonVersion = 'primary' | 'secondary' | 'white' | 'link';

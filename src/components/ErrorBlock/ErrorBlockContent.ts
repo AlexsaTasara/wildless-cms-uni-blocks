@@ -1,6 +1,6 @@
-import type { EmptyOption } from '../../model/EmptyOptionType';
 import type { Picture } from '../../model/Picture';
 import type { ButtonProps } from '../../ui-kit/Button/ButtonProps';
+import type { TitleProps } from '../../model/HeadlineType';
 
 /**
  * @title Изображение
@@ -8,7 +8,20 @@ import type { ButtonProps } from '../../ui-kit/Button/ButtonProps';
 export type ErrorImageDef = {
   /** @default Image */
   errorContentType: 'Image';
-  /** @title Изображение */
+  /**
+   * @default {
+   *   "format": "webp",
+   *   "size": {
+   *       "width": 460
+   *   },
+   *   "sources": [{
+   *       "media": 1279,
+   *       "width": 276,
+   *       "format": "webp",
+   *       "alignment": "center"
+   *   }]
+   * }
+   */
   image?: Picture;
 };
 
@@ -18,21 +31,35 @@ export type ErrorImageDef = {
 export type ErrorCodeDef = {
   /** @default Code */
   errorContentType: 'Code';
-  /** @title Код ошибки */
-  code?: number;
+  /** @default 404 */
+  code?: ErrorType;
 };
-export type ErrorContentDef = EmptyOption | ErrorImageDef | ErrorCodeDef;
+
+/** @title Вид контента */
+export type ErrorContentDef = ErrorCodeDef | ErrorImageDef;
+
+/** @title Код */
+export type ErrorType =
+  | ''
+  | '400'
+  | '401'
+  | '402'
+  | '403'
+  | '404'
+  | '500'
+  | '501'
+  | '502'
+  | '503'
+  | '504'
+  | '505';
 
 /**
  * @title Блок ошибки
  */
-export interface ErrorBlockContent {
-  /** @title Заголовок */
-  title?: string;
+export type ErrorBlockContent = TitleProps & {
   /** @title Описание */
   subtitle?: string;
-  /** @title Вид контента */
   error?: ErrorContentDef;
   /** @title Кнопка */
   button?: ButtonProps;
-}
+};

@@ -1,93 +1,109 @@
-import { renameProp, deleteEmptyProps } from '../utils.js';
+import { deleteEmptyProps, renameProp } from '../utils.js';
+
 export const description = 'v0.4.5';
-export default (unitPath, content) => {
+
+export const migrate = (unitPath, content) => {
   if (!content?.blocks) {
+    return content;
+  }
+
+  for (const block of content.blocks) {
+    adjustNavigatorTabsBlock(block);
+    adjustGroupBlock(block);
+    adjustTariffsTableBlock(block);
+  }
+
+  return { ...content };
+};
+
+function adjustNavigatorTabsBlock(block) {
+  if (block.type !== 'NavigatorTabs') {
     return;
   }
 
-  // NavigatorTabs переделываем в Tabs
-  content.blocks = content?.blocks.map((block) => {
-    if (block.type === 'NavigatorTabs') {
-      block.type = 'Tabs';
-      const blockContent = block.content;
-      renameProp(blockContent, 'navigatorTabs', 'tabs');
+  block.type = 'Tabs';
 
-      block.content?.tabs.forEach((item) => {
-        item.type = 'link';
-        delete item.label;
-      });
+  if (block.content) {
+    renameProp(block.content, 'navigatorTabs', 'tabs');
+
+    for (const item in block.content.tabs) {
+      item.type = 'link';
+      Reflect.deleteProperty(item, 'label');
     }
+  }
+}
 
-    return block;
-  });
+function adjustGroupBlock(block) {
+  if (block.type !== 'GroupBlock') {
+    return;
+  }
 
   // GroupBlock переделываем в Tabs
   // Страницы в которых есть GroupBlock credit-cards / debet-cards / deposits / loans / vse-vidy-strahovaniya1
-  content.blocks = content.blocks.map((block) => {
-    if (block.type === 'GroupBlock') {
-      const blockContent = block.content;
-      block.type = 'Tabs';
-      renameProp(blockContent, 'tabs', 'labels');
-      renameProp(blockContent, 'isShowCounter', 'showCounter');
 
-      blockContent.labels.forEach((item) => {
-        renameProp(item, 'tag', 'ref');
-        item.type = 'group';
-        delete item.index;
-      });
+  block.type = 'Tabs';
 
-      delete blockContent?.blocks;
-      delete blockContent?.groupBlocks;
+  if (block.content) {
+    renameProp(block.content, 'tabs', 'labels');
+    renameProp(block.content, 'isShowCounter', 'showCounter');
+
+    for (const item of block.content.labels) {
+      item.type = 'group';
+      renameProp(item, 'tag', 'ref');
+      Reflect.deleteProperty(item, 'index');
     }
 
-    return block;
-  });
+    Reflect.deleteProperty(block.content, 'blocks');
+    Reflect.deleteProperty(block.content, 'groupBlocks');
+  }
+}
 
-  // Добавить тип в ячейку компонента TariffsTable
-  function addCellType(cell) {
-    if (cell?.label || cell?.description) {
-      cell.tableCellType = 'LabelDescription';
-    }
-    if (cell?.buttons) {
-      cell.tableCellType = 'Buttons';
-    }
-    if (cell?.list) {
-      cell.tableCellType = 'List';
-    }
+function adjustTariffsTableBlock(block) {
+  if (block.type !== 'TariffsTable' || !block.content || !block.content.columns) {
+    return;
   }
 
-  content.blocks = content.blocks.map((block) => {
-    if (block.type === 'TariffsTable') {
-      const blockContent = block.content;
-      if (blockContent?.tariffsColumns) {
-        return;
-      }
-      renameProp(blockContent, 'columns', 'tariffsColumns');
-      blockContent.tariffsColumns.map((column) => {
-        return column.data.map((columnInner) => {
-          columnInner.forEach((cell, index) => {
-            deleteEmptyProps(cell);
-            if (Object.keys(cell).length === 2 && cell?.label && cell.description) {
-              addCellType(cell);
-            } else if (Object.keys(cell).length < 2) {
-              addCellType(cell);
-            } else {
-              // Если типов два и более и это не labels и description то разносим по разным ячейкам
-              let newArr = [];
-              Object.entries(cell).forEach(([key, value]) => {
-                let newObj = { [key]: value };
-                addCellType(newObj);
-                newArr.push(newObj);
-              });
-              columnInner.splice(index, 1, ...newArr);
-            }
-          });
-        });
-      });
+  renameProp(block.content, 'columns', 'tariffsColumns');
+
+  for (const column of block.content.tariffsColumns) {
+    for (const columnInner of column.data) {
+      adjustTariffsColumnsInner(columnInner);
     }
+  }
+}
 
-    return block;
-  });
+function adjustTariffsColumnsInner(columnInner) {
+  for (let index = 0; index < columnInner.length; index++) {
+    const cell = columnInner[index];
 
-  return content;
-};
+    deleteEmptyProps(cell);
+
+    if (Object.keys(cell).length === 2 && cell?.label && cell.description) {
+      addCellType(cell);
+    } else if (Object.keys(cell).length < 2) {
+      addCellType(cell);
+    } else {
+      // Если типов два и более и это не labels и description то разносим по разным ячейкам
+      const newArr = [];
+      for (const key in cell) {
+        newArr.push(addCellType({ [key]: cell[key] }));
+      }
+      columnInner.splice(index, 1, ...newArr);
+    }
+  }
+}
+
+// Добавить тип в ячейку компонента TariffsTable
+function addCellType(cell) {
+  if (cell?.label || cell?.description) {
+    cell.tableCellType = 'LabelDescription';
+  }
+  if (cell?.buttons) {
+    cell.tableCellType = 'Buttons';
+  }
+  if (cell?.list) {
+    cell.tableCellType = 'List';
+  }
+
+  return cell;
+}

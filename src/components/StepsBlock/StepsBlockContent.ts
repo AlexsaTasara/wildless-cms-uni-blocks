@@ -1,40 +1,23 @@
 import type { BlockVersion } from '../../model/BlockVersion';
-import type { Picture } from '../../model/Picture';
+import type { IconProps } from '../../model/Picture';
 import type { SizeVersion } from '../../model/SizeVersion';
 import type { ButtonWithIconProps } from '../../ui-kit/Button/ButtonProps';
+import type { DescriptionProps, HeadlineCommonProps, LabelProps } from '../../model/HeadlineType';
 
 /**
  * @title Шаг
  */
-export interface Step {
-  /** @title Название */
-  label?: string;
-  /** @title Описание */
-  description?: string;
-  /**
-   *  @title Иконка
-   *  @default
-   * {
-   *   "size": {
-   *     "width": 48,
-   *     "height": 48
-   *   },
-   *   "format": "webp"
-   * }
-   */
-  icon?: Picture;
-  /** @title Кнопка */
-  button?: ButtonWithIconProps;
-}
+export type Step = DescriptionProps &
+  LabelProps &
+  IconProps & {
+    /** @title Кнопка */
+    button?: ButtonWithIconProps;
+  };
 
 /**
  * @title Блок шаги
  */
-export interface StepsBlockContent {
-  /** @title Заголовок */
-  title?: string;
-  /** @title Описание */
-  description?: string; // TODO: mobile content
+export type StepsBlockContent = HeadlineCommonProps & {
   /**
    * @title Линии
    * @default true
@@ -54,4 +37,4 @@ export interface StepsBlockContent {
    */
   size?: SizeVersion; // TODO: mobile content
   version?: BlockVersion;
-}
+};

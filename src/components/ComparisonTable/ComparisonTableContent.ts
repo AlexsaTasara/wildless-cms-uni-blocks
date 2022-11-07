@@ -1,43 +1,25 @@
 import type { LinkProps } from '../../model/LinkProps';
 import type { ListOrientation } from '../../model/ListOrientation';
 import type { Picture } from '../../model/Picture';
-
-/**
- * @hidden
- */
-export type Row = {
-  header: RowHeader;
-  data: CellData[][];
-};
+import type { DescriptionProps, LabelProps, TitleProps } from '../../model/HeadlineType';
 
 /**
  * @title Ячейка
  */
-export interface CellData {
-  /** @title Заголовок */
-  label?: string;
-  /** @title Описание */
-  description?: string;
-}
+export type CellData = LabelProps & DescriptionProps;
 
 /**
  * @title Шапка колонки
  */
-export interface ColumnHeader {
-  /** @title Заголовок */
-  title?: string;
+export type ColumnHeader = TitleProps & {
   /** @title Подзаголовок */
   subtitle?: string;
-  /**
-   * @default { "format": "webp", "size": { "width": 24 } }
-   */
+  /** @default { "format": "webp", "size": { "width": 24 } } */
   icon?: Picture;
-  /**
-   * @default { "format": "webp", "size": { "width": 100 } }
-   */
+  /** @default { "format": "webp", "size": { "width": 100 } } */
   image?: Picture;
   link?: LinkProps;
-}
+};
 
 /**
  * @title Продукт
@@ -57,31 +39,11 @@ export interface RowHeader {
 }
 
 /**
- * @title Ячейка
- */
-export interface TableColumnData {
-  rowHeader?: string;
-  cell: CellData[];
-}
-
-/**
- * @title Параметр
- */
-export interface TableColumnHeader {
-  /** @title Заголовок */
-  title?: string;
-
-  icon?: Picture;
-}
-
-/**
  * @title Сравнительная таблица
  */
-export interface ComparisonTableContent {
-  /** @title Заголовок */
-  title?: string;
+export type ComparisonTableContent = TitleProps & {
   /** @title Параметры */
-  rowHeaders?: RowHeader[];
+  rowHeaders?: TitleProps[];
   /** @title Продукты */
   columns?: Column[];
   /** @title Закрасить первую колонку */
@@ -90,4 +52,4 @@ export interface ComparisonTableContent {
   visibleRowLength?: number;
   /** @title Отображать элементы в моб. версии (прокрутка shift+mouseScroll) */
   orientation?: ListOrientation; // TODO: мобильный проп
-}
+};

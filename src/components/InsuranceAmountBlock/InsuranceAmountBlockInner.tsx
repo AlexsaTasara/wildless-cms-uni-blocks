@@ -6,9 +6,9 @@ import type { ButtonProps } from '../../ui-kit/Button/ButtonProps';
 import { renderArrows } from '../../ui-kit/Button/renderArrows';
 import { Img } from '../../ui-kit/Img/Img';
 import { addSpacesBetweenNumbers } from '../../utils/addSpacesBetweenNumbers';
-import type { CardItem, InsuranceAmountBlockTabs } from './InsuranceAmountBlockContent';
+import type { CardItem, InsuranceAmountBlockTab } from './InsuranceAmountBlockContent';
 
-export interface InsuranceAmountBlockInnerProps extends InsuranceAmountBlockTabs, UniBlockProps {
+export interface InsuranceAmountBlockInnerProps extends InsuranceAmountBlockTab, UniBlockProps {
   button?: ButtonProps;
 }
 
@@ -119,7 +119,7 @@ function renderSlide({ slide, i, activeSlideIndex, onClick }: InsuranceSlideProp
     >
       {slide?.icon ? (
         <Img
-          className="p-6 rounded-full bg-secondary-light mr-[30px]"
+          className="p-5 rounded-full bg-secondary-light mr-[30px]"
           image={slide.icon}
           width="108"
           height="108"
@@ -147,7 +147,7 @@ function renderValueBlock(title: string, sum: number) {
 function renderDoneIcon(isActive: boolean) {
   return isActive ? (
     <Img
-      className={`h-[24px] w-[24px] min-w-[24px] min-h-[24px] absolute right-4 top-4`}
+      className={`h-6 w-6 min-w-6 min-h-6 absolute right-4 top-4`}
       image="DoneIcon"
       width="24"
       height="24"

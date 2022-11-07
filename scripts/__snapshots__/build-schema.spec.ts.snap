@@ -454,23 +454,6 @@ Object {
       "title": "Блок Бонусы",
       "type": "object",
     },
-    "Branch": Object {
-      "properties": Object {
-        "address": Object {
-          "type": "string",
-        },
-        "branchCode": Object {
-          "type": "string",
-        },
-        "safeBoxCaseVolumes": Object {
-          "items": Object {
-            "$ref": "#/definitions/SafeBoxCaseVolume",
-          },
-          "type": "array",
-        },
-      },
-      "type": "object",
-    },
     "ButtonContent": Object {
       "properties": Object {
         "buttons": Object {
@@ -514,11 +497,13 @@ Object {
       "enum": Array [
         "primary",
         "secondary",
+        "white",
         "link",
       ],
       "enumNames": Array [
         "Основная",
         "Второстепенная",
+        "Белая",
         "Ссылка",
       ],
       "title": "Цвет кнопки",
@@ -671,6 +656,24 @@ Object {
       "type": "object",
     },
     "CardTransferContent": Object {
+      "properties": Object {
+        "buttonText": Object {
+          "title": "Текст кнопки",
+          "type": "string",
+        },
+        "label": Object {
+          "title": "Название поля",
+          "type": "string",
+        },
+        "placeholder": Object {
+          "title": "Плейсхолдер поля",
+          "type": "string",
+        },
+        "title": Object {
+          "title": "Заголовок",
+          "type": "string",
+        },
+      },
       "title": "Перевод с карты на карту",
       "type": "object",
     },
@@ -1187,7 +1190,6 @@ Object {
         },
         "error": Object {
           "$ref": "#/definitions/ErrorContentDef",
-          "title": "Вид контента",
         },
         "subtitle": Object {
           "title": "Описание",
@@ -1204,8 +1206,8 @@ Object {
     "ErrorCodeDef": Object {
       "properties": Object {
         "code": Object {
-          "title": "Код ошибки",
-          "type": "number",
+          "$ref": "#/definitions/ErrorType",
+          "default": 404,
         },
         "errorContentType": Object {
           "const": "Code",
@@ -1222,15 +1224,13 @@ Object {
     "ErrorContentDef": Object {
       "anyOf": Array [
         Object {
-          "$ref": "#/definitions/EmptyOption",
+          "$ref": "#/definitions/ErrorCodeDef",
         },
         Object {
           "$ref": "#/definitions/ErrorImageDef",
         },
-        Object {
-          "$ref": "#/definitions/ErrorCodeDef",
-        },
       ],
+      "title": "Вид контента",
     },
     "ErrorImageDef": Object {
       "properties": Object {
@@ -1241,7 +1241,6 @@ Object {
         },
         "image": Object {
           "$ref": "#/definitions/Picture",
-          "title": "Изображение",
         },
       },
       "required": Array [
@@ -1249,6 +1248,24 @@ Object {
       ],
       "title": "Изображение",
       "type": "object",
+    },
+    "ErrorType": Object {
+      "enum": Array [
+        "",
+        "400",
+        "401",
+        "402",
+        "403",
+        "404",
+        "500",
+        "501",
+        "502",
+        "503",
+        "504",
+        "505",
+      ],
+      "title": "Код",
+      "type": "string",
     },
     "ExchangeRateTileContent": Object {
       "properties": Object {
@@ -1526,13 +1543,13 @@ Object {
         },
         "type": Object {
           "const": "group",
-          "default": "group",
           "type": "string",
         },
       },
       "required": Array [
         "type",
       ],
+      "title": "Группа",
       "type": "object",
     },
     "HeaderContent": Object {
@@ -1790,6 +1807,8 @@ Object {
         "JCBIcon",
         "LogoIcon",
         "LoupeIcon",
+        "MapMarkerClusterIcon",
+        "MapMarkerSingleIcon",
         "MasterCardIcon",
         "MinusIcon",
         "MirIcon",
@@ -1876,6 +1895,8 @@ Object {
         "JCB",
         "Logo",
         "Лупа",
+        "MapMarkerClusterIcon",
+        "MapMarkerSingleIcon",
         "MasterCard",
         "Минус",
         "МИР",
@@ -2403,13 +2424,13 @@ Object {
         },
         "type": Object {
           "const": "link",
-          "default": "link",
           "type": "string",
         },
       },
       "required": Array [
         "type",
       ],
+      "title": "Ссылка",
       "type": "object",
     },
     "ListBenefitDef": Object {
@@ -3473,34 +3494,6 @@ Object {
       "title": "Параметр",
       "type": "object",
     },
-    "SafeBoxCase": Object {
-      "properties": Object {
-        "safeBoxCasesSize": Object {
-          "type": "string",
-        },
-        "tariffs": Object {
-          "items": Object {
-            "$ref": "#/definitions/Tariff",
-          },
-          "type": "array",
-        },
-      },
-      "type": "object",
-    },
-    "SafeBoxCaseVolume": Object {
-      "properties": Object {
-        "safeBoxCases": Object {
-          "items": Object {
-            "$ref": "#/definitions/SafeBoxCase",
-          },
-          "type": "array",
-        },
-        "volume": Object {
-          "type": "string",
-        },
-      },
-      "type": "object",
-    },
     "SafeDepositRentalContent": Object {
       "properties": Object {
         "title": Object {
@@ -3650,6 +3643,9 @@ Object {
           "$ref": "#/definitions/LinkTab",
         },
       ],
+      "default": Object {
+        "type": "group",
+      },
       "title": "Таб",
     },
     "TableColumnData": Object {
@@ -3717,17 +3713,6 @@ Object {
       ],
       "title": "Таргет (target)",
       "type": "string",
-    },
-    "Tariff": Object {
-      "properties": Object {
-        "tariffType": Object {
-          "type": "string",
-        },
-        "tariffValue": Object {
-          "type": "number",
-        },
-      },
-      "type": "object",
     },
     "TariffsTableColumn": Object {
       "properties": Object {
@@ -3973,6 +3958,7 @@ Object {
       "enumNames": Array [
         "Красный",
         "Зеленый",
+        "Черный",
       ],
       "title": "Цвет текста",
       "type": "string",

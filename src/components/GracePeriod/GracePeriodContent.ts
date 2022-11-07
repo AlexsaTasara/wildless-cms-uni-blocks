@@ -1,24 +1,23 @@
-import type { TitleProps } from '../../model/HeadlineType';
+import type { HeadlineCommonProps } from '../../model/HeadlineType';
 import type { Picture } from '../../model/Picture';
 
-interface Month {
+export interface Month {
   /** @title Название месяца */
   text?: string;
   /**
    * @title Изображение календарного месяца
-   * @default
-   * {
-   *  format: "webp",
-   *  size: {
-   *    width: 210,
-   *    height: 190
+   * @default {
+   *   "format": "webp",
+   *   "size": {
+   *       "width": 210
+   *       "height": 190
    *   }
    * }
    */
   image?: Picture;
 }
 
-interface CalendarItem {
+export interface CalendarItem {
   /** @title Месяц */
   month?: Month[];
   /** @title Основной текст */
@@ -30,9 +29,7 @@ interface CalendarItem {
 /**
  * @title Льготный период
  */
-export interface GracePeriodContent extends TitleProps {
-  /** @title Описание */
-  description?: string;
+export type GracePeriodContent = HeadlineCommonProps & {
   /** @title Календарь */
   calendar?: CalendarItem[];
-}
+};

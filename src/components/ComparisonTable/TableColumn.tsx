@@ -1,11 +1,20 @@
 import { JSX } from '@redneckz/uni-jsx';
 import type { ButtonVersion } from '../../model/ButtonVersion';
+import type { IconProps } from '../../model/Picture';
 import type { UniBlockProps } from '../../types';
+import type { TitleProps } from '../../model/HeadlineType';
 import { Button } from '../../ui-kit/Button/Button';
+import { CellData } from './ComparisonTableContent';
 import { GRADIENT } from './constants';
 import { HeaderCell } from './HeaderCell';
 import { TableCell } from './TableCell';
-import type { TableColumnData, TableColumnHeader } from './ComparisonTableContent';
+
+export interface TableColumnData {
+  rowHeader?: string;
+  cell: CellData[];
+}
+
+export type TableColumnHeader = TitleProps & IconProps;
 
 export interface TableColumnProps extends UniBlockProps {
   header: TableColumnHeader;

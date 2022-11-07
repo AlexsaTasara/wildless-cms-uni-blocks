@@ -1,26 +1,12 @@
-import type { Picture } from '../../model/Picture';
+import type { IconProps } from '../../model/Picture';
+import type { LabelProps, TitleProps } from '../../model/HeadlineType';
 
-export interface OfficeServicesBlockList {
-  /**
-   *  @title Иконка
-   *  @default {
-   *   "size": {
-   *     "width": 24,
-   *     "height": 24
-   *   },
-   *   "format": "webp"
-   * }
-   */
-  icon?: Picture;
-  text?: string;
-}
+export type OfficeServicesBlockList = LabelProps & IconProps;
 
 /**
  * @title Офисные услуги
  */
-export interface OfficeServicesBlockContent {
-  /** @title Заголовок */
-  title?: string;
+export type OfficeServicesBlockContent = TitleProps & {
   /** @title Список услуг */
   servicesList?: OfficeServicesBlockList[];
-}
+};

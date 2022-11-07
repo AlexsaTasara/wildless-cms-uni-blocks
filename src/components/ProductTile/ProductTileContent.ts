@@ -1,21 +1,30 @@
 import type { BlockVersion } from '../../model/BlockVersion';
+import type { DescriptionProps, HeadlineProps, LabelProps } from '../../model/HeadlineType';
+import type { Picture } from '../../model/Picture';
 import type { ButtonContent } from '../../ui-kit/Button/ButtonProps';
-import type { HeadlineProps } from '../../model/HeadlineType';
-import type { ImageContent } from '../../ui-kit/Img/ImgProps';
 
-export interface TextBenefit {
-  /** @title Название */
-  label?: string;
-  /** @title Описание */
-  description?: string;
-}
+export type TextBenefit = DescriptionProps & LabelProps;
 
 /**
  * @title Продуктовая плитка
  */
 export type ProductTileContent = HeadlineProps &
-  ButtonContent &
-  ImageContent & {
+  ButtonContent & {
+    /**
+     * @default {
+     *   "format": "webp",
+     *   "size": {
+     *       "width": 320
+     *   },
+     *   "sources": [{
+     *       "media": 1279,
+     *	     "width": 192,
+     *       "format": "webp",
+     *       "alignment": "southeast"
+     *   }]
+     * }
+     */
+    image?: Picture;
     version?: BlockVersion;
     /**
      * @title Преимущества

@@ -53,6 +53,7 @@ module.exports = {
 
         'title-extra': ['15.625rem', '14.687rem'], // 250px 235px
         'title-huge': ['12.5rem', '15.625rem'], // 200px 250px
+        'title-error': ['76.75rem', '107rem'], // 307px 428px
         h0: [
           '3.5rem',
           {
@@ -199,6 +200,7 @@ module.exports = {
             end: 'rgba(var(--color-gradient-to), <alpha-value>)',
           },
           stroke: 'rgba(201, 202, 204, <alpha-value>)',
+          disabled: 'rgba(187, 187, 187, <alpha-value>)',
         },
         primary: {
           main: 'rgba(var(--color-primary-main), <alpha-value>)',

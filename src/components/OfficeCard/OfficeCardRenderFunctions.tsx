@@ -17,7 +17,7 @@ const TEXT_COLORS: Record<TextColorVersion, string> = {
 
 export function renderCurrentDay(openTime: DayStatus) {
   return (
-    <div className=" flex flex-col">
+    <div className="flex flex-col">
       {openTime?.open ? (
         <div className={`${TEXT_COLORS['green']} mr-7 border p-2.5 border-green-700`}>
           {openTime.open}

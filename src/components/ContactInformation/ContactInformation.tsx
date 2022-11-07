@@ -51,14 +51,14 @@ function renderCard(card: ContactCard, i: number) {
           ) : null}
         </div>
         {card.data?.length ? (
-          <div className="grid grid-cols-2 gap-1">{card.data.map(renderData)}</div>
+          <div className="grid grid-cols-2 gap-1">{card.data.map(renderContactData)}</div>
         ) : null}
       </div>
     </div>
   );
 }
 
-function renderData(data: ContactData, i: number) {
+function renderContactData(data: ContactData, i: number) {
   const textCol = data.label === 'E-mail' ? 'green' : 'black';
 
   return (

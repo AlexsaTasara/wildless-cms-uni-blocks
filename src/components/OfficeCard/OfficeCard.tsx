@@ -70,7 +70,7 @@ type renderPageNameProps = {
 function renderPageName({ title, linkAndArrow, location, metros }: renderPageNameProps) {
   return (
     <div className="mb-2 flex flex-col content-center ">
-      <div className=" mb-2 flex flex-row gap-2.5 h-full font-medium text-center text-h6 justify-start content-center">
+      <div className="mb-2 flex flex-row gap-2.5 h-full font-medium text-center text-h6 justify-start content-center">
         <div className="">{title}</div>
         {linkAndArrow?.link ? (
           <div className={`${TEXT_COLORS['green']} text-base text-center`}>{linkAndArrow.link}</div>
@@ -86,7 +86,7 @@ function renderPageName({ title, linkAndArrow, location, metros }: renderPageNam
         ) : null}
       </div>
 
-      <div className=" mb-2 flex flex-row h-full font-normal text-l ">
+      <div className="mb-2 flex flex-row h-full font-normal text-l ">
         {location?.icon ? (
           <Img
             className="mr-[10px] max-w-6 max-h-6"

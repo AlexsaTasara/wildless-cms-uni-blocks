@@ -65,7 +65,8 @@
     "fonts",
     "mobile/src",
     "src",
-    "cosmos-static/icons"
+    "cosmos-static/icons",
+    "tailwind.config.cjs"
   ],
   "repository": {
     "url": "https://github.com/redneckz/wildless-cms-uni-blocks.git"
@@ -131,6 +132,7 @@
     "@types/glob": "^8.0.0",
     "@types/jest": "^28.1.5",
     "@types/sharp": "^0.31.0",
+    "@types/yandex-maps": "^2.1.27",
     "@typescript-eslint/eslint-plugin": "^5.30.6",
     "@typescript-eslint/experimental-utils": "^5.30.6",
     "@typescript-eslint/parser": "^5.30.6",

@@ -39,7 +39,7 @@ function renderCard(card: ContactCard, i: number) {
         <div className="flex flex-row mb-4">
           {card?.icon ? (
             <Img
-              className="w-[48px] h-[48px] min-h-48 min-w-48 bg-main rounded-full box-border p-[12px]"
+              className="w-[48px] h-[48px] min-h-[48px] min-w-[48px] bg-main rounded-full box-border p-[12px]"
               image={card.icon}
               width="48"
               height="48"
@@ -59,16 +59,15 @@ function renderCard(card: ContactCard, i: number) {
 }
 
 function renderData(data: ContactData, i: number) {
-  let textcol = TEXT_COLORS['green'];
-  data.textColor ? (textcol = data.textColor) : null;
+  const textCol = data.label === 'E-mail' ? 'green' : 'black';
 
   return (
     <div key={String(i)} className="mb-8 gap-2">
-      {data.label ? (
+      {data?.label ? (
         <div className="font-normal text-secondary-text text-sm mb-2 w-[180px]">{data.label}</div>
       ) : null}
-      {data.values?.length ? (
-        <div className={`font-medium text-primary-text text-md m-0 ${TEXT_COLORS[textcol]}`}>
+      {data?.values?.length ? (
+        <div className={`font-medium text-primary-text text-md m-0 ${TEXT_COLORS[textCol]}`}>
           {data.values.map((val) => (
             <div>{val}</div>
           ))}

@@ -11,13 +11,18 @@ export type TextColorVersion = 'red' | 'green' | 'yellow';
 
 export interface OfficeCardContent {
   title?: string;
-  link?: string;
+  linkAndArrow?: LinkAndArrow;
   location?: Location;
   openTime?: DayStatus;
   metros?: Metro[];
   contactsInfo?: ContactInformation[];
   dates?: DayOfWeek[];
   currencies?: Currency[];
+}
+
+export interface LinkAndArrow {
+  link?: string;
+  iconbutton?: Picture;
 }
 
 export interface DayStatus {

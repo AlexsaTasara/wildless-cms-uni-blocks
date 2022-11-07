@@ -702,22 +702,20 @@ exports[`Blocks OfficeCard should render block "OfficeCard" without content 1`] 
       class="mb-2 flex flex-col content-center "
     >
       <div
-        class=" mb-2 flex flex-row gap-2.5 h-full font-medium text-center text-h6 justify-start"
+        class=" mb-2 flex flex-row gap-2.5 h-full font-medium text-center text-h6 justify-start content-center"
       >
         <div
           class=""
         />
-        <div
-          class="text-green-500 text-base text-center"
-        />
       </div>
       <div
         class=" mb-2 flex flex-row h-full font-normal text-l "
-      />
+      >
+        <span
+          class=""
+        />
+      </div>
     </div>
-    <div
-      class="text-green-500 mr-7 "
-    />
   </div>
 </section>
 `;

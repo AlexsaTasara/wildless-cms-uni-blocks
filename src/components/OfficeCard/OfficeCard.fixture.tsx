@@ -5,6 +5,7 @@ import type {
   Currency,
   DayOfWeek,
   DayStatus,
+  LinkAndArrow,
   Location,
   Metro,
   OfficeCardContent,
@@ -64,9 +65,14 @@ export const CURRENT_DAY: DayStatus = {
   open: 'Открыто до 20:00',
 };
 
+export const LINK_AND_ARROW: LinkAndArrow = {
+  link: 'Подробнее',
+  iconbutton: { icon: 'ArrowUpIcon' },
+};
+
 export const OFFICE_CARD: OfficeCardContent = {
   title: 'Центральный офис нижегородского филиала',
-  link: 'Подробнее',
+  linkAndArrow: LINK_AND_ARROW,
   location: ADDRESS,
   openTime: CURRENT_DAY,
   metros: CURRENT_METRO,

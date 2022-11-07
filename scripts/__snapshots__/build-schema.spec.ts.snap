@@ -934,9 +934,6 @@ Object {
         "label": Object {
           "type": "string",
         },
-        "textColor": Object {
-          "$ref": "#/definitions/TextColorVersion",
-        },
         "values": Object {
           "items": Object {
             "type": "string",
@@ -1080,6 +1077,20 @@ Object {
           "type": "string",
         },
         "time": Object {
+          "type": "string",
+        },
+      },
+      "type": "object",
+    },
+    "DayStatus": Object {
+      "properties": Object {
+        "break": Object {
+          "type": "string",
+        },
+        "close": Object {
+          "type": "string",
+        },
+        "open": Object {
           "type": "string",
         },
       },
@@ -2146,6 +2157,17 @@ Object {
       "title": "Заголовок и описание",
       "type": "object",
     },
+    "LinkAndArrow": Object {
+      "properties": Object {
+        "iconbutton": Object {
+          "$ref": "#/definitions/Picture",
+        },
+        "link": Object {
+          "type": "string",
+        },
+      },
+      "type": "object",
+    },
     "LinkColumnsMode": Object {
       "enum": Array [
         "single",
@@ -2732,8 +2754,8 @@ Object {
           },
           "type": "array",
         },
-        "link": Object {
-          "type": "string",
+        "linkAndArrow": Object {
+          "$ref": "#/definitions/LinkAndArrow",
         },
         "location": Object {
           "$ref": "#/definitions/Location",
@@ -2745,7 +2767,7 @@ Object {
           "type": "array",
         },
         "openTime": Object {
-          "type": "string",
+          "$ref": "#/definitions/DayStatus",
         },
         "title": Object {
           "type": "string",
@@ -3946,12 +3968,11 @@ Object {
       "enum": Array [
         "red",
         "green",
-        "black",
+        "yellow",
       ],
       "enumNames": Array [
         "Красный",
         "Зеленый",
-        "Черный",
       ],
       "title": "Цвет текста",
       "type": "string",

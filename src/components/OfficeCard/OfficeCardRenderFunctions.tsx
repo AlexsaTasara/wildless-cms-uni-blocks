@@ -1,4 +1,5 @@
 import { Img } from '../../ui-kit/Img/Img';
+
 import type {
   ContactInformation,
   Currency,
@@ -39,7 +40,7 @@ export function renderCurrentDay(openTime: DayStatus) {
 export function renderMetro(metro: Metro, i: number) {
   return (
     <div key={String(i)} className="flex mb-6 gap-1 flex-row h-full max-w-[490px] mr-5">
-      {metro.icon ? (
+      {metro?.icon ? (
         <Img
           className="mr-[10px] max-w-6 max-h-6"
           width="24px"

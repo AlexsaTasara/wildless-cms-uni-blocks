@@ -74,6 +74,7 @@ export const ADDRESS: Location = {
 
 export const CURRENT_DAY: DayStatus = {
   open: 'Открыто до 20:00',
+  break: 'Перерыв 13:30-14:00',
 };
 
 export const LINK_AND_ARROW: LinkAndArrow = {

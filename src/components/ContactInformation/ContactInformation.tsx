@@ -34,26 +34,24 @@ export const ContactInformation = JSX<ContactInformationProps>((props) => {
 
 function renderCard(card: ContactCard, i: number) {
   return (
-    <div key={String(i)} className="mb-8 ml-4">
-      <div className="flex gap-1 flex-col h-full max-w-[990px]">
-        <div className="flex flex-row mb-4">
-          {card?.icon ? (
-            <Img
-              className="w-[48px] h-[48px] min-h-[48px] min-w-[48px] bg-main rounded-full box-border p-[12px]"
-              image={card.icon}
-              width="48"
-              height="48"
-              asSVG
-            />
-          ) : null}
-          {card?.label ? (
-            <div className="font-medium text-primary-text text-md ml-2 p-[12px]">{card.label}</div>
-          ) : null}
-        </div>
-        {card.data?.length ? (
-          <div className="grid grid-cols-2 gap-1">{card.data.map(renderContactData)}</div>
+    <div key={String(i)} className="mb-8 ml-4 flex gap-1 flex-col h-full max-w-[990px]">
+      <div className="flex flex-row mb-4">
+        {card?.icon ? (
+          <Img
+            className="w-[48px] h-[48px] min-h-[48px] min-w-[48px] bg-main rounded-full box-border p-[12px]"
+            image={card.icon}
+            width="48"
+            height="48"
+            asSVG
+          />
+        ) : null}
+        {card?.label ? (
+          <div className="font-medium text-primary-text text-base ml-2 p-[12px]">{card.label}</div>
         ) : null}
       </div>
+      {card.data?.length ? (
+        <div className="grid grid-cols-2 gap-2">{card.data.map(renderContactData)}</div>
+      ) : null}
     </div>
   );
 }
@@ -62,14 +60,14 @@ function renderContactData(contactInformation: ContactData, i: number) {
   const textCol = contactInformation.label === 'E-mail' ? 'green' : 'black';
 
   return (
-    <div key={String(i)} className="mb-8 gap-2">
+    <div key={String(i)} className="mb-2 gap-2">
       {contactInformation?.label ? (
         <div className="font-normal text-secondary-text text-sm mb-2 w-[180px]">
           {contactInformation.label}
         </div>
       ) : null}
       {contactInformation?.values?.length ? (
-        <div className={`font-medium text-primary-text text-md m-0 ${TEXT_COLORS[textCol]}`}>
+        <div className={`font-normal text-primary-text text-base m-0 ${TEXT_COLORS[textCol]}`}>
           {contactInformation.values.map((val) => (
             <div>{val}</div>
           ))}

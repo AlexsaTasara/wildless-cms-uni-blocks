@@ -1,5 +1,6 @@
 import { JSX } from '@redneckz/uni-jsx';
 import type { UniBlockProps } from '../../model/ContentPageDef';
+import { BlockWrapper } from '../../ui-kit/BlockWrapper';
 import type { OfficeCardContent } from './OfficeCardContent';
 import { renderContacts } from './renderContacts';
 import { renderCurrency } from './renderCurrency';
@@ -12,6 +13,7 @@ export interface OfficeCardProps extends OfficeCardContent, UniBlockProps {}
 export const OfficeCard = JSX<OfficeCardProps>((props) => {
   const {
     className = '',
+    context,
     title = '',
     linkAndArrow,
     location,
@@ -20,12 +22,11 @@ export const OfficeCard = JSX<OfficeCardProps>((props) => {
     contactsInfo,
     dates,
     currencies,
-    anchor = '',
   } = props;
 
   return (
-    <section
-      id={anchor}
+    <BlockWrapper
+      context={context}
       className={`flex flex-col font-sans text-primary-text bg-white divide-solid divide-stone-300 divide-y p-8 divide ${className}`}
     >
       <div className="flex flex-row flex-grow-0 justify-between">
@@ -41,6 +42,6 @@ export const OfficeCard = JSX<OfficeCardProps>((props) => {
       {currencies?.length ? (
         <div className="flex flex-row pt-6 pb-6 gap-16">{currencies.map(renderCurrency)}</div>
       ) : null}
-    </section>
+    </BlockWrapper>
   );
 });

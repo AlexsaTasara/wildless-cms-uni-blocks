@@ -25,7 +25,7 @@ const DIF_DATA: ContactData[] = [
   },
 ];
 
-const ALLCARDS: ContactInformationContent = {
+const CARDS: ContactInformationContent = {
   title: 'Контактная информация',
   contactCards: [
     {
@@ -49,7 +49,7 @@ const ALLCARDS: ContactInformationContent = {
 export default {
   default: (
     <div className="container grid grid-cols-12">
-      <ContactInformation className="col-span-12" context={context} {...ALLCARDS} />
+      <ContactInformation className="col-span-12" context={context} {...CARDS} />
     </div>
   ),
 };

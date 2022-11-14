@@ -1,6 +1,7 @@
 import { JSX } from '@redneckz/uni-jsx';
 import type { UniBlockProps } from '../../model/ContentPageDef';
 import { Heading } from '../../ui-kit/Heading/Heading';
+import { BlockWrapper } from '../../ui-kit/BlockWrapper';
 import { Img } from '../../ui-kit/Img/Img';
 import type {
   ContactCard,
@@ -12,17 +13,20 @@ import { TEXT_COLORS } from './textColors';
 export interface ContactInformationProps extends ContactInformationContent, UniBlockProps {}
 
 export const ContactInformation = JSX<ContactInformationProps>((props) => {
-  const { className = '', title, contactCards, anchor = '' } = props;
+  const { className = '', context, title, contactCards } = props;
 
   return (
-    <section id={anchor} className={`font-sans text-primary-text py-10 bg-white ${className}`}>
-      <section>
+    <BlockWrapper
+      context={context}
+      className={`font-sans text-primary-text py-10 bg-white ${className}`}
+    >
+      <div>
         {title ? <Heading className="w-full ml-10 mb-8" headingType="h4" title={title} /> : null}
-      </section>
+      </div>
       {contactCards?.length ? (
         <div className="flex flex-row ml-8">{contactCards.map(renderCard)}</div>
       ) : null}
-    </section>
+    </BlockWrapper>
   );
 });
 

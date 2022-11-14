@@ -136,9 +136,8 @@ exports[`Blocks ComparisonTable should render block "ComparisonTable" without co
 exports[`Blocks ContactInformation should render block "ContactInformation" without content 1`] = `
 <section
   class="font-sans text-primary-text py-10 bg-white "
-  id=""
 >
-  <section />
+  <div />
 </section>
 `;
 
@@ -683,7 +682,6 @@ exports[`Blocks MobileAppTile should render block "MobileAppTile" without conten
 exports[`Blocks OfficeCard should render block "OfficeCard" without content 1`] = `
 <section
   class="flex flex-col font-sans text-primary-text bg-white divide-solid divide-stone-300 divide-y p-8 divide "
-  id=""
 >
   <div
     class="flex flex-row flex-grow-0 justify-between"
@@ -1122,8 +1120,9 @@ exports[`Blocks SafeDepositRental should render block "SafeDepositRental" withou
                 class="flex items-center relative cursor-pointer"
               >
                 <input
-                  class="appearance-none flex justify-center items-center shrink-0 w-5 h-5 border-2 border-primary-main
-        rounded-full cursor-pointer after:block after:w-2.5 after:h-2.5 after:rounded-full checked:after:bg-primary-main"
+                  class="appearance-none flex justify-center items-center shrink-0 w-5 h-5 border border-gray hover:border-checkbox-hover
+        checked:border-2 checked:!border-primary-main focus:checked:border-primary-main focus:border-primary-text active:border-primary-text
+        after:block after:w-2.5 after:h-2.5 after:rounded-full checked:after:bg-primary-main outline-none rounded-full cursor-pointer"
                   name="contractType"
                   type="radio"
                   value="option1"
@@ -1141,8 +1140,9 @@ exports[`Blocks SafeDepositRental should render block "SafeDepositRental" withou
               >
                 <input
                   checked=""
-                  class="appearance-none flex justify-center items-center shrink-0 w-5 h-5 border-2 border-primary-main
-        rounded-full cursor-pointer after:block after:w-2.5 after:h-2.5 after:rounded-full checked:after:bg-primary-main"
+                  class="appearance-none flex justify-center items-center shrink-0 w-5 h-5 border border-gray hover:border-checkbox-hover
+        checked:border-2 checked:!border-primary-main focus:checked:border-primary-main focus:border-primary-text active:border-primary-text
+        after:block after:w-2.5 after:h-2.5 after:rounded-full checked:after:bg-primary-main outline-none rounded-full cursor-pointer"
                   name="contractType"
                   type="radio"
                   value="option2"

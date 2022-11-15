@@ -1,0 +1,55 @@
+{
+  "title": "Центральный офис нижегородского филиала",
+  "linkAndArrow": {
+    "link": "Подробнее",
+    "iconbutton": { "icon": "ArrowUpIcon" }
+  },
+  "location": {
+    "icon": { "icon": "GeolocationIcon" },
+    "adress": "Калиниский проезд 2, дом 5"
+  },
+  "openTime": {
+    "open": "Открыто до 20:00",
+    "break": "Перерыв 13:30-14:00"
+  },
+  "metros": [
+    {
+      "icon": { "icon": "CardTickIcon" },
+      "name": "Сокольники",
+      "distance": "(~250м)",
+      "time": "6 мин"
+    },
+    {
+      "icon": { "icon": "CardTickIcon" },
+      "name": "Курская",
+      "distance": "(~350м)",
+      "time": "8 мин"
+    }
+  ],
+  "contactsInfo": [
+    { "title": "Телефон офиса", "info": "123456789" },
+    { "title": "Телефон компании", "info": "123456789" }
+  ],
+  "dates": [
+    {
+      "dayOfWeek": "Понедельник",
+      "time": "9:00 - 17:00",
+      "status": "Без перерыва"
+    },
+    {
+      "dayOfWeek": "Вторник",
+      "time": "9:00 - 17:00",
+      "status": "Без перерыва"
+    },
+    {
+      "dayOfWeek": "Среда",
+      "time": "9:00 - 17:00",
+      "status": "Перерыв 13:10 - 13:30"
+    }
+  ],
+  "currencies": [
+    { "name": "USD", "buy": "104,0741", "sell": "103,1618" },
+    { "name": "EUR", "buy": "105,0876", "sell": "102,1198" },
+    { "name": "GBP", "buy": "103,1792", "sell": "101,67732" }
+  ]
+}

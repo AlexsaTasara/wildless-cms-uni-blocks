@@ -20,6 +20,7 @@ import { LinkDocs } from './LinkDocs/LinkDocs';
 import { MiniGallery } from './MiniGallery/MiniGallery';
 import { MobileAppTile } from './MobileAppTile/MobileAppTile';
 import { OfficeCard } from './OfficeCard/OfficeCard';
+import { OfficeMap } from './OfficeMap/OfficeMap';
 import { OfficeServicesBlock } from './OfficeServicesBlock/OfficeServicesBlock';
 import { OtherProducts } from './OtherProducts/OtherProducts';
 import { OtherProductsItem } from './OtherProductsItem/OtherProductsItem';
@@ -63,6 +64,8 @@ export const Blocks = {
   ProductTile,
   PromoTile,
   OfficeCard,
+  OfficeMap,
+  OfficeServicesBlock,
   OtherProducts,
   OtherProductsItem,
   Recommendation,
@@ -75,5 +78,4 @@ export const Blocks = {
   SafeDepositRental,
   Tabs,
   ErrorBlock,
-  OfficeServicesBlock,
 };

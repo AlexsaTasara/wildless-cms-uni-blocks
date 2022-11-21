@@ -132,6 +132,14 @@ exports[`Blocks ComparisonTable should render block "ComparisonTable" without co
 </section>
 `;
 
+exports[`Blocks ContactInformation should render block "ContactInformation" without content 1`] = `
+<section
+  class="font-sans text-primary-text py-10 bg-white "
+>
+  <div />
+</section>
+`;
+
 exports[`Blocks ErrorBlock should render block "ErrorBlock" without content 1`] = `
 <section
   class="flex flex-col justify-center items-center mt-12 "
@@ -675,6 +683,29 @@ exports[`Blocks MobileAppTile should render block "MobileAppTile" without conten
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`Blocks OfficeCard should render block "OfficeCard" without content 1`] = `
+<section
+  class="flex flex-col font-sans text-primary-text bg-white divide-solid divide-stone-300 divide-y p-8 divide "
+>
+  <div
+    class="flex flex-row flex-grow-0 justify-between"
+  >
+    <div
+      class="mb-2 flex flex-col content-center "
+    >
+      <div
+        class="mb-2 flex flex-row gap-2.5 h-full font-medium text-center text-h6 justify-start content-center"
+      >
+        <div />
+      </div>
+      <div
+        class="mb-2 flex flex-row h-full font-normal text-l "
+      />
     </div>
   </div>
 </section>

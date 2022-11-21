@@ -964,6 +964,37 @@ Object {
       "title": "Сравнительная таблица",
       "type": "object",
     },
+    "ContactCard": Object {
+      "properties": Object {
+        "data": Object {
+          "items": Object {
+            "$ref": "#/definitions/ContactData",
+          },
+          "type": "array",
+        },
+        "icon": Object {
+          "$ref": "#/definitions/Picture",
+        },
+        "label": Object {
+          "type": "string",
+        },
+      },
+      "type": "object",
+    },
+    "ContactData": Object {
+      "properties": Object {
+        "label": Object {
+          "type": "string",
+        },
+        "values": Object {
+          "items": Object {
+            "type": "string",
+          },
+          "type": "array",
+        },
+      },
+      "type": "object",
+    },
     "ContactInfo": Object {
       "properties": Object {
         "description": Object {
@@ -979,6 +1010,32 @@ Object {
         },
       },
       "title": "Контакт",
+      "type": "object",
+    },
+    "ContactInformation": Object {
+      "description": "* @title Контактная информация офиса",
+      "properties": Object {
+        "info": Object {
+          "type": "string",
+        },
+        "title": Object {
+          "type": "string",
+        },
+      },
+      "type": "object",
+    },
+    "ContactInformationContent": Object {
+      "properties": Object {
+        "contactCards": Object {
+          "items": Object {
+            "$ref": "#/definitions/ContactCard",
+          },
+          "type": "array",
+        },
+        "title": Object {
+          "type": "string",
+        },
+      },
       "type": "object",
     },
     "ContactType": Object {
@@ -1030,6 +1087,51 @@ Object {
         "calcType",
       ],
       "title": "Кредитный калькулятор",
+      "type": "object",
+    },
+    "Currency": Object {
+      "description": "* @title Информация о валюте",
+      "properties": Object {
+        "buy": Object {
+          "type": "string",
+        },
+        "name": Object {
+          "type": "string",
+        },
+        "sell": Object {
+          "type": "string",
+        },
+      },
+      "type": "object",
+    },
+    "DayOfWeek": Object {
+      "description": "* @title Статус офиса в определенный день недели",
+      "properties": Object {
+        "dayOfWeek": Object {
+          "type": "string",
+        },
+        "status": Object {
+          "type": "string",
+        },
+        "time": Object {
+          "type": "string",
+        },
+      },
+      "type": "object",
+    },
+    "DayStatus": Object {
+      "description": "* @title Статус офиса на сегодняшний день",
+      "properties": Object {
+        "break": Object {
+          "type": "string",
+        },
+        "close": Object {
+          "type": "string",
+        },
+        "open": Object {
+          "type": "string",
+        },
+      },
       "type": "object",
     },
     "DepositCalculatorParams": Object {
@@ -2291,6 +2393,18 @@ Object {
       },
       "type": "object",
     },
+    "LinkAndArrow": Object {
+      "description": "* @title Ссылка с изображением стрелки",
+      "properties": Object {
+        "iconbutton": Object {
+          "$ref": "#/definitions/Picture",
+        },
+        "link": Object {
+          "type": "string",
+        },
+      },
+      "type": "object",
+    },
     "LinkColumnsMode": Object {
       "enum": Array [
         "single",
@@ -2623,6 +2737,21 @@ Object {
       "title": "Направление списка",
       "type": "string",
     },
+    "Location": Object {
+      "description": "* @title Адрес офиса",
+      "properties": Object {
+        "adress": Object {
+          "type": "string",
+        },
+        "icon": Object {
+          "$ref": "#/definitions/Picture",
+        },
+      },
+      "required": Array [
+        "adress",
+      ],
+      "type": "object",
+    },
     "Logo": Object {
       "properties": Object {
         "image": Object {
@@ -2650,6 +2779,24 @@ Object {
       ],
       "title": "Брейкпоинт",
       "type": "number",
+    },
+    "Metro": Object {
+      "description": "* @title Ближайшее метро",
+      "properties": Object {
+        "distance": Object {
+          "type": "string",
+        },
+        "icon": Object {
+          "$ref": "#/definitions/Picture",
+        },
+        "name": Object {
+          "type": "string",
+        },
+        "time": Object {
+          "type": "string",
+        },
+      },
+      "type": "object",
     },
     "MiniGalleryBlockListDef": Object {
       "properties": Object {
@@ -2805,6 +2952,52 @@ Object {
         },
         "name": Object {
           "title": "Название месяца",
+          "type": "string",
+        },
+      },
+      "type": "object",
+    },
+    "OfficeCardContent": Object {
+      "description": "* @title Информация об офисе",
+      "properties": Object {
+        "contactsInfo": Object {
+          "description": "* @title Контактная информация",
+          "items": Object {
+            "$ref": "#/definitions/ContactInformation",
+          },
+          "type": "array",
+        },
+        "currencies": Object {
+          "description": "* @title Информация о нескольких валютах",
+          "items": Object {
+            "$ref": "#/definitions/Currency",
+          },
+          "type": "array",
+        },
+        "dates": Object {
+          "description": "* @title Статус офиса в каждый день недели",
+          "items": Object {
+            "$ref": "#/definitions/DayOfWeek",
+          },
+          "type": "array",
+        },
+        "linkAndArrow": Object {
+          "$ref": "#/definitions/LinkAndArrow",
+        },
+        "location": Object {
+          "$ref": "#/definitions/Location",
+        },
+        "metros": Object {
+          "description": "* @title Список ближайших станций метро",
+          "items": Object {
+            "$ref": "#/definitions/Metro",
+          },
+          "type": "array",
+        },
+        "openTime": Object {
+          "$ref": "#/definitions/DayStatus",
+        },
+        "title": Object {
           "type": "string",
         },
       },

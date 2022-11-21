@@ -1,0 +1,16 @@
+{
+  "title": "Контактная информация",
+  "contactCards": [
+    {
+      "label": "Для физических лиц",
+      "data": [
+        {
+          "label": "Телефон филиала",
+          "values": ["8 (495) 200-78-70", "8 (195) 860-28-71"]
+        },
+        { "label": "E-mail", "values": ["newname@mail.ru"] }
+      ],
+      "icon": { "icon": "DocumentTextIcon" }
+    }
+  ]
+}

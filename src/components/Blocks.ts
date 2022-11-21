@@ -6,6 +6,7 @@ import { Calculator } from './Calculator/Calculator';
 import { CardTransfer } from './CardTransfer/CardTransfer';
 import { Catalog } from './Catalog/Catalog';
 import { ComparisonTable } from './ComparisonTable/ComparisonTable';
+import { ContactInformation } from './ContactInformation/ContactInformation';
 import { ErrorBlock } from './ErrorBlock/ErrorBlock';
 import { ExchangeRateTile } from './ExchangeRateTile/ExchangeRateTile';
 import { Footer } from './Footer/Footer';
@@ -18,6 +19,7 @@ import { InvestmentInfo } from './InvestmentInfo/InvestmentInfo';
 import { LinkDocs } from './LinkDocs/LinkDocs';
 import { MiniGallery } from './MiniGallery/MiniGallery';
 import { MobileAppTile } from './MobileAppTile/MobileAppTile';
+import { OfficeCard } from './OfficeCard/OfficeCard';
 import { OfficeServicesBlock } from './OfficeServicesBlock/OfficeServicesBlock';
 import { OtherProducts } from './OtherProducts/OtherProducts';
 import { OtherProductsItem } from './OtherProductsItem/OtherProductsItem';
@@ -41,6 +43,7 @@ export const Blocks = {
   Bonus,
   CardTransfer,
   ComparisonTable,
+  ContactInformation,
   Calculator,
   Catalog,
   ExchangeRateTile,
@@ -59,6 +62,7 @@ export const Blocks = {
   ProductGallery,
   ProductTile,
   PromoTile,
+  OfficeCard,
   OtherProducts,
   OtherProductsItem,
   Recommendation,
